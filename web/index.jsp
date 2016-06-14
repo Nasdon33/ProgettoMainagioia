@@ -13,17 +13,15 @@
         <title>Mainagioia ricerca ristoranti</title>
     </head>
     <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <input type="text" class="location" id="location" placeholder="Dove cerchi?">
-        </div>
-        <div class="navbar-header">
-          <input type="text" class="name" id="name" placeholder="Cosa cerchi?">
-        </div>
-          
-      </div>
-    </nav> 
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4">
         
+          <input type="text" class="location" id="location" placeholder="Dove cerchi?">
+          </div>
+           <div class="col-md-6">
+               
+          <input type="text" class="name" id="name" placeholder="Cosa cerchi?">
+         </div>
+            </div>
     </body>
 </html>
