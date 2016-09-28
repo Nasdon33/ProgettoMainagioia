@@ -1,4 +1,4 @@
-package unitn;
+package servlet;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,6 +10,6 @@ package unitn;
  *
  * @author carlo.toniatti-2
  */
-public class Utente {
+public class Ristorante {
     
 }
