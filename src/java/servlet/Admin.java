@@ -12,7 +12,7 @@ package servlet;
  */
 
 
-import DBManager.DBManager;
+import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

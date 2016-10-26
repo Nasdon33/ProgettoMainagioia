@@ -2,10 +2,11 @@ package db;
 import java.io.Serializable;
 
 
-public class Utente implements Serializable {
+public class Ristorante implements Serializable {
     
     
     private String nome;
+    private String cognome;
     private String descrizione;
     private String offLink;
     private String cucine;
@@ -30,7 +31,7 @@ public class Utente implements Serializable {
 
     
     public void setDescrizione(String descrizione) {
-        this.cognome = cognome;
+        this.descrizione = descrizione;
     }
     
     
