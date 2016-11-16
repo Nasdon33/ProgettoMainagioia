@@ -6,7 +6,6 @@ public class Ristorante implements Serializable {
     
     
     private String nome;
-    private String cognome;
     private String descrizione;
     private String offLink;
     private String cucine;
@@ -26,7 +25,7 @@ public class Ristorante implements Serializable {
     
     
     public String getDescrizione() {
-        return cognome;
+        return descrizione;
     }
 
     
