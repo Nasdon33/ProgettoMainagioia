@@ -19,7 +19,7 @@ public class DBManager implements Serializable {
     // transient == non viene serializzato
     private final transient Connection con;
     
-    public DBManager(String dburl) throws SQLException {
+    public DBManager() throws SQLException {
 
         try {
 
@@ -30,7 +30,7 @@ public class DBManager implements Serializable {
             throw new RuntimeException(e.toString(), e);
         }
         
-        Connection con = DriverManager.getConnection(dburl);
+        Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mainagioia;shutdown=true");
         this.con = con;        
     }
 
