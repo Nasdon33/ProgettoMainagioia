@@ -51,7 +51,6 @@ public class Admin extends HttpServlet {
                 //string sql="SELECT rp.description, rv.ALL FROM rp as Replies, rv as Reviews WHERE ID_VALIDATOR= ?"
                 //idris = getParameter("risposta");
                 //getData(sql,idris);
-            
             };
             case "ristoratore":
             {
