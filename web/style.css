@@ -9,8 +9,48 @@ and open the template in the editor.
 */
 
 #menu{
+   
     width: 100%; /* si adatta in larghezza a alle 
                     risoluzioni di tutti i browser */
     height: 200px;               /*cambia*/
-    background-color: #990033;  /*cambia*/
+    background-color: #ff6600;  /*cambia*/
+}
+
+#contenitore
+{
+    
+    width: 960px;
+    margin: 0 auto; /* per azzerare */
+    padding: 0; /* per azzerare */
+    position: relative;
+    background-color: #ff6600;
+    
+    
+}
+
+
+#testata,
+#contenuti,
+#footer
+{
+    margin: 0;
+    width: 820px;
+    
+}
+
+#testata
+{
+    height: 203px;
+    padding: 0;
+}
+
+#contenuti
+{    
+   
+    padding: 0;
+}
+
+#footer {
+    padding: 0;
+    background-color: transparent;
 }
