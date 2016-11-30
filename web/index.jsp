@@ -10,18 +10,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Mainagioia ricerca ristoranti</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>Magnagioia</title>
     </head>
     <body>
-        <div class="row">
-            <div class="col-md-2 col-md-offset-4">
-        
-          <input type="text" class="location" id="location" placeholder="Dove cerchi?">
-          </div>
-           <div class="col-md-6">
-               
-          <input type="text" class="name" id="name" placeholder="Cosa cerchi?">
-         </div>
-            </div>
+        <div id="menu">
+            
+        </div>
+        <div id="contenitore">
+            <div id="testata"></div>
+            <div id="contenuti"></div>
+            <div id="footer"></div>
+        </div>
     </body>
 </html>
