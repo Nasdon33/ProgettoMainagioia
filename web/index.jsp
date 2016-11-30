@@ -15,8 +15,31 @@
     </head>
     <body>
         <div id="menu">
-            
-        </div>
+            <div id="intestazione">
+               
+                    <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia">
+                    <form id="ricerca_per" action="">
+                        <p id="testo"> Ricerca per: 
+                        <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
+                        <input type="radio" name="ricerca" value="cucina"> Cucina
+                        <input type="radio" name="ricerca" value="nome"> Nome
+                        <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
+                        </p>
+                    </form>
+                    <div id="cerca">
+                        <div class="flexsearch">
+                                        <div class="flexsearch--wrapper">
+                                                <form class="flexsearch--form" action="#" method="post">
+                                                        <div class="flexsearch--input-wrapper">
+                                                                <input class="flexsearch--input" type="search" placeholder="cerca">
+                                                        </div>
+                                                        <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                                                </form>
+                                        </div>
+                        </div>
+                    </div>
+
+            </div>
         <div id="contenitore">
             <div id="testata"></div>
             <div id="contenuti"></div>
