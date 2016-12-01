@@ -40,10 +40,24 @@
                     </div>
 
             </div>
+            
         <div id="contenitore">
-            <div id="testata"></div>
-            <div id="contenuti"></div>
+            <div id ="ristorante1">
+                <div id="immagine_ristorante">
+                    
+
+                </div>
+                
+                <div id="descrizone_ristorante">
+                   
+                </div>
+            
+            </div>
+            
+            
+                
             <div id="footer"></div>
+            </div>
         </div>
     </body>
 </html>
