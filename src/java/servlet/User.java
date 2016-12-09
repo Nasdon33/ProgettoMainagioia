@@ -39,7 +39,7 @@ public class User extends HttpServlet {
             throws ServletException, IOException, SQLException {
         DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
         String email = request.getParameter("email");
-        String sql = "SELECT * FROM carpediem.Utenti WHERE email = ?";
+        String sql = "SELECT * FROM Mainagioia.Users WHERE email = ?";
         ResultSet rs;
         HttpSession sess = request.getSession();
         Utente user;
@@ -47,11 +47,10 @@ public class User extends HttpServlet {
             user = new Utente();
             rs = manager.getData(sql, email);
             rs.next();
-            user.setId(rs.getString("id_utente"));
-            user.setNome(rs.getString("nome"));
-            user.setCognome(rs.getString("cognome"));
+            user.setId(rs.getString("ID"));
+            user.setNome(rs.getString("name"));
+            user.setCognome(rs.getString("surname"));
             user.setEmail(email);
-            user.setRuolo(rs.getString("ruolo"));
         } else {
             user = null;
         }

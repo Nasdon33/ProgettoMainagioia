@@ -40,9 +40,9 @@ public class Registrazione extends HttpServlet {
          * Stringa x l'inserimento nel DB dell'utente che si vuole registrare (da modificare)"
         */
         
-        String sql = "INSERT INTO   (nome, cognome, email, password, credito, ruolo) values (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO   (name, surname, email, password) values (?, ?, ?, ?)";
         
-        manager.setData(sql, nome, cognome, email, password, "0.00", "utente");
+        manager.setData(sql, nome, cognome, email, password);
         response.sendRedirect("reg_ok.jsp");
     }
 
