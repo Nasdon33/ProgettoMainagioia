@@ -56,8 +56,60 @@ public class User extends HttpServlet {
         }
         sess.setAttribute("utente", user);
         response.sendRedirect(request.getHeader("Referer"));
+    
+        String function = request.getParameter("function");
+        
+        switch(function){
+            case "recensione":
+            {
+                //val=getParameter("global_value")
+                //foo=getParameter("food")
+                //ser=getParameter("service")
+                //vfm=getParameter("value_for_money")
+                //atm=getParameter("atmosphere")
+                //dat=getDate()
+                //nam=getParameter("name")
+                //des=getParameter("description")
+                //idr=getParameter("id_restaurant")
+                //idc=getParameter("id_creator")
+                //if (getParameter("photo")!=null)
+                //  idp=addphototoserver("photo");
+                //string sql= "INSERT global_value=? food=? service=?
+                //  value_for_money=? atmosphere=? name=? description=?
+                //  date_creation=? id_restaurant=? id_creator=? id_photo=? 
+                //  from REVIEWS where id_restaurant=?"
+                //getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
+            };
+            case "nuovo_ristorante":
+            {
+                //nam=getParameter("name")
+                //des=getParameter("description")
+                //web=getParameter("web_site_url")
+                //DA AGGIORNARE
+                //if (getParameter("photo")!=null)
+                //  idp=addphototoserver("photo");
+                //string sql= "INSERT global_value=? food=? service=?
+                //  value_for_money=? atmosphere=? name=? description=?
+                //  date_creation=? id_restaurant=? id_creator=? id_photo=? 
+                //  from REVIEWS where id_restaurant=?"
+                //getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
+            };
+            case "segnala":
+            {
+                // Invia notifica ad admin per controllo foto con id = getParameter("idphoto");
+            };
+            case "modifica":
+            {
+                //nam=getParameter("name")
+                //des=getParameter("description")
+                //web=getParameter("web_site_url")
+                //string sql= "UPDATE name=? description=? web_site_url=?  from utenti where id=?"
+                //id =getParameter("id");
+                //getData(sql,nam, des, web, id);
+            };
+        }
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
