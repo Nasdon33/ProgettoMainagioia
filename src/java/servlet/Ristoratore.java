@@ -27,10 +27,10 @@ public class Ristoratore extends User{
         switch(function){
             case "risposta":
             {
-                //string sql ="INSERT id, description, date_creation,, ?,,? FROM REPLIES"
-                //idrev = getParameter("id");
-                //idown = getParameter("ido");
-                //getData(sql,idseg, idrev, idown);
+                //string sql = "INSERT id, description, date_creation,, ?,,? FROM REPLIES";
+                //string idrev = request.getParameter("id");
+                //string idown = request.getParameter("ido");
+                //manager.getData(sql,idseg, idrev, idown);
             };
             case "segnala":
             {
@@ -38,12 +38,12 @@ public class Ristoratore extends User{
             };
             case "modifica":
             {
-                //nam=getParameter("name")
-                //des=getParameter("description")
-                //web=getParameter("web_site_url")
-                //string sql= "UPDATE name=? description=? web_site_url=?  from utenti where id=?"
-                //id =getParameter("id");
-                //getData(sql,nam, des, web, id);
+                //string nam = request.getParameter("name");
+                //string des = request.getParameter("description");
+                //string web = request.getParameter("web_site_url");
+                //string sql= "UPDATE name=? description=? web_site_url=?  from utenti where id=?";
+                //id = request.getParameter("id");
+                //manager.getData(sql,nam, des, web, id);
             };
         }
         

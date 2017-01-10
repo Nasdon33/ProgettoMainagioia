@@ -42,19 +42,25 @@ public class Admin extends HttpServlet {
         switch(function){
             case "segnalazione":
             {
-                //string sql ="SELECT id, path FROM PHOTOS WHERE id=?"
-                //idseg = getParameter("id");
-                //getData(sql,idseg);
+                //string sql ="SELECT id, path FROM PHOTOS WHERE id=?";
+                //string idseg = request.getParameter("id");
+                //manager.getData(sql,idseg);
             };
             case "risposta":
             {
-                //string sql="SELECT rp.description, rv.ALL FROM rp as Replies, rv as Reviews WHERE ID_VALIDATOR= ?"
-                //idris = getParameter("risposta");
-                //getData(sql,idris);
+                //string sql="SELECT rp.description, rv.ALL FROM rp as Replies, rv as Reviews WHERE ID_VALIDATOR= 0";
+                //manager.getData(sql);
+            };
+            case "convalidarisposta":
+            {
+                //string sql = "UPDATE ID_VALIDATOR FROM Replies Where ID_OWNER=?";
+                //string idowner = request.getParameter("id");
+                //manager.setData(sql,id);
             };
             case "ristoratore":
             {
-                //string sql= "UPDATE RUOLO=2 from utenti" 
+                //string sql = "UPDATE RUOLO=2 from utenti";
+                //manager.setData(sql);
             };
         }
         

@@ -62,37 +62,38 @@ public class User extends HttpServlet {
         switch(function){
             case "recensione":
             {
-                //val=getParameter("global_value")
-                //foo=getParameter("food")
-                //ser=getParameter("service")
-                //vfm=getParameter("value_for_money")
-                //atm=getParameter("atmosphere")
-                //dat=getDate()
-                //nam=getParameter("name")
-                //des=getParameter("description")
-                //idr=getParameter("id_restaurant")
-                //idc=getParameter("id_creator")
+                //double val = request.getParameter("global_value");
+                //double foo = request.getParameter("food");
+                //double ser = request.getParameter("service");
+                //double vfm = request.getParameter("value_for_money");
+                //double atm = request.getParameter("atmosphere");
+                //Date dat = request.getDate();
+                //string nam = request.getParameter("name");
+                //string des = request.getParameter("description");
+                //string idr = request.getParameter("id_restaurant");
+                //string idc = request.getParameter("id_creator");
                 //if (getParameter("photo")!=null)
-                //  idp=addphototoserver("photo");
+                //  idp=request.addphototoserver("photo");
                 //string sql= "INSERT global_value=? food=? service=?
                 //  value_for_money=? atmosphere=? name=? description=?
-                //  date_creation=? id_restaurant=? id_creator=? id_photo=? 
-                //  from REVIEWS where id_restaurant=?"
-                //getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
+                //  date_creation=? id_restaurant=? id_creator=? id_photo=?
+                //  from REVIEWS where id_restaurant=?";
+                //manager.getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
             };
             case "nuovo_ristorante":
             {
-                //nam=getParameter("name")
-                //des=getParameter("description")
-                //web=getParameter("web_site_url")
+                //string nam = request.getParameter("name");
+                //string des = request.getParameter("description");
+                //string web = request.getParameter("web_site_url");
+                //Point coord = request.getParameter("address"); <- FUNZIONE che traduce un indirizzo in coordinate?
                 //DA AGGIORNARE
                 //if (getParameter("photo")!=null)
-                //  idp=addphototoserver("photo");
+                //  idp=request.addphototoserver("photo");
                 //string sql= "INSERT global_value=? food=? service=?
                 //  value_for_money=? atmosphere=? name=? description=?
                 //  date_creation=? id_restaurant=? id_creator=? id_photo=? 
-                //  from REVIEWS where id_restaurant=?"
-                //getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
+                //  from REVIEWS where id_restaurant=?";
+                //manager.getData(sql, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
             };
             case "segnala":
             {
@@ -100,12 +101,12 @@ public class User extends HttpServlet {
             };
             case "modifica":
             {
-                //nam=getParameter("name")
-                //des=getParameter("description")
-                //web=getParameter("web_site_url")
-                //string sql= "UPDATE name=? description=? web_site_url=?  from utenti where id=?"
-                //id =getParameter("id");
-                //getData(sql,nam, des, web, id);
+                //string nam = request.getParameter("name")
+                //string des = request.getParameter("description")
+                //string web = request.getParameter("web_site_url")
+                //string sql = "UPDATE name=? description=? web_site_url=?  from utenti where id=?"
+                //string id = request.getParameter("id");
+                //manager.getData(sql,nam, des, web, id);
             };
         }
     }
