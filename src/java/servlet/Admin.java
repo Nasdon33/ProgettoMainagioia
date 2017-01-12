@@ -15,6 +15,10 @@ package servlet;
 import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,7 +38,7 @@ public class Admin extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         PrintWriter out = response.getWriter();
         DBManager manager = (DBManager) super.getServletContext().getAttribute("dbmanager");
         String function = request.getParameter("function");
@@ -42,26 +46,61 @@ public class Admin extends HttpServlet {
         switch(function){
             case "segnalazione":
             {
-                //string sql ="SELECT id, path FROM PHOTOS WHERE id=?";
-                //string idseg = request.getParameter("id");
-                //manager.getData(sql,idseg);
-            };
+                ResultSet segnalazioni;
+                String sql ="SELECT id, path FROM PHOTOS WHERE id=?";
+                String idseg = request.getParameter("id");
+                segnalazioni = manager.getData(sql,idseg);
+                out.println("<table>");
+                out.println("<tr> <td> Foto </td> </tr>");
+                while(segnalazioni.next()){
+                    out.println("<tr><td>"+segnalazioni.getString("path") +"</td></tr>");
+                    // Inserire modo per visualizzare la foto
+                }
+                out.println("</table>");
+                break;
+            }
+            
+            case "fotono":
+            {
+                String sql = "DELETE * FROM PHOTOS WHERE id_photo = ?";
+                String id_photo = request.getParameter("id");
+                manager.setData(sql, id_photo);
+                //invia a utente messaggio che l'admin ha controllato la foto e ha decretato non sia ok
+                break;
+            }
+            
+            case "fotook":
+            {
+                //invia a utente messaggio che l'admin ha controllato la foto e ha decretato sia ok
+            }
+            
             case "risposta":
             {
-                //string sql="SELECT rp.description, rv.ALL FROM rp as Replies, rv as Reviews WHERE ID_VALIDATOR= 0";
-                //manager.getData(sql);
-            };
+                ResultSet risposte;
+                String sql="SELECT rv.global_value as gv, rv.name as name, rv.description as desrev, rp.description as desrep FROM rp as Replies, rv as Reviews WHERE ID_VALIDATOR = 0";
+                risposte = manager.getData(sql);
+                out.println("<table>");
+                out.println("<tr> <td> Voto Recensione </td> <td> Titolo Recensione </td> <td> Descrizione </td> <td> Risposta Ristoratore </td> </tr>");
+                while(risposte.next()){
+                    out.println("<tr><td>"+risposte.getString("gv")+"</td><td>"+risposte.getString("name")+"</td><td>"+risposte.getString("desrev")+"</td><td>"+risposte.getString("desrep")+"</td></tr>");
+                }
+                out.println("</table>");
+                break;
+            }
             case "convalidarisposta":
             {
-                //string sql = "UPDATE ID_VALIDATOR FROM Replies Where ID_OWNER=?";
-                //string idowner = request.getParameter("id");
-                //manager.setData(sql,id);
-            };
+                String sql = "UPDATE ID_VALIDATOR FROM Replies Where ID_OWNER=?";
+                String idowner = request.getParameter("id");
+                manager.setData(sql, idowner);
+                break;
+            }
             case "ristoratore":
             {
-                //string sql = "UPDATE RUOLO=2 from utenti";
-                //manager.setData(sql);
-            };
+                String sql = "UPDATE RUOLO=2 from utenti where id = ?";
+                String id = request.getParameter("id");
+                manager.setData(sql, id);
+                break;
+            }
         }
         
     }
@@ -78,7 +117,11 @@ public class Admin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -92,7 +135,11 @@ public class Admin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
