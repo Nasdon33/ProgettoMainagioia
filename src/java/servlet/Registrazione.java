@@ -33,6 +33,7 @@ public class Registrazione extends HttpServlet {
             throws ServletException, IOException, SQLException {
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
+        String nickname = request.getParameter("nickname");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager"); 
@@ -40,9 +41,9 @@ public class Registrazione extends HttpServlet {
          * Stringa x l'inserimento nel DB dell'utente che si vuole registrare (da modificare)"
         */
         
-        String sql = "INSERT INTO   (name, surname, email, password) values (?, ?, ?, ?)";
+        String sql = "INSERT INTO   (name, surname, nickname, email, password) values (?, ?, ?, ?, ?)";
         
-        manager.setData(sql, nome, cognome, email, password);
+        manager.setData(sql, nome, cognome, nickname, email, password);
         response.sendRedirect("reg_ok.jsp");
     }
 
