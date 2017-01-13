@@ -67,6 +67,10 @@ public class DBManager implements Serializable {
         }
         stm.executeUpdate();
     }
+
+    public void setData(String sql4, String ris, String[] coord) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

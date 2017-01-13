@@ -3,6 +3,9 @@ package servlet;
 import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Ristoratore extends User{
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         PrintWriter out = response.getWriter();
         DBManager manager = (DBManager) super.getServletContext().getAttribute("dbmanager");
         String function = request.getParameter("function");
@@ -27,24 +30,86 @@ public class Ristoratore extends User{
         switch(function){
             case "risposta":
             {
-                //string sql = "INSERT id, description, date_creation,, ?,,? FROM REPLIES";
-                //string idrev = request.getParameter("id");
-                //string idown = request.getParameter("ido");
-                //manager.getData(sql,idseg, idrev, idown);
-            };
+                String sql = "INSERT id, description, date_creation,, ?,,? FROM REPLIES";
+                String idrev = request.getParameter("id");
+                String idown = request.getParameter("ido");
+                manager.setData(sql, idrev, idown);
+                break;
+            }
             case "segnala":
             {
                 // Invia notifica ad admin per controllo foto con id = getParameter("idphoto");
-            };
+                break;
+            }
             case "modifica":
             {
-                //string nam = request.getParameter("name");
-                //string des = request.getParameter("description");
-                //string web = request.getParameter("web_site_url");
-                //string sql= "UPDATE name=? description=? web_site_url=?  from utenti where id=?";
-                //id = request.getParameter("id");
-                //manager.getData(sql,nam, des, web, id);
-            };
+                String nam = null, des = null, web = null, sql, id;
+                boolean p1, p2, p3;
+                id = request.getParameter("id");
+                
+                if(request.getParameter("name") != null){
+                    nam = request.getParameter("name");
+                    p1 = true;
+                }
+                else
+                    p1 = false;
+                
+                if(request.getParameter("description") != null){
+                    des = request.getParameter("description");
+                    p2 = true;
+                }
+                else
+                    p2 = false;
+                
+                if(request.getParameter("web_site_url") != null){
+                    web = request.getParameter("web_site_url");
+                    p3 = true;
+                }
+                else
+                    p3 = false;
+                
+                if(p1 == true){
+                    if(p2 == true){
+                        if(p3 == true){
+                            sql= "UPDATE Restaurants SET name=? description=? web_site_url=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                        else{
+                            sql= "UPDATE Restaurants SET name=? description=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                    }
+                    else{
+                        if(p3 == true){
+                            sql= "UPDATE Restaurants SET name=? web_site_url=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                        else{
+                            sql= "UPDATE Restaurants SET name=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                    }
+                }
+                else{
+                    if(p2 == true){
+                        if(p3 == true){
+                            sql= "UPDATE Restaurants SET description=? web_site_url=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                        else{
+                            sql= "UPDATE Restaurants SET description=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                    }
+                    else{
+                        if(p3 == true){
+                            sql= "UPDATE Restaurants SET web_site_url=? where id=?";
+                            manager.setData(sql, nam, des, web, id);
+                        }
+                    }
+                }
+                break;
+            }
         }
         
     }
@@ -61,7 +126,11 @@ public class Ristoratore extends User{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -75,7 +144,11 @@ public class Ristoratore extends User{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
