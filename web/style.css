@@ -21,12 +21,13 @@ and open the template in the editor.
     position: relative;
     width: 100%;
     height: 100%;
-   border: 1px solid black;
+    border: 1px solid black;
 }
 
 
 #logo{
     width: 45.8%;
+   
     max-width: 100%;
     max-height: 100%;
     position: absolute;
@@ -40,7 +41,7 @@ and open the template in the editor.
 #ricerca_per{
     position: absolute;
     
-    top: 90px;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -48,17 +49,11 @@ and open the template in the editor.
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 100px;
     text-align:center; 
 }
 
 
 body{
-font-size: 1.5em;
-line-height: 1.5em;
 text-align: center;
 font-family: Georgia, serif;
 }
@@ -76,14 +71,35 @@ font-family: Georgia, serif;
 }
 
 #contenitore{
-    
-    background-color: #ffa366;
+    position: absolute;
+    background-color: #ffffff;
+    top: 160px;
     width: 93.75%;
-    margin: 0 auto; /* per azzerare */
-    padding: 0; /* per azzerare */
+    margin: auto; 
+    
+    
+     
+}
+
+#Login {
+    width: 93.75%;
+   position: absolute;
+   background-color: #ff6600;
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    text-align: right;
+   
+     
 }
 
 
+
+/*barra di ricerca*/
 .flexsearch--wrapper {
 	height: auto;
 	width: auto;
@@ -108,13 +124,9 @@ font-family: Georgia, serif;
   width: 100%;
 }
 
-/***********************
- * Configurable Styles *
- ***********************/
 .flexsearch {
-  padding: 0 10.041% 0 10.041%; /* Padding for other horizontal elements */
+  padding: 0 15.041% 0 20.041%; /* Padding for other horizontal elements */
 }
-
 
 .flexsearch--input {
   -webkit-box-sizing: content-box;
@@ -166,11 +178,8 @@ font-family: Georgia, serif;
   cursor: pointer;
 }
 
-::-webkit-input-placeholder {
-	color: #888;  
-}
-
 input:-moz-placeholder {
   color: #888
 }
+
 

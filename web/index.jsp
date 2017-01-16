@@ -15,6 +15,11 @@
     </head>
     <body>
         <div id="menu">
+            <div id ="Login">
+               
+               
+               ACCEDI | REGISTRATI
+            </div>
             <div id="intestazione">
                
                     <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia">
@@ -25,7 +30,7 @@
                         <input type="radio" name="ricerca" value="nome"> Nome
                         <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
                         </p>
-                    </form>
+                    </form> 
                     <div id="cerca">
                         <div class="flexsearch">
                                         <div class="flexsearch--wrapper">
@@ -42,15 +47,10 @@
             </div>
             
         <div id="contenitore">
-            <div id ="ristorante1">
-                <div id="immagine_ristorante">
-                    
-
-                </div>
+            
+             
                 
-                <div id="descrizone_ristorante">
-                   
-                </div>
+            
             
             </div>
             
