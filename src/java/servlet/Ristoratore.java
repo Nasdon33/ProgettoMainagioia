@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Ristoratore extends User{
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException, SQLException, Exception {
         PrintWriter out = response.getWriter();
         DBManager manager = (DBManager) super.getServletContext().getAttribute("dbmanager");
         String function = request.getParameter("function");
@@ -130,6 +130,8 @@ public class Ristoratore extends User{
             processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -147,6 +149,8 @@ public class Ristoratore extends User{
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
+            Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
             Logger.getLogger(Ristoratore.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

@@ -5,6 +5,10 @@
 	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	 version="3.1">
     <servlet>
+        <servlet-name>DBManager</servlet-name>
+        <servlet-class>db.DBManager</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>User</servlet-name>
         <servlet-class>servlet.User</servlet-class>
     </servlet>
@@ -12,6 +16,10 @@
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>servlet.Registrazione</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>DBManager</servlet-name>
+        <url-pattern>/DBManager</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
@@ -25,4 +33,8 @@
             30
         </session-timeout>
     </session-config>
+    <context-param>
+        <param-name>dburl</param-name>
+        <param-value>jdbc:derby://localhost:1527/Mainagioia;user=Mainagioia;password=Mainagioia</param-value>
+    </context-param>
 </web-app>
