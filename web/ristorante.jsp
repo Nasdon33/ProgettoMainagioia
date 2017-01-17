@@ -151,7 +151,7 @@
                 <div class="container">
                    <div class="row">
                    <div class="">
-                       <h3><center>Scopri i commenti dei clienti:</center></h3>
+                       <h3><center>Scopri le recensioni dei clienti:</center></h3>
                    </div><!-- /col-sm-12 -->
                    </div><!-- /row -->
                    <div class="row">
@@ -189,6 +189,46 @@
                    </div><!-- /panel panel-default -->
                    </div><!-- /col-sm-5 -->
                    </div><!-- /row -->
+                   
+                   <div class="row">
+                   <div class="col-sm-1 col-xs-2">
+                   <div class="thumbnail">
+                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                   </div><!-- /thumbnail -->
+                   </div><!-- /col-sm-1 -->
+
+                   <div class="col-sm-5 col-xs-10">
+                   <div class="panel panel-default">
+                   <div class="panel-heading">
+                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                   </div>
+                   <div class="panel-body">
+                   Panel content
+                   </div><!-- /panel-body -->
+                   </div><!-- /panel panel-default -->
+                   </div><!-- /col-sm-5 -->
+
+                   <div class="col-sm-1 col-xs-2">
+                   <div class="thumbnail">
+                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                   </div><!-- /thumbnail -->
+                   </div><!-- /col-sm-1 -->
+
+                   <div class="col-sm-5 col-xs-10">
+                   <div class="panel panel-default">
+                   <div class="panel-heading">
+                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                   </div>
+                   <div class="panel-body">
+                   Panel content
+                   </div><!-- /panel-body -->
+                   </div><!-- /panel panel-default -->
+                   </div><!-- /col-sm-5 -->
+                   </div><!-- /row -->
+                   
+                   
+                   
+                   
 
             </div><!-- /container -->
              </div>
