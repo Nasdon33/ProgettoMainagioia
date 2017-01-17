@@ -57,6 +57,7 @@ public class User extends HttpServlet {
             user.setEmail(email);
         } else {
             user = null;
+            
         }
         sess.setAttribute("utente", user);
         response.sendRedirect(request.getHeader("Referer"));

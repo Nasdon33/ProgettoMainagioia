@@ -32,19 +32,16 @@ public class Registrazione extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         String nome = request.getParameter("nome");
-        String cognome = request.getParameter("cognome");
-        String nickname = request.getParameter("nickname");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
+            String cognome = request.getParameter("cognome");
+            String nick = request.getParameter("nickname");
+            String mail = request.getParameter("email");
+            String password = request.getParameter("password");
         DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager"); 
-        /*
-         * Stringa x l'inserimento nel DB dell'utente che si vuole registrare (da modificare)"
-        */
         
-        String sql = "INSERT INTO   (name, surname, nickname, email, password) values (?, ?, ?, ?, ?)";
         
-        manager.setData(sql, nome, cognome, nickname, email, password);
-        response.sendRedirect("reg_ok.jsp");
+        String sql = "INSERT INTO mainagioia.Users(name,surname,nickname,email,password) VALUES (?,?,?,?,?);";
+        manager.setData(sql,nome,cognome,nick,mail,password);
+        response.sendRedirect("index.jsp"); //poi modificare con pagina apposta di reindirizzamento
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -94,4 +91,5 @@ public class Registrazione extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    
 }

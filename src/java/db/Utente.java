@@ -18,9 +18,10 @@ public class Utente implements Serializable {
     private String id;
     private String nome;
     private String cognome;
+    private String nickname;
     private String ruolo;
     private String email;
-
+    private String password;
     
     
     public String getId() {
@@ -61,6 +62,15 @@ public class Utente implements Serializable {
         this.cognome = cognome;
     }
     
+    public String getNickname() {
+        return nickname;
+    }
+
+    
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+    
     
     public String getEmail() {
         return email;
@@ -70,4 +80,14 @@ public class Utente implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
 }
