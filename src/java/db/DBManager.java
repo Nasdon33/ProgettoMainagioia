@@ -6,6 +6,7 @@
 
 package db;
 
+
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,25 +16,7 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 public class DBManager implements Serializable {
-    
-    // transient == non viene serializzato
-    private transient Connection con;
-    public DBManager() {
- 
-        try {
-            // load, and link the jdbc driver class
-            Class.forName("org.apache.derby.jdbc.ClientDriver", true, getClass().getClassLoader());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-    private Connection getCon() throws Exception {
- 
-        con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mainagioia","Mainagioia","Mainagioia");
-        // urlForManipulatingDb,DbUsername, DbPassword);
-        return con;
-    }
+    private final transient Connection con;
     
     public DBManager(String dburl) throws SQLException {
 
@@ -49,6 +32,9 @@ public class DBManager implements Serializable {
         Connection con = DriverManager.getConnection(dburl);
         this.con = con;        
     }
+
+    
+
 
 
     public static void shutdown() {
@@ -83,7 +69,7 @@ public class DBManager implements Serializable {
      * @throws SQLException
      */
     public void setData(String... param) throws SQLException, Exception {
-        PreparedStatement stm = getCon().prepareStatement(param[0]);
+        PreparedStatement stm = con.prepareStatement(param[0]);
         for(int i=1; i<param.length;i++){
             stm.setString(i, param[i]);
             

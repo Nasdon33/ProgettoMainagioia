@@ -1,3 +1,4 @@
+<%@page import="db.Utente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!DOCTYPE html>
@@ -45,7 +46,7 @@
             </div>
             <div class="col-md-3 col-xs-2">
                 
-ACCEDI | REGISTRATI
+                ACCEDI |  REGISTRATI
                 
             </div>
             <div class="row-fluid">
@@ -61,7 +62,8 @@ ACCEDI | REGISTRATI
             
             
                 
-            <div></div>
+            <div>
+            </div>
             </div>
         </div>
         

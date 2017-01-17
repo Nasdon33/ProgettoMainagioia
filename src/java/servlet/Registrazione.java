@@ -5,12 +5,10 @@
  */
 package servlet;
 
+
 import db.DBManager;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -40,11 +38,11 @@ public class Registrazione extends HttpServlet {
         String mail = request.getParameter("email");
         String password = request.getParameter("password");
         DBManager manager; 
-        manager = new DBManager();
+        manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
         
-        String sql = "INSERT INTO mainagioia.Users(name,surname,nickname,email,password) VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO mainagioia.Users(name,surname,nickname,email,password) VALUES (?,?,?,?,?,?);";
         
-        manager.setData(sql,nome,cognome,nick,mail,password);
+        manager.setData(sql,"1",nome,cognome,nick,mail,password);
         response.sendRedirect("index2.jsp"); //poi modificare con pagina apposta di reindirizzamento
     }
 

@@ -9,6 +9,10 @@
         <servlet-class>db.DBManager</servlet-class>
     </servlet>
     <servlet>
+       <servlet-name>WebAppContextListener</servlet-name>
+       <servlet-class>listener.WebAppContextListener</servlet-class>
+   </servlet>
+    <servlet>
         <servlet-name>User</servlet-name>
         <servlet-class>servlet.User</servlet-class>
     </servlet>
@@ -16,6 +20,14 @@
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>servlet.Registrazione</servlet-class>
     </servlet>
+    <servlet-mapping>
+       <servlet-name>WebAppContextListener</servlet-name>
+       <url-pattern>/WebAppContextListener</url-pattern>
+   </servlet-mapping>
+    <listener>
+       <description>listener</description>
+       <listener-class>listener.WebAppContextListener</listener-class>
+   </listener>
     <servlet-mapping>
         <servlet-name>DBManager</servlet-name>
         <url-pattern>/DBManager</url-pattern>

@@ -53,8 +53,13 @@ public class User extends HttpServlet {
             rs.next();
             user.setId(rs.getString("ID"));
             user.setNome(rs.getString("name"));
+            user.setNickname(rs.getString("nickname"));
             user.setCognome(rs.getString("surname"));
             user.setEmail(email);
+            if(user.getPassword() == request.getParameter("password"))
+                System.out.println("Password Corretta");
+            else
+                System.out.println("Non funzia");
         } else {
             user = null;
             

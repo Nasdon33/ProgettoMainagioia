@@ -69,6 +69,10 @@
         <url-pattern>/admin_functions</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>User</servlet-name>
+        <url-pattern>/User</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>sendPassword</servlet-name>
         <url-pattern>/sendPassword</url-pattern>
     </servlet-mapping>
