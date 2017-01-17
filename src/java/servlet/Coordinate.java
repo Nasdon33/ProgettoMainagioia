@@ -21,6 +21,7 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 import javax.xml.xpath.XPathConstants;
+import org.json.JSONArray;
 import org.w3c.dom.Document;
 import org.json.JSONObject;
 import org.json.JSONException;
@@ -91,10 +92,8 @@ public class Coordinate
   public  static String getAddress(String[] coordinate) throws JSONException, IOException{
       
         String webrequest= "http://maps.googleapis.com/maps/api/geocode/json?latlng="+coordinate[0]+","+coordinate[1]+"&sensor=false";
-        webrequest = "http://maps.googleapis.com/maps/api/geocode/json?latlng=23.45,56.87339&sensor=false";
         JSONObject json = readJsonFromUrl(webrequest);
-        String address = (String) (json.get("formatted_address"));
-        System.out.println(address);
+        String address = ((JSONArray)json.get("results")).getJSONObject(0).getString("formatted_address");
         return address;
 
 
