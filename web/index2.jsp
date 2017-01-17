@@ -10,6 +10,7 @@
         <title>Magnagioia</title>
     </head>
     <body>
+       
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <div class="row">
@@ -42,7 +43,7 @@
                     </div>
             </div>
             <div class="col-md-3 col-xs-2">
-                <a href="Login.html" data-toggle="modal"> ACCEDI </a> | REGISTRATI
+                ACCEDI | REGISTRATI
                 
             </div>
             <div class="row-fluid">
