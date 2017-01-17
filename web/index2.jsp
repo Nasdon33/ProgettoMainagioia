@@ -5,19 +5,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <link href="style2.css" rel="stylesheet" type="text/css">
         <title>Magnagioia</title>
     </head>
     <body>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <div class="row">
-            <div class="col-md-3 col-xs-2">
-               
-               
-               ACCEDI | REGISTRATI
+            <div class="col-md-3 ">  
             </div>
+            
             <div class="col-md-6 col-xs-10">
+
                
                     <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
-                    <form action="">
+                    <form action="" id="Cerca_per" >
                         <p> Ricerca per: 
                         <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
                         <input type="radio" name="ricerca" value="cucina"> Cucina
@@ -37,11 +40,14 @@
                                         </div>
                         </div>
                     </div>
-
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-2">
+                <a href="Login.html" data-toggle="modal"> ACCEDI </a> | REGISTRATI
+                
             </div>
-            
+            <div class="row-fluid">
+                <img src="sfondo.jpg" width="100%">
+            </div>
         <div>
             
              
@@ -55,5 +61,6 @@
             <div></div>
             </div>
         </div>
+        
     </body>
 </html>
