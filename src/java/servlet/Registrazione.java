@@ -8,6 +8,7 @@ package servlet;
 
 import db.DBManager;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,17 +33,27 @@ public class Registrazione extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, Exception {
         
+        DBManager manager;
+        manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+        
+        String sqlget = "SELECT ID FROM mainagioia.Users ORDER BY ID DESC  fetch first 1 rows only";
+        
+        System.out.println("uei uei, mo mando la query");
+        
+        ResultSet increment = manager.getData(sqlget);
+        
+        System.out.println("uei uei, mo cambio valore");
+        increment.next();
+        String id = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
         String nick = request.getParameter("nickname");
         String mail = request.getParameter("email");
-        String password = request.getParameter("password");
-        DBManager manager; 
-        manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+        String password = request.getParameter("password");        
         
-        String sql = "INSERT INTO mainagioia.Users(name,surname,nickname,email,password) VALUES (?,?,?,?,?,?);";
+        String sql = "INSERT INTO mainagioia.Users(ID,name,surname,nickname,email,password) VALUES (?,?,?,?,?,?)";
         
-        manager.setData(sql,"1",nome,cognome,nick,mail,password);
+        manager.setData(sql,id,nome,cognome,nick,mail,password);
         response.sendRedirect("login.jsp"); //poi modificare con pagina apposta di reindirizzamento
     }
 
