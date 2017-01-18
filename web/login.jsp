@@ -18,7 +18,7 @@
             Utente utente;
             utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
-                response.sendRedirect("index2.jsp");
+                response.sendRedirect("index_nuovo.jsp");
             }
         %>
         <div class="container-fluid">

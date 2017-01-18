@@ -43,7 +43,7 @@ public class Registrazione extends HttpServlet {
         String sql = "INSERT INTO mainagioia.Users(name,surname,nickname,email,password) VALUES (?,?,?,?,?,?);";
         
         manager.setData(sql,"1",nome,cognome,nick,mail,password);
-        response.sendRedirect("index2.jsp"); //poi modificare con pagina apposta di reindirizzamento
+        response.sendRedirect("login.jsp"); //poi modificare con pagina apposta di reindirizzamento
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
