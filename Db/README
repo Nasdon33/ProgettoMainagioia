@@ -1,2 +1,1 @@
-Per installare il database copiarlo nella cartella .netbeans-derby, su windows si trova nella cartella Utenti.
-Quindi su netbeans andare in Services > Database > Java DB, tasto destro su Mainagioia e cliccare connect.
+Per installare il database modificare su netbeans andando in Services > Database > tasto destro su Java DB e cliccare su properties cambiando l'indirizzo della cartella della seconda voce nella cartella Mainagioia/Db del progetto.
