@@ -39,7 +39,7 @@ public class DBManager implements Serializable {
 
     public static void shutdown() {
         try {
-            DriverManager.getConnection("jdbc:derby://localhost:1527/Mainagioia;shutdown=true");
+            DriverManager.getConnection("jdbc:derby://localhost:1527/Mainagioia;user=Mainagioia;password=Mainagioia;shutdown=true");
         } catch (SQLException ex) {
             Logger.getLogger(DBManager.class.getName()).info(ex.getMessage());
         }

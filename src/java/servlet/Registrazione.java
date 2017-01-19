@@ -38,11 +38,7 @@ public class Registrazione extends HttpServlet {
         
         String sqlget = "SELECT ID FROM mainagioia.Users ORDER BY ID DESC  fetch first 1 rows only";
         
-        System.out.println("uei uei, mo mando la query");
-        
         ResultSet increment = manager.getData(sqlget);
-        
-        System.out.println("uei uei, mo cambio valore");
         increment.next();
         String id = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
         String nome = request.getParameter("nome");
