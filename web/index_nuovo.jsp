@@ -11,7 +11,8 @@
         <title>Magnagioia</title>
     </head>
     <body>
-
+        <%@page import="db.Utente" %>
+        
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <div class="row">
@@ -44,9 +45,20 @@
                     </div>
             </div>
             <div class="col-md-3 col-xs-2">
-                
-ACCEDI | REGISTRATI
-                
+                <%
+                HttpSession ses = request.getSession();
+                Utente utente;
+                utente = (Utente)ses.getAttribute("utente");
+                if(utente==null){
+                   
+                %>
+                <a href="login.jsp">ACCEDI</a> | <a href="registrazione.jsp">REGISTRATI</a>
+                <% }
+                else
+                {
+                %>
+                <a href="User">LOGOUT</a>
+                <% } %>
             </div>
             <div class="row-fluid">
                 <img src="sfondo.jpg" width="100%">

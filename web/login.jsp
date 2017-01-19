@@ -32,7 +32,7 @@
                         <div class="panel1 panel-body">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <form id="login" action="User" method="POST"> <!Inserire qua la servlet per il controllo login>
+                                    <form id="login" action="User" method="POST"> 
                                         <table>
                                             <tr>
                                                 <td>

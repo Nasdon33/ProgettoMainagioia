@@ -64,6 +64,7 @@ function sendPassword(){
     });
 }
 
+
 function start(t){
     $.ajax({
         type: "POST",

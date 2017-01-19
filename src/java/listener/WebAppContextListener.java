@@ -24,7 +24,7 @@ public class WebAppContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
 
         String dburl = sce.getServletContext().getInitParameter("dburl");
-
+        //String dburl = "jdbc:derby://localhost:1527/Mainagioia;user=Mainagioia;password=Mainagioia";
         try {
             DBManager manager = new DBManager(dburl);
 

@@ -13,7 +13,15 @@
         <title>Registrazione</title>
     </head>
     <body>
-        
+        <%@page import="db.Utente" %>
+        <%
+            HttpSession ses = request.getSession();
+            Utente utente;
+            utente = (Utente)ses.getAttribute("utente");
+            if(utente!=null){
+                response.sendRedirect("index_nuovo.jsp");
+            }
+        %>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-1"></div>
