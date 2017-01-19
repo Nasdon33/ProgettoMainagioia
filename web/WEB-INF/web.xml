@@ -12,6 +12,14 @@
        <servlet-name>WebAppContextListener</servlet-name>
        <servlet-class>listener.WebAppContextListener</servlet-class>
    </servlet>
+   <servlet>
+        <servlet-name>Utente</servlet-name>
+        <servlet-class>db.Utente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validate</servlet-name>
+        <servlet-class>servlet.validate</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>User</servlet-name>
         <servlet-class>servlet.User</servlet-class>
@@ -35,6 +43,14 @@
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validate</servlet-name>
+        <url-pattern>/validate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Utente</servlet-name>
+        <url-pattern>/Utente</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>User</servlet-name>
