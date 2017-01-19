@@ -1,6 +1,8 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!DOCTYPE html>
+<!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,7 +13,7 @@
         <title>Magnagioia</title>
     </head>
     <body>
-
+       
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <div class="row">
@@ -87,6 +89,46 @@ ACCEDI | REGISTRATI
               </div>
                     
                 </div>
+                
+                <%! private DBManager manager; %>
+                <%! 
+                    public void init() throws ServletException {
+                    // inizializza il DBManager dagli attributi di Application
+                    this.manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+                    //System.out.println("DBManager attivato\n");
+                    } 
+                %>
+        
+                <%
+                    ResultSet ristoranti;
+                    if(request.getParameter("type") == "zona"){
+                        String lon = request.getParameter("Longitude");
+                        String lat = request.getParameter("Latitude");
+                        String distance = request.getParameter("distance");
+                        String sql = "SELECT id FROM (SELECT R.id as id, sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) as distance FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant  RC.id_coordinate = C.id ORDER BY sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) DESC) WHERE distance * 999.6 < ?";
+                        ristoranti = manager.getData(sql,lon,lat,lon,lat,distance);
+                    }
+                    else if(request.getParameter("type") == "cuisine"){
+                        String cuisine = request.getParameter("cuisine");
+                        String sql = "SELECT R.id FROM mainagioia.Restaurants as R, mainagioia.Restaurant_cuisine as RC, mainagioia.Cuisines as C WHERE R.id = RC.id_restaurant AND RC.id_cousine = C.id AND C.name = ?";
+                        ristoranti = manager.getData(sql,cuisine);
+                    }
+                    else if(request.getParameter("type") == "name"){
+                        String name = request.getParameter("name");
+                        String sql = "SELECT id FROM mainagioia.Restaurants WHERE name LIKE ?";
+                        ristoranti = manager.getData(sql,name);
+                    }
+                    else if(request.getParameter("type") == "address"){
+                        String address = request.getParameter("address");
+                        String sql = "SELECT R.id FROM FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant AND RC.id_coordinate = C.id AND C.address LIKE ?";
+                        ristoranti = manager.getData(sql,address);
+                    }
+                    else{
+                        //avviso che non sono stati trovati ristoranti con i parametri selezionati
+                    }
+                    
+                %>
+                
                 <div class="col-md-2 col-xs-3">
                     
                     <img src="ristorantiprova.jpeg" width="80%">

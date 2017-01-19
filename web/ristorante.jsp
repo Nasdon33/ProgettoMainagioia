@@ -4,6 +4,9 @@
     Author     : adribuc
 --%>
 
+<%@page import="db.DBManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="db.Ristorante"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!DOCTYPE html    DA SISTEMARE SFONDO PER INSERIRE HEADER>
@@ -55,6 +58,21 @@
             </div>
         </div>
         
+        <%! private DBManager manager; %>
+            <%! 
+                public void init() throws ServletException {
+                    // inizializza il DBManager dagli attributi di Application
+                    this.manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+                    //System.out.println("DBManager attivato\n");
+                } 
+            %>
+        
+        <%
+        String idris = request.getParameter("idris");
+        String sql = "SELECT * FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Restaurant_cuisine as C, mainagioia.Price_ranges as P, mainagioia.Opening_hours_range_restaurant_coordinate as O  WHERE R.id = ? AND R.id = RC.id_restaurant AND R.id = C.id_restaurant AND R.id = P.id AND R.id = O.id_restaurant";
+        ResultSet ristorante = manager.getData(sql, idris);
+        %>
+        
         <div class="row_separatoria">
             <div class="col-md-12">
                 <center> Ristoranti > Trento > NOME </center>
@@ -66,12 +84,12 @@
                     <img src="ristorantiprova.jpeg" width="100%">
                 </div>
                 <div class="col-md-2 col-xs-2">
-                    <b>NOME</b>
+                    <b><% out.println(ristorante.getString("name")); %></b>
                     
                 </div>
                 
                 <div class="col-md-4 col-xs-4">
-                    valutazione
+                    valutazione <% out.println(ristorante.getString("global_value")); %>
                 </div>
                 <div class="col-md-3 col-xs-3">
                     <center><button type="button" class="btn btn-primary">Scrivi una Recensione</button></center>
@@ -86,7 +104,7 @@
                 
                 
                 <div class="col-md-4 col-xs-4">
-                    descrizione
+                    descrizione: <% out.println(ristorante.getString("description")); %>
                     </div>
                 
                 
@@ -99,6 +117,7 @@
                       </tr>
                     </thead>
                     <tbody>
+                        <% //Dopo aver gestito l'SQL in modo che ritorni un array allora si può fare un while dove si scrivono gli orari in una tabella %>
                       <tr>
                         <td>11.30-14.00</td>
                         <td id="aperto">Ora aperto</td> 
@@ -121,22 +140,32 @@
                     <table class="table table-bordered">
                     <thead>
                       <tr>
+                          
                         <th>Indirizzo</th>
-                        <th>Città (CAP)</th>
                         <th>Prezzo</th>
                         <th>Cucina</th>
-                        <th>Telefono</th>
                         <th>Sito</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Via Marogone di Ravina, 15</td>
-                        <td>Trento (38123)</td>
-                        <td>€€€</td>
-                        <td>Italiana, Tipica</td>
-                        <td>046448585</td>
-                        <td>www.pinkopallo.it</td>
+                        <td><% 
+                            String idcoo = ristorante.getString("id_coordinate");
+                            String sql2 = "SELECT address FROM mainagioia.coordinates WHERE id = ?";
+                            ResultSet address = manager.getData(sql2,idcoo);
+                            out.println(address.getString(1)); %></td>
+                        <td><% 
+                            String idpri = ristorante.getString("P.id");
+                            String sql3 = "SELECT name FROM mainagioia.price_ranges WHERE id = ?";
+                            ResultSet price = manager.getData(sql3,idpri);
+                            out.println(price.getString(1)); //si potrebbe anche stamparlo come icone in € volendo %></td>
+                        <td><% 
+                            String idcui = ristorante.getString("C.id_cuisine");
+                            String sql4 = "SELECT name FROM mainagioia.cuisines WHERE id = ?";
+                            ResultSet cuisine = manager.getData(sql4,idcui);
+                                while(price.next())
+                                        out.print(cuisine.getString("name")+", "); %></td>
+                        <td><% out.println(ristorante.getString("web_site_url")); %></td>
                       </tr>
                      
                     </tbody>
