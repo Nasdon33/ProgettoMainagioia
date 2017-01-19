@@ -5,18 +5,21 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PAGINA DA SISTEMARE>
 <html>
     <head>
         <%@include file="head.html" %>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <link href="style2.css" rel="stylesheet" type="text/css">
+        <link href="Login.css" rel="stylesheet" type="text/css">
         
         <title>Registrazione</title>
     </head>
     <body>
         <%@page import="db.Utente" %>
+        <%@include file="header.jsp" %>
         <%
-            HttpSession ses = request.getSession();
-            Utente utente;
             utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
                 response.sendRedirect("index_nuovo.jsp");

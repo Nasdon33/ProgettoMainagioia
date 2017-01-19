@@ -5,22 +5,27 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html    PAGINA DA SISTEMARE>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <%@include file="head.html" %>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <link href="style2.css" rel="stylesheet" type="text/css">
+        <link href="Login.css" rel="stylesheet" type="text/css">
         <title>Magnagioia Login</title>
     </head>
     <body>
         <%@page import="db.Utente" %>
+        <%@include file="header.jsp" %>
         <%
-            HttpSession ses = request.getSession();
-            Utente utente;
-            utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
+        <div class="row-fluid">
+                <img src="sfondo.jpg" width="100%">
+            </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-1"></div>
