@@ -325,7 +325,7 @@
                                     <%   
                                        out.print("Voto Qualità/Prezzo: ");
                                        
-                                       for(int k = recensioni.getInt("global_value"); k > 0; k--)
+                                       for(int k = recensioni.getInt("value_for_money"); k > 0; k--)
                                         out.print("♥");
                                     %>
                                 </div>
