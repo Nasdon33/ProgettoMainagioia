@@ -4,6 +4,7 @@
     Author     : adribuc
 --%>
 
+<%@page import="java.sql.Timestamp"%>
 <%@page import="db.DBManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
@@ -69,8 +70,11 @@
         
         <%
         String idris = request.getParameter("idris");
-        String sql = "SELECT * FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Restaurant_cuisine as C, mainagioia.Price_ranges as P, mainagioia.Opening_hours_range_restaurant_coordinate as O  WHERE R.id = ? AND R.id = RC.id_restaurant AND R.id = C.id_restaurant AND R.id = P.id AND R.id = O.id_restaurant";
+        idris = "0";
+        String sql = "SELECT R.NAME, R.DESCRIPTION, R.WEB_SITE_URL, RC.ID_COORDINATE, P.ID FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Price_ranges as P  WHERE R.id = ? AND R.id = RC.id_restaurant AND R.ID_PRICE_RANGE = P.id";
         ResultSet ristorante = manager.getData(sql, idris);
+        ristorante.next();
+        
         %>
         
         <div class="row_separatoria">
@@ -84,12 +88,12 @@
                     <img src="ristorantiprova.jpeg" width="100%">
                 </div>
                 <div class="col-md-2 col-xs-2">
-                    <b><% out.println(ristorante.getString("name")); %></b>
+                    <b><%= ristorante.getString("name") %></b>
                     
                 </div>
                 
                 <div class="col-md-4 col-xs-4">
-                    valutazione <% out.println(ristorante.getString("global_value")); %>
+                    valutazione <% // %>
                 </div>
                 <div class="col-md-3 col-xs-3">
                     <center><button type="button" class="btn btn-primary">Scrivi una Recensione</button></center>
@@ -117,14 +121,44 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <% //Dopo aver gestito l'SQL in modo che ritorni un array allora si può fare un while dove si scrivono gli orari in una tabella %>
-                      <tr>
-                        <td>11.30-14.00</td>
-                        <td id="aperto">Ora aperto</td> 
-                      </tr>
-                      <tr>
-                          <td>18.00-22.00</td>
-                      </tr>
+                        <%
+                            String giorni[] = {"Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"};
+                            String sql5 = "SELECT O.day_of_the_week, O.start_hour, O.end_hour FROM opening_hours_ranges as O, (SELECT OH.id_opening_hours_range FROM opening_hours_range_restaurant as OH WHERE OH.id_restaurant = ?) as R WHERE R.id_opening_hours_range = O.id";
+                            ResultSet orari = manager.getData(sql5,idris);
+                            
+                            
+                            orari.next();
+                            boolean b = true;
+                            for(int i=0;i < 7; i++){
+                                out.println("<tr>"
+                                        + "<td>"+giorni[i]+"<td>");
+                                if((b == true) && Integer.parseInt(orari.getString("day_of_the_week")) == i+1){
+                                    out.println("<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
+                                        + "</tr>");
+                                    boolean c = true;
+                                    while(c == true && orari.next()){
+                                        if(Integer.parseInt(orari.getString("day_of_the_week")) == i+1)
+                                            out.println("<tr>"
+                                            + "<td></td>"
+                                            + "<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
+                                            + "</tr>");
+                                        else
+                                            c = false;
+                                    }
+                                    if(c == true)
+                                        b = false;
+                                }
+                                else{
+                                    out.println("<td> CHIUSO </td>"
+                                        + "</tr>");
+                                }
+                                    
+                            }
+                            
+                          
+                        
+                        %>
+                      
                      
                     </tbody>
                   </table>
@@ -153,18 +187,21 @@
                             String idcoo = ristorante.getString("id_coordinate");
                             String sql2 = "SELECT address FROM mainagioia.coordinates WHERE id = ?";
                             ResultSet address = manager.getData(sql2,idcoo);
-                            out.println(address.getString(1)); %></td>
+                            address.next();
+                            out.println(address.getString("address")); %></td>
                         <td><% 
-                            String idpri = ristorante.getString("P.id");
+                            String idpri = ristorante.getString("id");
                             String sql3 = "SELECT name FROM mainagioia.price_ranges WHERE id = ?";
                             ResultSet price = manager.getData(sql3,idpri);
-                            out.println(price.getString(1)); //si potrebbe anche stamparlo come icone in € volendo %></td>
+                            price.next();
+                            out.println(price.getString("name")); //si potrebbe anche stamparlo come icone in € volendo %></td>
                         <td><% 
-                            String idcui = ristorante.getString("C.id_cuisine");
-                            String sql4 = "SELECT name FROM mainagioia.cuisines WHERE id = ?";
-                            ResultSet cuisine = manager.getData(sql4,idcui);
-                                while(price.next())
-                                        out.print(cuisine.getString("name")+", "); %></td>
+                            String sql4 = "SELECT C.name FROM mainagioia.cuisines as C, (SELECT RC.id_cousine FROM restaurants as R, restaurant_cuisine as RC WHERE RC.id_restaurant = R.id AND R.id = ?)  as R WHERE C.id = R.id_cousine";
+                            ResultSet cuisine = manager.getData(sql4,idris);
+                            cuisine.next();
+                            out.print(cuisine.getString("name"));
+                                while(cuisine.next())
+                                        out.print(", " + cuisine.getString("name")); %></td>
                         <td><% out.println(ristorante.getString("web_site_url")); %></td>
                       </tr>
                      
@@ -183,7 +220,47 @@
                        <h3><center>Scopri le recensioni dei clienti:</center></h3>
                    </div><!-- /col-sm-12 -->
                    </div><!-- /row -->
-                   <div class="row">
+                   <%
+                           String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
+                           ResultSet recensioni = manager.getData(sql6,idris);
+                           
+                           while(recensioni.next()){
+                    %>           
+                               <div class="col-sm-1 col-xs-2">
+                               <div class="thumbnail">
+                               <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                               </div><!-- /thumbnail -->
+                               </div><!-- /col-sm-1 -->
+
+                               <div class="col-sm-5 col-xs-10">
+                               <div class="panel panel-default">
+                               <div class="panel-heading">
+                               <strong>
+                                   <%
+                                       String sql7 = "SELECT nickname FROM mainagioia.Users WHERE id = ?";
+                                       ResultSet user = manager.getData(sql7,recensioni.getString("id_creator"));
+                                       user.next();
+                                       out.print(user.getString("nickname"));
+                                   %>
+                               </strong> <span class="text-muted">commented 
+                               <%
+                                   Timestamp time = user.getTimestamp("date_creation");
+                                  // Timestamp currenttime = getTime();
+                               %>
+                               </span>
+                               </div>
+                               <div class="panel-body">
+                               Panel content
+                               </div><!-- /panel-body -->
+                               </div><!-- /panel panel-default -->
+                               </div><!-- /col-sm-5 -->
+                           <%
+                               }
+                   %>
+                   
+                   
+                   
+                   <% /* <div class="row">
                    <div class="col-sm-1 col-xs-2">
                    <div class="thumbnail">
                    <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
@@ -255,7 +332,7 @@
                    </div><!-- /col-sm-5 -->
                    </div><!-- /row -->
                    
-                   
+                   */ %>
                    
                    
 
