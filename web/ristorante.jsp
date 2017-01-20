@@ -244,13 +244,107 @@
                                    %>
                                </strong> <span class="text-muted">commented 
                                <%
-                                   Timestamp time = user.getTimestamp("date_creation");
-                                  // Timestamp currenttime = getTime();
+                                   Timestamp time = recensioni.getTimestamp("date_creation");
+                                   Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                                   long diff = timestamp.getTime() - time.getTime();
+                                   long seconds = diff / 1000;
+                                   System.out.println("Seconds: "+seconds);
+                                   long minutes = seconds / 60 ;
+                                   System.out.println("Minutes: "+minutes);
+                                   seconds = seconds % 60;
+                                   long hours = minutes / 60;
+                                   System.out.println("Hourse: "+hours+ "S: "+seconds);
+                                   minutes = minutes % 60;
+                                   long days = hours / 24;
+                                   System.out.println("Days: "+days+ "M: "+minutes);
+                                   hours = hours % 24;
+                                   long months = days / 30;
+                                   System.out.println("Months: "+months+ "H: "+hours);
+                                   days = days % 30;
+                                   long years = months / 12;
+                                   System.out.println("Years: "+years+ "D: "+days);
+                                   months = months % 12;
+                                   System.out.println("M: "+months);
+                                   
+                                   if(years > 0){
+                                        out.print(years+" year");
+                                        if(years > 1)
+                                            out.print("s");
+                                   }
+                                   else if (months > 0){
+                                       out.print(months+" month");
+                                        if(months > 1)
+                                            out.print("s");
+                                   }
+                                   else if (days > 0){
+                                       out.print(days+" day");
+                                       if(days > 1)
+                                            out.print("s");
+                                   }
+                                   else if (hours > 0){
+                                       out.print(hours+" hour");
+                                        if(hours > 1)
+                                            out.print("s");
+                                   }
+                                   else if (minutes > 0){
+                                       out.print(minutes+" minute");
+                                       if(minutes > 1)
+                                            out.print("s");
+                                   }
+                                    else{
+                                       out.print(seconds+" second");
+                                           if(seconds > 1)
+                                            out.print("s");
+                                    }
+                                   out.print(" ago");
                                %>
+                               <div>
+                                   <% 
+                                       out.print("Voto Globale: ");
+                                       for(int k = recensioni.getInt("global_value"); k > 0; k--)
+                                        out.print("♥");
+                                    %>
+                               </div>
+                               <div>
+                                    <%
+                                       out.print("Voto Cibo: ");
+                                       
+                                       for(int k = recensioni.getInt("food"); k > 0; k--)
+                                        out.print("♥");
+                                    %>
+                                </div>
+                                <div>    
+                                    <%
+                                       out.print("Voto Servizio: ");
+                                       
+                                       for(int k = recensioni.getInt("service"); k > 0; k--)
+                                        out.print("♥");
+                                    %>
+                                </div>
+                                <div>    
+                                    <%   
+                                       out.print("Voto Qualità/Prezzo: ");
+                                       
+                                       for(int k = recensioni.getInt("global_value"); k > 0; k--)
+                                        out.print("♥");
+                                    %>
+                                </div>
+                                <div>    
+                                    <%
+                                        out.print("Voto Atmosfera: ");
+                                       
+                                       for(int k = recensioni.getInt("atmosphere"); k > 0; k--)
+                                        out.print("♥");
+                                   %>
+                                   
+                               </div>
                                </span>
                                </div>
                                <div class="panel-body">
-                               Panel content
+                                   <%=recensioni.getString("name") %>
+                                   <div>
+                                       <%=recensioni.getString("description") %>
+                                   </div>
                                </div><!-- /panel-body -->
                                </div><!-- /panel panel-default -->
                                </div><!-- /col-sm-5 -->
