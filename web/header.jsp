@@ -63,13 +63,21 @@
                         //<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Logged in as %>
                         <%= utente.getNome()+" "+utente.getCognome()%> <% //<span class="caret"></span></a>
                         //<ul class="dropdown-menu"> %>
-                            <% if(utente.getRuolo().equals("admin")){ %>
-                                <li><a href="admin.jsp">Menu utente</a></li>
+                            <% 
+                                String ruolo = utente.getRuolo();
+                                out.println(ruolo);
+                                if(ruolo.contains("admin")){ %>
+                                <li><a href="admin.jsp">Notifiche</a></li>
+                            <% } else if(ruolo.contains("owner")) { %>
+                                <li><a href="owner.jsp">Notifiche</a></li>
+                                <li><a href="impostazioni_ristorante.jsp">Ristorante</a></li>
                             <% } else { %>
-                                <li><a href="user.jsp">Menu utente</a></li>
+                                <li><a href="user.jsp">Notifiche</a></li>
                             <% } %>
                             <% //<li role="separator" class="divider"></li> %>
-                            <li><a href="User">Logout</a></li> <%
+                            <li><a href="impostazioni_profilo.jsp">Nome e Cognome</a></li>
+                            <% //<li role="separator" class="divider"></li> %>
+                            <li><a href="User">Esci</a></li> <%
                         //</ul>
                     //</li>
                 //</ul> %>

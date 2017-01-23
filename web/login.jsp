@@ -55,7 +55,11 @@
                                                     <input type="password" name="password" maxlength="50">
                                                 </td>
                                             </tr>
-                                            
+                                            <tr class="errore invisibile" id="login-error">
+                                                <td colspan="2">
+                                                    <em>Email o password errati</em>
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td colspan="2">
                                                     <input type="submit" value="Registrati">

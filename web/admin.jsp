@@ -23,16 +23,5 @@
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
-        <%@include file='modal.jsp' %>
-            
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 col-xs-6" id="banner">
-                        <div class="panel panel3 panel-default" >
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
     </body>
 </html>
