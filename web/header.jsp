@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/flexform.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -19,31 +20,30 @@
             <div class="col-md-3 ">  
             </div>
             
-            <div class="col-md-6 col-xs-10">
-
-               
+            <div class="col-md-6 col-xs-10"> 
+                <form action=Ricerca.jsp method=GET>
                     <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
-                    <form action="" id="Cerca_per" >
                         <p> Ricerca per: 
                         <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
                         <input type="radio" name="ricerca" value="cucina"> Cucina
                         <input type="radio" name="ricerca" value="nome"> Nome
                         <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
                         </p>
-                    </form> 
                     <div>
-                        <div class="flexsearch">
-                                        <div class="flexsearch--wrapper">
-                                                <form class="flexsearch--form" action="#" method="post">
+                            <div class="flexsearch">
+                                            <div class="flexsearch--wrapper">
+                                                 <div class="flexsearch-form" id="mainForm">
                                                         <div class="flexsearch--input-wrapper">
-                                                                <input class="flexsearch--input" type="search" placeholder="cerca">
+                                                                <input class="flexsearch--input"  name=search" placeholder="cerca">
                                                         </div>
                                                         <input class="flexsearch--submit" type="submit" value="&#10140;"/>
-                                                </form>
+                                                </div>
                                         </div>
                         </div>
                     </div>
+                </form>
             </div>
+            
             <div class="col-md-3 col-xs-2">
                 <%
                 HttpSession ses = request.getSession();
@@ -83,5 +83,7 @@
                 //</ul> %>
                 <% } %>
             </div>
+             
+	
     </body>
 </html>
