@@ -56,14 +56,13 @@ public class User extends HttpServlet {
             user.setNickname(rs.getString("nickname"));
             user.setCognome(rs.getString("surname"));
             user.setEmail(email);
-            if(user.getPassword() == request.getParameter("password"))
-                sess.setAttribute("utente", user);
-            else
-                System.out.println("Non funzia");
+            user.setPassword(rs.getString("password"));
+            user.setRuolo(rs.getString("ruolo"));
         } else {
             user = null;
             
         }
+        sess.setAttribute("utente", user);
         
         response.sendRedirect(request.getHeader("Referer"));
     

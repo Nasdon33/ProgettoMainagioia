@@ -45,7 +45,8 @@ $(document).ready(function(){
     
     cont();
 });
-
+ 
+$("#login input").focusin($("#login-error").addClass("invisibile"));
 
 function sendPassword(){
     $.ajax({
@@ -63,7 +64,6 @@ function sendPassword(){
         }
     });
 }
-
 
 function start(t){
     $.ajax({

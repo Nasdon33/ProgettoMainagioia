@@ -57,7 +57,22 @@
                 else
                 {
                 %>
-                <a href="User">LOGOUT</a>
+                <%
+                    //<ul class="nav navbar-nav navbar-right">
+                    //<li class="dropdown">
+                        //<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Logged in as %>
+                        <%= utente.getNome()+" "+utente.getCognome()%> <% //<span class="caret"></span></a>
+                        //<ul class="dropdown-menu"> %>
+                            <% if(utente.getRuolo().equals("admin")){ %>
+                                <li><a href="admin.jsp">Menu utente</a></li>
+                            <% } else { %>
+                                <li><a href="user.jsp">Menu utente</a></li>
+                            <% } %>
+                            <% //<li role="separator" class="divider"></li> %>
+                            <li><a href="User">Logout</a></li> <%
+                        //</ul>
+                    //</li>
+                //</ul> %>
                 <% } %>
             </div>
     </body>

@@ -1,0 +1,455 @@
+body {
+    background: url("../img/background.jpg");
+}
+
+.login {
+    padding-right: 1%;
+}
+
+.navbar-brand {
+    font-size: 40px;
+}
+
+.navbar {
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.nav {
+    padding-left: 3%;
+    padding-bottom: .5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 20px;
+}
+
+.row {
+    padding-top: 3%;
+}
+
+.panel3 img {
+  background-size: cover;
+  width: 100%;
+}
+
+#map-container { 
+    height: 400px;
+    width: 600px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+footer {
+    text-transform: capitalize;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+/*carpi*/
+img.loc {
+       width: 100%;
+}
+
+a.btn-primary  {
+    width: 100%;
+    margin-top: 3%;
+    padding: 5%;
+}
+
+button.btn-primary  {
+    width: 100%;
+    padding: 3%;
+}
+
+.col-md-5 img {
+    width: 100%;
+    border: solid;
+    border-color: #265a88;
+    border-width: 5px;
+    border-style: ridge;
+}
+
+.col-md-5 {
+    padding-left: 3%;
+    padding-bottom: 3%;
+}
+
+.col-xs-5 {
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+
+.col-sm-7 {
+    padding-bottom: 3%;
+    padding-right: 3%;
+}
+
+.col-xs-7 {
+    padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+h1.titolo {
+    text-shadow: 2px 2px #265a88;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.truncate {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*carpi*/
+
+/*subia*/
+
+/** {
+    border: red;
+    border-width: 1px;
+    border-style: solid;
+}*/
+
+#sala {
+    border-style: double;
+    border-color: grey;
+    border-width: 2px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px
+}
+
+.posto {
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+}
+
+.posto_inesistente {
+    background-color: black;
+}
+
+.posto_inesistente:hover, .posto_prenotato:hover {
+    cursor: default;
+}
+
+.posto_prenotato {
+    background-color: blue;
+}
+
+.posto {
+    padding: 0px; 
+}
+
+#posti {
+    margin: auto auto auto auto;
+}
+
+#posti td{
+    padding: 7px;
+}
+
+.in_prenotazione {
+    background-color: lightgreen;
+}
+
+.locandina {
+    border: solid;
+    border-color: #265a88;
+    border-width: 5px;
+    border-style: ridge;
+}
+
+#orario {
+    padding: 7px;
+}
+
+#orario b {
+    margin-right: 30px;
+}
+
+#orario button {
+    padding: 5px;
+    max-width: 70px;
+    display: inline-block;
+}
+
+.invisibile {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#biglietti button {
+    margin: 8px;
+    font-size: 17px;
+    max-width: 150px;
+    min-width: 100px;
+}
+
+#biglietti .col-md-3 {
+    width:25%;
+    text-align: center;
+}
+
+#info img {
+    display: block;
+    margin: 0 auto;
+}
+
+#pagamento button{
+    width: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#registrazione table, #login table{
+    margin: 0 auto;
+}
+
+#registrazione table td, #login table td {
+    padding: 7px;
+}
+
+#registrazione table td b {
+    text-align: left;
+}
+
+.film {
+    text-align: center;
+    width: 25%;
+}
+
+#page {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#legenda button{
+    margin: 5px;
+}
+
+#film_image button{
+    margin-top: 5px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.pop-up {
+    display: none;
+    position: absolute;
+    width: 200px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #337AB7 0px, #265A88 100%);
+    color: white;
+    border: 1px solid;
+    font-size: 90%;
+}
+
+.errore {
+    color: red;
+}
+
+#login-collapsed, #login-normal{
+    margin-right: 10px;
+}
+
+select {
+    margin: 10px;
+}
+
+#clienti_top td, #clienti_top th {
+    padding: 10px;
+    text-align: center;
+}
+
+#clienti_top table {
+    margin: 0 auto;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.unclickable:hover {
+    cursor: default;
+}
+
+#clienti_top {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#map-container {
+    width: 100%;
+}
+
+#index_scoller {
+    width: 85%;
+}
+
+#banner {
+    width: 15%;
+    max-width: 200px;
+}
+
+#prezzi table {
+    width: 100%;
+}
+
+#prezzi table td {
+    width: 33%;
+    padding: 3px;
+}
+
+#a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 980px) and (min-width: 619px){
+    #info {
+        display: flex;
+        margin: 0 auto;
+    }
+    
+    .film {
+        width: 33%;
+    }
+    
+    #film_image button{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 690px) {
+    #sala {
+        overflow: scroll;
+        text-align: center;
+    }
+    
+    .film {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 618px) {
+    #info {
+        display: block;
+    }
+    
+    #biglietti .col-md-3 {
+        width:50%;
+    }
+    #film_image, #film_info{
+        width: 100%;
+        text-align: center;
+    }
+    #film_image img {
+        width: auto;
+        margin: auto;
+    }
+    #film_image button {
+        width: 225px;
+        font-size: 17px;
+    }
+    #film_info .titolo {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #titolo {
+        font-size: 20px;
+    }
+    
+    .film {
+        width: 100%;
+    }
+    
+    .truncate {
+        white-space: normal;
+    }
+    
+    #biglietti .col-md-3 {
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    #login-normal {
+        display: block;
+    }
+    
+    #login-collapsed {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    #login-normal {
+        display: none;
+    }
+    
+    #login-collapsed {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    header a {
+        font-size: 15px;
+    }
+    
+    #index_scoller {
+        width: 100%;
+    }
+
+    #banner {
+        display: none;
+    }
+    
+    #user1, #user2, #user3 {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 910px) and (min-width: 400px) {
+    #titolo {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 910px) and (min-width: 800px){
+    #user1, #user2 {
+        width: 50%;
+    }
+    #user3 {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #user1, #user2, #user3 {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 1055px){
+    #prezzi {
+        width: 100%;
+    }
+}
+
+
+/*subia*/
