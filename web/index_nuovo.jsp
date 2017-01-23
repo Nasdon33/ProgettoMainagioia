@@ -6,8 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         
-        <link href="style2.css" rel="stylesheet" type="text/css">
-        <link href="Index.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/Index.css" rel="stylesheet" type="text/css">
         <title>Magnagioia</title>
     </head>
     

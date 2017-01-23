@@ -22,7 +22,7 @@
             
             <div class="col-md-6 col-xs-8"> 
                 <form action=Ricerca.jsp method=GET>
-                    <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
+                    <img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
                         <div id="Ricerca_per">
                             <center>
                         <p> Ricerca per: 

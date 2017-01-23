@@ -16,8 +16,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-        <link href="style2.css" rel="stylesheet" type="text/css">
-        <link href="Commenti.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         
         <title>Ristorante Magnagioia</title>
     </head>
