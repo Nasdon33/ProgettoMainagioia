@@ -34,7 +34,13 @@
                                             <div class="flexsearch--wrapper">
                                                  <div class="flexsearch-form" id="mainForm">
                                                         <div class="flexsearch--input-wrapper">
-                                                                <input class="flexsearch--input"  name=search" placeholder="cerca">
+                                                            <%
+                                                                String ricerca = request.getParameter("search");
+                                                                if(ricerca == null){ %>
+                                                                <input class="flexsearch--input"  name="search" placeholder="cerca">
+                                                            <% } else { %>
+                                                            <input class="flexsearch--input"  name="search" placeholder="<%=ricerca %>" >
+                                                            <% } %>
                                                         </div>
                                                         <input class="flexsearch--submit" type="submit" value="&#10140;"/>
                                                 </div>

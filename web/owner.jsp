@@ -19,7 +19,7 @@
         <%@page import="db.Utente" %>
         <%@include file="header.jsp" %>
         <%
-            if(utente!=null){
+            if(!utente.getRuolo().contains("owner")){
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>

@@ -13,13 +13,13 @@
         
         <link href="style2.css" rel="stylesheet" type="text/css">
         <link href="Login.css" rel="stylesheet" type="text/css">
-        <title>Magnagioia Login</title>
+        <title>Magnagioia</title>
     </head>
     <body>
         <%@page import="db.Utente" %>
         <%@include file="header.jsp" %>
         <%
-            if(utente!=null){
+            if(!utente.getRuolo().contains("owner")){
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
