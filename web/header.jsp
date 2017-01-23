@@ -17,10 +17,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <div class="row header">
-            <div class="col-md-3 ">  
+            <div class="col-md-3 col-xs-1">  
             </div>
             
-            <div class="col-md-6 col-xs-10"> 
+            <div class="col-md-6 col-xs-8"> 
                 <form action=Ricerca.jsp method=GET>
                     <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
                         <div id="Ricerca_per">
@@ -53,7 +53,7 @@
                 </form>
             </div>
             
-            <div class="col-md-3 col-xs-2">
+            <div class="col-md-3 col-xs-3">
                 <%
                 HttpSession ses = request.getSession();
                 Utente utente;

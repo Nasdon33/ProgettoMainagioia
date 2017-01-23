@@ -13,8 +13,9 @@
         <title>Magnagioia</title>
     </head>
     <body>
+        <div>
        <%@include file="header.jsp" %>
-            
+        </div>
             <div class="row10">
                 <div class="col-md-4 col-xs-12">
                     <div class="container">

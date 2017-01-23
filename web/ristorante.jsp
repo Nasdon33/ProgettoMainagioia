@@ -22,42 +22,11 @@
         <title>Ristorante Magnagioia</title>
     </head>
     <body>
-        
+        <div>
+         <%@include file="header.jsp" %>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <div class="row">
-            <div class="col-md-3 ">  
-            </div>
-            
-            <div class="col-md-6 col-xs-10">
-
-               
-                    <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
-                    <form action="" id="Cerca_per" >
-                        <p> Ricerca per: 
-                        <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
-                        <input type="radio" name="ricerca" value="cucina"> Cucina
-                        <input type="radio" name="ricerca" value="nome"> Nome
-                        <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
-                        </p>
-                    </form> 
-                    <div>
-                        <div class="flexsearch">
-                                        <div class="flexsearch--wrapper">
-                                                <form class="flexsearch--form" action="#" method="post">
-                                                        <div class="flexsearch--input-wrapper">
-                                                                <input class="flexsearch--input" type="search" placeholder="cerca">
-                                                        </div>
-                                                        <input class="flexsearch--submit" type="submit" value="&#10140;"/>
-                                                </form>
-                                        </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-md-3 col-xs-2">
-             ACCEDI | REGISTRATI   
-            </div>
-        </div>
         
         <%! private DBManager manager; %>
             <%! 
