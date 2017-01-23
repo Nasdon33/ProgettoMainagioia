@@ -14,7 +14,13 @@
     text-align:center; 
 }
 
+
+
 .row {
+    padding-top: 0;
+}
+
+.row.header {
     background-color: #ff6600;
     
  
@@ -48,9 +54,10 @@ b {
 	background: transparent;
 	margin: 0;
 	position: static;
+       
 }
 	
-.flexsearch--form {
+.flexsearch-form {
 	overflow: hidden;
 	position: relative;
 }
@@ -65,7 +72,7 @@ b {
 }
 
 .flexsearch {
-  padding: 0 0 0 10%; /* Padding for other horizontal elements */
+  padding: 0px; /* Padding for other horizontal elements */
 }
 
 .flexsearch--input {
@@ -73,12 +80,12 @@ b {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
  	height: 26px;
-  padding: 0 46px 0 10px;
+  padding: 0 0 0 5px;
 	border-color: #000000;
-  border-radius: 35px; /* (height/2) + border-width */
+  border-radius: 32px; /* (height/2) + border-width */
   border-style: solid;
 	border-width: 2px;
-  margin-top: 20px;
+  margin-top: 0px;
   color: #333;
   font-family: 'Helvetica', sans-serif;
 	font-size: 18px;
@@ -89,11 +96,10 @@ b {
 .flexsearch--submit {
   position: absolute;
 	right: 0;
-	top: 5px;
+	top: -15px;
 	display: block;
 	width: 60px;
 	height: 60px;
-  padding: 0;
   border: none;
 	margin-top: 0; /* margin-top + border-width */
   margin-right: 5px; /* border-width */

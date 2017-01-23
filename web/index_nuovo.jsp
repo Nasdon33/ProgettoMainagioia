@@ -7,16 +7,17 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         
         <link href="style2.css" rel="stylesheet" type="text/css">
-        <link href="Login.css" rel="stylesheet" type="text/css">
+        <link href="Index.css" rel="stylesheet" type="text/css">
         <title>Magnagioia</title>
     </head>
+    
     <body>
-        <%@page import="db.Utente" %>
         
+        <%@page import="db.Utente" %>
+        <div class="row">
        <%@include file="header.jsp" %>
-            <div class="row-fluid">
-                <img src="sfondo.jpg" width="100%">
-            </div>
+        </div>
+                   
         <div>
             
              

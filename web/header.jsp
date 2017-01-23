@@ -16,20 +16,23 @@
     <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <div class="row">
+        <div class="row header">
             <div class="col-md-3 ">  
             </div>
             
             <div class="col-md-6 col-xs-10"> 
                 <form action=Ricerca.jsp method=GET>
                     <img src="Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
+                        <div id="Ricerca_per">
+                            <center>
                         <p> Ricerca per: 
                         <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
                         <input type="radio" name="ricerca" value="cucina"> Cucina
                         <input type="radio" name="ricerca" value="nome"> Nome
                         <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
                         </p>
-                    <div>
+                            </center>
+                       
                             <div class="flexsearch">
                                             <div class="flexsearch--wrapper">
                                                  <div class="flexsearch-form" id="mainForm">

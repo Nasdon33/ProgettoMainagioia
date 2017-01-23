@@ -12,22 +12,21 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         
         <link href="style2.css" rel="stylesheet" type="text/css">
-        <link href="Login.css" rel="stylesheet" type="text/css">
+        
         <title>Magnagioia Login</title>
     </head>
     <body>
         <%@page import="db.Utente" %>
+         <div class="row"> 
         <%@include file="header.jsp" %>
         <%
             if(utente!=null){
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
-        <div class="row-fluid">
-                <img src="sfondo.jpg" width="100%">
-            </div>
-        <div class="container-fluid">
-            <div class="row">
+         </div>
+        <div class="row">
+            <div class="container-fluid">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10 col-xs-12">
                     <div class="panel panel1 panel-default">
