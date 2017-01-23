@@ -69,8 +69,7 @@
             %>
         
         <%
-        String idris = request.getParameter("idris");
-        idris = "0";
+        String idris = request.getParameter("id");
         String sql = "SELECT R.NAME, R.DESCRIPTION, R.WEB_SITE_URL, RC.ID_COORDINATE, P.ID FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Price_ranges as P  WHERE R.id = ? AND R.id = RC.id_restaurant AND R.ID_PRICE_RANGE = P.id";
         ResultSet ristorante = manager.getData(sql, idris);
         ristorante.next();
