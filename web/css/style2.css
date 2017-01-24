@@ -33,6 +33,12 @@
   }
 }
 
+@media (max-width: 505px) {
+#Sparisci_3 {
+   display:none;
+  }
+}
+
 .row {
     padding-top: 0;
 }
