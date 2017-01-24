@@ -53,7 +53,11 @@
         </div>
             <div class="row2">
                 <div class="col-md-3 col-xs-3">
+                    <div>
                     <img src="ristorantiprova.jpeg" width="100%">
+                    </div>
+                    <div>Valutazione:</div>
+                        
                 </div>
                 
                 <div class="col-md-4 col-xs-4">
@@ -65,8 +69,8 @@
                 </div>
                 
                 <div class="col-md-3 col-xs-5">
-                    <center>  <button type="button" class="btn btn-primary">Scrivi una Recensione</button>
-                        <button type="button" class="btn btn-primary" id="Sparisci_2">Visualizza Orari</button>
+                    <center>  <button name="button" class="btn btn-primary btn-responsive">Scrivi una Recensione</button>
+                        <button name="button" class="btn btn-primary btn-responsive" id="Sparisci_2">Visualizza Orari</button>
                     </center>
                 </div>
             </div>
@@ -74,7 +78,7 @@
             <div class="row3">
                 
                 
-                <div class="col-md-5" id="Sparisci">
+                <div class="col-md-5 col-xs-9" id="spazio">
                     descrizione: <% out.println(ristorante.getString("description")); %>
                 </div>
                 <div class="col-md-4"
@@ -138,7 +142,7 @@
         <div class="row2">
              
                 
-                <div class="col-md-12 col-xs-9">
+                <div class="col-md-12 col-xs-9" id="Spazio">
                     <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -184,7 +188,7 @@
             <div class="col-md-12 col-xs-12">
                 <div class="row.header">
                    <div class="row">
-                   <div class="">
+                   <div class="col-sm-12" id="Arancio">
                        <h3><center>Scopri le recensioni dei clienti:</center></h3>
                    </div><!-- /col-sm-12 -->
                    </div><!-- /row -->
