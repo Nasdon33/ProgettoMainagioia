@@ -19,6 +19,7 @@
         <link href="css/style2.css" rel="stylesheet" type="text/css">
         <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
+        <link href="css/recensione.css" rel="stylesheet" type="text/css">
         
         <title>Ristorante Magnagioia</title>
     </head>
@@ -276,12 +277,68 @@
         
         <div class="row6"> 
             <div class="col-md-12 col-xs-12">
+                
+    
                 <div class="row.header">
                    <div class="row">
                    <div class="col-sm-12" id="Arancio">
                        <h3><center>Scopri le recensioni dei clienti:</center></h3>
                    </div><!-- /col-sm-12 -->
                    </div><!-- /row -->
+                   <div>
+               
+                   <div class="container">
+	<div class="row" style="margin-top:40px;">
+		<div class="col-md-6">
+    	<div class="well well-sm">
+            <div class="text-right">
+                <a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Leave a Review</a>
+            </div>
+        
+            <div class="row" id="post-review-box" style="display:none;">
+                <div class="col-md-12">
+                    <form accept-charset="UTF-8" action="" method="post">
+                        <input id="ratings-hidden" name="rating" type="hidden"> 
+                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+        
+                        <div class="text-right">
+                            <div class="stars starrr" data-rating="0"></div>
+                            <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                            <span class="glyphicon glyphicon-remove"></span>Cancel</a>
+                            <button class="btn btn-success btn-lg" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+         
+		</div>
+	</div>
+</div>
+                    
+                    
+                        <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Demo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    
+            </div>
+                <div>
                    <%
                            String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                            ResultSet recensioni = manager.getData(sql6,idris);
@@ -490,7 +547,7 @@
                    
                    */ %>
                    
-                   
+                </div> 
 
             </div><!-- /container -->
              </div>
