@@ -14,6 +14,7 @@
     <body>
         
         <%@page import="db.Utente" %>
+        
         <div class="row">
        <%@include file="header.jsp" %>
         </div>

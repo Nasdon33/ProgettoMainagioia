@@ -55,40 +55,43 @@
                 <div class="col-md-3 col-xs-3">
                     <img src="ristorantiprova.jpeg" width="100%">
                 </div>
-                <div class="col-md-2 col-xs-2">
+                
+                <div class="col-md-4 col-xs-4">
                     <b><%= ristorante.getString("name") %></b>
                     
                 </div>
-                
-                <div class="col-md-4 col-xs-4">
-                    valutazione <% // %>
-                </div>
-                <div class="col-md-3 col-xs-3">
-                    <center><button type="button" class="btn btn-primary">Scrivi una Recensione</button></center>
+                <div class="col-md-2">
                     
+                </div>
+                
+                <div class="col-md-3 col-xs-5">
+                    <center>  <button type="button" class="btn btn-primary">Scrivi una Recensione</button>
+                        <button type="button" class="btn btn-primary" id="Sparisci_2">Visualizza Orari</button>
+                    </center>
                 </div>
             </div>
         
             <div class="row3">
-                <div class="col-md-2 col-xs-2">
-                    
-                </div>
                 
                 
-                <div class="col-md-4 col-xs-4">
+                <div class="col-md-5" id="Sparisci">
                     descrizione: <% out.println(ristorante.getString("description")); %>
-                    </div>
-                
-                
-                
-                <div class="col-md-3 col-xs-3">
-                    <table class="table">
+                </div>
+                <div class="col-md-4"
+                <div class="col-md-3 col-xs-3" id="Sparisci">
+                    <div class="table">
+                    <table class="table table-responsive">
                     <thead>
                       <tr>
+                    <th>Giorno</th>
+                    <th></th>
                     <th>Orari</th>
                       </tr>
                     </thead>
+                    
                     <tbody>
+                        <tr>
+                            
                         <%
                             String giorni[] = {"Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"};
                             String sql5 = "SELECT O.day_of_the_week, O.start_hour, O.end_hour FROM opening_hours_ranges as O, (SELECT OH.id_opening_hours_range FROM opening_hours_range_restaurant as OH WHERE OH.id_restaurant = ?) as R WHERE R.id_opening_hours_range = O.id";
@@ -102,12 +105,12 @@
                                         + "<td>"+giorni[i]+"<td>");
                                 if((b == true) && Integer.parseInt(orari.getString("day_of_the_week")) == i+1){
                                     out.println("<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
-                                        + "</tr>");
+                                        );
                                     boolean c = true;
                                     while(c == true && orari.next()){
                                         if(Integer.parseInt(orari.getString("day_of_the_week")) == i+1)
-                                            out.println("<tr>"
-                                            + "<td></td>"
+                                            out.println(
+                                            "<td></td>"
                                             + "<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
                                             + "</tr>");
                                         else
@@ -119,18 +122,15 @@
                                 else{
                                     out.println("<td> CHIUSO </td>"
                                         + "</tr>");
-                                }
-                                    
-                            }
-                            
-                          
-                        
+                                }     
+                            }                   
                         %>
-                      
-                     
+                           
+                        </tr>
                     </tbody>
-                  </table>
                     
+                  </table>
+                </div>
                 </div>
                 </div>
         
@@ -138,7 +138,7 @@
         <div class="row2">
              
                 
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-9">
                     <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -182,7 +182,7 @@
         
         <div class="row6"> 
             <div class="col-md-12 col-xs-12">
-                <div class="container">
+                <div class="row.header">
                    <div class="row">
                    <div class="">
                        <h3><center>Scopri le recensioni dei clienti:</center></h3>

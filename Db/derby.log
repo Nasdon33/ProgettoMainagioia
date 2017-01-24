@@ -12,3 +12,20 @@ os.arch=x86_64
 os.version=10.12.2
 derby.system.home=/Users/adribuc/Desktop/ProgettoWeb/ProgettoMainagioia/Db
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Jan 23 17:52:47 CET 2017:
+Arresto dell'istanza a816c00e-0159-cbdb-b685-ffffeed65a8b nella directory del database /Users/adribuc/Desktop/ProgettoWeb/ProgettoMainagioia/Db/Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@66d3c617 
+Mon Jan 23 17:52:47 CET 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = Mainagioia), (DRDAID = {3}), Chiusura del database 'Mainagioia'.
+----------------------------------------------------------------
+Tue Jan 24 11:16:02 CET 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance 7c740060-0159-cbdb-b685-ffffeed65a8b 
+on database directory /Users/adribuc/Desktop/ProgettoWeb/ProgettoMainagioia/Db/Mainagioia with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
+Loaded from file:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_121-b13
+user.dir=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/db
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.12.2
+derby.system.home=/Users/adribuc/Desktop/ProgettoWeb/ProgettoMainagioia/Db
+Database Class Loader started - derby.database.classpath=''
