@@ -26,8 +26,9 @@
         
         
         <div class="container">
+            <center>
 	<div class="row">
-		<h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
+		<h2>Inserisci la tua Recensione:</h2>
 	</div>
             
     <div class="row lead">
@@ -54,9 +55,40 @@
         <div id="stars" class="starrr"></div>
         You gave a rating of <span id="count">0</span> star(s)
 	</div>
+            </center>
     
-    
-</div>
+        </div>
+        <div>
+           <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+	
+		<div class="row">
+   
+  
+  
+  
+  
+  <hr>
+  <center>
+                <!-- the comment box -->
+                <div>
+                    <h4><i class="fa fa-paper-plane-o"></i> Leave a Comment:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+                    </form>
+                </div>
+
+   </center>
+  
+  
+	</div>
+
+	</div>
+
+       </div>
         
         
         

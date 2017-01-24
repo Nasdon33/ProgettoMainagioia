@@ -16,7 +16,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">  
         <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
@@ -70,7 +70,10 @@
                 </div>
                 
                 <div class="col-md-3 col-xs-5">
-                    <center>  <button name="button" class="btn btn-primary btn-responsive">Scrivi una Recensione</button>
+                    <center>  
+                        <form action="Recensione.jsp">
+                        <button name="button" class="btn btn-primary btn-responsive">Scrivi una Recensione</button>
+                        </form>
                         <button name="button" class="btn btn-primary btn-responsive" id="Sparisci_2">Visualizza Orari</button>
                     </center>
                 </div>
@@ -287,54 +290,10 @@
                    </div><!-- /row -->
                    <div>
                
-                   <div class="container">
-	<div class="row" style="margin-top:40px;">
-		<div class="col-md-6">
-    	<div class="well well-sm">
-            <div class="text-right">
-                <a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Leave a Review</a>
-            </div>
-        
-            <div class="row" id="post-review-box" style="display:none;">
-                <div class="col-md-12">
-                    <form accept-charset="UTF-8" action="" method="post">
-                        <input id="ratings-hidden" name="rating" type="hidden"> 
-                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
-        
-                        <div class="text-right">
-                            <div class="stars starrr" data-rating="0"></div>
-                            <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
-                            <span class="glyphicon glyphicon-remove"></span>Cancel</a>
-                            <button class="btn btn-success btn-lg" type="submit">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> 
-         
-		</div>
-	</div>
-</div>
+                   
                     
                     
-                        <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Demo</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+          
 
     
             </div>

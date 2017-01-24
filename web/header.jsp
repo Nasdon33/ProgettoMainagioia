@@ -62,6 +62,7 @@
                    
                 %>
                 <a href="login.jsp">ACCEDI</a> | <a href="registrazione.jsp">REGISTRATI</a>
+               
                 <% }
                 else
                 {
