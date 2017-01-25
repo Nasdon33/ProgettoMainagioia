@@ -463,7 +463,7 @@ insert into photos
 values(1,'Friends Fast Food','Copertina','img/friends.jpg',1,1);
 
 insert into photos
-values(2,'Osteria a Le Due Spade','Ingresso','img/osteria-a-le-due-spade.jpg',2,0);
+values(2,'Osteria Le Due Spade','Ingresso','img/osteria-le-due-spade.jpg',2,0);
 
 insert into photos
 values(3,'FryChicken','Cover','img/frychicken.jpg',3,3);

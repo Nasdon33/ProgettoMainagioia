@@ -113,7 +113,12 @@
                    
                     <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" >
                         <center>
-                    <img src="img/RistoranteProva.jpg" width="90%">
+                            <%
+                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
+                            ResultSet foto = manager.getData(sql10,idris);
+                            foto.next();
+                        %>
+                    <img src="<%=foto.getString("path") %>" width="90%">
                     <br>
                     <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
                     <br>
