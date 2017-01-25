@@ -291,7 +291,8 @@
                    <div>
                
                         <%
-                           while(recensioni2.next()){
+                            recensioni = manager.getData(sql6,idris);
+                           while(recensioni.next()){
                         %>
           
                    
