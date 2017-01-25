@@ -44,7 +44,6 @@
         String sql = "SELECT R.NAME, R.DESCRIPTION, R.WEB_SITE_URL, RC.ID_COORDINATE, P.ID FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Price_ranges as P  WHERE R.id = ? AND R.id = RC.id_restaurant AND R.ID_PRICE_RANGE = P.id";
         ResultSet ristorante = manager.getData(sql, idris);
         ristorante.next();
-        
         %>
         
         <div class="row_separatoria">
@@ -93,6 +92,7 @@
                            ResultSet recensioni2 = recensioni;
                            int c[] = {0,0,0,0,0};
                            double tot = 0.0;
+                           
                            double voto = 0.0;
                            while(recensioni.next()){
                             tot++;
@@ -113,7 +113,7 @@
                                                 <h1 class="rating-num">
                                                     <% 
                                                         if(media > 0)
-                                                            out.print(media);
+                                                            out.print((float)((int) (media*10)) /10);
                                                         else
                                                             out.print("-");
                                                     %>
@@ -121,7 +121,7 @@
                                                 <div class="rating">
                                                     <% 
                                                         for(int k = 0;k < 5; k++){
-                                                            if(media-k > 0){ %>
+                                                            if((int) media-k > 0){ %>
                                                                 <span class="glyphicon glyphicon-star"></span>
                                                                 <%
                                                             }
@@ -134,14 +134,14 @@
                                                         %>
                                                 </div>
                                                 <div>
-                                                    <span class="glyphicon glyphicon-user"></span><%=tot %> total
+                                                    <span class="glyphicon glyphicon-user"></span><%=(int)tot %> recensioni
                                                 </div>
                                             </div>
                                             <div class="col-xs-7 col-md-7" id="sx">
                                                 <div class="row rating-desc">
                                                     <% 
                                                         for(int n = 5; n > 0; n--){
-                                                            double p = (c[n-1]/tot) * 100;
+                                                            int p = (int) ((c[n-1]/tot) * 100);
                                                     %>
                                                         <div class="col-xs-3 col-md-3 text-right">
                                                             <span class="glyphicon glyphicon-star"></span><%=n %>
