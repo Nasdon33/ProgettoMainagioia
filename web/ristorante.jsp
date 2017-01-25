@@ -56,7 +56,7 @@
             <div class="row2">
                 <div class="col-md-3 col-xs-3">
                     <div>
-                    <img src="ristorantiprova.jpeg" width="100%">
+                    <img src="img/RistoranteProva.jpg" width="100%">
                     </div>
                     
                 </div>
@@ -87,6 +87,23 @@
                     descrizione: <% out.println(ristorante.getString("description")); %>
                     </div>
                     <hr>
+                    <%
+                           String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
+                           ResultSet recensioni = manager.getData(sql6,idris);
+                           ResultSet recensioni2 = recensioni;
+                           int c[] = {0,0,0,0,0};
+                           double tot = 0.0;
+                           double voto = 0.0;
+                           while(recensioni.next()){
+                            tot++;
+                            int i = recensioni.getInt("global_value");
+                            voto += i;
+                            c[i-1]++;
+                           }
+                           double media = 0.0;
+                            if(tot > 0)
+                                media = voto / tot;
+                    %> 
                     <div class="col-md-12 col-xs-12" id="Sparisci_3">
                             <div class="row">
                                 <div class="col-xs-12 col-md-12">
@@ -94,77 +111,55 @@
                                         <div class="row">
                                             <div class="col-xs-5 col-md-5 text-center">
                                                 <h1 class="rating-num">
-                                                    4.0</h1>
+                                                    <% 
+                                                        if(media > 0)
+                                                            out.print(media);
+                                                        else
+                                                            out.print("-");
+                                                    %>
+                                                   </h1>
                                                 <div class="rating">
-                                                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                                                    </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                                                    </span><span class="glyphicon glyphicon-star-empty"></span>
+                                                    <% 
+                                                        for(int k = 0;k < 5; k++){
+                                                            if(media-k > 0){ %>
+                                                                <span class="glyphicon glyphicon-star"></span>
+                                                                <%
+                                                            }
+                                                            else{
+                                                                %>
+                                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                                <%
+                                                            }
+                                                        }
+                                                        %>
                                                 </div>
                                                 <div>
-                                                    <span class="glyphicon glyphicon-user"></span>1,050,008 total
+                                                    <span class="glyphicon glyphicon-user"></span><%=tot %> total
                                                 </div>
                                             </div>
                                             <div class="col-xs-7 col-md-7" id="sx">
                                                 <div class="row rating-desc">
-                                                    <div class="col-xs-3 col-md-3 text-right">
-                                                        <span class="glyphicon glyphicon-star"></span>5
-                                                    </div>
-                                                    <div class="col-xs-8 col-md-9">
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                                                                aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                                                <span class="sr-only">80%</span>
+                                                    <% 
+                                                        for(int n = 5; n > 0; n--){
+                                                            double p = (c[n-1]/tot) * 100;
+                                                    %>
+                                                        <div class="col-xs-3 col-md-3 text-right">
+                                                            <span class="glyphicon glyphicon-star"></span><%=n %>
+                                                        </div>
+                                                        <div class="col-xs-8 col-md-9">
+                                                            <div class="progress progress-striped">
+                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                                                    aria-valuemin="0" aria-valuemax="100" style="width: <%=p %>%">
+                                                                    <span class="sr-only">
+                                                                        <%=p %>%
+                                                                    </span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- end 5 -->
-                                                    <div class="col-xs-3 col-md-3 text-right">
-                                                        <span class="glyphicon glyphicon-star"></span>4
-                                                    </div>
-                                                    <div class="col-xs-8 col-md-9">
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                                                                aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                                                <span class="sr-only">60%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end 4 -->
-                                                    <div class="col-xs-3 col-md-3 text-right">
-                                                        <span class="glyphicon glyphicon-star"></span>3
-                                                    </div>
-                                                    <div class="col-xs-8 col-md-9">
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                                                                aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                                                <span class="sr-only">40%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end 3 -->
-                                                    <div class="col-xs-3 col-md-3 text-right">
-                                                        <span class="glyphicon glyphicon-star"></span>2
-                                                    </div>
-                                                    <div class="col-xs-8 col-md-9">
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-                                                                aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                                                <span class="sr-only">20%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end 2 -->
-                                                    <div class="col-xs-3 col-md-3 text-right">
-                                                        <span class="glyphicon glyphicon-star"></span>1
-                                                    </div>
-                                                    <div class="col-xs-8 col-md-9">
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                                                                aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-                                                                <span class="sr-only">15%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    <%
+                                                        }
+                                                    %>
+                                                    
                                                     <!-- end 1 -->
                                                 </div>
                                                 <!-- end row -->
@@ -204,17 +199,17 @@
                                 if((b == true) && Integer.parseInt(orari.getString("day_of_the_week")) == i+1){
                                     out.println("<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
                                         );
-                                    boolean c = true;
-                                    while(c == true && orari.next()){
+                                    boolean a = true;
+                                    while(a == true && orari.next()){
                                         if(Integer.parseInt(orari.getString("day_of_the_week")) == i+1)
                                             out.println(
                                             "<td></td>"
                                             + "<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
                                             + "</tr>");
                                         else
-                                            c = false;
+                                            a = false;
                                     }
-                                    if(c == true)
+                                    if(a == true)
                                         b = false;
                                 }
                                 else{
@@ -290,20 +285,14 @@
                    </div><!-- /row -->
                    <div>
                
-                   
-                    
-                    
+                        <%
+                           while(recensioni2.next()){
+                        %>
           
-
-    
+                   
             </div>
                 <div>
-                   <%
-                           String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
-                           ResultSet recensioni = manager.getData(sql6,idris);
-                           
-                           while(recensioni.next()){
-                    %>           
+                             
                                <div class="col-sm-1 col-xs-2">
                                <div class="thumbnail">
                                <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">

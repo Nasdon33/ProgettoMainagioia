@@ -28,6 +28,14 @@
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>servlet.Registrazione</servlet-class>
     </servlet>
+    <servlet>
+       <servlet-name>Controller</servlet-name>
+       <servlet-class>servlet.Controller</servlet-class>
+   </servlet>
+    <servlet-mapping>
+       <servlet-name>Controller</servlet-name>
+       <url-pattern>/Controller</url-pattern>
+   </servlet-mapping>
     <servlet-mapping>
        <servlet-name>WebAppContextListener</servlet-name>
        <url-pattern>/WebAppContextListener</url-pattern>

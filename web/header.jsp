@@ -10,12 +10,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+       <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="js/autocomplete.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/flexform.css">
         <title>JSP Page</title>
     </head>
     <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        
         <div class="row header">
             <div class="col-md-3 col-xs-1">  
             </div>
@@ -40,9 +45,9 @@
                                                             <%
                                                                 String ricerca = request.getParameter("search");
                                                                 if(ricerca == null){ %>
-                                                                <input class="flexsearch--input"  name="search" placeholder="cerca">
+                                                                <input class="flexsearch--input" id="ricerca" name="search" placeholder="cerca">
                                                             <% } else { %>
-                                                            <input class="flexsearch--input"  name="search" placeholder="<%=ricerca %>" >
+                                                            <input class="flexsearch--input" id="ricerca" name="search" placeholder="<%=ricerca %>" >
                                                             <% } %>
                                                         </div>
                                                         <input class="flexsearch--submit" type="submit" value="&#10140;"/>

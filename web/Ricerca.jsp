@@ -105,7 +105,7 @@
                     %>
                     <div class="col-md-2 col-xs-3">
                     
-                    <img src="ristorantiprova.jpeg" width="80%">
+                    <img src="img/RistoranteProva.jpg" width="80%">
                     <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
                      
                     Voto: 
@@ -118,9 +118,13 @@
                             c++;
                             voto += recensioni.getInt("global_value");
                         }
-                        for(int k = voto / c; k > 0; k--)
-                            out.print("♥");
-                        out.print(" su "+c+" Recensioni");
+                        if(c > 0){
+                            for(int k = voto / c; k > 0; k--)
+                                out.print("♥");
+                            out.print(" su "+c+" Recensioni");
+                        }
+                        else
+                            out.print("0 Recensioni");
                         %>
                     Cucina: 
                     <%
