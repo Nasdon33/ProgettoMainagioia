@@ -1,3 +1,5 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -65,50 +67,44 @@
                 <%
                     ResultSet ristoranti;
                     String tipo = request.getParameter("ricerca");
-                    out.print(tipo);
                     String stringa = request.getParameter("search");
-                    out.print(stringa);
                     if(tipo.contains("zona")){ //da fare per bene
-                        /*String lon = request.getParameter("Longitude");
+                        String lon = request.getParameter("Longitude");
                         String lat = request.getParameter("Latitude");
                         String sql = "SELECT id, name FROM (SELECT R.id as id, sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) as distance FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant  RC.id_coordinate = C.id ORDER BY sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) DESC) WHERE distance * 999.6 < ?";
-                        ristoranti = manager.getData(sql,lon,lat,lon,lat,stringa);*/
+                        ristoranti = manager.getData(sql,lon,lat,lon,lat,stringa);
                         
-                        ristoranti = null;
                     }
                     else if(tipo.contains("cucina")){
-                        String sql = "SELECT R.id, R.name FROM mainagioia.Restaurants as R, mainagioia.Restaurant_cuisine as RC, mainagioia.Cuisines as C WHERE R.id = RC.id_restaurant AND RC.id_cousine = C.id AND C.name like '%Italiana%'";
-                        ristoranti = manager.getData(sql);
+                        String sql = "SELECT R.id, R.name FROM mainagioia.Restaurants as R, mainagioia.Restaurant_cuisine as RC, mainagioia.Cuisines as C WHERE R.id = RC.id_restaurant AND RC.id_cousine = C.id AND C.name  = ?";
+                        ristoranti = manager.getData(sql, stringa);
                     }
                     else if(tipo.contains("nome")){
-                        String sql = "SELECT id, name FROM mainagioia.Restaurants WHERE name LIKE '%?%'";
+                        String sql = "SELECT id, name FROM mainagioia.Restaurants WHERE name = ?";
                         ristoranti = manager.getData(sql,stringa);
                     }
-                    else if(tipo.contains("indirizzo")){
-                        String sql = "SELECT R.id, R.name FROM FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant AND RC.id_coordinate = C.id AND C.address LIKE '%?%'";
-                        ristoranti = manager.getData(sql,stringa);
+                    else{
+                        String sql = ("SELECT R.id, R.name FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant AND RC.id_coordinate = C.id AND C.address like ? ");
+                        ristoranti = manager.getData(sql,"%" + stringa + "%");
                     }
-                    else
-                        ristoranti = null;
                     
-                    if(ristoranti == null){                        
+                    if(!ristoranti.next()){                        
                     %>
-                    <div>
+                    <div class="col-md-2 col-xs-3">
                         NESSUN RISTORANTE TROVATO
                     </div>
                     <%          
                     }
                     else{
-                    ristoranti.next();
-                    while(ristoranti.next()){
+                    do{
                         String idris = ristoranti.getString("id");
                     %>
                     <div class="col-md-2 col-xs-3">
-                    
+                        <center>
                     <img src="img/RistoranteProva.jpg" width="80%">
+                    <br>
                     <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
-                     
-                    Voto: 
+                    <br>
                     <%
                         String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql,idris);
@@ -119,6 +115,7 @@
                             voto += recensioni.getInt("global_value");
                         }
                         if(c > 0){
+                            out.print("Voto: ");
                             for(int k = voto / c; k > 0; k--)
                                 out.print("♥");
                             out.print(" su "+c+" Recensioni");
@@ -126,6 +123,7 @@
                         else
                             out.print("0 Recensioni");
                         %>
+                        <br>
                     Cucina: 
                     <%
                         String sql1 = "SELECT C.name FROM mainagioia.cuisines as C, (SELECT RC.id_cousine FROM restaurants as R, restaurant_cuisine as RC WHERE RC.id_restaurant = R.id AND R.id = ?)  as R WHERE C.id = R.id_cousine";
@@ -136,10 +134,10 @@
                                 out.print(", " + cuisine.getString("name"));
                     %>
                     
-                    
+                        </center>
                 </div>
                 <%
-                    }
+                    }while(ristoranti.next());
                 }
                 %>
                 

@@ -33,7 +33,19 @@ public class DBManager implements Serializable {
         this.con = con;        
     }
 
-    
+    public Connection getConnection(String dburl) throws SQLException{
+        try {
+
+            System.out.println("Ho creato la connessione\n");
+            Class.forName("org.apache.derby.jdbc.ClientDriver", true, getClass().getClassLoader());
+
+        } catch(Exception e) {
+            throw new RuntimeException(e.toString(), e);
+        }
+        
+        Connection con = DriverManager.getConnection(dburl);
+        return con; 
+    }
 
 
 
@@ -62,8 +74,7 @@ public class DBManager implements Serializable {
         ResultSet rs = stm.executeQuery();
         return rs;
     }
-    
-    
+
     
     /**
      *
