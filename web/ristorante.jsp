@@ -52,7 +52,12 @@
             <div class="row2">
                 <div class="col-md-3 col-xs-3">
                     <div>
-                    <img src="img/RistoranteProva.jpg" width="100%">
+                        <%
+                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
+                            ResultSet foto = manager.getData(sql10,idris);
+                            foto.next();
+                        %>
+                        <img src="<%=foto.getString("path") %>" width="100%">
                     </div>
                     
                 </div>
