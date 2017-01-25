@@ -17,43 +17,54 @@
         <div>
        <%@include file="header.jsp" %>
         </div>
+        <br>
             <div class="row10">
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-3 col-xs-12">
                     <div class="container">
                         <form>
-                          <fieldset class="form-group row2">
-                            <legend class="col-form-legend col-sm-2">Ordina per:</legend>
-                            <div class="col-sm-10">
+                            <div>
+                            <p class="col-form-legend col-sm-12" id="Font">Ordina per:</p>
+                            
+                            <div class="col-sm-12" id="Spazio">
                               <div class="form-check">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                                   Classifica
                                 </label>
                               </div>
-                              <div class="form-check">
+                              <div class="form-check"id="Spazio">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                                   Alfabeto
                                 </label>
                               </div>
-                              <div class="form-check disabled">
+                              <div class="form-check disabled"id="Spazio">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
                                   Fascia di Prezzo
                                 </label>
                               </div>
-                            </div>
-                          </fieldset>
-                          
-                          <div class="form-group row2">
-                            <div class="offset-sm-2 col-sm-10">
+                           
+                            <div class="form-group2 row2">
+                            <div class="offset-md-10 col-xs-2 btn-responsive" id="Spazio">
                               <button type="submit" class="btn btn-primary">Cerca</button>
                             </div>
                           </div>
+                                 </div>
+                            </div>
+                            
                         </form>
-              </div>
-                    
+                    </div>
                 </div>
+            </div>
+        
+                          
+                          
+                          
+            
+                    
+        <div class="col-md-9 col-xs-12">
+               
                 
                 <%! private DBManager manager; %>
                 <%! 
@@ -90,7 +101,7 @@
                     
                     if(!ristoranti.next()){                        
                     %>
-                    <div class="col-md-2 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         NESSUN RISTORANTE TROVATO
                     </div>
                     <%          
@@ -99,12 +110,14 @@
                     do{
                         String idris = ristoranti.getString("id");
                     %>
-                    <div class="col-md-2 col-xs-3">
+                   
+                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" >
                         <center>
-                    <img src="img/RistoranteProva.jpg" width="80%">
+                    <img src="img/RistoranteProva.jpg" width="90%">
                     <br>
                     <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
                     <br>
+                    
                     <%
                         String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql,idris);
@@ -135,7 +148,9 @@
                     %>
                     
                         </center>
+                    <hr>
                 </div>
+                   
                 <%
                     }while(ristoranti.next());
                 }

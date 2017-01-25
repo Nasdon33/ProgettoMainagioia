@@ -88,14 +88,23 @@ b {
     color: gray;
 }
 
-
+#Altezza {
+    white-space:nowrap;
+    overflow:hidden;
+   
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+}
 
 
 #aperto {
     color: green;
 }
 
-
+#Font {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /*barra di ricerca*/
 .flexsearch--wrapper {

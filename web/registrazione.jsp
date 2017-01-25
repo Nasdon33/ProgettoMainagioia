@@ -29,14 +29,14 @@
                     <center><h2>Registrati a Magnagioia!</h2></center>
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
                                             
                         <input type="text" name="nome" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1">
 					</div>
 				</div>
                             
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
 						<input type="text" name="cognome" id="last_name" class="form-control input-lg" placeholder="Cognome" tabindex="2">
 					</div>
@@ -52,13 +52,13 @@
 			</div>
                            <br>
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
 						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
 					</div>
 				</div>
                              
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
 						<input type="password" name="pass2" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
 					</div>
