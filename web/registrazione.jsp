@@ -1,9 +1,3 @@
-<%-- 
-    Document   : registrazione
-    Created on : 17-gen-2017, 12.29.47
-    Author     : Carlo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html PAGINA DA SISTEMARE>
 <html>
@@ -17,89 +11,72 @@
     </head>
     <body>
         <%@page import="db.Utente" %>
+        <div>
         <%@include file="header.jsp" %>
+        </div>
         <%
             utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-10 col-xs-12">
-                    <div class="panel panel1 panel-default">
-                        <div class="panel1 panel-heading">
-                            Registration Form
-                        </div>
-                        <div class="panel1 panel-body">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <form method="post" action="Registrazione" id="registrazione">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <b>Nome:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="nome" maxlength="50" required>          
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b>Cognome:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="cognome" maxlength="50" required>          
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b>Nickname:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="nickname" maxlength="50" required>          
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b>E-mail:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="email" name="email" maxlength="50" required>          
-                                                </td>
-                                            </tr>
+        
+       <div class="container">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form" method="POST" action="Registrazione">
+                    <center><h2>Registrati a Magnagioia!</h2></center>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group2">
                                             
-                                            <tr>
-                                                <td>
-                                                    <b>Password:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="password" name="password" maxlength="50" required>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b>Ripeti password:</b>
-                                                </td>
-                                                <td>
-                                                    <input type="password" name="pass2" maxlength="50" required>
-                                                </td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="submit" value="Registrati">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </div>
-                            </div>
+                        <input type="text" name="nome" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1">
+					</div>
+				</div>
+                            
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group2">
+						<input type="text" name="cognome" id="last_name" class="form-control input-lg" placeholder="Cognome" tabindex="2">
+					</div>
+				</div>
+			</div>
+                         <br>
+			<div class="form-group2">
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nickname" tabindex="3">
+			</div>
+                          <br>
+			<div class="form-group2">
+				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="4">
+			</div>
+                           <br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group2">
+						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+					</div>
+				</div>
+                             
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group2">
+						<input type="password" name="pass2" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
+					</div>
+				</div>
+                              <br>
+			</div>
+                           <br>
+			
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		</form>
+	</div>
+</div>
+<!-- Modal -->
+
+    </div>
     </body>
 </html>
