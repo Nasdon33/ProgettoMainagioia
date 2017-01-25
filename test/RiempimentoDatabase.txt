@@ -454,3 +454,25 @@ VALUES (0, 0, 3, 1, '2017-01-24 12:01:38');
 INSERT INTO Mainagioia.user_review_likes
 VALUES (1, 2, 9, 1, '2016-07-21 08:04:45');
 
+
+
+insert into photos
+values(0,'La Stube del Galletto','Interni','img/la-stube-del-galletto.jpg',0,2);
+
+insert into photos
+values(1,'Friends Fast Food','Copertina','img/friends.jpg',1,1);
+
+insert into photos
+values(2,'Osteria a Le Due Spade','Ingresso','img/osteria-a-le-due-spade.jpg',2,0);
+
+insert into photos
+values(3,'FryChicken','Cover','img/frychicken.jpg',3,3);
+
+insert into photos
+values(4,'Pizzeria Fenice','Interno','img/pizzeria_fenice.jpg',4,4);
+
+insert into photos
+values(5,'Zushi','Interno','img/zushi.jpg',5,5);
+
+insert into photos
+values(6,'Le Ciaspole','Interno','img/le_ciaspole.jpg',6,6);
