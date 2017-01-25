@@ -60,31 +60,36 @@
                     
                 </div>
                 
-                <div class="col-md-4 col-xs-4">
+                <div class="col-md-6 col-xs-5">
+                    <div>
                     <b><%= ristorante.getString("name") %></b>
+                    </div>
                     
+                    <div>
+                         <div id="Spazio">
+                    descrizione: <% out.println(ristorante.getString("description")); %>
+                    </div>
+                    </div>
                 </div>
                 <div class="col-md-2">
                     
                 </div>
                 
-                <div class="col-md-3 col-xs-5">
+                <div class="col-md-3 col-xs-4">
                     <center>  
-                        <form action="Recensione.jsp">
+                            <form action="Recensione.jsp">
                         <button name="button" class="btn btn-primary btn-responsive">Scrivi una Recensione</button>
-                        </form>
+                            </form>     
                         <button name="button" class="btn btn-primary btn-responsive" id="Sparisci_2">Visualizza Orari</button>
                     </center>
-                </div>
+                 </div>
             </div>
-        
+           
             <div class="row3">
                 
                 
                 <div class="col-md-5 col-xs-9" id="spazio">
-                    <div>
-                    descrizione: <% out.println(ristorante.getString("description")); %>
-                    </div>
+                   
                     <hr>
                     <%
                            String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
@@ -104,7 +109,7 @@
                             if(tot > 0)
                                 media = voto / tot;
                     %> 
-                    <div class="col-md-12 col-xs-12" id="Sparisci_3">
+                    <div id="Sparisci_3">
                             <div class="row">
                                 <div class="col-xs-12 col-md-12">
                                     <div class="well well-sm">
@@ -170,7 +175,7 @@
                             </div>
                         </div>
                 </div>
-                <div class="col-md-3"
+               
                 <div class="col-md-3 col-xs-3" id="Sparisci">
                     <div class="table">
                     <table class="table table-responsive">
@@ -224,9 +229,9 @@
                     
                   </table>
                 </div>
+                </div>   
                 </div>
-                </div>
-        
+                       
         
         <div class="row2">
              
