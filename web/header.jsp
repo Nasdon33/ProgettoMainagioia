@@ -85,7 +85,6 @@
                         //<ul class="dropdown-menu"> %>
                             <% 
                                 String ruolo = utente.getRuolo();
-                                out.println(ruolo);
                                 if(ruolo.contains("admin")){ %>
                                 <li><a href="admin.jsp">Notifiche</a></li>
                             <% } else if(ruolo.contains("owner")) { %>
