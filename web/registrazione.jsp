@@ -70,7 +70,7 @@
 			
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-primary btn-block btn-lg" tabindex="7" id="Azzurro"></div>
                         </div>
 		</form>
 	</div>

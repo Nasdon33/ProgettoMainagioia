@@ -78,9 +78,9 @@
                 <div class="col-md-3 col-xs-4">
                     <center>  
                             <form action="Recensione.jsp">
-                        <button name="button" class="btn btn-primary btn-responsive">Scrivi una Recensione</button>
+                        <button name="button" class="btn btn-primary btn-responsive Azzurro">Scrivi una Recensione</button>
                             </form>     
-                        <button name="button" class="btn btn-primary btn-responsive" id="Sparisci_2">Visualizza Orari</button>
+                        <button name="button" class="btn btn-primary btn-responsive Azzurro" id="Sparisci_2">Visualizza Orari</button>
                     </center>
                  </div>
             </div>
