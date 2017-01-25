@@ -15,7 +15,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
+        <script src="js/orari.js"></script>
         <link href="css/style2.css" rel="stylesheet" type="text/css">  
         <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
@@ -46,12 +46,7 @@
         ristorante.next();
         %>
         
-        <div class="row_separatoria">
-            <div class="col-md-12">
-                <center> Ristoranti > Trento > NOME </center>
-            </div>
-            
-        </div>
+        <br>
             <div class="row2">
                 <div class="col-md-3 col-xs-3">
                     <div>
@@ -79,12 +74,16 @@
                     <center>  
                             <form action="Recensione.jsp">
                         <button name="button" class="btn btn-primary btn-responsive Azzurro">Scrivi una Recensione</button>
-                            </form>     
-                        <button name="button" class="btn btn-primary btn-responsive Azzurro" id="Sparisci_2">Visualizza Orari</button>
+                            </form>  
+                        <form>
+                        <input type="button" class="btn btn-primary btn-responsive Azzurro Sparisci_2" id="loader" value="Visualizza Orari" />
+                       </form> 
+                    
+
                     </center>
                  </div>
             </div>
-           
+            
             <div class="row3">
                 
                 
@@ -176,7 +175,7 @@
                         </div>
                 </div>
                
-                <div class="col-md-3 col-xs-3" id="Sparisci">
+                <div class="col-md-4 col-xs-3" id="Sparisci">
                     <div class="table">
                     <table class="table table-responsive">
                     <thead>
@@ -202,14 +201,14 @@
                                 out.println("<tr>"
                                         + "<td>"+giorni[i]+"<td>");
                                 if((b == true) && Integer.parseInt(orari.getString("day_of_the_week")) == i+1){
-                                    out.println("<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
+                                    out.println("<td>"+orari.getString("start_hour").substring(0,5)+" - "+orari.getString("end_hour").substring(0,5)+"</td>"
                                         );
                                     boolean a = true;
                                     while(a == true && orari.next()){
                                         if(Integer.parseInt(orari.getString("day_of_the_week")) == i+1)
                                             out.println(
                                             "<td></td>"
-                                            + "<td>"+orari.getString("start_hour")+"-"+orari.getString("end_hour")+"</td>"
+                                            + "<td>"+orari.getString("start_hour").substring(0,5)+" - "+orari.getString("end_hour").substring(0,5)+"</td>"
                                             + "</tr>");
                                         else
                                             a = false;
@@ -230,7 +229,7 @@
                   </table>
                 </div>
                 </div>   
-                </div>
+                </div>                               
                        
         
         <div class="row2">

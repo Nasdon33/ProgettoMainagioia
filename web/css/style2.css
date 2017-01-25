@@ -12,7 +12,7 @@
 }
 
 @media (min-width: 991px) {
-#Sparisci_2 {
+.Sparisci_2 {
    display:none;
    background-color: #5bc0de;
    border-color: #46b8da;
