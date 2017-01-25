@@ -29,6 +29,7 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/Inserimento_immagine"></script>
         
         <%! private DBManager manager; %>
             <%! 
@@ -57,10 +58,18 @@
                             ResultSet foto = manager.getData(sql10,idris);
                             foto.next();
                         %>
-                        <img src="<%=foto.getString("path") %>" width="100%">
+                        <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> 
+                        
                     </div>
                     
+                    </div>
+                    </div>
+        
+                    </div>
                 </div>
+            </div>
+                    
+               
                 
                 <div class="col-md-6 col-xs-5">
                     <div>
