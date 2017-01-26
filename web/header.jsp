@@ -16,10 +16,12 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/autocomplete.js"></script>
         <link rel="stylesheet" href="css/flexform.css">
+        <link rel="stylesheet" href="css/Menu_tendina.css">
         <title>JSP Page</title>
     </head>
     <body>
-        
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <div class="row header">
             <div class="col-md-3 col-xs-1">  
             </div>
@@ -75,34 +77,39 @@
                
                 <% }
                 else
+
+
                 {
                 %>
-                <%
-                    //<ul class="nav navbar-nav navbar-right">
-                    //<li class="dropdown">
-                        //<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Logged in as %>
-                        <%= utente.getNome()+" "+utente.getCognome()%> <% //<span class="caret"></span></a>
-                        //<ul class="dropdown-menu"> %>
-                            <% 
+                
+	
+        <div class="dropdown">
+		<button type="button" class="btn dropdown-toggle Arancio" id="dropdownMenu1" data-toggle="dropdown">
+            <%= utente.getNome()+" "+utente.getCognome()%> <span class="caret"></span>
+        </button>
+        
+        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu1">
+            <% 
                                 String ruolo = utente.getRuolo();
                                 if(ruolo.contains("admin")){ %>
                                 <li><a href="admin.jsp">Notifiche</a></li>
+                                <li><a href="admin.jsp">Aggiungi Ristorante</a></li>
+                                
                             <% } else if(ruolo.contains("owner")) { %>
                                 <li><a href="owner.jsp">Notifiche</a></li>
-                                <li><a href="impostazioni_ristorante.jsp">Ristorante</a></li>
+                                <li><a href="impostazioni_ristorante.jsp">Gestisci Ristorante</a></li>
                             <% } else { %>
                                 <li><a href="user.jsp">Notifiche</a></li>
                             <% } %>
-                            <% //<li role="separator" class="divider"></li> %>
-                            <li><a href="impostazioni_profilo.jsp">Nome e Cognome</a></li>
-                            <% //<li role="separator" class="divider"></li> %>
-                            <li><a href="User">Esci</a></li> <%
-                        //</ul>
-                    //</li>
-                //</ul> %>
+                            
+                            <li><a href="impostazioni_profilo.jsp">Gestisci Profilo</a></li>
+                           
+                            <li><a href="User">Esci</a></li> 
                 <% } %>
+        </ul>
+        
+                            
             </div>
-             
-	
+        </div>
     </body>
 </html>

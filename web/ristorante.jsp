@@ -21,6 +21,7 @@
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
         
+        
         <title>Ristorante Magnagioia</title>
     </head>
     <body>
@@ -62,7 +63,7 @@
                         
                     </div>
                     <div id="Spazio">
-                        <input type="hidden" value="<%=idris %>" name="id_restaurant"/>
+                        
                         <div class="container">
                             
                             <!-- Trigger the modal with a button -->
@@ -83,13 +84,24 @@
                                     <input type="file" name="file" size="50" />
                                     
                                     <br>
-                                    <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
-                                </form>
+                                    
+                                    
+                                
+                   
+                            <h4><i class="fa fa-paper-plane-o"></i>Descrizione:</h4>
+                            <div class="form-group">
+                            <textarea class="form-control" rows="2" id="descrizione"></textarea>
+                            </div>
+                           
+                            <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
+                           
+                                    </form>
                                     
                                 </div>
                                     <center> <p> Nota: Inserisci solo foto del ristorante </p> </center>
                                     </div>
-                                    
+                                
+                              </div>
                                     </div>
 
 

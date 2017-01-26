@@ -17,9 +17,12 @@
         <div>
        <%@include file="header.jsp" %>
         </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <br>
             <div class="row10">
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-3 col-xs-12 blocca" id="Sparisci">
+                    <hr style="border-width: 3px">
                     <div class="container">
                         <form>
                             <div>
@@ -35,7 +38,7 @@
                               <div class="form-check"id="Spazio">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                  Alfabeto
+                                  Nome
                                 </label>
                               </div>
                               <div class="form-check disabled"id="Spazio">
@@ -45,25 +48,51 @@
                                 </label>
                               </div>
                            
-                            <div class="form-group2 row2">
-                            <div class="offset-md-10 col-xs-2 btn-responsive" id="Spazio">
-                              <button type="submit" class="btn btn-primary">Cerca</button>
+                            
+                            <div class="offset-md-3 col-xs-2" id="Spazio">
+                              <button type="submit" class="btn btn-primary btn-responsive Azzurro">Cerca</button>
                             </div>
-                          </div>
+                                
+                          
+                               
                                  </div>
+                           
                             </div>
                             
                         </form>
+                        
                     </div>
+                     <hr style="border-width: 3px">
                 </div>
+                <div class="col-xs-12 Sparisci_2">
+                    <div class="row">
+        
+        
+		<!-- Our Special dropdown has class show-on-hover -->
+        <div class="btn-group show-on-hover col-xs-offset-6">
+           
+            <button type="button" class="btn btn-Primary btn-responsive dropdown-toggle Azzurro" data-toggle="dropdown">
+            Ordina Per <span class="caret"></span>
+          </button>
+            
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Classifica</a></li>
+            <li><a href="#">Nome</a></li>
+            <li><a href="#">Fascia di Prezzo</a></li>
+          </ul>
+                
+        </div>
+                </div>
+                
             </div>
+       
         
                           
                           
                           
             
                     
-        <div class="col-md-9 col-xs-12">
+        <div class="col-md-9 col-md-offset-3 col-xs-12" id="Spazio">
                
                 
                 <%! private DBManager manager; %>

@@ -5,6 +5,12 @@
     }
 }
 
+.blocca     {
+   
+   position:fixed;
+ 
+} 
+
 @media (max-width: 991px) {
 #Sparisci {
    display:none;
@@ -58,6 +64,11 @@ body {
     font-size:100%;
     line-height: 1.6;
   }
+}
+
+.dropdown {
+    color: #337AB7;
+    left:-30px;
 }
 
 #Arancio {
