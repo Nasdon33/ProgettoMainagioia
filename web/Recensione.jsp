@@ -36,7 +36,8 @@
                     <hr>
                     <h4>Voto globale</h4>
                     <br>
-                    <input type="range" id="total" min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
+                    <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
+                    
                     <span id="range">3</span>
                     <script type="text/javascript">
                     function showValue(newValue)
@@ -50,7 +51,8 @@
                     <hr>
                     <h4>Cibo</h4>
                     <br>
-                    <input type="range" id="food" min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
+                    <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
+                    
                     <span id="range2">3</span>
                     <script type="text/javascript">
                     function showValue2(newValue)
@@ -64,7 +66,8 @@
                     <hr>
                     <h4>Servizio</h4>
                     <br>
-                    <input type="range" id="service" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
+                    <input type="range" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
+                    
                     <span id="range3">3</span>
                     <script type="text/javascript">
                     function showValue3(newValue)
@@ -83,7 +86,8 @@
                     <hr>
                     <h4>Qualità/prezzo</h4>
                     <br>
-                    <input type="range" id="value_for_money" min="1" max="5" value="3" step="1" onchange="showValue4(this.value)" />
+                    <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue4(this.value)" />
+                    
                     <span id="range4">3</span>
                     <script type="text/javascript">
                     function showValue4(newValue)
@@ -97,7 +101,8 @@
                     <hr>
                     <h4>Atmosfera</h4>
                     <br>
-                    <input type="range" id="atmosphere" min="1" max="5" value="3" step="1" onchange="showValue5(this.value)" />
+                    <input type="range" min="1" max="5" value="3" step="1" onchange="showValue5(this.value)" />
+                    
                     <span id="range5">3</span>
                     <script type="text/javascript">
                     function showValue5(newValue)
@@ -115,12 +120,12 @@
                     <h2><i class="fa fa-paper-plane-o"></i> TITOLO:</h4>
                     <div class="form-group">
                         
-                        <textarea class="form-control" rows="1" id="name"></textarea>
+                        <input type="text" class="form-control"  name="name" value="" />
                     </div>
                         <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
 
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" id="description"></textarea>
+                                <input type="text" class="form-control" name="description" value="" />
                             </div>
                         <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                         <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>

@@ -49,17 +49,17 @@ public class Recensione extends HttpServlet {
         increment.next();
                 
                 String id = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
-                String val = request.getParameter("range");
-                String foo = request.getParameter("range2");
-                String ser = request.getParameter("range3");
-                String vfm = request.getParameter("range4");
-                String atm = request.getParameter("range5");
+                String val = request.getParameter("total");
+                String foo = request.getParameter("food");
+                String ser = request.getParameter("service");
+                String vfm = request.getParameter("value_for_money");
+                String atm = request.getParameter("atmosphere");
                 String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
                 String nam = request.getParameter("name");
                 String des = request.getParameter("description");
-                String idr = request.getParameter("id_restaurant");
+                String idr = "5";//request.getParameter("id_restaurant");
                 String idc = request.getParameter("id_creator");
-                //System.out.print(id+ val+ foo+ ser+ vfm+ atm+ nam+ des+ dat+ idr+ idc);
+                System.out.print(id+ val+ foo+ ser+ vfm+ atm+ nam+ des+ dat+ idr+ idc);
                 String sql2= "INSERT INTO mainagioia.Reviews(ID,global_value, food, service, value_for_money, atmosphere, name,description,date_creation,id_restaurant,id_creator,id_photo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null)";
                 manager.setData(sql2, id, val, foo, ser, vfm, atm, nam, des, dat, idr, idc);
         
