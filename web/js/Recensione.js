@@ -1,3 +1,5 @@
+/* global myDOMElement */
+
 // Starrr plugin (https://github.com/dobtco/starrr)
 var __slice = [].slice;
 
@@ -6,9 +8,10 @@ var __slice = [].slice;
 
   Starrr = (function() {
     Starrr.prototype.defaults = {
+      id : void "",
       rating: void 0,
       numStars: 5,
-      change: function(e, value) {}
+      change: function(e, id, value) {}
     };
 
     function Starrr($el, options) {
@@ -32,7 +35,7 @@ var __slice = [].slice;
       this.$el.on('mouseout.starrr', function() {
         return _this.syncRating();
       });
-      this.$el.on('click.starrr', 'span', function(e) {
+      this.$el.on('click.starrr', 'span', 'id', function(e) {
         return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
       });
       this.$el.on('starrr:change', this.options.change);
@@ -54,7 +57,7 @@ var __slice = [].slice;
       }
       this.options.rating = rating;
       this.syncRating();
-      return this.$el.trigger('starrr:change', rating);
+      return this.$el.trigger('starrr:change', id, rating);
     };
 
     Starrr.prototype.syncRating = function(rating) {
@@ -105,9 +108,10 @@ $(function() {
 
 $( document ).ready(function() {
       
-  $('#stars').on('starrr:change', function(e, value){
-      
-    $('.count').html(value);
+  $('#stars').on('starrr:change', function(e, id, value){
+    
+    document.getElementById("total").setAttribute("value", value);
+    $("#"+id+"").html(value);
   });
   
   
