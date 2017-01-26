@@ -33,27 +33,27 @@
             
     <div class="row lead">
         <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
+        You gave a rating of <span class="count" id="total">0</span> star(s)
 	</div>
             
             <div class="row lead">
         <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
+        You gave a rating of <span class="count" id="food">0</span> star(s)
 	</div>
             
             <div class="row lead">
         <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
+        You gave a rating of <span class="count" id="valueformoney">0</span> star(s)
 	</div>
             
             <div class="row lead">
         <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
+        You gave a rating of <span class="count" id="service">0</span> star(s)
 	</div>
             
              <div class="row lead">
         <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
+        You gave a rating of <span class="count" id="atmosphere">0</span> star(s)
 	</div>
             </center>
     
@@ -72,11 +72,16 @@
   <center>
                 <!-- the comment box -->
                 <div>
-                    <h4><i class="fa fa-paper-plane-o"></i> Leave a Comment:</h4>
                     <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
+                    <h2><i class="fa fa-paper-plane-o"></i> TITOLO:</h4>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="1" id="titolo"></textarea>
+                    </div>
+                        <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" id="descrizione"></textarea>
+                            </div>
                         <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
                     </form>
                 </div>

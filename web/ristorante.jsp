@@ -27,8 +27,6 @@
         <div>
          <%@include file="header.jsp" %>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <script src="js/Inserimento_immagine"></script>
         
         <%! private DBManager manager; %>
@@ -336,28 +334,23 @@
                                    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
                                    long diff = timestamp.getTime() - time.getTime();
                                    long seconds = diff / 1000;
-                                   System.out.println("Seconds: "+seconds);
                                    long minutes = seconds / 60 ;
-                                   System.out.println("Minutes: "+minutes);
                                    seconds = seconds % 60;
                                    long hours = minutes / 60;
-                                   System.out.println("Hourse: "+hours+ "S: "+seconds);
                                    minutes = minutes % 60;
                                    long days = hours / 24;
-                                   System.out.println("Days: "+days+ "M: "+minutes);
                                    hours = hours % 24;
                                    long months = days / 30;
-                                   System.out.println("Months: "+months+ "H: "+hours);
                                    days = days % 30;
                                    long years = months / 12;
-                                   System.out.println("Years: "+years+ "D: "+days);
                                    months = months % 12;
-                                   System.out.println("M: "+months);
                                    
                                    if(years > 0){
                                         out.print(years+" year");
                                         if(years > 1)
                                             out.print("s");
+                                        if(months > 1)
+                                            out.print(" and "+ months +" months");
                                    }
                                    else if (months > 0){
                                        out.print(months+" month");
