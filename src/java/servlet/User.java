@@ -84,15 +84,10 @@ public class User extends HttpServlet {
                 String des = request.getParameter("description");
                 String idr = request.getParameter("id_restaurant");
                 String idc = request.getParameter("id_creator");
-                String idp = null;
-                if (request.getParameter("photo")!=null){
-                    //Salva la foto da qualche parte e manda URL in idp
-                }
-                String sql2= "INSERT global_value = ? food = ? service = ? "
-                        + "value_for_money = ? atmosphere = ? name = ? description = ?"
-                        + "date_creation = ? id_restaurant = ? id_creator = ? id_photo = ?"
-                        + "from REVIEWS where id_restaurant = ?";
-                manager.getData(sql2, val, foo, ser, vfm, atm, dat, nam, des, idr, idc, idp, idr);
+                String sql2= "INSERT INTO REVIEWS VALUES(global_value = ?, food = ?, service = ?, "
+                        + "value_for_money = ?, atmosphere = ?, name = ?, description = ?,"
+                        + "date_creation = ?, id_restaurant = ?, id_creator = ?)";
+                manager.getData(sql2, val, foo, ser, vfm, atm, dat, nam, des, idr, idc);
                 
                 break;
             }

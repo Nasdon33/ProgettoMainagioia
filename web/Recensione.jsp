@@ -26,51 +26,115 @@
         
         
         <div class="container">
-            
-            <center>
-	<div class="row">
+            <form role="form" action="Recensione" method="GET">
+        <center>
+            <div class="row">
 		<h2>Inserisci la tua Recensione:</h2>
-	</div>
-            
-         
-        <div>
-           <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-	
-		<div class="row">
+            </div>
+            <div class="container">
+                <div class="col-md-2 col-xs-3 col-md-offset-1">
+                    <hr>
+                    <h4>Voto globale</h4>
+                    <br>
+                    <input type="range" id="total" min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
+                    <span id="range">3</span>
+                    <script type="text/javascript">
+                    function showValue(newValue)
+                    {
+                            document.getElementById("range").innerHTML=newValue;
+                    }
+                    </script>
+
+                </div>
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <hr>
+                    <h4>Cibo</h4>
+                    <br>
+                    <input type="range" id="food" min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
+                    <span id="range2">3</span>
+                    <script type="text/javascript">
+                    function showValue2(newValue)
+                    {
+                            document.getElementById("range2").innerHTML=newValue;
+                    }
+                    </script>
+
+                </div>
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <hr>
+                    <h4>Servizio</h4>
+                    <br>
+                    <input type="range" id="service" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
+                    <span id="range3">3</span>
+                    <script type="text/javascript">
+                    function showValue3(newValue)
+                    {
+                            document.getElementById("range3").innerHTML=newValue;
+                    }
+                    </script>
+
+                </div>
+            </div>
    
-  
-  
-  
-  
-  <hr>
-  <center>
+           <hr>
+           
+           <div class="container">
+                <div class="col-md-2 col-xs-3 col-md-offset-3 col-xs-offset-2">
+                    <hr>
+                    <h4>Qualità/prezzo</h4>
+                    <br>
+                    <input type="range" id="value_for_money" min="1" max="5" value="3" step="1" onchange="showValue4(this.value)" />
+                    <span id="range4">3</span>
+                    <script type="text/javascript">
+                    function showValue4(newValue)
+                    {
+                            document.getElementById("range4").innerHTML=newValue;
+                    }
+                    </script>
+
+                </div>
+                <div class="col-md-2 col-xs-3 col-md-offset-2 col-xs-offset-2">
+                    <hr>
+                    <h4>Atmosfera</h4>
+                    <br>
+                    <input type="range" id="atmosphere" min="1" max="5" value="3" step="1" onchange="showValue5(this.value)" />
+                    <span id="range5">3</span>
+                    <script type="text/javascript">
+                    function showValue5(newValue)
+                    {
+                            document.getElementById("range5").innerHTML=newValue;
+                    }
+                    </script>
+
+                </div>
+            </div>
+           <hr>
                 <!-- the comment box -->
                 <div>
-                    
+                      <center>
                     <h2><i class="fa fa-paper-plane-o"></i> TITOLO:</h4>
                     <div class="form-group">
-                        <form role="form">
-                        <textarea class="form-control" rows="1" id="titolo"></textarea>
+                        
+                        <textarea class="form-control" rows="1" id="name"></textarea>
                     </div>
                         <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
 
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" id="descrizione"></textarea>
+                                <textarea class="form-control" rows="3" id="description"></textarea>
                             </div>
-                        <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
-                           </form> 
+                        <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
+                        <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
+                        <button type="submit" class="btn btn-primary">Submit </button>
 
                 </div>
 
    </center>
   
+                </form>
+
+	</div>
   
-	</div>
 
-	</div>
-
-       </div>
         
         
         

@@ -25,6 +25,10 @@
         <servlet-class>servlet.User</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>Recensione</servlet-name>
+        <servlet-class>servlet.Recensione</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>servlet.Registrazione</servlet-class>
     </servlet>
@@ -51,6 +55,10 @@
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Recensione</servlet-name>
+        <url-pattern>/Recensione</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>validate</servlet-name>

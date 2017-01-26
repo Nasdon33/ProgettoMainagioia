@@ -62,7 +62,7 @@
                         
                     </div>
                     <div id="Spazio">
-                        
+                        <input type="hidden" value="<%=idris %>" name="id_restaurant"/>
                         <div class="container">
                             
                             <!-- Trigger the modal with a button -->
