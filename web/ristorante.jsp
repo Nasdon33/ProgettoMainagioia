@@ -27,7 +27,9 @@
         <div>
          <%@include file="header.jsp" %>
         </div>
-        <script src="js/Inserimento_immagine"></script>
+        
+        <%-- Script per i MODAL --%>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         <%! private DBManager manager; %>
             <%! 
@@ -59,13 +61,66 @@
                         <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> 
                         
                     </div>
-                    
+                    <div id="Spazio">
+                        
+                        <div class="container">
+                            
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-primary btn-lg btn-responsive Azzurro" id="myBtn">Inserisci foto</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                              <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                <div class="modal-header col-md-10 col-xs-12 col-md-offset-2" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    
+                                    <h1><span class="glyphicon glyphicon-open"></span> Inserisci foto:</h1>
+                                    
+                                    
+                                    <form action="Photos" method="post" enctype="multipart/form-data" id="Spazio">
+                                    <input type="file" name="file" size="50" />
+                                    
+                                    <br>
+                                    <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
+                                </form>
+                                    
+                                </div>
+                                    <center> <p> Nota: Inserisci solo foto del ristorante </p> </center>
+                                    </div>
+                                    
+                                    </div>
+
+
+
+                                                </div>
+                                        </div>
+
+                                   
+                                  </div>
+                                  
+                                </div>
+
+                             
+                            </div> 
+                         
+                          <script>
+                          $(document).ready(function(){
+                              $("#myBtn").click(function(){
+                                  $("#myModal").modal();
+                              });
+                          });
+                          </script>
+                        
+                        </div>
                     </div>
+                        
                     </div>
         
-                    </div>
-                </div>
-            </div>
+               
+          
+         
                     
                
                 
@@ -91,8 +146,8 @@
                             </form>  
                         <form>
                         <input type="button" class="btn btn-primary btn-responsive Azzurro Sparisci_2" id="loader" value="Visualizza Orari" />
-                       </form> 
-                    
+          </form>
+      
 
                     </center>
                  </div>
@@ -422,8 +477,10 @@
                                </span>
                                </div>
                                <div class="panel-body">
+                                   <div style="font-weight: bold" class="Font_ufficale_titoli">
                                    <%=recensioni.getString("name") %>
-                                   <div>
+                                   </div>
+                                   <div class="Font_ufficale_normale">
                                        <%=recensioni.getString("description") %>
                                    </div>
                                </div><!-- /panel-body -->

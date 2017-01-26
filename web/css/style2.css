@@ -34,6 +34,10 @@
     
  
 }
+body {
+    font-family: 'Comic Sans MS';
+
+}
 
 @media (max-width: 768px) {
   .btn-responsive {
@@ -55,10 +59,16 @@
 #Arancio {
     background-color: #ff6600;
 }
+
+.Arancio {
+    background-color: #ff6600;
+}
 .Azzurro {
     background-color: #5bc0de;
     border-color: #46b8da;
+
 }
+
 .colorgraph {
   height: 5px;
   border-top: 0;
