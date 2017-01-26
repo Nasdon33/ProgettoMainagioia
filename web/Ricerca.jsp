@@ -7,17 +7,19 @@
 <!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+       <link href="css/style2.css" rel="stylesheet" type="text/css">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
         <title>Magnagioia</title>
     </head>
+    
+    
     <body>
         <div>
        <%@include file="header.jsp" %>
         </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 
         <br>
             <div class="row10">
@@ -71,7 +73,7 @@
 		<!-- Our Special dropdown has class show-on-hover -->
         <div class="btn-group show-on-hover col-xs-offset-6">
            
-            <button type="button" class="btn btn-Primary btn-responsive dropdown-toggle Azzurro" data-toggle="dropdown">
+            <button type="button" class="btn btn-Primary dropdown-toggle Azzurro" data-toggle="dropdown">
             Ordina Per <span class="caret"></span>
           </button>
             

@@ -25,8 +25,7 @@
         <link href="css/style2.css" rel="stylesheet" type="text/css">
         <link href="css/Index.css" rel="stylesheet" type="text/css">
         <title>Magnagioia</title>
-        <script src="js/Index.js"></script>
-
+        
     </head>
     
     <body>

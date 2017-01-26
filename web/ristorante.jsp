@@ -15,11 +15,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <script src="js/orari.js"></script>
+       
         <link href="css/style2.css" rel="stylesheet" type="text/css">  
         <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         
         <title>Ristorante Magnagioia</title>
@@ -30,7 +31,7 @@
         </div>
         
         <%-- Script per i MODAL --%>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
         
         <%! private DBManager manager; %>
             <%! 
@@ -157,6 +158,7 @@
                         <button name="button" class="btn btn-primary btn-responsive Azzurro">Scrivi una Recensione</button>
                             </form>  
                         <form>
+            
                         <input type="button" class="btn btn-primary btn-responsive Azzurro Sparisci_2" id="loader" value="Visualizza Orari" />
           </form>
       
