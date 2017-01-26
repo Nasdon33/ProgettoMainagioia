@@ -66,7 +66,7 @@
                         <div class="container">
                             
                             <!-- Trigger the modal with a button -->
-                            <button type="button" class="btn btn-primary btn-lg btn-responsive Azzurro" id="myBtn">Inserisci foto</button>
+                            <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn">Inserisci foto</button>
                             <!-- Modal -->
                             <div class="modal fade" id="myModal" role="dialog">
                               <div class="modal-dialog">
@@ -126,12 +126,12 @@
                 
                 <div class="col-md-6 col-xs-5">
                     <div>
-                    <b><%= ristorante.getString("name") %></b>
+                    <b style="font-size: 25px"><%= ristorante.getString("name") %></b>
                     </div>
                     
                     <div>
-                         <div id="Spazio">
-                    descrizione: <% out.println(ristorante.getString("description")); %>
+                         <div id="Spazio"> <%--Descrizione --%> 
+                    <% out.println(ristorante.getString("description")); %>
                     </div>
                     </div>
                 </div>
@@ -286,8 +286,7 @@
                                         b = false;
                                 }
                                 else{
-                                    out.println("<td> CHIUSO </td>"
-                                        + "</tr>");
+                                    out.println("<td id='Rosso';> CHIUSO </td>" + "</tr>");
                                 }     
                             }                   
                         %>

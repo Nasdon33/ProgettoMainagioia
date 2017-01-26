@@ -30,7 +30,7 @@
         
         <%@page import="db.Utente" %>
         
-        <div class="row">
+        <div>
        <%@include file="header.jsp" %>
         </div>
                    

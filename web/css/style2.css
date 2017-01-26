@@ -19,6 +19,10 @@
   }
 }
 
+#Rosso {
+    color:red;
+}
+
 @media (max-width: 505px) {
 #Sparisci_3 {
    display:none;
