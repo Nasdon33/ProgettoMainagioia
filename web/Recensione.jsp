@@ -10,7 +10,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/style2.css" rel="stylesheet" type="text/css">
-        <link href="css/recensione.css" rel="stylesheet" type="text/css">
       
         <title>Ristorante Magnagioia</title>
     </head>
@@ -34,12 +33,11 @@
                     <h4>Voto globale</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
-                    
-                    <span id="range">3</span>
+                    <input class="placeholder" id="range" name="total" value="3" readonly/>
                     <script type="text/javascript">
                     function showValue(newValue)
                     {
-                            document.getElementById("range").innerHTML=newValue;
+                            document.getElementById("range").value=newValue;
                     }
                     </script>
 
@@ -49,12 +47,11 @@
                     <h4>Cibo</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
-                    
-                    <span id="range2">3</span>
+                    <input class="placeholder" id="range2" name="food" value="3" readonly/>
                     <script type="text/javascript">
                     function showValue2(newValue)
                     {
-                            document.getElementById("range2").innerHTML=newValue;
+                            document.getElementById("range2").value=newValue;
                     }
                     </script>
 
@@ -64,12 +61,13 @@
                     <h4>Servizio</h4>
                     <br>
                     <input type="range" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
-                    
-                    <span id="range3">3</span>
+                    <input class="placeholder" id="range3" name="service" value="3" readonly/>
                     <script type="text/javascript">
                     function showValue3(newValue)
                     {
-                            document.getElementById("range3").innerHTML=newValue;
+                        
+                                
+                            document.getElementById("range3").value=newValue;
                     }
                     </script>
 
@@ -84,12 +82,11 @@
                     <h4>Qualità/prezzo</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue4(this.value)" />
-                    
-                    <span id="range4">3</span>
+                    <input class="placeholder" id="range4" name="value_for_money" value="3" readonly/>
                     <script type="text/javascript">
                     function showValue4(newValue)
                     {
-                            document.getElementById("range4").innerHTML=newValue;
+                            document.getElementById("range4").value=newValue;
                     }
                     </script>
 
@@ -99,12 +96,11 @@
                     <h4>Atmosfera</h4>
                     <br>
                     <input type="range" min="1" max="5" value="3" step="1" onchange="showValue5(this.value)" />
-                    
-                    <span id="range5">3</span>
+                    <input class="placeholder" id="range5" name="atmosphere" value="3" readonly/>
                     <script type="text/javascript">
                     function showValue5(newValue)
                     {
-                            document.getElementById("range5").innerHTML=newValue;
+                            document.getElementById("range5").value=newValue;
                     }
                     </script>
 

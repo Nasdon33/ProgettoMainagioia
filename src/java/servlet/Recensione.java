@@ -57,7 +57,7 @@ public class Recensione extends HttpServlet {
                 String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
                 String nam = request.getParameter("name");
                 String des = request.getParameter("description");
-                String idr = "5";//request.getParameter("id_restaurant");
+                String idr = request.getParameter("id_restaurant");
                 String idc = request.getParameter("id_creator");
                 System.out.print(id+ val+ foo+ ser+ vfm+ atm+ nam+ des+ dat+ idr+ idc);
                 String sql2= "INSERT INTO mainagioia.Reviews(ID,global_value, food, service, value_for_money, atmosphere, name,description,date_creation,id_restaurant,id_creator,id_photo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null)";

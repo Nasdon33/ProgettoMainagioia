@@ -155,10 +155,9 @@
                 
                 <div class="col-md-3 col-xs-4">
                     <center>  
-                            <form action="Recensione.jsp">
-                        <button name="button" class="btn btn-primary btn-responsive Azzurro">Scrivi una Recensione</button>
+                        <form action="Recensione.jsp?id=<%=idris %>" method="post">
+                        <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="Scrivi una Recensione" />
                             </form>  
-                        <form>
 
         <!-- Boxes de Acoes -->
         <div class="col-xs-12 col-md-12 Sparisci_2">
