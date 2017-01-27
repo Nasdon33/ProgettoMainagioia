@@ -19,7 +19,7 @@ $(document).ready(function () {
                     type: "GET",
                     data: {
                         term: request.term,
-                        ric: document.querySelector('input[name=ricerca]:checked').value
+                        ric: document.querySelector('input[name="rate"]:checked').value
                     },
                     dataType: "json",
                     success: function (data) {
