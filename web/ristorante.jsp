@@ -291,6 +291,7 @@
                                 </div>
                             </div>
                         </div>
+        </div>
                 </div>
                
                 <div class="col-md-4 col-xs-3" id="Sparisci">
@@ -383,6 +384,7 @@
                 }
             </script>    
         </div>
+        
         
         <div class="row6"> 
             <div class="col-md-12 col-xs-12">
