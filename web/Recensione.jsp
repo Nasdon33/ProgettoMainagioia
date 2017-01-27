@@ -9,10 +9,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
         <link href="css/style2.css" rel="stylesheet" type="text/css">
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
-        
+      
         <title>Ristorante Magnagioia</title>
     </head>
     <body>
@@ -20,10 +19,8 @@
          <%@include file="header.jsp" %>
        
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-       
         
+       
         
         <div class="container">
             <form role="form" action="Recensione" method="GET">
