@@ -21,6 +21,8 @@
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqLGJyMiDEZIohhJaX63cDfyXTDHky-g&sensor=false"></script>
         
         <title>Ristorante Magnagioia</title>
     </head>
@@ -90,9 +92,9 @@
                    
                             <h4><i class="fa fa-paper-plane-o"></i>Descrizione:</h4>
                             <div class="form-group">
-                            <textarea class="form-control" rows="2" id="descrizione"></textarea>
+                            <textarea class="form-control" rows="2" name="descrizione"></textarea>
                             </div>
-                           
+                            <input type="hidden" value="<%=idris %>" name="idris" />
                             <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
                            
                                     </form>
@@ -318,9 +320,15 @@
                       <tr>
                         <td><% 
                             String idcoo = ristorante.getString("id_coordinate");
-                            String sql2 = "SELECT address FROM mainagioia.coordinates WHERE id = ?";
+                            String sql2 = "SELECT latitude,longitude,address FROM mainagioia.coordinates WHERE id = ?";
                             ResultSet address = manager.getData(sql2,idcoo);
                             address.next();
+                            float lati=Float.parseFloat(address.getString("latitude"));
+                            float longi=Float.parseFloat(address.getString("longitude"));
+                            %>
+                            <input type="hidden" id="latitude"  name="latitude" value="<%=lati%>">
+                            <input type="hidden" id="longitude"  name="longitude" value="<%=longi%>">
+                            <%
                             out.println(address.getString("address")); %></td>
                         <td><% 
                             String idpri = ristorante.getString("id");
@@ -342,7 +350,39 @@
                   </table>
                 </div>
                
-            
+        <div id="map-canvas" style="height:300px; width:300px"></div>
+            <script>
+                var map;
+                var tmp1=document.getElementById('latitude').value;
+                var lat=parseFloat(tmp1);
+                console.log(lat);
+                var tmp2=document.getElementById('longitude').value;
+                var long=parseFloat(tmp2);
+                console.log(long);
+                function initialize() {
+                    var mapOptions = {
+                        zoom: 13,
+                        center: new google.maps.LatLng(lat, long )
+                    };
+                    map = new google.maps.Map(document.getElementById('map-canvas'),
+                            mapOptions);
+                            TestMarker();
+                     }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+                function addMarker(location) {
+                    marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                        });
+                    }
+
+                     // Testing the addMarker function
+                function TestMarker() {
+                       mark = new google.maps.LatLng(lat, long);
+                       addMarker(mark);
+                }
+            </script>    
         </div>
         
         <div class="row6"> 
