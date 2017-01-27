@@ -71,7 +71,8 @@
         
         
 		<!-- Our Special dropdown has class show-on-hover -->
-        <div class="btn-group show-on-hover col-xs-offset-6">
+                <center>
+        <div class="btn-group show-on-hover">
            
             <button type="button" class="btn btn-Primary dropdown-toggle Azzurro" data-toggle="dropdown">
             Ordina Per <span class="caret"></span>
@@ -84,6 +85,7 @@
           </ul>
                 
         </div>
+                </center>
                 </div>
                 
             </div>
@@ -132,8 +134,8 @@
                     
                     if(!ristoranti.next()){                        
                     %>
-                    <div class="col-md-3 col-xs-3">
-                        NESSUN RISTORANTE TROVATO
+                    <div class="col-md-12 col-xs-12">
+                        <center>   <p style="color:red">**NESSUN RISTORANTE TROVATO**</p></center>
                     </div>
                     <%          
                     }
