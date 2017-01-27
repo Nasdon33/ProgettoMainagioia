@@ -32,65 +32,41 @@
             }
         %>
        
-        <div>
-            <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
-               <div class="container">
-                <form class="form-horizontal">
-                <fieldset>
-
-                <!-- Form Name -->
-                
-                <legend>Gestisci Profilo</legend>
-                
-                <!-- Text input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Cambia Email</label>  
-                  <div class="col-md-4">
-                  <input id="textinput" name="textinput" type="text" placeholder="Nuova Email" class="form-control input-md">
-                   
-                  </div>
-                </div>
-
-                <!-- Password input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Cambia Password</label>
-                  <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Nuova Password" class="form-control input-md">
-
-                  </div>
-                </div>
-
-                <!-- Password input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Ripeti Password</label>
-                  <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Ripeti Password" class="form-control input-md">
-
-                  </div>
-                </div>
-
-                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Cambia Password</label>
-                  <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Nuova Password" class="form-control input-md">
-
-                  </div>
-                </div>
-
-                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Cambia Password</label>
-                  <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Nuova Password" class="form-control input-md">
-
-                  </div>
-                </div>
-
-                </fieldset>
-                </form>
-                </div>
-
-            </div>
-        </div>
+       <div class="row">
+        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+		<form role="form" method="POST" action="Registrazione">
+                    <center><h2>Modifica i tuoi dati:</h2></center>
+			<hr class="colorgraph">
+			<div class="form-group2">
+                            <center><b>Email Attuale:</b>"vecchia email"</center>
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3">
+			</div>
+                         <br>
+			<div class="form-group2">
+                            <center><b>Nickname Attuale:</b>"vecchio nickname"</center>
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuovo Nickname" tabindex="3">
+			</div>
+                          <br>
+			<div class="form-group2">
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3">
+			</div>
+                           <br>
+			<div class="form-group2">
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuova Password" tabindex="3">
+			</div>
+                           <br>
+                           <div class="form-group2">
+				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Ripeti Nuova Password" tabindex="3">
+			</div>
+			
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-12"><input type="submit" value="Conferma" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"></div>
+                        </div>
+		</form>
+	</div>
+</div>
         
         
         
