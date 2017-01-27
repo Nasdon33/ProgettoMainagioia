@@ -174,7 +174,9 @@
                 </div>
                 <div class="modal-body">
                     <!-- INSERIRE LA TABELLA CON GLI ORARI -->
-                
+                    <% String url = "tabella_orari.jsp?id="+idris; %>
+                    <jsp:include page="<%=url %>" />
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
@@ -291,57 +293,9 @@
                 </div>
                
                 <div class="col-md-4 col-xs-3" id="Sparisci">
-                    <div class="table">
-                    <table class="table table-responsive">
-                    <thead>
-                      <tr>
-                    <th>Giorno</th>
-                    <th></th>
-                    <th>Orari</th>
-                      </tr>
-                    </thead>
                     
-                    <tbody>
-                        <tr>
-                            
-                        <%
-                            String giorni[] = {"Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"};
-                            String sql5 = "SELECT O.day_of_the_week, O.start_hour, O.end_hour FROM opening_hours_ranges as O, (SELECT OH.id_opening_hours_range FROM opening_hours_range_restaurant as OH WHERE OH.id_restaurant = ?) as R WHERE R.id_opening_hours_range = O.id";
-                            ResultSet orari = manager.getData(sql5,idris);
-                            
-                            
-                            orari.next();
-                            boolean b = true;
-                            for(int i=0;i < 7; i++){
-                                out.println("<tr>"
-                                        + "<td>"+giorni[i]+"<td>");
-                                if((b == true) && Integer.parseInt(orari.getString("day_of_the_week")) == i+1){
-                                    out.println("<td>"+orari.getString("start_hour").substring(0,5)+" - "+orari.getString("end_hour").substring(0,5)+"</td>"
-                                        );
-                                    boolean a = true;
-                                    while(a == true && orari.next()){
-                                        if(Integer.parseInt(orari.getString("day_of_the_week")) == i+1)
-                                            out.println(
-                                            "<td></td>"
-                                            + "<td>"+orari.getString("start_hour").substring(0,5)+" - "+orari.getString("end_hour").substring(0,5)+"</td>"
-                                            + "</tr>");
-                                        else
-                                            a = false;
-                                    }
-                                    if(a == true)
-                                        b = false;
-                                }
-                                else{
-                                    out.println("<td id='Rosso';> CHIUSO </td>" + "</tr>");
-                                }     
-                            }                   
-                        %>
-                           
-                        </tr>
-                    </tbody>
+                    <jsp:include page="<%=url %>" />
                     
-                  </table>
-                </div>
                 </div>   
                 </div>                               
                        
@@ -537,79 +491,7 @@
                    
                    
                    
-                   <% /* <div class="row">
-                   <div class="col-sm-1 col-xs-2">
-                   <div class="thumbnail">
-                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                   </div><!-- /thumbnail -->
-                   </div><!-- /col-sm-1 -->
-
-                   <div class="col-sm-5 col-xs-10">
-                   <div class="panel panel-default">
-                   <div class="panel-heading">
-                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-                   </div>
-                   <div class="panel-body">
-                   Panel content
-                   </div><!-- /panel-body -->
-                   </div><!-- /panel panel-default -->
-                   </div><!-- /col-sm-5 -->
-
-                   <div class="col-sm-1 col-xs-2">
-                   <div class="thumbnail">
-                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                   </div><!-- /thumbnail -->
-                   </div><!-- /col-sm-1 -->
-
-                   <div class="col-sm-5 col-xs-10">
-                   <div class="panel panel-default">
-                   <div class="panel-heading">
-                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-                   </div>
-                   <div class="panel-body">
-                   Panel content
-                   </div><!-- /panel-body -->
-                   </div><!-- /panel panel-default -->
-                   </div><!-- /col-sm-5 -->
-                   </div><!-- /row -->
                    
-                   <div class="row">
-                   <div class="col-sm-1 col-xs-2">
-                   <div class="thumbnail">
-                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                   </div><!-- /thumbnail -->
-                   </div><!-- /col-sm-1 -->
-
-                   <div class="col-sm-5 col-xs-10">
-                   <div class="panel panel-default">
-                   <div class="panel-heading">
-                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-                   </div>
-                   <div class="panel-body">
-                   Panel content
-                   </div><!-- /panel-body -->
-                   </div><!-- /panel panel-default -->
-                   </div><!-- /col-sm-5 -->
-
-                   <div class="col-sm-1 col-xs-2">
-                   <div class="thumbnail">
-                   <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                   </div><!-- /thumbnail -->
-                   </div><!-- /col-sm-1 -->
-
-                   <div class="col-sm-5 col-xs-10">
-                   <div class="panel panel-default">
-                   <div class="panel-heading">
-                   <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-                   </div>
-                   <div class="panel-body">
-                   Panel content
-                   </div><!-- /panel-body -->
-                   </div><!-- /panel panel-default -->
-                   </div><!-- /col-sm-5 -->
-                   </div><!-- /row -->
-                   
-                   */ %>
                    
                 </div> 
 
