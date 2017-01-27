@@ -1,19 +1,22 @@
+<%@page import="db.Utente" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html PAGINA DA SISTEMARE>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!DOCTYPE html    DA SISTEMARE SFONDO PER INSERIRE HEADER>
 <html>
     <head>
         <%@include file="head.html" %>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+        <link href="css/style2.css" rel="stylesheet" type="text/css">  
         
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
-        
-        <title>Registrazione</title>
+        <title>Ristorante Magnagioia</title>
     </head>
     <body>
-        <%@page import="db.Utente" %>
         <div>
-        <%@include file="header.jsp" %>
+         <%@include file="header.jsp" %>
         </div>
+        
         <%
             utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
@@ -21,10 +24,9 @@
             }
         %>
         
-       <div class="container">
-
-<div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 		<form role="form" method="POST" action="Registrazione">
                     <center><h2>Registrati a Magnagioia!</h2></center>
 			<hr class="colorgraph">

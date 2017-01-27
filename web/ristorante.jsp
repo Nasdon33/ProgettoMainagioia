@@ -22,7 +22,6 @@
         <link href="css/recensione.css" rel="stylesheet" type="text/css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        
         <title>Ristorante Magnagioia</title>
     </head>
     <body>
@@ -158,9 +157,42 @@
                         <button name="button" class="btn btn-primary btn-responsive Azzurro">Scrivi una Recensione</button>
                             </form>  
                         <form>
-            
-                        <input type="button" class="btn btn-primary btn-responsive Azzurro Sparisci_2" id="loader" value="Visualizza Orari" />
-          </form>
+
+        <!-- Boxes de Acoes -->
+        <div class="col-xs-12 col-md-12 Sparisci_2">
+										
+	<div class="icon">
+					
+    <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
+    <!-- Modal -->
+    <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4> <i class="fa fa-bar-chart-o""></i>Visualizza Orari </h4>
+                </div>
+                <div class="modal-body">
+                    <!-- INSERIRE LA TABELLA CON GLI ORARI -->
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Modal -->
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		    
+	
+
+                            
+                        </form>
       
 
                     </center>

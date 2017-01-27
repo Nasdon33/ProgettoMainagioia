@@ -58,9 +58,10 @@
                       <ul class="list-unstyled" style="line-height: 2">
                           <li><i class="fa fa-check text-success"></i> Gestisci il tuo ristorante</li>
                           <li><span class="fa fa-check text-success"></span> Scegli il ristorante più adatto a te</li>
+                          <li><span class="fa fa-check text-success"></span> Recensisci i ristoranti</li>
                           <li><span class="fa fa-check text-success"></span> Risparmia denaro</li>
                           <li><span class="fa fa-check text-success"></span> Risparmia tempo</li>
-                          <li><span class="fa fa-check text-success"></span> Recensisci i ristoranti</li>
+                          
                           
                       </ul>
                       <p><a href="registrazione.jsp" class="btn btn-info btn-block">Registrati ora!</a></p>
