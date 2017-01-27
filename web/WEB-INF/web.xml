@@ -36,6 +36,14 @@
        <servlet-name>Controller</servlet-name>
        <servlet-class>servlet.Controller</servlet-class>
    </servlet>
+   <servlet>
+       <servlet-name>Photos</servlet-name>
+       <servlet-class>servlet.Photos</servlet-class>
+   </servlet>
+    <servlet-mapping>
+       <servlet-name>Photos</servlet-name>
+       <url-pattern>/Photos</url-pattern>
+   </servlet-mapping>
     <servlet-mapping>
        <servlet-name>Controller</servlet-name>
        <url-pattern>/Controller</url-pattern>
