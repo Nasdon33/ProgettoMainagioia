@@ -319,7 +319,7 @@
                       <tr>
                         <td><% 
                             String idcoo = ristorante.getString("id_coordinate");
-                            String sql2 = "SELECT latitude,longitude,address FROM mainagioia.coordinates WHERE id = ?";
+                            String sql2 = "SELECT * FROM mainagioia.coordinates WHERE id = ?";
                             ResultSet address = manager.getData(sql2,idcoo);
                             address.next();
                             float lati=Float.parseFloat(address.getString("latitude"));
@@ -328,7 +328,7 @@
                             <input type="hidden" id="latitude"  name="latitude" value="<%=lati%>">
                             <input type="hidden" id="longitude"  name="longitude" value="<%=longi%>">
                             <%
-                            out.println(address.getString("address")); %></td>
+                            out.println(address.getString("address")+", "+address.getString("city")+" "+address.getString("province")); %></td>
                         <td><% 
                             String idpri = ristorante.getString("id");
                             String sql3 = "SELECT name FROM mainagioia.price_ranges WHERE id = ?";

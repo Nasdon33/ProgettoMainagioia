@@ -198,19 +198,19 @@ INSERT INTO Mainagioia.restaurants
 VALUES (6, 'Le Ciaspole', 'Ristorante rinomato', 'http://www.alleciaspole.it/', 4, 4, 3);
 
 INSERT INTO Mainagioia.coordinates
-VALUES (0,46.088294, 11.065447,'Via Strada di cadine 13, 38123 Trento');
+VALUES (0,46.088294, 11.065447,'Via Strada di cadine 13', '38123', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (2,46.066969, 11.120262,'Via Don Arcangelo Rizzi 11, 38122 Trento');
+VALUES (2,46.066969, 11.120262,'Via Don Arcangelo Rizzi 11', '38122', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (1,46.069588, 11.118281,'Via della Prepositura 6, 38122 Trento');
+VALUES (1,46.069588, 11.118281,'Via della Prepositura 6', '38122', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (3,46.056916, 11.128201,'Viale Verona 40, 38122 Trento');
+VALUES (3,46.056916, 11.128201,'Viale Verona 40', '38122', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (4,45.894495, 10.849075,'Viale Trento 59/G, 38066 Riva del Garda TN');
+VALUES (4,45.894495, 10.849075,'Viale Trento 59/G', '38066', 'Riva del Garda', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (5,46.075187, 11.124904,'Via del Brennero 2, 38121 Trento');
+VALUES (5,46.075187, 11.124904,'Via del Brennero 2', '38121', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (6,46.480856, 11.141735,'Localita Plazze 6, Fraz. Tret, 38010 Fondo TN');
+VALUES (6,46.480856, 11.141735,'Localita Plazze 6', '38010', 'Fondo', 'TN', 'Italia');
 
 INSERT INTO Mainagioia.restaurant_coordinate
 VALUES (0,0);

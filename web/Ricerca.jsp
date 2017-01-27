@@ -113,10 +113,8 @@
                     String tipo = request.getParameter("ricerca");
                     String stringa = request.getParameter("search");
                     if(tipo.contains("zona")){ //da fare per bene
-                        String lon = request.getParameter("Longitude");
-                        String lat = request.getParameter("Latitude");
-                        String sql = "SELECT id, name FROM (SELECT R.id as id, sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) as distance FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant  RC.id_coordinate = C.id ORDER BY sqrt(pow(C.longitude - ?,2) + pow(C.latitude - ?,2)) DESC) WHERE distance * 999.6 < ?";
-                        ristoranti = manager.getData(sql,lon,lat,lon,lat,stringa);
+                        String sql = ("SELECT R.id, R.name FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant AND RC.id_coordinate = C.id AND (C.city = ? OR C.province = ? OR C.state = ?)");
+                        ristoranti = manager.getData(sql, stringa, stringa, stringa);
                         
                     }
                     else if(tipo.contains("cucina")){

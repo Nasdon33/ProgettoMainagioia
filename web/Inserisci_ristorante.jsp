@@ -64,6 +64,14 @@
                                <center><b>Città:</b></center>
 				<input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Trento" tabindex="3">
 			</div>
+                           <div class="form-group2">
+                               <center><b>Provincia:</b></center>
+				<input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="TN" tabindex="3">
+			</div>
+                           <div class="form-group2">
+                               <center><b>Stato:</b></center>
+				<input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Italia" tabindex="3">
+			</div>
 			<div class="form-group2">
                                 <center><b>Tipo di cucina:</b></center>
                                 <input type="checkbox" name="Italiana" value="Italiana"> Italiana &nbsp &nbsp &nbsp
@@ -78,13 +86,312 @@
                                 <input type="checkbox" name="Dolci" value="Dolci"> Dolci &nbsp &nbsp &nbsp
                                 <input type="checkbox" name="Pizza" value="Pizza"> Pizza &nbsp &nbsp &nbsp
                                 <input type="checkbox" name="Cibo di Strada" value="Cibo di Strada"> Cibo di Strada<br>
-                        </div>
+                        </div><br>
                            
                         <div class="form-group2">
-                            <center><b>Orari:</b></center><br>
-                                <center>Lunedì</center>
-                                <input type="radio" name="lunedì" value="0" checked> 0-8€<br>
-                                <input type="radio" name="prezzo" value="1">
+                            <center><b>Orari:</b></center>
+                                <center><H4> LUNEDI'</H4>
+                                <input type="checkbox" name="lun0" value="lun0"> Pranzo <select name="oraplun0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchlun0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="lun1" value="lun1"> Cena <select name="oraplun1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchlun1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                <H4> MARTEDI'</H4>
+                                <input type="checkbox" name="mar0" value="mar0"> Pranzo <select name="orapmar0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchmar0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="mar1" value="mar1"> Cena <select name="orapmar1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchmar1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                <H4> MERCOLEDI'</H4>
+                                <input type="checkbox" name="mer0" value="mer0"> Pranzo <select name="orapmer0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchmer0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="mer1" value="mer1"> Cena <select name="orapmer1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchmer1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                <H4> GIOVEDI'</H4>
+                                <input type="checkbox" name="gio0" value="gio0"> Pranzo <select name="orapgio0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchgio0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="gio1" value="gio1"> Cena <select name="orapgio1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchgio1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                <H4> VENERDI'</H4>
+                                <input type="checkbox" name="ven0" value="ven0"> Pranzo <select name="orapven0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchven0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="ven1" value="ven1"> Cena <select name="orapven1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchven1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                <H4> SABATO'</H4>
+                                <input type="checkbox" name="sab0" value="sab0"> Pranzo <select name="orapsab0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchsab0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="sab1" value="sab1"> Cena <select name="orapsab1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchsab1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                                    <H4> DOMENICA</H4>
+                                    <input type="checkbox" name="dom0" value="dom0"> Pranzo <select name="orapdom0">
+                                                                                                    <option value="10.00">10.00</option>
+                                                                                                    <option value="10.30">10.30</option>
+                                                                                                    <option value="11.00">11.00</option>
+                                                                                                    <option value="11.30">11.30</option>
+                                                                                                    <option value="12.00">12.00</option>
+                                                                                                    <option value="12.30">12.00</option>
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchdom0">
+                                                                                                    <option value="13.00">13.00</option>
+                                                                                                    <option value="13.30">13.30</option>
+                                                                                                    <option value="14.00">14.00</option>
+                                                                                                    <option value="14.30">14.30</option>
+                                                                                                    <option value="15.00">15.00</option>
+                                                                                                    <option value="15.30">15.00</option>
+                                                                                                    <option value="16.00">16.00</option>
+                                                                                                </select>
+                                                                                                &nbsp &nbsp
+                                <input type="checkbox" name="dom1" value="dom1"> Cena <select name="orapdom1">
+                                                                                                    <option value="18.00">18.00</option>
+                                                                                                    <option value="18.30">18.30</option>
+                                                                                                    <option value="19.00">19.00</option>
+                                                                                                    <option value="19.30">19.30</option>
+                                                                                                    <option value="20.00">20.00</option>
+                                                                                                    <option value="20.30">20.30</option>
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                </select>
+                                                                                                <select name="orchdom1">
+                                                                                                    <option value="21.00">21.00</option>
+                                                                                                    <option value="21.30">21.30</option>
+                                                                                                    <option value="22.00">22.00</option>
+                                                                                                    <option value="22.30">22.30</option>
+                                                                                                    <option value="23.00">23.00</option>
+                                                                                                    <option value="23.30">23.30</option>
+                                                                                                    <option value="24.00">24.00</option>
+                                                                                                    <option value="00.30">00.30</option>
+                                                                                                    <option value="01.00">01.00</option>
+                                                                                                    <option value="01.30">01.30</option>
+                                                                                                    <option value="02.00">02.00</option>
+                                                                                                </select>
+                                                                                                <br>
+                            </center>
                         </div>
 			
 

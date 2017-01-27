@@ -59,13 +59,17 @@ public class Controller extends HttpServlet {
         String ric = request.getParameter("ric");
         String sql;
         if(ric == "zona"){
-            sql = "SELECT address FROM mainagioia.coordinates WHERE address LIKE '"+term+"%"+"'";
+            sql = "SELECT * FROM mainagioia.coordinates WHERE city LIKE '"+term+"%"+"' OR province LIKE '"+term+"%"+"' OR state LIKE '"+term+"%"+"'";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
                 while (rs.next()) {
-                String data = rs.getString("address");
-                list.add(data);
+                String data1 = rs.getString("city");
+                String data2 = rs.getString("province");
+                String data3 = rs.getString("state");
+                list.add(data1);
+                list.add(data2);
+                list.add(data3);
             }
             } catch (SQLException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
