@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(function () {
         $("#ricerca").autocomplete({
+            
             width: 300,
             max: 10,
             delay: 100,
@@ -11,12 +12,14 @@ $(document).ready(function () {
             highlight: false,
             source: function (request, response) {
                 
+                
                 var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
                 $.ajax({
                     url: "Controller",
                     type: "GET",
                     data: {
-                        term: request.term
+                        term: request.term,
+                        ric: document.querySelector('input[name=ricerca]:checked').value
                     },
                     dataType: "json",
                     success: function (data) {

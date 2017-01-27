@@ -15,6 +15,9 @@
        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/autocomplete.js"></script>
+        <script type="text/javascript">
+        window.onload = savecheckbox('ricerca');
+        </script>
         <link rel="stylesheet" href="css/flexform.css">
         <link rel="stylesheet" href="css/Menu_tendina.css">
         <title>JSP Page</title>
@@ -93,7 +96,6 @@
                                 String ruolo = utente.getRuolo();
                                 if(ruolo.contains("admin")){ %>
                                 <li><a href="admin.jsp">Notifiche</a></li>
-                                <li><a href="admin.jsp">Aggiungi Ristorante</a></li>
                                 
                             <% } else if(ruolo.contains("owner")) { %>
                                 <li><a href="owner.jsp">Notifiche</a></li>
@@ -103,6 +105,7 @@
                             <% } %>
                             
                             <li><a href="impostazioni_profilo.jsp">Gestisci Profilo</a></li>
+                            <li><a href="Inserisci_ristorante.jsp">Aggiungi Ristorante</a></li>
                            
                             <li><a href="User">Esci</a></li> 
                 <% } %>

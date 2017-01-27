@@ -54,21 +54,63 @@ public class Controller extends HttpServlet {
         DBManager manager = (DBManager) super.getServletContext().getAttribute("dbmanager");
 
         response.setContentType("application/json");
-
-        String term = request.getParameter("term");
-        
         ArrayList<String> list = new ArrayList();
-        String sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
-        ResultSet rs;
-        try{
-            rs=manager.getData(sql);
-            while (rs.next()) {
-            String data = rs.getString("name");
-            list.add(data);
-        }
-        } catch (SQLException ex) {
+        String term = request.getParameter("term");
+        String ric = request.getParameter("ric");
+        String sql;
+        if(ric == "zona"){
+            sql = "SELECT address FROM mainagioia.coordinates WHERE address LIKE '"+term+"%"+"'";
+            ResultSet rs;
+            try{
+                rs=manager.getData(sql);
+                while (rs.next()) {
+                String data = rs.getString("address");
+                list.add(data);
+            }
+            } catch (SQLException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+        else if(ric == "cucina"){
+            sql = "SELECT name FROM mainagioia.cuisines WHERE name LIKE '"+term+"%"+"'";
+            ResultSet rs;
+            try{
+                rs=manager.getData(sql);
+                while (rs.next()) {
+                String data = rs.getString("name");
+                list.add(data);
+            }
+            } catch (SQLException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else if(ric == "nome"){
+            sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
+            ResultSet rs;
+            try{
+                rs=manager.getData(sql);
+                while (rs.next()) {
+                String data = rs.getString("name");
+                list.add(data);
+            }
+            } catch (SQLException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else if(ric == "indirizzo"){
+            sql = "SELECT address FROM mainagioia.coordinates WHERE address LIKE '"+term+"%"+"'";
+            ResultSet rs;
+            try{
+                rs=manager.getData(sql);
+                while (rs.next()) {
+                String data = rs.getString("address");
+                list.add(data);
+            }
+            } catch (SQLException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
         
 
         

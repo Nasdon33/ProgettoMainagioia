@@ -122,8 +122,8 @@
                         ristoranti = manager.getData(sql, stringa);
                     }
                     else if(tipo.contains("nome")){
-                        String sql = "SELECT id, name FROM mainagioia.Restaurants WHERE name = ?";
-                        ristoranti = manager.getData(sql,stringa);
+                        String sql = "SELECT id, name FROM mainagioia.Restaurants WHERE name like ?";
+                        ristoranti = manager.getData(sql,"%" + stringa + "%");
                     }
                     else{
                         String sql = ("SELECT R.id, R.name FROM mainagioia.Restaurants as R, mainagioia.Restaurant_coordinate as RC, mainagioia.Coordinates as C WHERE R.id = RC.id_restaurant AND RC.id_coordinate = C.id AND C.address like ? ");
