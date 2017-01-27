@@ -110,6 +110,19 @@ public class Controller extends HttpServlet {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        else{ 
+            sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
+            ResultSet rs;
+            try{
+                rs=manager.getData(sql);
+                while (rs.next()) {
+                String data = rs.getString("name");
+                list.add(data);
+            }
+            } catch (SQLException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         
         
 

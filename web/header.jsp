@@ -35,10 +35,10 @@
                         <div id="Ricerca_per">
                             <center>
                         <p> Ricerca per: 
-                        <input type="radio" name="ricerca" value="zona" checked="checked"> Zona
-                        <input type="radio" name="ricerca" value="cucina"> Cucina
-                        <input type="radio" name="ricerca" value="nome"> Nome
-                        <input type="radio" name="ricerca" value="indirizzo"> Indirizzo
+                        <input type="radio" id="r1" name="ricerca" value="zona" checked="checked"> Zona
+                        <input type="radio" id="r2" name="ricerca" value="cucina"> Cucina
+                        <input type="radio" id="r3" name="ricerca" value="nome"> Nome
+                        <input type="radio" id="r4" name="ricerca" value="indirizzo"> Indirizzo
                         </p>
                             </center>
                        

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var ricerca = document.querySelector('input[name=ricerca]:checked').value;
     $(function () {
         $("#ricerca").autocomplete({
             
@@ -19,7 +20,7 @@ $(document).ready(function () {
                     type: "GET",
                     data: {
                         term: request.term,
-                        ric: document.querySelector('input[name="rate"]:checked').value
+                        ric: ricerca.serialize()
                     },
                     dataType: "json",
                     success: function (data) {
