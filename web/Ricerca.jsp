@@ -151,7 +151,7 @@
                         %>
                     <img src="<%=foto.getString("path") %>" width="90%">
                     <br>
-                    <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
+                    <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=ristoranti.getString("name") %> </a>
                     <br>
                     
                     <%
