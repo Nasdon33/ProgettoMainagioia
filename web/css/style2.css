@@ -30,6 +30,11 @@ input.placeholder {
   }
 }
 
+.Azzurro_tondo {
+    background-color: #5bc0de;
+    border-radius: 32px;
+    
+}
 #Rosso {
     color:red;
 }
@@ -51,6 +56,7 @@ input.placeholder {
 }
 body {
     font-family: 'Comic Sans MS';
+    
 
 }
 
@@ -83,11 +89,16 @@ body {
 .Arancio {
     background-color: #ff6600;
 }
+
+.Azzurro_no_bordo {
+    background-color: #5bc0de;
+}
 .Azzurro {
     background-color: #5bc0de;
     border-color: #46b8da;
 
 }
+
 
 .colorgraph {
   height: 5px;
@@ -119,7 +130,6 @@ b {
 #Altezza {
     white-space:nowrap;
     overflow:hidden;
-   
     text-overflow:ellipsis;
     -o-text-overflow:ellipsis;
 }
@@ -324,52 +334,3 @@ input:-moz-placeholder {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
 }
-
-.caption {
-    font-family: Verdana, sans-serif;
-    font-size: 9px;
-    float: left;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-}
- 
-.caption img {
-    float: center;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    border: none;
-}
- 
-.caption span {
-    float: left;
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-    color: #dedede;
-     
-    background: #222;
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
- 
-.caption span strong {
-    font-weight: bold;
-    font-size: 11px;
-    text-transform: uppercase;
-    display: block;
-    padding-bottom: 5px;
-}
-.caption span {
-    /* ... */
-    display: none;
-}
- 
-.caption:hover span { display: block; }
-a:link    {text-decoration: none; color: white;}
-a:visited {text-decoration: none; color: white;}
-a:hover   {color: white;}
