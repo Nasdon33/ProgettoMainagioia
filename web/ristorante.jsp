@@ -307,7 +307,10 @@
         %>
             <div class="col-md-4 col-xs-4 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
-                <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
+                <div>
+                    <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
+                
+                </div>
             </a>
         </div>
                 <%
@@ -332,12 +335,14 @@
 <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
-                <center> <p style="font-size:30px" class="modal-title" id="image-gallery-title">Titolo foto</h4> </center> 
-            </div>
             <div class="modal-body">
-                <img id="image-gallery-image" class="img-responsive" src="img/RistoranteProva.jpg"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                <div class="caption">
+                    <img id="image-gallery-image" class="img-responsive" src="img/RistoranteProva.jpg"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                    <span>
+                            <strong><%=foto2.getString("name") %></strong>
+                            <em><%=foto2.getString("description") %></em>
+                    </span>
+                </div>
             </div>
             <div class="modal-footer">
 
