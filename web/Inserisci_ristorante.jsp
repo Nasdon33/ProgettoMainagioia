@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="form-group2">
-                            <hr color="#blue">
+                            <hr>
                             <center><b>Fascia di prezzo:</b></center>
                             <br>
                             <div class="col-md-3 col-xs-3">
@@ -451,7 +451,8 @@
                                                                                     <option value="01.00">01.00</option>
                                                                                     <option value="01.30">01.30</option>
                                                                                     <option value="02.00">02.00</option>
-                                                                                </select>     
+                                                                                </select>
+                         <hr id="hr1">
                     </div>
                 </div>
                 </center>
@@ -459,8 +460,8 @@
                 <div class="row">
                     <div id="Spazio">
                         <div class="container row">
-                            <div class="col-md-10 col-xs-12 col-md-offset-2" style="padding:35px 50px;">
-                                <h1><span class="glyphicon glyphicon-open"></span> Inserisci foto:</h1>
+                            <div class="col-md-12 col-xs-12">
+                                <p style="font-size: 30px">  <span class="glyphicon glyphicon-open"></span> Inserisci foto:</p>
                                 <input type="file" name="file" />
                             </div>
                         </div>

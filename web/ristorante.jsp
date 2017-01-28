@@ -76,16 +76,17 @@
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
-                                <div class="modal-header col-md-10 col-xs-12 col-md-offset-2" style="padding:35px 50px;">
+                                <div class="modal-header col-md-12 col-xs-12 " style="padding:35px 50px;">
+                                     <center>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     
-                                    <h1><span class="glyphicon glyphicon-open"></span> Inserisci foto:</h1>
+                                    <p style="font-size:30px"><span class="glyphicon glyphicon-open"></span> Inserisci foto:</p>
                                     
-                                    
+                                    <hr>
                                     <form action="Photos" method="post" enctype="multipart/form-data" id="Spazio">
                                     <input type="file" name="file" size="50" />
                                     
-                                    <br>
+                                    
                                     
                                     
                                 
@@ -95,15 +96,23 @@
                             <textarea class="form-control" rows="2" name="descrizione"></textarea>
                             </div>
                             <input type="hidden" value="<%=idris %>" name="idris" />
-                            <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
+                            <br>
                            
+                            <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
+                            </center>
                                     </form>
                                     
                                 </div>
-                                    <center> <p> Nota: Inserisci solo foto del ristorante </p> </center>
+                          
+                             <div class="modal-footer">
+                                 
+                                                <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                            </div>
+                           
                                     </div>
-                                
+                               
                               </div>
+                             
                                     </div>
 
 
@@ -160,14 +169,14 @@
 
                             <div class="icon">
 					
-                                <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
+                                <a class="btn btn-primary btn-responsive" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
                                 <!-- Modal -->
                                 <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header modal-header-primary">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h4> <i class="fa fa-bar-chart-o""></i>Visualizza Orari </h4>
+                                                <p style="font-size: 30px"> <i class="fa fa-bar-chart-o""></i>Visualizza Orari </h4>
                                             </div>
                                             <div class="modal-body">
                                                 <!-- INSERIRE LA TABELLA CON GLI ORARI -->
@@ -328,7 +337,7 @@
                                             <div class="modal-body">
                                                 <!-- INSERIRE LA TABELLA CON GLI ORARI -->  
                                                 <center>
-                                                    <div id="map-canvas" style="height:300px; width:300px"></div>
+                                                    <div id="map-canvas" style="height:350px; width:100%"></div>
                                                         <script>
                                                             
                                                             var map;
@@ -368,7 +377,7 @@
                                                     </center>
 
                                             </div>
-                                            <div class="modal-footer">
+                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
                                             </div>
                                         </div><!-- /.modal-content -->
