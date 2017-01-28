@@ -108,8 +108,7 @@
 
 
 
-                                                </div>
-                                        </div>
+                                                    
 
                                    
                                   </div>
@@ -128,9 +127,6 @@
                           </script>
                         
                         </div>
-                    </div>
-                        
-                    </div>
         
                
           
@@ -159,48 +155,41 @@
                         <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="Scrivi una Recensione" />
                             </form>  
 
-        <!-- Boxes de Acoes -->
-        <div class="col-xs-12 col-md-12 Sparisci_2">
-										
-	<div class="icon">
-					
-    <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
-    <!-- Modal -->
-    <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-primary">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4> <i class="fa fa-bar-chart-o""></i>Visualizza Orari </h4>
-                </div>
-                <div class="modal-body">
-                    <!-- INSERIRE LA TABELLA CON GLI ORARI -->
-                    <% String url = "tabella_orari.jsp?id="+idris; %>
-                    <jsp:include page="<%=url %>" />
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <!-- Modal -->
-						</div>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div> 
-		</div>		    
-	
+                        <!-- Boxes de Acoes -->
+                        <div class="col-xs-12 col-md-12 Sparisci_2">
 
-                            
-                        </form>
+                            <div class="icon">
+					
+                                <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-header-primary">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4> <i class="fa fa-bar-chart-o""></i>Visualizza Orari </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- INSERIRE LA TABELLA CON GLI ORARI -->
+                                                <% String url = "tabella_orari.jsp?id="+idris; %>
+                                                <jsp:include page="<%=url %>" />
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                                <!-- Modal -->
+                            </div>
+			</div>
+                    </center>                            
+		</div>
+		<div class="space"></div>	 
       
 
-                    </center>
-                 </div>
-            </div>
+                    
             
             <div class="row3">
                 
@@ -283,23 +272,22 @@
                                                     %>
                                                     
                                                     <!-- end 1 -->
-                                                </div>
-                                                <!-- end row -->
                                             </div>
+                                            <!-- end row -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-        </div>
+                    </div>
                 </div>
+            </div>
                
-                <div class="col-md-4 col-xs-3" id="Sparisci">
-                    
-                    <jsp:include page="<%=url %>" />
-                    
-                </div>   
-                </div>                               
+            <div class="col-md-4 col-xs-3" id="Sparisci">
+
+                <jsp:include page="<%=url %>" />
+
+            </div>                                
                        
         
         <div class="row2">
@@ -329,7 +317,65 @@
                             <input type="hidden" id="latitude"  name="latitude" value="<%=lati%>">
                             <input type="hidden" id="longitude"  name="longitude" value="<%=longi%>">
                             <%
-                            out.println(address.getString("address")+", "+address.getString("city")+" "+address.getString("province")); %></td>
+                            out.println(address.getString("address")+", "+address.getString("city")+" "+address.getString("province")); %>
+                            
+					
+                            <a class="btn btn-primary btn-responsive Azzurro" href="#secondary" data-toggle="modal"><i class="fa fa-soundcloud"></i><img src="https://www.shareicon.net/data/128x128/2015/11/05/667119_map_512x512.png" height="20"> Visualizza su Mappa</a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="secondary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <!-- INSERIRE LA TABELLA CON GLI ORARI -->  
+                                                <center>
+                                                    <div id="map-canvas" style="height:300px; width:300px"></div>
+                                                        <script>
+                                                            
+                                                            var map;
+                                                            var tmp1=document.getElementById('latitude').value;
+                                                            var lat=parseFloat(tmp1);
+                                                            console.log(lat);
+                                                            var tmp2=document.getElementById('longitude').value;
+                                                            var long=parseFloat(tmp2);
+                                                            console.log(long);
+                                                            $("#secondary").on("shown.bs.modal", function () {
+                                                            google.maps.event.trigger(map, "resize");
+                                                            });
+                                                            function initialize() {
+                                                                var mapOptions = {
+                                                                    zoom: 13,
+                                                                    center: new google.maps.LatLng(lat+0.018345, long-0.029393 )
+                                                                };
+                                                                map = new google.maps.Map(document.getElementById('map-canvas'),
+                                                                        mapOptions);
+                                                                        TestMarker();
+                                                                 }
+
+                                                            google.maps.event.addDomListener(window, 'load', initialize);
+                                                            function addMarker(location) {
+                                                                marker = new google.maps.Marker({
+                                                                    position: location,
+                                                                    map: map
+                                                                    });
+                                                                }
+
+                                                                 // Testing the addMarker function
+                                                            function TestMarker() {
+                                                                   mark = new google.maps.LatLng(lat, long);
+                                                                   addMarker(mark);
+                                                            }
+                                                        </script> 
+                                                    </center>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                                <!-- Modal -->
+                        </td>
                         <td><% 
                             String idpri = ristorante.getString("id");
                             String sql3 = "SELECT name FROM mainagioia.price_ranges WHERE id = ?";
@@ -349,40 +395,7 @@
                     </tbody>
                   </table>
                 </div>
-               
-        <div id="map-canvas" style="height:300px; width:300px"></div>
-            <script>
-                var map;
-                var tmp1=document.getElementById('latitude').value;
-                var lat=parseFloat(tmp1);
-                console.log(lat);
-                var tmp2=document.getElementById('longitude').value;
-                var long=parseFloat(tmp2);
-                console.log(long);
-                function initialize() {
-                    var mapOptions = {
-                        zoom: 13,
-                        center: new google.maps.LatLng(lat, long )
-                    };
-                    map = new google.maps.Map(document.getElementById('map-canvas'),
-                            mapOptions);
-                            TestMarker();
-                     }
-
-                google.maps.event.addDomListener(window, 'load', initialize);
-                function addMarker(location) {
-                    marker = new google.maps.Marker({
-                        position: location,
-                        map: map
-                        });
-                    }
-
-                     // Testing the addMarker function
-                function TestMarker() {
-                       mark = new google.maps.LatLng(lat, long);
-                       addMarker(mark);
-                }
-            </script>    
+        
         </div>
         
         

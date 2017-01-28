@@ -1,0 +1,10 @@
+{
+    "elements": {
+        "c:out": {}
+    },
+    "attributes": {
+        "size": {
+            "context": "input"
+        }
+    }
+}
