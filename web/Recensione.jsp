@@ -24,13 +24,13 @@
         <div class="container">
             <form role="form" action="Recensione" method="GET">
         <center>
-            <div class="row">
-		<h2>Inserisci la tua Recensione:</h2>
+            <div class="row" id="Spazio">
+		<p style="font-size:30px">Inserisci la tua Recensione:</p>
             </div>
-            <div class="container">
-                <div class="col-md-2 col-xs-3 col-md-offset-1">
+            <div class="container" id="Altezza">
+                <div class="col-md-4 col-xs-4">
                     <hr>
-                    <h4>Voto globale</h4>
+                    <h4><span class="glyphicon glyphicon-globe"></span> Voto globale</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
                     <input class="placeholder" id="range" name="total" value="3" readonly/>
@@ -42,9 +42,9 @@
                     </script>
 
                 </div>
-                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                <div class="col-md-4 col-xs-4  ">
                     <hr>
-                    <h4>Cibo</h4>
+                    <h4><span class="glyphicon glyphicon-apple"></span> Cibo</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
                     <input class="placeholder" id="range2" name="food" value="3" readonly/>
@@ -56,9 +56,9 @@
                     </script>
 
                 </div>
-                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                <div class="col-md-4 col-xs-4 ">
                     <hr>
-                    <h4>Servizio</h4>
+                    <h4><span class="glyphicon glyphicon-heart-empty"></span> Servizio</h4>
                     <br>
                     <input type="range" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
                     <input class="placeholder" id="range3" name="service" value="3" readonly/>
@@ -74,12 +74,12 @@
                 </div>
             </div>
    
-           <hr>
+           
            
            <div class="container">
-                <div class="col-md-2 col-xs-3 col-md-offset-3 col-xs-offset-2">
+                <div class="col-md-4 col-xs-4 col-md-offset-2 col-xs-offset-2">
                     <hr>
-                    <h4>Qualità/prezzo</h4>
+                    <h4><span class="glyphicon glyphicon-piggy-bank"></span> Qualità/prezzo</h4>
                     <br>
                     <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue4(this.value)" />
                     <input class="placeholder" id="range4" name="value_for_money" value="3" readonly/>
@@ -91,9 +91,9 @@
                     </script>
 
                 </div>
-                <div class="col-md-2 col-xs-3 col-md-offset-2 col-xs-offset-2">
+                <div class="col-md-4 col-xs-4">
                     <hr>
-                    <h4>Atmosfera</h4>
+                    <h4><span class="glyphicon glyphicon-home"></span> Atmosfera</h4>
                     <br>
                     <input type="range" min="1" max="5" value="3" step="1" onchange="showValue5(this.value)" />
                     <input class="placeholder" id="range5" name="atmosphere" value="3" readonly/>
@@ -122,7 +122,7 @@
                             </div>
                         <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                         <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
-                        <button type="submit" class="btn btn-primary">Submit </button>
+                        <button type="submit" class="btn btn-primary btn-responsive Azzurro">Inserisci </button>
 
                 </div>
 
