@@ -1,4 +1,3 @@
-<%@page import="java.sql.Timestamp"%>
 <%@page import="db.DBManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
@@ -76,7 +75,7 @@
    
            
            
-           <div class="container">
+           <div class="container" id="Altezza">
                 <div class="col-md-4 col-xs-4 col-md-offset-2 col-xs-offset-2">
                     <hr>
                     <h4><span class="glyphicon glyphicon-piggy-bank"></span> Qualità/prezzo</h4>
