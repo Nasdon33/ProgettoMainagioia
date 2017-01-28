@@ -15,6 +15,8 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +27,8 @@ import javax.servlet.http.Part;
  *
  * @author brando
  */
+@WebServlet("/upload")
+@MultipartConfig
 public class Photos extends HttpServlet {
 
     DBManager manager;
@@ -76,10 +80,14 @@ public class Photos extends HttpServlet {
 
         HttpSession s = request.getSession();
         Utente u = (Utente) s.getAttribute("utente");
+        System.out.println(appPath);
+        System.out.println(savePath);
         System.out.println("ID LOG_IN "+u.getId());
         System.out.println("NOME "+u.getNome());
-        System.out.println("ID RISTORANE "+request.getParameter("idris"));
-        for (Part part : request.getParts()) {
+        String ris;
+        ris = request.getParameter("idris");
+        System.out.println("ID RISTORANE "+ris);
+        Part part = request.getPart("file");
             String fileName = extractFileName(part);
             
             
@@ -87,7 +95,7 @@ public class Photos extends HttpServlet {
             part.write(savePath + fileName);
 
             String sqlget = "SELECT ID FROM mainagioia.photos ORDER BY ID DESC  fetch first 1 rows only";
-            String sqlristo = "SELECT name FROM mainagioia.restaurants WHERE id=" + request.getParameter("idris");
+            String sqlristo = "SELECT name FROM mainagioia.restaurants WHERE id=" + ris;
             ResultSet ristorante;
             String id_rest_tmp=null;
             
@@ -112,24 +120,23 @@ public class Photos extends HttpServlet {
             String name = id_rest_tmp;
             String description = (String) request.getParameter("descrizione");
             String path = savePath + fileName;
-            String id_rest = (String) request.getParameter("idris");
             String id_owner = u.getId();
 
             System.out.println("ID= "+id);
             System.out.println("NOME RISTO= "+name);
             System.out.println("DESCRIZIONE= "+description);
             System.out.println("PERCORSO= "+path);
-            System.out.println("ID rISTO= "+id_rest);
+            System.out.println("ID rISTO= "+ris);
             System.out.println("ID USER FOTO= "+id_owner);
 
             String sql = "INSERT INTO mainagioia.photos VALUES (?,?,?,?,?,?)";
             try {
-                manager.setData(sql, id, name, description, path, id_rest, id_owner);
+                manager.setData(sql, id, name, description, path, ris, id_owner);
             } catch (Exception ex) {
                 System.out.println("FOTO NON CARICATA");
             }
             
-        }
+        
 
         request.setAttribute("message", "Upload has been done successfully!");
         getServletContext().getRequestDispatcher("/index_nuovo.jsp").forward(

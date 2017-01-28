@@ -99,8 +99,9 @@
                             <br>
                            
                             <input type="submit" value="Carica Foto" class="btn btn-primary btn-responsive Azzurro"/>
-                            </center>
+                            
                                     </form>
+                            </center>
                                     
                                 </div>
                           
