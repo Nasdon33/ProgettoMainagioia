@@ -54,6 +54,27 @@ input.placeholder {
     
  
 }
+
+@media (max-width: 991px) {
+    .Font_ridimensionato {
+        font-size: 40px;
+    }
+    .Font_ridimensionato2 {
+        font-size: 20px;
+    }
+    
+}
+@media (min-width: 991px) {
+    .Font_ridimensionato {
+        font-size: 50px;
+    }
+    .Font_ridimensionato2 {
+        font-size: 30px;
+    }
+    
+}
+
+
 body {
     font-family: 'Comic Sans MS';
     
