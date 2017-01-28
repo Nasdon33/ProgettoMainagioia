@@ -94,15 +94,10 @@
         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu1">
             <% 
                                 String ruolo = utente.getRuolo();
-                                if(ruolo.contains("admin")){ %>
-                                <li><a href="admin.jsp">Notifiche</a></li>
-                                
-                            <% } else if(ruolo.contains("owner")) { %>
-                                <li><a href="owner.jsp">Notifiche</a></li>
+                             if(ruolo.contains("owner")) { %>
                                 <li><a href="impostazioni_ristorante.jsp">Gestisci Ristorante</a></li>
-                            <% } else { %>
-                                <li><a href="user.jsp">Notifiche</a></li>
                             <% } %>
+                                <li><a href="user.jsp">Notifiche</a></li>
                             
                             <li><a href="impostazioni_profilo.jsp">Gestisci Profilo</a></li>
                             <li><a href="Inserisci_ristorante.jsp">Aggiungi Ristorante</a></li>
