@@ -457,22 +457,22 @@ VALUES (1, 2, 9, 1, '2016-07-21 08:04:45');
 
 
 insert into photos
-values(0,'La Stube del Galletto','Interni','img/la-stube-del-galletto.jpg',0,2);
+values(0,'La Stube del Galletto','Principale','img/la-stube-del-galletto.jpg',0,2);
 
 insert into photos
-values(1,'Friends Fast Food','Copertina','img/friends.jpg',1,1);
+values(1,'Friends Fast Food','Principale','img/friends.jpg',1,1);
 
 insert into photos
-values(2,'Osteria Le Due Spade','Ingresso','img/osteria-le-due-spade.jpg',2,0);
+values(2,'Osteria Le Due Spade','Principale','img/osteria-le-due-spade.jpg',2,0);
 
 insert into photos
-values(3,'FryChicken','Cover','img/frychicken.jpg',3,3);
+values(3,'FryChicken','Principale','img/frychicken.jpg',3,3);
 
 insert into photos
-values(4,'Pizzeria Fenice','Interno','img/pizzeria_fenice.jpg',4,4);
+values(4,'Pizzeria Fenice','Principale','img/pizzeria_fenice.jpg',4,4);
 
 insert into photos
-values(5,'Zushi','Interno','img/zushi.jpg',5,5);
+values(5,'Zushi','Principale','img/zushi.jpg',5,5);
 
 insert into photos
-values(6,'Le Ciaspole','Interno','img/le_ciaspole.jpg',6,6);
+values(6,'Le Ciaspole','Principale','img/le_ciaspole.jpg',6,6);
