@@ -59,9 +59,12 @@
                 <div class="col-md-3 col-xs-3">
                     <div>
                         <%
-                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
+                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description = 'Principale' ";
                             ResultSet foto = manager.getData(sql10,idris);
                             foto.next();
+                            String sql11 = "SELECT * FROM Mainagioia.Photos WHERE id_restaurant = ? AND description != 'Principale' ";
+                            ResultSet foto2 = manager.getData(sql11,idris);
+                            foto2.next();
                         %>
                         <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> 
                         
@@ -297,13 +300,21 @@
                                                    
     <div class="col-md-12" id="Spazio2">
        
-    
+    <% 
+        int x = 0;
+        while(foto2.next() && (x < 3)){
+            x++;
+        %>
             <div class="col-md-4 col-xs-4 thumb">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="http://onelive.us/wp-content/uploads/2014/08/flower-delivery-online.jpg" data-target="#image-gallery">
-                <img class="img-responsive" src="img/RistoranteProva.jpg" alt="Short alt text">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
+                <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
             </a>
         </div>
-            <div class="col-md-4 col-xs-4 thumb">
+                <%
+                    
+                    }
+
+            /*<div class="col-md-4 col-xs-4 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="The car i dream about" data-caption="If you sponsor me, I can drive this car" data-image="http://www.picturesnew.com/media/images/car-image.jpg" data-target="#image-gallery">
                 <img class="img-responsive" src="img/RistoranteProva.jpg" alt="A alt text">
             </a>
@@ -312,7 +323,8 @@
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-caption="And if there is money left, my girlfriend will receive this car" data-image="http://upload.wikimedia.org/wikipedia/commons/7/78/1997_Fiat_Panda.JPG" data-target="#image-gallery">
                 <img class="img-responsive" src="img/RistoranteProva.jpg" alt="Another alt text">
             </a>
-        </div>
+        </div>*/
+%>
         
 </div>
 
