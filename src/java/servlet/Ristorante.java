@@ -26,7 +26,6 @@ import javax.servlet.http.Part;
  *
  * @author carlo.toniatti-2
  */
-@WebServlet("/upload")
 @MultipartConfig
 public class Ristorante extends HttpServlet {
     DBManager manager;

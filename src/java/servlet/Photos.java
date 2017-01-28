@@ -27,7 +27,6 @@ import javax.servlet.http.Part;
  *
  * @author brando
  */
-@WebServlet("/upload")
 @MultipartConfig
 public class Photos extends HttpServlet {
 
