@@ -9,6 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,16 +26,19 @@ import javax.servlet.http.Part;
  *
  * @author carlo.toniatti-2
  */
+@WebServlet("/upload")
+@MultipartConfig
 public class Ristorante extends HttpServlet {
+    DBManager manager;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, Exception {
-        DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+        manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
         String sqlget = "SELECT ID FROM mainagioia.Restaurants ORDER BY ID DESC  fetch first 1 rows only";
         
         ResultSet increment = manager.getData(sqlget);
         increment.next();
         String ris = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
-            String nam = request.getParameter("name");
+            String nam = (String) request.getParameter("nome");
             String des = request.getParameter("description");
             String web;
             if(request.getParameter("web_site_url") == null)
@@ -53,7 +58,7 @@ public class Ristorante extends HttpServlet {
             }
 
             String price = request.getParameter("price");   
-            String sql3 = "INSERT INTO Restaurants(id, name, description, web_site_url"
+            String sql3 = "INSERT INTO Restaurants(id, name, description, web_site_url,"
                     + "id_owner, id_creator, id_price_range) VALUES (?,?,?,?,?,?,?)";
 
             manager.setData(sql3, ris, nam, des, web, owner, id, price);
@@ -156,10 +161,10 @@ public class Ristorante extends HttpServlet {
                 
             }
             
-            //Part foto = request.getParts();
+            Part foto = request.getPart("file");
             request.setAttribute("idris", ris);
-            request.setAttribute("descrizione", des);
-            //request.setAttribute(nam, yeeee);
+            request.setAttribute("descrizione", "Principale");
+            request.setAttribute("file", foto);
             RequestDispatcher rd = request.getRequestDispatcher("Photos");
             rd.forward(request,response);
     

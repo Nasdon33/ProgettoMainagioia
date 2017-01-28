@@ -3,11 +3,12 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 <!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">        
        <link href="css/style2.css" rel="stylesheet" type="text/css">
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
        
@@ -28,7 +29,7 @@
         %>
        
         <div class="row">
-            <form role="form" method="POST" action="Ristorante" enctype="multipart/form-data">
+            <form method="POST" action="Ristorante" enctype="multipart/form-data">
                 <div>
                     <center><h2>Inserisci ristorante</h2></center>
                 </div>
@@ -41,7 +42,7 @@
 
                         <div class="form-group2">
                             <center><b>Nome:</b></center>
-                            <input type="text" name="name" id="display_name" class="form-control input-lg" placeholder="Nome Ristorante" tabindex="3">
+                            <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nome Ristorante" tabindex="3">
                         </div>
                         <br>
                         <div class="form-group2">
