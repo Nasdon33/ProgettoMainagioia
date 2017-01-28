@@ -84,7 +84,10 @@ public class Photos extends HttpServlet {
         System.out.println("ID LOG_IN "+u.getId());
         System.out.println("NOME "+u.getNome());
         String ris;
-        ris = request.getParameter("idris");
+        if(request.getParameter("idris") != null)
+            ris = request.getParameter("idris");
+        else
+            ris = (String) request.getAttribute("idris");
         System.out.println("ID RISTORANE "+ris);
         Part part = request.getPart("file");
             String fileName = extractFileName(part);
@@ -117,7 +120,11 @@ public class Photos extends HttpServlet {
 
             String id = String.valueOf(1 + Integer.parseInt(id_tmp));
             String name = id_rest_tmp;
-            String description = (String) request.getParameter("descrizione");
+            String description;
+            if(request.getParameter("descrizione") != null)
+                description = request.getParameter("descrizione");
+            else
+                description = (String) request.getAttribute("descrizione");
             String path = savePath + fileName;
             String id_owner = u.getId();
 

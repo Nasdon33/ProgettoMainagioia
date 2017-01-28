@@ -1,8 +1,13 @@
 package servlet;
 
 import db.DBManager;
+import db.Utente;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -10,10 +15,10 @@ import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 /*
@@ -44,8 +49,9 @@ public class Ristorante extends HttpServlet {
                 web = null;
             else
                 web = request.getParameter("web_site_url");
-
-            String id = request.getParameter("id");
+            HttpSession s = request.getSession();
+            Utente u = (Utente) s.getAttribute("utente");
+            String id = u.getId();
 
             String owner = request.getParameter("owner");
             if("0".equals(owner))
@@ -56,7 +62,7 @@ public class Ristorante extends HttpServlet {
                 manager.setData(sql,id);
             }
 
-            String price = request.getParameter("price");   
+            String price = request.getParameter("prezzo");   
             String sql3 = "INSERT INTO Restaurants(id, name, description, web_site_url,"
                     + "id_owner, id_creator, id_price_range) VALUES (?,?,?,?,?,?,?)";
 
@@ -66,14 +72,14 @@ public class Ristorante extends HttpServlet {
         ResultSet increment2 = manager.getData(sql4id);
         increment2.next();
             String coo = String.valueOf(1 + Integer.parseInt(increment2.getString("id")));
-            String address = request.getParameter("address");
-            String cap = request.getParameter("cap");
-            String city = request.getParameter("city");
-            String province = request.getParameter("province");
-            String state = request.getParameter("state");
+            String address = request.getParameter("address1");
+            String cap = request.getParameter("address2");
+            String city = request.getParameter("address3");
+            String province = request.getParameter("address4");
+            String state = request.getParameter("address5");
             String[] coord = Coordinate.getLatLongPositions(address+", "+cap+" "+ city+" "+province+" "+state); // <- FUNZIONE che traduce un indirizzo in coordinate?
 
-            String sql4 = "INSERT INTO Coordinates(id, latitude, longitude, address, cap, city, province, state VALUES (?, ?, ?, ?, ?, ?, ?, ?)"; 
+            String sql4 = "INSERT INTO Coordinates(id, latitude, longitude, address, cap, city, province, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"; 
             manager.setData(sql4, coo, coord[0], coord[1], address, cap, city, province, state);
          
             String sql5 ="INSERT INTO Restaurant_Coordinate(id_restaurant, id_coordinate) VALUES (?, ?)";
@@ -134,7 +140,7 @@ public class Ristorante extends HttpServlet {
                 }
                 String gio;
                 gio = String.valueOf(i);
-                String sqlapid = "SELECT ID FROM mainagioia.Coordinates ORDER BY ID DESC  fetch first 1 rows only";
+                String sqlapid = "SELECT ID FROM mainagioia.opening_hours_ranges ORDER BY ID DESC  fetch first 1 rows only";
                 ResultSet increment3 = manager.getData(sqlapid);
                 increment3.next();
                 int c = 0;
@@ -144,6 +150,7 @@ public class Ristorante extends HttpServlet {
                     String orch = request.getParameter("orch"+giorno+"0");
                     String ido = String.valueOf(1 + Integer.parseInt(increment3.getString("id")));
                     String sql7 = "INSERT INTO Opening_hours_ranges(id, day_of_the_week, start_hour, end_hour) VALUES(?,?,?,?)";
+                    System.out.println(orap);
                     manager.setData(sql7, ido, gio, orap+":00", orch+":00");
                     String sql8 = "INSERT INTO Opening_hours_range_Restaurant(id_restaurant, id_opening_hours_range) VALUES(?,?)";
                     manager.setData(sql8, ris, ido);
