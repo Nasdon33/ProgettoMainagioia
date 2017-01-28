@@ -468,6 +468,18 @@
                     </div>
                 </div>
                 </center>
+                <hr>
+                <center>
+                <div class="row">
+                    <H4>Sei il proprietario del ristorante?</H4>
+                    <div class="col-md-2 col-xs-2 col-md-offset-4 col-xs-offset-4">
+                        <input type="radio" name="owner" value="1"/> Sì
+                    </div>
+                    <div class="col-md-2 col-xs-2">
+                        <input type="radio" name="owner" value="0" checked/> No
+                    </div>
+                </div>
+                </center>
                 <div class="row">
                     <hr class="colorgraph col-md-6 col-md-offset-3">
                     <div class="row">
