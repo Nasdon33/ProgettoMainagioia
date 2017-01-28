@@ -26,7 +26,7 @@
             %>
             
         <div class="table">
-                    <table class="table table-responsive">
+                    <table class="table table-responsive Altezza">
                     <thead>
                       <tr>
                     <th>Giorno</th>
