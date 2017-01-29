@@ -51,8 +51,8 @@
         ristorante.next();
         %>
         
-        <br>
-        <div class="row2">
+        
+        <div class="row2" id="Spazio">
             <div class="col-md-3 col-xs-3">
                 <div>
                     <%
@@ -262,13 +262,16 @@
                                         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
+                                                    <center>
                                                     <div class="modal-body">
+                                                        
                                                         <div class="caption">
                                                             <div id="titolo"></div><hr>
-                                                            <img id="image-gallery-image" class="img-responsive" src="" alt="UEUE"><hr> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                                                            <img id="image-gallery-image" class="img-responsive" src="" alt="UEUE" width="350px"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
                                                             <div id="descrizione"></div>
                                                         </div>
                                                     </div>
+                                                    </center>
                                                     <div class="modal-footer">
                                                         <div class="col-md-2 col-xs-2">
                                                             <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
