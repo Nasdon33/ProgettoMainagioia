@@ -266,7 +266,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-body">
                                                     <div class="caption">
-                                                        <img id="image-gallery-image" class="img-responsive" src="img/RistoranteProva.jpg"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                                                        <img id="image-gallery-image" class="img-responsive" src="<%=foto2.getString("path") %>"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
                                                         <span>
                                                                 <strong><%=foto2.getString("name") %></strong>
                                                                 <em><%=foto2.getString("description") %></em>
