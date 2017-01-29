@@ -43,10 +43,13 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         
         
-        <div id="login-overlay" class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Effettua il Login su Magnagioia!</h4>
+        <div id="login-overlay" class="modal-dialog" style="background-color: white; opacity:0.9; border-radius: 30px">
+      <div >
+          <div>
+              <center>
+              <p class="modal-title" style="font-size: 30px" id="myModalLabel">Effettua il Login su Magnagioia!</p>
+              </center>
+              <hr class="colorgraph">
           </div>
           <div class="modal-body">
               <div class="row">
@@ -59,19 +62,20 @@
                                   <span class="help-block"></span>
                               </div>
                               <div class="form-group1">
+                                  
                                   <label for="password" class="control-label">Password</label>
                                   <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
                                   <span class="help-block"></span>
                               </div>
                               <div class="errore invisibile" id="login-error">Email o Password errati</div>
-                              
-                              <button type="submit" class="btn btn-success btn-block">Login</button>
-                              <a href="Password" class="btn btn-default btn-block">Dimenticato la password?</a>
+                              <br>
+                              <button type="submit" class="btn btn-info Azzurro btn-block btn-responsive">Login</button>
+                              <a href="Password" class="btn btn-default btn-block btn-responsive">Dimenticato la password?</a>
                           </form>
                       </div>
                   </div>
-                  <div class="col-xs-6">
-                      <p class="lead">Registrati ora è <span class="text-success">GRATIS!</span></p>
+                  <div class="col-xs-6" id="Altezza">
+                      <p style="font-size:20px">Registrati ora è <span class="text-success">GRATIS!</span></p>
                       <ul class="list-unstyled" style="line-height: 2">
                           <li><i class="fa fa-check text-success"></i> Gestisci il tuo ristorante</li>
                           <li><span class="fa fa-check text-success"></span> Scegli il ristorante più adatto a te</li>
@@ -81,7 +85,7 @@
                           
                           
                       </ul>
-                      <p><a href="registrazione.jsp" class="btn btn-info btn-block">Registrati ora!</a></p>
+                      <p><a href="registrazione.jsp" class="btn btn-info btn-block btn-responsive">Registrati ora!</a></p>
                   </div>
               </div>
           </div>

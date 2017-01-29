@@ -17,6 +17,24 @@
         <%-- Script per i MODAL --%>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
+        <style>
+        body {
+        height:100%;
+        width:100%;
+        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+        background-size:cover;    
+        }
+
+      @media only screen and (max-width: 767px) {
+       body {
+         /* The file size of this background image is 93% smaller
+            to improve page load speed on mobile internet connections */
+         background-image: url(img/SfondoPiccolo.jpg);
+         
+        }
+       }
+       </style>
         
         <title>Profilo</title>
     </head>
@@ -33,7 +51,7 @@
         %>
        
        <div class="row">
-        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1" style="background-color: white; opacity:0.9; border-radius: 30px">
 		<form role="form" method="POST" action="Registrazione">
                     <center><h2>Modifica i tuoi dati:</h2></center>
 			<hr class="colorgraph col-md-12">

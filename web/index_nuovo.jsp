@@ -87,8 +87,8 @@
                                <div class="panel panel-default">
                                <div class="panel-heading">
                                <strong>
-                                  
-                               </strong>Andrea Beltramo <span class="text-muted"> ha commentato 3 mesi fa
+                                  Andrea Beltramo
+                               </strong> <span class="text-muted"> ha commentato 3 mesi fa
                                </span>
                                
                                </div>

@@ -11,7 +11,25 @@
        <link href="css/style2.css" rel="stylesheet" type="text/css">
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
        
-        <title>Magnagioia</title>
+       <style>
+        body {
+        height:100%;
+        width:100%;
+        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+        background-size:cover;    
+        }
+
+      @media only screen and (max-width: 767px) {
+       body {
+         /* The file size of this background image is 93% smaller
+            to improve page load speed on mobile internet connections */
+         background-image: url(img/SfondoPiccolo.jpg);
+         
+        }
+       }
+       </style>
+        <title>Ricerca</title>
     </head>
     
     
@@ -22,13 +40,15 @@
     
 
         <br>
-            <div class="row10">
-                <div class="col-md-3 col-xs-12 blocca" id="Sparisci">
-                    <hr>
+            
+                <div class="col-md-3 blocca" id="Sparisci" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.3px solid;">
+                    
                     <div class="container">
+                        
                         <form>
                             <div>
-                            <p class="col-form-legend col-sm-12" id="Font">Ordina per:</p>
+                                
+                            <p class="col-form-legend" id="Font">Ordina per:</p>
                             
                             <div class="col-sm-12" id="Spazio">
                               <div class="form-check">
@@ -49,22 +69,23 @@
                                   Fascia di Prezzo
                                 </label>
                               </div>
+                              </div>
                            
                             
                             <div class="offset-md-3 col-xs-2" id="Spazio">
                               <button type="submit" class="btn btn-primary btn-responsive Azzurro">Cerca</button>
                             </div>
                                 
-                          
+                                
                                
                                  </div>
                            
-                            </div>
+                           </div>
                             
                         </form>
                         
                     </div>
-                     <hr>
+                    
                 </div>
                 <div class="col-xs-12 Sparisci_2">
                     <div class="row">
@@ -96,7 +117,7 @@
                           
             
                     
-        <div class="col-md-9 col-md-offset-3 col-xs-12" id="Spazio">
+        <div class="col-md-9 col-md-offset-3 col-xs-12" id="Spazio" >
                
                 
                 <%! private DBManager manager; %>
@@ -132,7 +153,7 @@
                     
                     if(!ristoranti.next()){                        
                     %>
-                    <div class="col-md-12 col-xs-12">
+                    <div class="col-md-12 col-xs-12 " style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.3px solid;">
                         <center>   <p style="color:red">**NESSUN RISTORANTE TROVATO**</p></center>
                     </div>
                     <%          
@@ -142,7 +163,8 @@
                         String idris = ristoranti.getString("id");
                     %>
                    
-                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" >
+                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.5px solid;">
+                       <br>
                         <center>
                             <%
                             String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
@@ -184,7 +206,7 @@
                     %>
                     
                         </center>
-                    <hr>
+                    <br>
                 </div>
                    
                 <%

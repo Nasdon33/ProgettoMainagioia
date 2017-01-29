@@ -41,12 +41,12 @@
             }
         %>
         
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+<div class="container" id="Spazio">
+    <div class="row" >
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"  style="background-color: white; opacity:0.9; border-radius: 30px">
 		<form role="form" method="POST" action="Registrazione">
                     <center><h2>Registrati a Magnagioia!</h2></center>
-			<hr class="colorgraph col-md-6 col-md-offset-3">
+			<hr class="colorgraph">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
@@ -87,9 +87,9 @@
                            <br>
 			
 			
-			<hr class="colorgraph col-md-6 col-md-offset-3">
+			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"></div>
+				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
                         </div>
 		</form>
 	</div>
