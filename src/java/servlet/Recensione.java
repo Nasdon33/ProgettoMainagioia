@@ -3,13 +3,9 @@ package servlet;
 import db.DBManager;
 import db.Utente;
 import java.io.IOException;
-import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -66,6 +62,7 @@ public class Recensione extends HttpServlet {
             response.sendRedirect(request.getHeader("referer"));
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
+            response.sendRedirect(request.getHeader("referer"));
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -120,6 +117,10 @@ public class Recensione extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void alert(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 

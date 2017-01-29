@@ -29,7 +29,6 @@
         <title>Ristorante Magnagioia</title>
     </head>
     <body>
-        <script type="text/javascript" src="js/Foto.js"></script>
         <div>
             <%@include file="header.jsp" %>
         </div>
@@ -255,32 +254,42 @@
                                                 x++;
                                     %>   
                                     <div class="col-md-4 col-xs-4 thumb">
-                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
+                                        <a id="img" class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
                                         <div>
                                             <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
                                         </div>
                                         </a>
-                                    </div>
-                                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <div class="caption">
-                                                        <img id="image-gallery-image" class="img-responsive" src="<%=foto2.getString("path") %>"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
-                                                        <span>
-                                                                <strong><%=foto2.getString("name") %></strong>
-                                                                <em><%=foto2.getString("description") %></em>
-                                                        </span>
+                                        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="caption">
+                                                            <div id="titolo"></div><hr>
+                                                            <img id="image-gallery-image" class="img-responsive" src="" alt="UEUE"><hr> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                                                            <div id="descrizione"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <div class="col-md-2 col-xs-2">
-                                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
-                                                    </div>                
+                                                    <div class="modal-footer">
+                                                        <div class="col-md-2 col-xs-2">
+                                                            <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                                        </div>                
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <script>
+                                        $(document).ready(function () { //Dom Ready
+                                            $('#image-gallery').on('show.bs.modal', function (e) { //Event listener
+                                                var image = $(e.relatedTarget).data("image"); //.getAttribute("data-image"); //Fetch image url from modal trigger <a> link
+                                                var titolo = $(e.relatedTarget).data("title"); //getAttribute("data-title"); //Fetch image url from modal trigger <a> link
+                                                var descrizione = $(e.relatedTarget).data("caption"); //getAttribute("data-caption"); //Fetch image url from modal trigger <a> link
+                                                document.getElementById("image-gallery-image").setAttribute("src", image); //load image in modal
+                                                document.getElementById("titolo").innerHTML = "<H2>"+titolo+"</H2>";                                        
+                                                document.getElementById("descrizione").innerHTML = "<H4>"+descrizione+"</H4>";
+                                            });
+                                        });
+                                        </script>                   
+                                    </div>                    
                                     <%
                                             }while((foto2.next()) && (x < 3));
                                         }
