@@ -1,8 +1,10 @@
 package servlet;
 
 import db.DBManager;
+import db.Utente;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -14,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,23 +29,60 @@ import javax.servlet.http.HttpServletResponse;
  * @author carlo.toniatti-2
  */
 public class Recensione extends HttpServlet {
+    DBManager manager;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, Exception {
-        DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
-        /*PrintWriter out = response.getWriter();
-        String function = request.getParameter("function");
-        ResultSet recensioni;
         
-        String sql = ("SELECT * FROM Reviews WHERE ID_RESTAURANT  = ?");
-        String id_rest = request.getParameter("id");
-        recensioni = manager.getData(sql, id_rest);
-        
-        out.println("<table>");
-        out.println("<tr> <td> Titolo </td> <td> Descrizione Recensione </td> <td> Voto Generale </td> <td> Voto Cibo </td> <td> Voto Servizio </td> <td> Voto Qualità/Prezzo </td> <td> Voto Atmosfera </td> </tr>");
-        while(recensioni.next()){
-            out.println("<tr><td>"+recensioni.getString("Name")+"</td><td>"+recensioni.getString("Description")+"</td><td>"+recensioni.getInt("GLOBAL VALUE") +"</td><td>"+recensioni.getInt("FOOD")+"</td><td>"+recensioni.getInt("SERVICE")+"</td><td>"+recensioni.getInt("VALUE_FOR_MONEY")+"</td><td>"+recensioni.getInt("ATMOSPHERE")+"</td></tr>");
-            }
-        out.println("</table>");*/
+    }    
+
+
+
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+        manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+        HttpSession ses = request.getSession();
+        Utente utente;
+        utente = (Utente)ses.getAttribute("utente");
+        String id_user = utente.getId();
+        String id_review = request.getParameter("idr");
+        String id_creator = request.getParameter("id");
+        String like = request.getParameter("val");
+        String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
+        String sql = "INSERT INTO mainagioia.user_review_likes(id_user, id_review, id_creator, like_type, date_creation) VALUES(?,?,?,?,?) ";
+        manager.setData(sql,id_user, id_review, id_creator, like, dat);
+        response.sendRedirect(request.getHeader("referer"));
+        } catch (SQLException ex) {
+            response.sendRedirect(request.getHeader("referer"));
+            Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
         String sqlget = "SELECT ID FROM mainagioia.Reviews ORDER BY ID DESC  fetch first 1 rows only";
         
         ResultSet increment = manager.getData(sqlget);
@@ -64,44 +104,6 @@ public class Recensione extends HttpServlet {
                 manager.setData(sql2, id, val, foo, ser, vfm, atm, nam, des, dat, idr, idc);
         
                 response.sendRedirect("index_nuovo.jsp");
-    }    
-
-
-
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
