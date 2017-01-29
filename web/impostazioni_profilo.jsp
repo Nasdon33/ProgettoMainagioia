@@ -52,12 +52,12 @@
        
        <div class="row">
         <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"  id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px">
-		<form role="form" method="POST" action="Registrazione">
+		<form role="form" method="POST" action="User">
                     <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center>
 			<hr class="colorgraph">
 			<div class="form-group2">
                             <center><b>Email Attuale:</b>"vecchia email"</center>
-				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3">
+				<input type="text" name="email" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3" required="">
 			</div>
                          <hr>
 			<div class="form-group2">
@@ -67,17 +67,17 @@
                           <hr>
                          <center><b>Cambia Password:</b></center>
 			<div class="form-group2">
-				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3">
+				<input type="text" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3">
 			</div>
                            <br>
 			<div class="form-group2">
-				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuova Password" tabindex="3">
+				<input type="text" name="npassword" id="display_name" class="form-control input-lg" placeholder="Nuova Password" tabindex="3">
 			</div>
                            <br>
                            <div class="form-group2">
-				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Ripeti Nuova Password" tabindex="3">
+				<input type="text" name="rpassword" id="display_name" class="form-control input-lg" placeholder="Ripeti Nuova Password" tabindex="3">
 			</div>
-			
+                           <input type="hidden" name="id" value="<%=utente.getId() %>">
 			
 			<hr class="colorgraph">
 			<div class="row">

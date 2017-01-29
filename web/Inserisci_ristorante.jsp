@@ -61,12 +61,12 @@
 
                         <div class="form-group2">
                             <center><b>Nome:</b></center>
-                            <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nome Ristorante" tabindex="3">
+                            <input type="text" name="nome" id="display_name" required="" class="form-control input-lg" placeholder="Nome Ristorante" tabindex="3">
                         </div>
                         <br>
                         <div class="form-group2">
                             <center><b>Descrizione:</b></center>
-                            <textarea name="description" id="display_name" class="form-control input-lg" placeholder="Descrizione" tabindex="3"></textarea>
+                            <textarea name="description" id="display_name" required="" class="form-control input-lg" placeholder="Descrizione" tabindex="3"></textarea>
                         </div>
                         <br>
                         <div class="form-group2">
@@ -97,27 +97,27 @@
                         <div class="form-group2">
                            
                             <center><b>Indirizzo:</b></center>
-                            <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Via Napoleone 57" tabindex="3">
+                            <input type="text" name="address1" id="display_name" required="" class="form-control input-lg" placeholder="Via Napoleone 57" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
                             <center><b>CAP:</b></center>
-                            <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="38122" tabindex="3">
+                            <input type="text" name="address2" id="display_name" required="" class="form-control input-lg" placeholder="38122" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
                             <center><b>Città:</b></center>
-                            <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Trento" tabindex="3">
+                            <input type="text" name="address3" id="display_name" required="" class="form-control input-lg" placeholder="Trento" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
                             <center><b>Provincia:</b></center>
-                            <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="TN" tabindex="3">
+                            <input type="text" name="address4" id="display_name" required="" class="form-control input-lg" placeholder="TN" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
                             <center><b>Stato:</b></center>
-                            <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Italia" tabindex="3">
+                            <input type="text" name="address5" id="display_name" required="" class="form-control input-lg" placeholder="Italia" tabindex="3">
                         </div>
                     </div>
                 </div>
@@ -483,7 +483,7 @@
                         <div class="container row">
                             <div class="col-md-12 col-xs-12">
                                 <p style="font-size: 30px">  <span class="glyphicon glyphicon-open"></span> Inserisci foto:</p>
-                                <input type="file" name="file" />
+                                <input type="file" name="file" required=""/>
                             </div>
                         </div>
                     </div>

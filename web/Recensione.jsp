@@ -118,11 +118,11 @@
                         <center>
                             <h2><i class="fa fa-paper-plane-o"></i> TITOLO:</h4>
                             <div class="form-group">
-                                <input type="text" class="form-control"  name="name" value="" />
+                                <input type="text" class="form-control"  name="name" value="" required="" />
                             </div>
                             <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
                             <div class="form-group">
-                                <textarea  class="form-control textarea" name="description" rows="3" ></textarea>
+                                <textarea  class="form-control textarea" name="description" rows="3" required=""></textarea>
                             </div>
                             <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                             <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
