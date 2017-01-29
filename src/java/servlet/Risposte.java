@@ -5,8 +5,14 @@
  */
 package servlet;
 
+import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Carlo
  */
 public class Risposte extends HttpServlet {
-
+    DBManager manager;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -30,19 +36,7 @@ public class Risposte extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Risposte</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Risposte at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -71,9 +65,29 @@ public class Risposte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+        try {
+            manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+            String sqlget = "SELECT ID FROM mainagioia.Replies ORDER BY ID DESC  fetch first 1 rows only";
 
+            ResultSet increment = manager.getData(sqlget);
+            increment.next();
+            String id = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
+            String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
+            String des = request.getParameter("description");
+            String idr = request.getParameter("id_review");
+            String ido = request.getParameter("id_owner");
+            String sql= "INSERT INTO mainagioia.Replies(ID,description,date_creation,date_validation,id_review,id_validator,id_owner) VALUES(?,?,?,null,?,null,?)";
+            manager.setData(sql, id, des, dat, idr, ido);
+
+            response.sendRedirect("index_nuovo.jsp");
+        } catch (SQLException ex) {
+                response.sendRedirect(request.getHeader("referer"));
+                Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                response.sendRedirect(request.getHeader("referer"));
+                Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
     /**
      * Returns a short description of the servlet.
      *
