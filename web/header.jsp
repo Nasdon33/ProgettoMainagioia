@@ -76,8 +76,10 @@
                 if(utente==null){
                    
                 %>
-                <a href="login.jsp">ACCEDI</a> | <a href="registrazione.jsp">REGISTRATI</a>
-               
+                
+<a class="btn icon-btn btn-info" href="login.jsp"><span class="glyphicon btn-glyphicon glyphicon-log-in img-circle"></span> ACCEDI</a>
+<a class="btn icon-btn btn-info" href="registrazione.jsp"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span> REGISTRATI</a>
+</div>
                 <% }
                 else
 
@@ -87,7 +89,8 @@
                 
 	
         <div class="dropdown">
-		<button type="button" class="btn dropdown-toggle Arancio" id="dropdownMenu1" data-toggle="dropdown">
+
+		<button type="button" class="btn btn icon-btn btn-info dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span>
             <%= utente.getNome()+" "+utente.getCognome()%> <span class="caret"></span>
         </button>
         

@@ -116,8 +116,8 @@
                 <hr>
                 <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
                      <center>
-                         <p style="font-size:20px;"> Sei un nuovo utente? <a href="registrazione.jsp">Registrati</a></p>
-                <p style="font-size:20px;"> Hai già un account? <a href="login.jsp">Accedi</a></p>
+                         <p style="font-size:20px;"> Sei un nuovo utente? <a href="registrazione.jsp" style="color:#5bc0de;">Registrati</a></p>
+                <p style="font-size:20px;"> Hai già un account? <a href="login.jsp" style="color:#5bc0de;">Accedi</a></p>
                 <p style="font-size:20px;">#Magnagioia</p>
                     </center>
                 </div>
