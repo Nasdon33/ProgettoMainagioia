@@ -29,6 +29,10 @@
         <servlet-class>servlet.Recensione</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>Risposte</servlet-name>
+        <servlet-class>servlet.Risposte</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Ristorante</servlet-name>
         <servlet-class>servlet.Ristorante</servlet-class>
     </servlet>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Risposte</servlet-name>
+        <url-pattern>/Risposte</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Recensione</servlet-name>
