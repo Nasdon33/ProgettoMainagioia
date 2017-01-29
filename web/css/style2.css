@@ -120,6 +120,11 @@ body {
 
 }
 
+.textarea{ 
+    min-height:120px; 
+    resize:none;
+}
+
 
 .colorgraph {
   height: 5px;

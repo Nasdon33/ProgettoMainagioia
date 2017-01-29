@@ -7,10 +7,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/style2.css" rel="stylesheet" type="text/css">
+        
+        <style>
+        body {
+        height:100%;
+        width:100%;
+        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+        background-size:cover;    
+        }
+
+      @media only screen and (max-width: 767px) {
+       body {
+         /* The file size of this background image is 93% smaller
+            to improve page load speed on mobile internet connections */
+         background-image: url(img/SfondoPiccolo.jpg);
+         
+        }
+       }
+       </style>
       
-        <title>Ristorante Magnagioia</title>
+        <title>Recensione</title>
     </head>
     <body>
         <div>
@@ -20,7 +38,7 @@
         
        
         
-        <div class="container">
+        <div class="container" style="background-color: white; opacity:0.9; border-radius: 30px">
             <form role="form" action="Recensione" method="GET">
         <center>
             <div class="row" id="Spazio">
@@ -117,24 +135,24 @@
                         <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" name="description" value="" />
+                                <textarea  class="form-control textarea" name="description" rows="3" value="" ></textarea>
                             </div>
                         <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                         <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
-                        <button type="submit" class="btn btn-primary btn-responsive Azzurro">Inserisci </button>
-
+                        <button type="submit" class="btn btn-info Azzurro  btn-responsive">Login</button>
                 </div>
 
    </center>
+                        
   
                 </form>
 
-	</div>
+
   
 
         
         
         
-        
+        </div>
     </body>
 </html>
