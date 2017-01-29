@@ -24,7 +24,7 @@
         <br>
             <div class="row10">
                 <div class="col-md-3 col-xs-12 blocca" id="Sparisci">
-                    <hr style="border-width: 3px">
+                    <hr>
                     <div class="container">
                         <form>
                             <div>
@@ -64,7 +64,7 @@
                         </form>
                         
                     </div>
-                     <hr style="border-width: 3px">
+                     <hr>
                 </div>
                 <div class="col-xs-12 Sparisci_2">
                     <div class="row">
@@ -151,7 +151,7 @@
                         %>
                     <img src="<%=foto.getString("path") %>" width="90%">
                     <br>
-                    <a href="ristorante.jsp?id=<%=idris %>" > <%=ristoranti.getString("name") %> </a>
+                    <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=ristoranti.getString("name") %> </a>
                     <br>
                     
                     <%

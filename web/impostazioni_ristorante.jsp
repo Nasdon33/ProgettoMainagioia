@@ -1,29 +1,22 @@
-<%-- 
-    Document   : login
-    Created on : 17-gen-2017, 12.03.31
-    Author     : Carlo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html    PAGINA DA SISTEMARE>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!DOCTYPE html>
 <html>
     <head>
-        <%@include file="head.html" %>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        
         <link href="css/style2.css" rel="stylesheet" type="text/css">
-        <title>Magnagioia</title>
+        <title>Impostazioni Risotrante</title>
+        
     </head>
+    
     <body>
-        <div>
+        
         <%@page import="db.Utente" %>
-        <%@include file="header.jsp" %>
-        <%-- <%
-            if(!utente.getRuolo().contains("owner")){
-                response.sendRedirect("index_nuovo.jsp");
-            }
-        %> --%>
-        </div>
+        
+        <div>
+       <%@include file="header.jsp" %>
+        </div>  
         <div class="container">
             <div class="row">
                 <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">

@@ -1,56 +1,90 @@
-<%-- 
-    Document   : login
-    Created on : 17-gen-2017, 12.03.31
-    Author     : Carlo
---%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
-        <%@include file="head.html" %>
-        <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
-        <link href="css/notifiche.css" rel="stylesheet" type="text/css">
-        <title>Magnagioia Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+       <link href="css/style2.css" rel="stylesheet" type="text/css">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
+        <title>Notifiche</title>
     </head>
+    
+    
     <body>
-        <%@page import="db.Utente" %>
-        <div class="row">
-        <%@include file="header.jsp" %>x
+        <div>
+       <%@include file="header.jsp" %>
+        </div>
         <%
             if(utente==null){
                 response.sendRedirect("index_nuovo.jsp");
             }
             
         %>
-        </div>
-        <center>
+        
+    
+    
+    
+        <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1">
             <!-- Notification header -->
             <div>
+                <center>
                 <h3>Ecco le tue notifiche:</h3>
+                </center>
             </div>
-        </center>
+        
         <!-- Notifications -->
-        <div class="container">
+       
             <%
                 if(utente.getRuolo().contains("user")){
             %>
                 <!-- NOTIFICHE PER L'UTENTE GENERICO -->
-                <div class="row">
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                        <button id="segnalazione_controllata" type="button" class="btn btn-warning ribbon">                           
-                            <img src="immagine-utente.jpg" alt="nome-utente" class="profile_img">
-                               Ha controllato la
+               
+                
+                    <div class="col-md-12 Azzurro_tondo">
+                        
+                        <button id="segnalazione_controllata" type="button" class="btn btn-responsive Azzurro_no_bordo">                           
+                             <p> "Nome utente" ha controllato la
                                <a href="link-recensione">segnalazione</a>
-                               che ci hai inviato.
+                               che ci hai inviato.</p>
                         </button>
-                        </div>
+                        
                     </div>
-                    <br>
+                    
+                    <div class="col-md-12">
+                        <br>                    <!--Spazio per le notifiche-->
+                    </div>
+                    
+                
+                    <div class="col-md-12 Azzurro_tondo">
+                        
+                        <button id="segnalazione_controllata" type="button" class="btn btn-responsive Azzurro_no_bordo">                           
+                             <p> "Nome utente" ha controllato la
+                               <a href="link-recensione">segnalazione</a>
+                               che ci hai inviato.</p>
+                        </button>
+                        
+                    </div>
+                
+                 <div class="col-md-12">
+                        <br>                    <!--Spazio per le notifiche-->
+                    </div>
+                       
+                <div class="col-md-12 Azzurro_tondo">
+                        
+                        <button id="segnalazione_controllata" type="button" class="btn btn-responsive Azzurro_no_bordo">                           
+                             <p> "Nome utente" ha controllato la
+                               <a href="link-recensione">segnalazione</a>
+                               che ci hai inviato.</p>
+                        </button>
+                        
+                    </div>
+                    
+                   
                 </div>
              <%
                  }
@@ -59,29 +93,26 @@
                 
                 <!-- NOTIFICHE PER IL RISTORATORE -->
                 <div class="row">
-                    <div class="row">
-                        <div class="col-md-2">                        
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                            <button id="risposta_approvata" type="button" class="btn btn-warning ribbon">                         
+                    
+                        
+                        <div class="col-md-12">
+                            
+                            <button id="risposta_approvata" type="button" class="btn btn-responsive col-md-12">                         
                                 <img src="immagine-utente.jpg" alt="nome-utente" class="profile_img">
                                     Ha approvato la tua
                                     <a href="link-recensione">risposta</a>
                                     ad una recensione.
                             </button>
-                            </div>
+                           
                         <br>
                         </div>
                         <br>
-                    </div>
-                    <div class="row_separatoria"><br><br></div>
+                    
+                   
                     <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
+                            <div class="col-md-12">
                             <div class="row">
-                            <button id="risposta_approvata" type="button" class="btn btn-warning ribbon">                         
+                            <button id="risposta_approvata" type="button" class="btn btn-responsive">                         
                                 <img src="immagine-utente.jpg" alt="nome-utente" class="profile_img">
                                     Ha approvato la tua
                                     <a href="link-recensione">risposta</a>
@@ -100,11 +131,10 @@
                 <!-- NOTIFICHE PER L'ADMIN -->
                 <div class="row">
                     <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
+                        
+                        <div class="col-md-12">
                             <div class="row">
-                            <button id="foto_segnalata" type="button" class="btn btn-warning ribbon">                           
+                            <button id="foto_segnalata" type="button" class="btn btn-responsive">                           
                                 <img src="immagine-utente.jpg" alt="nome-utente" class="profile_img">
                                     Ha segnalato una
                                     <a href="link-recensione">foto</a>
@@ -115,13 +145,12 @@
                         </div>
                         <br>
                     </div>
-                    <div class="row_separatoria"><br><br></div>
+                    <br>
                     <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-8">
+                        
+                        <div class="col-md-12">
                             <div class="row">
-                            <button id="risposta_pubblicata" type="button" class="btn btn-warning ribbon">                           
+                            <button id="risposta_pubblicata" type="button" class="btn btn-responsive">                           
                                 <img src="immagine-utente.jpg" alt="nome-utente" class="profile_img">
                                     Ha pubblicato una
                                     <a href="link-recensione">risposta</a>
@@ -137,5 +166,6 @@
                     }
                 %>
             </div>
+ 
     </body>
 </html>
