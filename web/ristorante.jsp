@@ -247,13 +247,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <% 
-                                    int x = 0;
-                                    if(foto2.next()){
-                                        do{
-                                            x++;
-                                %>      
                                 <div class="col-md-12" id="Spazio2">
+                                    <% 
+                                        int x = 0;
+                                        if(foto2.next()){
+                                            do{
+                                                x++;
+                                    %>   
                                     <div class="col-md-4 col-xs-4 thumb">
                                         <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
                                         <div>
@@ -261,31 +261,31 @@
                                         </div>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <div class="caption">
-                                                    <img id="image-gallery-image" class="img-responsive" src="img/RistoranteProva.jpg"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
-                                                    <span>
-                                                            <strong><%=foto2.getString("name") %></strong>
-                                                            <em><%=foto2.getString("description") %></em>
-                                                    </span>
+                                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <div class="caption">
+                                                        <img id="image-gallery-image" class="img-responsive" src="img/RistoranteProva.jpg"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                                                        <span>
+                                                                <strong><%=foto2.getString("name") %></strong>
+                                                                <em><%=foto2.getString("description") %></em>
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div class="col-md-2 col-xs-2">
-                                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
-                                                </div>                
+                                                <div class="modal-footer">
+                                                    <div class="col-md-2 col-xs-2">
+                                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                                    </div>                
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <%
+                                            }while((foto2.next()) && (x < 3));
+                                        }
+                                    %>
                                 </div>
-                                <%
-                                        }while((foto2.next()) && (x < 3));
-                                    }
-                                %>
                             </div>
                         </div>
                     </div>
