@@ -68,7 +68,7 @@
                 <div id="Spazio">
                     <div class="container">
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn">Inserisci foto</button>
+                    <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn"><span class="glyphicon glyphicon-open"></span> Inserisci foto</button>
                     <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
                             <div class="modal-dialog">
@@ -99,7 +99,7 @@
                                     </center>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
             <!-- Boxes de Acoes -->
             <div class="col-xs-12 col-md-12 Sparisci_2">
                 <div class="icon">
-                    <a class="btn btn-primary btn-responsive" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
+                    <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
                     <!-- Modal -->
                     <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -150,7 +150,7 @@
                                     <jsp:include page="<%=url %>" />
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
@@ -274,7 +274,7 @@
                                                     </center>
                                                     <div class="modal-footer">
                                                         <div class="col-md-2 col-xs-2">
-                                                            <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                                            <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
                                                         </div>                
                                                     </div>
                                                 </div>
@@ -335,15 +335,14 @@
                                 <%
                                     out.println(address.getString("address")+", "+address.getString("city")+" "+address.getString("province")); 
                                 %>
-                                <a class="btn btn-primary btn-responsive Azzurro" href="#secondary" data-toggle="modal"><i class="fa fa-soundcloud"></i><img src="https://www.shareicon.net/data/128x128/2015/11/05/667119_map_512x512.png" height="20">
-                                    Visualizza su Mappa
+                                <a class="btn btn-primary btn-responsive Azzurro" href="#secondary" data-toggle="modal"><span class="glyphicon glyphicon-map-marker"></span>
+                                     Visualizza su Mappa
                                 </a>
                                 <!-- Modal -->
                                 <div class="modal fade" id="secondary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-body">
-                                                <!-- INSERIRE LA TABELLA CON GLI ORARI -->  
                                                 <center>
                                                 <div id="map-canvas" style="height:350px; width:100%"></div>
                                                     <script>
@@ -385,7 +384,7 @@
                                                 </center>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal">Chiudi</button>
+                                                <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi</button>
                                             </div>
                                         </div><!-- /.modal-content -->
                                     </div><!-- /.modal-dialog -->
@@ -446,7 +445,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-md-9">
+                                        <div class="col-md-9 col-xs-9">
                                             <strong>
                                                 <%
                                                     String sql7 = "SELECT nickname FROM mainagioia.Users WHERE id = ?";
@@ -519,7 +518,7 @@
                                                 out.print(" fa");
                                             %>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-xs-3 " id="Altezza">
                                             <%
                                                 String sql12 = "SELECT like_type FROM user_review_likes WHERE id_review = ?";
                                                 ResultSet likes = manager.getData(sql12, recensioni.getString("id"));
@@ -578,14 +577,62 @@
                                 </div>
                                 <div>
                                     <div class="panel-body">
-                                        <div style="font-weight: bold" class="Font_ufficale_titoli">
+                                        <div style="font-weight: bold">
+                                            <div class="col-md-9 col-xs-8">
                                             <%=recensioni.getString("name") %>
+                                            </div>
+                                            
                                         </div>
-                                        <div class="Font_ufficale_normale">
+                                            <div class="col-md-3  col-xs-4 col-sm-6">
+                                               
+                                                <a class="btn btn-primary btn-responsive Azzurro" href="#terzo" data-toggle="modal"><span class="glyphicon glyphicon-send"></span> Rispondi</a>
+                              
+                                <!-- Modal -->
+                                <div class="modal fade" id="terzo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header modal-header-primary">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <p style="font-size:30px">Rispondi a commento:</p>
+                                </div>
+                                <div class="modal-body" style="padding-bottom:200px">
+                                    
+                                                <div class="col-md-9 col-xs-9">
+                                                    
+                                                    
+                                                <textarea  class="form-control textarea" name="description" rows="3" ></textarea>
+                                                <br>
+                                                    <br>
+                                                </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-send"></span>  Invia</button>
+                               
+                                    </div>
+                               
+                               
+                                   
+                                
+                                <div class="col-md-12 col-xs-12">
+                                    
+                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi</button>
+                                </div>
+                                     </div>
+                                     </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                                    </div> 
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                            
+                                        <div>
+                                            
                                             <%=recensioni.getString("description") %>
                                         </div>
-                                    </div><!-- /panel-body -->
-                                    <div class="panel-body">
+                                         
+                                   
+                                    
                                         <% 
                                             String sql8 = "SELECT description, date_creation, id_validator FROM Replies WHERE id_review = ?";
                                             ResultSet risposta = manager.getData(sql8,recensioni.getString("id"));
@@ -667,15 +714,15 @@
                                           %>    
                                     </div>
                                 </div>
-                            </div><!-- /panel panel-default -->
-                        </div><!-- /col-sm-5 -->
+                            
+                       
                         <%
                             }
                         %>
                     </div> 
                 </div><!-- /container -->
-            </div>
-        </div>
+           </div><!-- /panel panel-default -->
+        </div><!-- /col-sm-5 -->
     </body> 
 </html>
     

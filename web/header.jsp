@@ -74,8 +74,8 @@
                    
                 %>
                 
-<a class="btn icon-btn btn-info" href="login.jsp"><span class="glyphicon btn-glyphicon glyphicon-log-in img-circle"></span> ACCEDI</a>
-<a class="btn icon-btn btn-info" href="registrazione.jsp"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span> REGISTRATI</a>
+<a class="btn icon-btn btn-info btn-responsive" href="login.jsp"><span class="glyphicon btn-glyphicon glyphicon-log-in img-circle"></span> ACCEDI</a>
+<a class="btn icon-btn btn-info btn-responsive" href="registrazione.jsp"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span> REGISTRATI</a>
 </div>
                 <% }
                 else
