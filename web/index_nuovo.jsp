@@ -39,9 +39,9 @@
        
         <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
             <center>
-                <b>  <p class="Font_ridimensionato">Benvenuti su Magnagioia!</p></b>
+                <b>  <p class="Font_ridimensionato">Benvenuto su Magnagioia!</p></b>
                 <p class="Font_ridimensionato2">Scopri nuovi ristoranti e aiutali a migliorare</p>
-                <hr>
+                
             </center>
         </div>
         
@@ -57,14 +57,15 @@
                                <div class="panel panel-default">
                                <div class="panel-heading">
                                <strong>
-                                 "Nome della zoccola"
+                                 Sara Sampaio
                                </strong> <span class="text-muted">ha commentato 2 mesi fa
                                </span>
                                </div>
                                <div class="panel-body">
-                                   <div style="font-weight: bold" class="Font_ufficale_titoli">
-                                       Commento figo <br>
-                                       di almeno 2 righe
+                                   <div>
+                                       Il ristorante migliore di sempre!  <br>
+                                       Mai stata così contenta! <br>
+                                      Ci tornerò sicuramente
                                        
                                    </div>
                                    <div class="Font_ufficale_normale">
@@ -87,16 +88,18 @@
                                <div class="panel-heading">
                                <strong>
                                   
-                               </strong>"nome dello scemo" <span class="text-muted"> ha commentato 3 mesi fa
+                               </strong>Andrea Beltramo <span class="text-muted"> ha commentato 3 mesi fa
                                </span>
                                
                                </div>
                                <div class="panel-body">
-                                   <div style="font-weight: bold" class="Font_ufficale_titoli">
-                                       commento figo <br>
-                                       di almeno 2 righe
+                                   <div>
+                                       Location veramente bella <br>
+                                       Peccato per il servizio, da migliorare <br>
+                                       Tutto sommato un buon ristorante.
+                                       
                                    </div>
-                                   <div class="Font_ufficale_normale">
+                                   <div>
                                       
                                    </div>
                                </div><!-- /panel-body -->
