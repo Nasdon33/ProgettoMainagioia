@@ -31,7 +31,7 @@
             
             <div class="col-md-6 col-xs-8"> 
                 <form action=Ricerca.jsp method=GET>
-                    <img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%">
+                    <a href="index_nuovo.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a>
                         <div id="Ricerca_per">
                             <center>
                         <p> Ricerca per: 
