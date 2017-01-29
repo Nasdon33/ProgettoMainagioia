@@ -31,7 +31,7 @@
        }
        </style>
        
-        <title>Inserisci Ristorante</title>
+        <title>Magnagioia</title>
     </head>
     
     
@@ -47,16 +47,16 @@
             }
         %>
        
-        <div class="row" style="background-color: white; opacity:0.85; border-radius: 30px">
+        <div class="row" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">
             <form method="POST" action="Ristorante" enctype="multipart/form-data">
                 <div>
-                    <center><h2>Inserisci ristorante</h2></center>
+                    <center><p style="font-size:30px">Inserisci ristorante</p></center>
                 </div>
-                <hr class="colorgraph col-md-6 col-md-offset-3">
+                
                 <div class="row">
                     <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
 
-
+                        <hr class="colorgraph">
 
 
                         <div class="form-group2">
@@ -95,22 +95,27 @@
                         </div>
 
                         <div class="form-group2">
+                           
                             <center><b>Indirizzo:</b></center>
                             <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Via Napoleone 57" tabindex="3">
                         </div>
                         <div class="form-group2">
+                            <br>
                             <center><b>CAP:</b></center>
                             <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="38122" tabindex="3">
                         </div>
                         <div class="form-group2">
+                            <br>
                             <center><b>Città:</b></center>
                             <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Trento" tabindex="3">
                         </div>
                         <div class="form-group2">
+                            <br>
                             <center><b>Provincia:</b></center>
                             <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="TN" tabindex="3">
                         </div>
                         <div class="form-group2">
+                            <br>
                             <center><b>Stato:</b></center>
                             <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Italia" tabindex="3">
                         </div>
@@ -170,7 +175,8 @@
                 <center>
                 <div class="row">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-                        <center><b>Orari:</b></center>     
+                        <center><b>Orari:</b></center>    
+                        <br>
                         <H4> LUNEDI'</H4>
                         <input type="checkbox" name="lun0" value="lun0"> Pranzo <select name="oraplun0">
                                                                                     <option value="10:00">10.00</option>
@@ -493,12 +499,17 @@
                     <div class="col-md-2 col-xs-2">
                         <input type="radio" name="owner" value="0" checked/> No
                     </div>
+                    
                 </div>
+                    
                 </center>
+               
                 <div class="row">
-                    <hr class="colorgraph col-md-6 col-md-offset-3">
+                    <hr class="colorgraph col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
                     <div class="row">
+                        
                         <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+                            
                             <input type="submit" value="Inserisci" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7">
                         </div>
                     </div>

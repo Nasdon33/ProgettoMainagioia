@@ -51,10 +51,10 @@
         %>
        
        <div class="row">
-        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1" style="background-color: white; opacity:0.9; border-radius: 30px">
+        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"  id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px">
 		<form role="form" method="POST" action="Registrazione">
-                    <center><h2>Modifica i tuoi dati:</h2></center>
-			<hr class="colorgraph col-md-12">
+                    <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center>
+			<hr class="colorgraph">
 			<div class="form-group2">
                             <center><b>Email Attuale:</b>"vecchia email"</center>
 				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3">
@@ -79,7 +79,7 @@
 			</div>
 			
 			
-			<hr class="colorgraph col-md-12">
+			<hr class="colorgraph">
 			<div class="row">
 				<div class="col-xs-12 col-md-12"><input type="submit" value="Conferma" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"></div>
                         </div>

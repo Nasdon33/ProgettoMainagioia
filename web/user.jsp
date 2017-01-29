@@ -48,12 +48,13 @@
     
     
     
-        <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1" style="background-color: white; opacity:0.9; border-radius: 30px;">
+        <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1" id="Spazio"style="background-color: white; opacity:0.9; border-radius: 30px;">
             <!-- Notification header -->
             <div>
                 <center>
-                <h3>Ecco le tue notifiche:</h3>
+                <p style="font-size: 30px">Ecco le tue notifiche:</p>
                 </center>
+                <hr class="colorgraph">
             </div>
         
         <!-- Notifications -->
@@ -105,8 +106,21 @@
                <div class="col-md-12">
                         <br>                    <!--Spazio per le notifiche-->
                     </div>
+                
+                <hr class="colorgraph">
+                
+                 </div>
+                
+                
+                
+                
+                   <!-- DA QUI IN POI NON è A POSTO DAL PUNTO DI VISTA GRAFICO -->
                    
-                </div>
+                   
+                   
+                   
+                   
+               
              <%
                  }
                 else if(utente.getRuolo().contains("owner")){
@@ -141,10 +155,13 @@
                             </button>
                             </div>
                         <br>
+                        
                         </div>
-                        <br>
+                         
                     </div>
                 </div>
+                
+                
                 <%
                     }
                    else if(utente.getRuolo().contains("admin")){

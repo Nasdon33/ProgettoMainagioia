@@ -1,115 +1,524 @@
+<%-- 
+    Document   : login
+    Created on : 17-gen-2017, 12.03.31
+    Author     : Carlo
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!DOCTYPE html>
+<!DOCTYPE html    PAGINA DA SISTEMARE>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <%@include file="head.html" %>
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">        
         <link href="css/style2.css" rel="stylesheet" type="text/css">
-        <title>Impostazioni Risotrante</title>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Gestisci Ristorante</title>
+        
+        <style>
+        body {
+        height:100%;
+        width:100%;
+        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+        background-size:cover;    
+        }
+
+      @media only screen and (max-width: 767px) {
+       body {
+         /* The file size of this background image is 93% smaller
+            to improve page load speed on mobile internet connections */
+         background-image: url(img/SfondoPiccolo.jpg);
+         
+        }
+       }
+       </style>
         
     </head>
-    
     <body>
-        
-        <%@page import="db.Utente" %>
-        
         <div>
-       <%@include file="header.jsp" %>
-        </div>  
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
-                    <form role="form" method="POST" action="Registrazione">
-                    <center><h2>Modifica i dati relativi al ristorante:</h2></center>
-                </div>
-                <div>
-                    <hr class="colorgraph col-md-12"></div>
-                <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
-                    <div class="form-group2">
-                        <center><b>Nome del ristorante:</b></center>
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci il nome" tabindex="3">
-                    </div>
-                    <hr>
-                    <div class="form-group2">
-                        <center><b>Indirizzo:</b></center>
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci la via e il numero" tabindex="3">
-                    </div>
-                    <br>
-                    <div class="form-group2">
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci la città" tabindex="3">
-                    </div>
-                    <br>
-                    <div class="form-group2">
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci il paese" tabindex="3">
-                    </div>
-                    <hr>
-                    <div class="form-group2">
-                        <center><b>Sito web:</b></center>
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci l'indirizzo web" tabindex="3">
-                    </div>
-                    <hr>
-                    <div class="form-group2">
-                        <center><b>Orario di apertura:</b></center>
-                        <table class="table table-sm">
-                            <thead>
-                              <tr>
-                                <th>Giorno</th>
-                                <th>Apertura</th>
-                                <th>Chiusura</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">Lunedì</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Martedì</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Mercoledì</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Giovedì</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Venerdì</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Sabato</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Domenica</th>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                                <td><input type="text" id="hours" class="form-control input-lg" placeholder="00:00"></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-                    <hr>
-                    <div class="form-group2" contentEditable="true" style="min-height: 80px">
-                        <center><b>Descrizione del ristorante:</b></center>
-                        <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Inserisci una descrizione" tabindex="3">
-                    </div>
-                </div>
-                <hr>
-                <hr class="colorgraph col-md-12">
-                <div class="row">
-                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"><input type="submit" value="Conferma" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"></div>
-                </div>
-            </div>
+        <%@page import="db.Utente" %>
+        <%@include file="header.jsp" %>
+        <%-- <%
+            if(!utente.getRuolo().contains("owner")){
+                response.sendRedirect("index_nuovo.jsp");
+            }
+        %> --%>
         </div>
+        <div class="row" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">
+            <form method="POST" action="Ristorante" enctype="multipart/form-data">
+                
+               
+                <div class="row">
+                    
+                     <div>
+                    <center><p style="font-size: 30px">Modifica ristorante:</p></center>
+                </div>
+                    
+                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+<hr class="colorgraph">
+                        <div class="form-group2">
+                            <center><b>Nome attuale:</b>"nome attuale"</center>
+                            <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
+                        </div>
+                        <br>
+                        <div class="form-group2">
+                            <center><b>Cambia descrizione:</b></center>
+                            <textarea name="description" id="display_name" class="form-control input-lg" placeholder="Nuova descrizione" tabindex="3"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group2">
+                            <center><b>Sito Web attuale:</b>"indirizzo attuale"</center>
+                            <input type="text" name="web_site_url" id="display_name" class="form-control input-lg" placeholder="Nuovo sito Web" tabindex="3">
+                        </div>
+
+                        <div class="form-group2">
+                            <hr>
+                            <center><b>Fascia di prezzo attuale:</b>"fascia attuale"</center>
+                            <br>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="radio" name="prezzo" value="0" checked> 0 - 8€<br>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="radio" name="prezzo" value="1"> 8 - 20€<br>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="radio" name="prezzo" value="2"> 20 - 50€<br>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="radio" name="prezzo" value="3"> 50+ €<br>
+                            </div>
+                            <br>
+                            <hr>
+                        </div>
+
+                        <div class="form-group2">
+                            <center><b>Indirizzo attuale:</b>"indirizzo attuale"</center>
+                            <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Nuovo indirizzo" tabindex="3">
+                        </div>
+                        <div class="form-group2">
+                            <br>
+                            <center><b>CAP attuale:</b>"cap attuale"</center>
+                            <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="Nuovo CAP" tabindex="3">
+                        </div>
+                        <div class="form-group2">
+                            <br>
+                            <center><b>Città attuale:</b>"città attuale"</center>
+                            <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Nuova città" tabindex="3">
+                        </div>
+                        <div class="form-group2">
+                            <br>
+                            <center><b>Provincia attuale:</b>"provincia attuale"</center>
+                            <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="Nuova provincia" tabindex="3">
+                        </div>
+                        <div class="form-group2">
+                            <br>
+                            <center><b>Stato attuale:</b>"stato attuale"</center>
+                            <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Nuovo stato" tabindex="3">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
+                        <hr>
+                        <center><b>Cucina attuale:</b>"cucina attuale"</center>
+                        <br>
+                        <div class="Spazio">
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Italiana" value="Italiana"> Italiana
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Vegetariana" value="Vegetariana"> Vegetariana
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Steakhouse" value="Steakhouse"> Steakhouse
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Americana" value="Americana"> Americana
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Araba" value="Araba"> Araba
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Francese" value="Francese"> Francese<br>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Spagnola" value="Spagnola"> Spagnola
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Cinese" value="Cinese"> Cinese
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Giapponese" value="Giapponese"> Giapponese
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Dolci" value="Dolci"> Dolci
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Pizza" value="Pizza"> Pizza
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <input type="checkbox" name="Cibo di Strada" value="Cibo di Strada"> Cibo di Strada<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                <div class="row">
+                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                        <hr>
+                        <center><b>Cambia orari:</b></center>  
+                        <br>
+                        <H4> LUNEDI'</H4>
+                        <input type="checkbox" name="lun0" value="lun0"> Pranzo <select name="oraplun0">
+                                                                                    <option value="10:00">10.00</option>
+                                                                                    <option value="10:30">10.30</option>
+                                                                                    <option value="11:00">11.00</option>
+                                                                                    <option value="11:30">11.30</option>
+                                                                                    <option value="12:00">12.00</option>
+                                                                                    <option value="12:30">12.00</option>
+                                                                                    <option value="13:00">13.00</option>
+                                                                                </select>
+
+                                                                                <select name="orchlun0">
+                                                                                    <option value="13:00">13.00</option>
+                                                                                    <option value="13:30">13.30</option>
+                                                                                    <option value="14:00">14.00</option>
+                                                                                    <option value="14:30">14.30</option>
+                                                                                    <option value="15:00">15.00</option>
+                                                                                    <option value="15:30">15.00</option>
+                                                                                    <option value="16:00">16.00</option>
+                                                                                </select>
+
+                        <input type="checkbox" name="lun1" value="lun1"> Cena   <select name="oraplun1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchlun1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> MARTEDI'</H4>
+                        <input type="checkbox" name="mar0" value="mar0"> Pranzo <select name="orapmar0">
+                                                                                    <option value="10:00">10.00</option>
+                                                                                    <option value="10:30">10.30</option>
+                                                                                    <option value="11:00">11.00</option>
+                                                                                    <option value="11:30">11.30</option>
+                                                                                    <option value="12:00">12.00</option>
+                                                                                    <option value="12:30">12.00</option>
+                                                                                    <option value="13:00">13.00</option>
+                                                                                </select>
+                                                                                <select name="orchmar0">
+                                                                                    <option value="13:00">13.00</option>
+                                                                                    <option value="13:30">13.30</option>
+                                                                                    <option value="14:00">14.00</option>
+                                                                                    <option value="14:30">14.30</option>
+                                                                                    <option value="15:00">15.00</option>
+                                                                                    <option value="15:30">15.00</option>
+                                                                                    <option value="16:00">16.00</option>
+                                                                                </select>
+                        <input type="checkbox" name="mar1" value="mar1"> Cena   <select name="orapmar1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchmar1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> MERCOLEDI'</H4>
+                        <input type="checkbox" name="mer0" value="mer0"> Pranzo     <select name="orapmer0">
+                                                                                        <option value="10:00">10.00</option>
+                                                                                        <option value="10:30">10.30</option>
+                                                                                        <option value="11:00">11.00</option>
+                                                                                        <option value="11:30">11.30</option>
+                                                                                        <option value="12:00">12.00</option>
+                                                                                        <option value="12:30">12.00</option>
+                                                                                        <option value="13:00">13.00</option>
+                                                                                    </select>
+                                                                                    <select name="orchmer0">
+                                                                                        <option value="13:00">13.00</option>
+                                                                                        <option value="13:30">13.30</option>
+                                                                                        <option value="14:00">14.00</option>
+                                                                                        <option value="14:30">14.30</option>
+                                                                                        <option value="15:00">15.00</option>
+                                                                                        <option value="15:30">15.00</option>
+                                                                                        <option value="16:00">16.00</option>
+                                                                                    </select>  
+                        <input type="checkbox" name="mer1" value="mer1"> Cena <select name="orapmer1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchmer1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> GIOVEDI'</H4>
+                        <input type="checkbox" name="gio0" value="gio0"> Pranzo     <select name="orapgio0">
+                                                                                        <option value="10:00">10.00</option>
+                                                                                        <option value="10:30">10.30</option>
+                                                                                        <option value="11:00">11.00</option>
+                                                                                        <option value="11:30">11.30</option>
+                                                                                        <option value="12:00">12.00</option>
+                                                                                        <option value="12:30">12.00</option>
+                                                                                        <option value="13:00">13.00</option>
+                                                                                    </select>
+                                                                                    <select name="orchgio0">
+                                                                                        <option value="13:00">13.00</option>
+                                                                                        <option value="13:30">13.30</option>
+                                                                                        <option value="14:00">14.00</option>
+                                                                                        <option value="14:30">14.30</option>
+                                                                                        <option value="15:00">15.00</option>
+                                                                                        <option value="15:30">15.00</option>
+                                                                                        <option value="16:00">16.00</option>
+                                                                                    </select>
+                        <input type="checkbox" name="gio1" value="gio1"> Cena   <select name="orapgio1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchgio1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> VENERDI'</H4>
+                        <input type="checkbox" name="ven0" value="ven0"> Pranzo     <select name="orapven0">
+                                                                                        <option value="10:00">10.00</option>
+                                                                                        <option value="10:30">10.30</option>
+                                                                                        <option value="11:00">11.00</option>
+                                                                                        <option value="11:30">11.30</option>
+                                                                                        <option value="12:00">12.00</option>
+                                                                                        <option value="12:30">12.00</option>
+                                                                                        <option value="13:00">13.00</option>
+                                                                                    </select>
+                                                                                    <select name="orchven0">
+                                                                                        <option value="13:00">13.00</option>
+                                                                                        <option value="13:30">13.30</option>
+                                                                                        <option value="14:00">14.00</option>
+                                                                                        <option value="14:30">14.30</option>
+                                                                                        <option value="15:00">15.00</option>
+                                                                                        <option value="15:30">15.00</option>
+                                                                                        <option value="16:00">16.00</option>
+                                                                                    </select>
+                        <input type="checkbox" name="ven1" value="ven1"> Cena   <select name="orapven1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchven1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> SABATO'</H4>
+                        <input type="checkbox" name="sab0" value="sab0"> Pranzo <select name="orapsab0">
+                                                                                    <option value="10:00">10.00</option>
+                                                                                    <option value="10:30">10.30</option>
+                                                                                    <option value="11:00">11.00</option>
+                                                                                    <option value="11:30">11.30</option>
+                                                                                    <option value="12:00">12.00</option>
+                                                                                    <option value="12:30">12.00</option>
+                                                                                    <option value="13:00">13.00</option>
+                                                                                </select>
+                                                                                <select name="orchsab0">
+                                                                                    <option value="13:00">13.00</option>
+                                                                                    <option value="13:30">13.30</option>
+                                                                                    <option value="14:00">14.00</option>
+                                                                                    <option value="14:30">14.30</option>
+                                                                                    <option value="15:00">15.00</option>
+                                                                                    <option value="15:30">15.00</option>
+                                                                                    <option value="16:00">16.00</option>
+                                                                                </select>
+
+                        <input type="checkbox" name="sab1" value="sab1"> Cena   <select name="orapsab1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchsab1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                        <hr id="hr1">
+                        <H4> DOMENICA</H4>
+                        <input type="checkbox" name="dom0" value="dom0"> Pranzo <select name="orapdom0">
+                                                                                    <option value="10:00">10.00</option>
+                                                                                    <option value="10:30">10.30</option>
+                                                                                    <option value="11:00">11.00</option>
+                                                                                    <option value="11:30">11.30</option>
+                                                                                    <option value="12:00">12.00</option>
+                                                                                    <option value="12:30">12.00</option>
+                                                                                    <option value="13:00">13.00</option>
+                                                                                </select>
+                                                                                <select name="orchdom0">
+                                                                                    <option value="13:00">13.00</option>
+                                                                                    <option value="13:30">13.30</option>
+                                                                                    <option value="14:00">14.00</option>
+                                                                                    <option value="14:30">14.30</option>
+                                                                                    <option value="15:00">15.00</option>
+                                                                                    <option value="15:30">15.00</option>
+                                                                                    <option value="16:00">16.00</option>
+                                                                                </select>
+                        <input type="checkbox" name="dom1" value="dom1"> Cena   <select name="orapdom1">
+                                                                                    <option value="18:00">18.00</option>
+                                                                                    <option value="18:30">18.30</option>
+                                                                                    <option value="19:00">19.00</option>
+                                                                                    <option value="19:30">19.30</option>
+                                                                                    <option value="20:00">20.00</option>
+                                                                                    <option value="20:30">20.30</option>
+                                                                                    <option value="21:00">21.00</option>
+                                                                                </select>
+                                                                                <select name="orchdom1">
+                                                                                    <option value="21:00">21.00</option>
+                                                                                    <option value="21:30">21.30</option>
+                                                                                    <option value="22:00">22.00</option>
+                                                                                    <option value="22:30">22.30</option>
+                                                                                    <option value="23:00">23.00</option>
+                                                                                    <option value="23:30">23.30</option>
+                                                                                    <option value="24:00">24.00</option>
+                                                                                    <option value="00:30">00.30</option>
+                                                                                    <option value="01:00">01.00</option>
+                                                                                    <option value="01:30">01.30</option>
+                                                                                    <option value="02:00">02.00</option>
+                                                                                </select>
+                         <hr id="hr1">
+                    </div>
+                </div>
+                </center>
+                <center>
+                <div class="row">
+                    <div id="Spazio">
+                        <div class="container row">
+                            <div class="col-md-12 col-xs-12">
+                                <p style="font-size: 30px">  <span class="glyphicon glyphicon-open"></span> Cambia foto:</p>
+                                <input type="file" name="file" />
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </center>
+                <center>
+                    <div class="row">
+                        <H4>Sei il proprietario del ristorante?</H4>
+                        <div class="col-md-2 col-xs-2 col-md-offset-4 col-xs-offset-4">
+                            <input type="radio" name="owner" value="1"/> Sì
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <input type="radio" name="owner" value="0" checked/> No
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <hr>
+                    </div>
+                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+                        <div class="form-group2">
+                                <center><b>Password:</b></center>
+                                <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Inserisci la password per confermare le modifiche" tabindex="3">
+                        <hr class="colorgraph">
+                        </div>
+                    </div>
+                </center>
+                <div class="row">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+                            <input type="submit" value="Inserisci" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7">
+                        </div>
+                    </div>
+                </div>
+            </form>
+	</div>
     </body>
 </html>
