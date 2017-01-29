@@ -56,10 +56,10 @@ public class Controller extends HttpServlet {
         response.setContentType("application/json");
         ArrayList<String> list = new ArrayList();
         String term = request.getParameter("term");
-        String ric = request.getParameter("ric");
+        String ric = request.getParameter("rad");
         String sql;
-        if(ric == "zona"){
-            sql = "SELECT * FROM mainagioia.coordinates WHERE city LIKE '"+term+"%"+"' OR province LIKE '"+term+"%"+"' OR state LIKE '"+term+"%"+"'";
+        if("zona".equals(ric)){
+            sql = "SELECT DISTINCT city, province, state FROM mainagioia.coordinates WHERE city LIKE '"+term+"%"+"' OR province LIKE '"+term+"%"+"' OR state LIKE '"+term+"%"+"'";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -75,7 +75,7 @@ public class Controller extends HttpServlet {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        else if(ric == "cucina"){
+        else if("cucina".equals(ric)){
             sql = "SELECT name FROM mainagioia.cuisines WHERE name LIKE '"+term+"%"+"'";
             ResultSet rs;
             try{
@@ -88,7 +88,7 @@ public class Controller extends HttpServlet {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        else if(ric == "nome"){
+        else if("nome".equals(ric)){
             sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
             ResultSet rs;
             try{
@@ -101,7 +101,7 @@ public class Controller extends HttpServlet {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        else if(ric == "indirizzo"){
+        else if("indirizzo".equals(ric)){
             sql = "SELECT address FROM mainagioia.coordinates WHERE address LIKE '"+term+"%"+"'";
             ResultSet rs;
             try{

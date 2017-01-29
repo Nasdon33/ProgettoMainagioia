@@ -1,0 +1,14 @@
+.corpo {
+    background-color: #ff6600;
+}
+
+.spazio{
+    border-color: #d43f3a;
+}
+
+.centered{
+  padding: 0;
+  font-size: 12px;
+  left: 50%;
+  top: 50%;
+}
