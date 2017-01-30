@@ -28,7 +28,7 @@
         body {
         height:100%;
         width:100%;
-        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-image:url("img/SfondoGrandeOpaco.jpg");/*your background image*/  
         background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
         background-size:cover; 
        

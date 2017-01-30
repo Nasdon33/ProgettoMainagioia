@@ -115,19 +115,17 @@
                     <hr>
                 <!-- the comment box -->
                     <div>
-                        <center>
-                            <h2><i class="fa fa-paper-plane-o"></i> TITOLO:</h4>
-                            <div class="form-group">
-                                <input type="text" class="form-control"  name="name" value="" required="" />
-                            </div>
-                            <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
-                            <div class="form-group">
-                                <textarea  class="form-control textarea" name="description" rows="3" required=""></textarea>
-                            </div>
-                            <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
-                            <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
-                            <button type="submit" class="btn btn-info Azzurro  btn-responsive">Login</button>
-                        </center>
+                        <h3><i class="fa fa-paper-plane-o"></i> TITOLO:</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control"  name="name" value="" required="" />
+                        </div>
+                        <h4><i class="fa fa-paper-plane-o"></i> Descrizione:</h4>
+                        <div class="form-group">
+                            <textarea  class="form-control textarea" name="description" rows="3" required=""></textarea>
+                        </div>
+                        <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
+                        <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
+                        <button type="submit" class="btn btn-info Azzurro  btn-responsive">Login</button>
                     </div>
                 </center>
             </form>
