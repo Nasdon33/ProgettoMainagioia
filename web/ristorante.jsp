@@ -329,7 +329,7 @@
             <jsp:include page="<%=url %>" />
         </div>                                
         <div class="row2">
-            <div class="col-md-12 col-xs-12" id="Spazio">
+            <div class="col-md-12 col-xs-12" id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px">
                 <table class="table table-bordered">
                     <br>
                     <thead>
