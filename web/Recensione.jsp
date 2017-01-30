@@ -2,15 +2,24 @@
 <%@page import="db.Utente"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
+<%@page import="java.sql.Timestamp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html    DA SISTEMARE SFONDO PER INSERIRE HEADER>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <style>
+      <link href="css/style2.css" rel="stylesheet" type="text/css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqLGJyMiDEZIohhJaX63cDfyXTDHky-g"></script>
+        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
+        <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
+       
+        
+       <style>
         body {
         height:100%;
         width:100%;
@@ -28,8 +37,8 @@
         }
        }
        </style>
-      <link href="css/style2.css" rel="stylesheet" type="text/css">
         <title>Recensione</title>
+        
     </head>
     <body>
         <div>
@@ -40,10 +49,11 @@
             <center>
                 <div class="row" id="Spazio">
                     <p style="font-size:30px">Inserisci la tua Recensione:</p>
+                    <hr class="colorgraph">
                 </div>
                 <div class="container" id="Altezza">
                     <div class="col-md-4 col-xs-4">
-                        <hr>
+                        
                         <h4><span class="glyphicon glyphicon-globe"></span> Voto globale</h4>
                         <br>
                         <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue(this.value)" />
@@ -56,7 +66,7 @@
                         </script>
                     </div>
                     <div class="col-md-4 col-xs-4  ">
-                        <hr>
+                        
                         <h4><span class="glyphicon glyphicon-apple"></span> Cibo</h4>
                         <br>
                         <input type="range"  min="1" max="5" value="3" step="1" onchange="showValue2(this.value)" />
@@ -69,7 +79,7 @@
                         </script>
                         </div>
                         <div class="col-md-4 col-xs-4 ">
-                            <hr>
+                            
                             <h4><span class="glyphicon glyphicon-heart-empty"></span> Servizio</h4>
                             <br>
                             <input type="range" min="1" max="5" value="3" step="1" onchange="showValue3(this.value)" />
@@ -125,7 +135,8 @@
                         </div>
                         <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                         <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
-                        <button type="submit" class="btn btn-info Azzurro  btn-responsive">Login</button>
+                        <hr class="colorgraph">
+                        <button type="submit" class="btn btn-info Azzurro  btn-responsive"><span class="glyphicon glyphicon-send"></span> Invia Recensione</button>
                     </div>
                 </center>
             </form>
