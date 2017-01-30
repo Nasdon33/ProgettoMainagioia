@@ -3,13 +3,16 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
        
+        <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+       <script src="js/pass_verification.js"></script>
         <link href="css/style2.css" rel="stylesheet" type="text/css">  
         <link href="css/Commenti.css" rel="stylesheet" type="text/css">
         <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
@@ -25,6 +28,19 @@
         background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
         background-size:cover;    
         }
+        .invalid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#ec3f41 ;
+           }
+           .valid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#3a7d34 ;
+           }
+
 
       @media only screen and (max-width: 767px) {
        body {
@@ -71,17 +87,25 @@
 			</div>
                            <br>
 			<div class="form-group2">
-				<input type="text" name="npassword" id="display_name" class="form-control input-lg" placeholder="Nuova Password" tabindex="3">
+                                <input type="password" name="password" required="" id="password" class="form-control input-lg" placeholder="Nuova Password" tabindex="5">
 			</div>
                            <br>
                            <div class="form-group2">
-				<input type="text" name="rpassword" id="display_name" class="form-control input-lg" placeholder="Ripeti Nuova Password" tabindex="3">
+						<input type="password" name="pass2" required="" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
 			</div>
+                           <br>
+			<ul>
+                                        <li id="letter" class="invalid">Almeno <strong>una lettera</strong></li>
+                                        <li id="capital" class="invalid">Almeno <strong>una lettera maiuscola</strong></li>
+                                        <li id="number" class="invalid">Almeno <strong>un numero</strong></li>
+                                        <li id="length" class="invalid">Almeno <strong>8 caratteri</strong></li>
+                                        </ul>
+                           <br>
                            <input type="hidden" name="id" value="<%=utente.getId() %>">
 			
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-12"><input type="submit" value="Conferma" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"></div>
+                            <div class="col-xs-12 col-md-12"><input type="submit" id="reg_but" value="Conferma" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
                         </div>
 		</form>
 	</div>

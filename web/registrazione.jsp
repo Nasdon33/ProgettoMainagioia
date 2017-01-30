@@ -7,6 +7,9 @@
         <%@include file="head.html" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+       <script src="js/pass_verification.js"></script>
         <style>
         body {
         height:100%;
@@ -15,6 +18,18 @@
         background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
         background-size:cover;    
         }
+        .invalid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#ec3f41 ;
+           }
+           .valid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#3a7d34 ;
+           }
 
       @media only screen and (max-width: 767px) {
        body {
@@ -74,22 +89,29 @@
 				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
 						<input type="password" name="password" required="" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-					</div>
 				</div>
-                             
+                                </div>
 				<div class="col-xs-6 col-sm-6 col-md-6">
 					<div class="form-group2">
 						<input type="password" name="pass2" required="" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
 					</div>
-				</div>
+                                        
+                                </div>
                               <br>
+                              
 			</div>
                            <br>
-			
+			<ul>
+                                        <li id="letter" class="invalid">Almeno <strong>una lettera</strong></li>
+                                        <li id="capital" class="invalid">Almeno <strong>una lettera maiuscola</strong></li>
+                                        <li id="number" class="invalid">Almeno <strong>un numero</strong></li>
+                                        <li id="length" class="invalid">Almeno <strong>8 caratteri</strong></li>
+                                        </ul>
+                           <br>
 			
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-12"><input type="submit" value="Registrati" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
+                            <div class="col-xs-12 col-md-12"><input type="submit" id="reg_but" value="Registrati" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
                         </div>
 		</form>
 	</div>
