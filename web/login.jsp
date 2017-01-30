@@ -55,7 +55,7 @@
               <div class="row">
                   <div class="col-xs-6 col-md-6">
                       <div class="col-md-12 col-xs-12">
-                          <form id="login" method="POST" action="User">
+                          <form id="login" method="GET" action="User">
                               <div class="form-group1">
                                   <label for="email" class="control-label">Email</label>
                                   <input type="text" class="form-control" id="username" name="email" value="" required="" title="Please enter you email" placeholder="example@gmail.com">

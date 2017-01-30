@@ -3,35 +3,57 @@
     Created on : Jan 17, 2017, 12:06:37 PM
     Author     : adribuc
 --%>
-
-<%@page import="java.sql.Timestamp"%>
 <%@page import="db.DBManager"%>
+<%@page import="db.Utente"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
-<%@page import="db.Utente" %>
+<%@page import="java.sql.Timestamp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
+<!DOCTYPE html    DA SISTEMARE SFONDO PER INSERIRE HEADER>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/style2.css" rel="stylesheet" type="text/css">  
-        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
-        <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
-        <link href="css/recensione.css" rel="stylesheet" type="text/css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="css/style2.css" rel="stylesheet" type="text/css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqLGJyMiDEZIohhJaX63cDfyXTDHky-g"></script>
+        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
+        <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
+       
         
+        <style>
+        body {
+        height:100%;
+        width:100%;
+        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+        background-size:cover; 
+       
+        }
+
+      @media only screen and (max-width: 767px) {
+       body {
+         /* The file size of this background image is 93% smaller
+            to improve page load speed on mobile internet connections */
+         background-image: url(img/SfondoPiccolo.jpg);
+         
+        }
+       }
+       </style>
+        <title>Ristorante</title>
         
-        <title>Ristorante Magnagioia</title>
     </head>
     <body>
         <div>
-            <%@include file="header.jsp" %>
+         <%@include file="header.jsp" %>
         </div>
+
+
+
+
         
         <%-- Script per i MODAL --%>
         
@@ -51,9 +73,9 @@
         ristorante.next();
         %>
         
-        
+        <div>
         <div class="row2" id="Spazio">
-            <div class="col-md-3 col-xs-3">
+            <div class="col-md-3 col-xs-3 ">
                 <div>
                     <%
                         String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description = 'Principale' ";
@@ -142,7 +164,7 @@
                             <div class="modal-content">
                                 <div class="modal-header modal-header-primary">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <p style="font-size: 30px"> <i class="fa fa-bar-chart-o"></i><h4>Visualizza Orari </h4>
+                                    <p style="font-size: 30px"> <i class="fa fa-bar-chart-o"></i>Orari </p>
                                 </div>
                                 <div class="modal-body">
                                     <!-- INSERIRE LA TABELLA CON GLI ORARI -->
@@ -168,7 +190,6 @@
                 <%
                     String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                     ResultSet recensioni = manager.getData(sql6,idris);
-                    ResultSet recensioni2 = recensioni;
                     int c[] = {0,0,0,0,0};
                     double tot = 0.0;
 
@@ -583,44 +604,7 @@
                                             </div>
                                             
                                         </div>
-                                            <div class="col-md-3  col-xs-4 col-sm-6">
-                                               
-                                                <a class="btn btn-primary btn-responsive Azzurro" href="#terzo" data-toggle="modal"><span class="glyphicon glyphicon-send"></span> Rispondi</a>
-                              
-                                <!-- Modal -->
-                                <div class="modal fade" id="terzo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header modal-header-primary">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <p style="font-size:30px">Rispondi a commento:</p>
-                                </div>
-                                <div class="modal-body" style="padding-bottom:200px">
-                                    
-                                                <div class="col-md-9 col-xs-9">
-                                                    
-                                                    
-                                                <textarea  class="form-control textarea" name="description" rows="3" ></textarea>
-                                                <br>
-                                                    <br>
-                                                </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-send"></span>  Invia</button>
-                               
-                                    </div>
-                               
-                               
-                                   
-                                
-                                <div class="col-md-12 col-xs-12">
-                                    
-                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi</button>
-                                </div>
-                                     </div>
-                                     </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                                    </div> 
+                                            
                                             </div>
                                             
                                             
@@ -631,8 +615,8 @@
                                             <%=recensioni.getString("description") %>
                                         </div>
                                          
-                                   
-                                    
+                                        <hr>
+                                        <div>
                                         <% 
                                             String sql8 = "SELECT description, date_creation, id_validator FROM Replies WHERE id_review = ?";
                                             ResultSet risposta = manager.getData(sql8,recensioni.getString("id"));
@@ -699,15 +683,79 @@
                                                             else
                                                                 out.print("o");
                                                      }
-                                                    out.print(" fa:");
-                                                    out.println(risposta.getString("description"));
+                                                    out.print(" fa:"); %>
+                                        </div>
+                                       
+                                        <div>
+                                                    <%
+                                                    out.println(risposta.getString("description")); %>
+                                        </div>
+                                        <%
                                                 }
                                             }
                                             else{
                                                 if (utente != null)
                                                     if(utente.getId().equals(ristorante.getString("id_owner"))){
                                                         %>
-                                                            RISPONDI
+                                                            
+                                                        
+                                                        
+                                                       <div class="col-md-3  col-xs-4 col-sm-6">
+                                               
+                                                           <a class="btn btn-primary btn-responsive Azzurro" href="#terzo" data-toggle="modal" data-id="<%=recensioni.getString("id") %>"><span class="glyphicon glyphicon-send"></span> Rispondi</a>
+                              
+                                                <!-- Modal -->
+                                <div class="modal fade" id="terzo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <center>
+                                    <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header modal-header-primary">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                
+                                    <p style="font-size:30px">Rispondi a commento:</p>
+                                
+                                </div>
+                               
+                                <div class="modal-body" style="padding-bottom:200px">
+                                     <form role="form" action="Risposte" method="POST">
+                                                <div class="col-md-9 col-xs-9">
+                                                    
+                                                   
+                                                <textarea  class="form-control textarea" name="description" rows="3" ></textarea>
+                                                <input type="hidden" name="id_owner" value="<%=ristorante.getString("id_owner") %>"/>
+                                                <input type="hidden" id="rec" name="id_review" value=""/>
+                                                </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <input type="submit" class="btn btn-primary btn-responsive pull-left Azzurro"  value="Invia"/>
+                               
+                                    </div>
+                                </form>
+                               
+                                   
+                                
+                                <div class="col-md-12 col-xs-12">
+                                    <br>
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi</button>
+                                </div>
+                                     </div>
+                                     </div>
+                            </div>
+                                    </center><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                                    </div>  
+                                        <script>
+                                        $(document).ready(function () { //Dom Ready
+                                            $('#terzo').on('show.bs.modal', function (e) { //Event listener
+                                                var id = $(e.relatedTarget).data("id"); //.getAttribute("data-image"); //Fetch image url from modal trigger <a> link
+                                                document.getElementById("rec").setAttribute("value", id); //load image in modal
+                                            });
+                                        });
+                                        </script>  
+                                                        
+                                                        
+                                                        
+                                                        
                                                         <%
                                                     }
                                             }  
@@ -723,6 +771,7 @@
                 </div><!-- /container -->
            </div><!-- /panel panel-default -->
         </div><!-- /col-sm-5 -->
+        </div>
     </body> 
 </html>
     

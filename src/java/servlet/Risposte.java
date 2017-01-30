@@ -79,7 +79,7 @@ public class Risposte extends HttpServlet {
             String sql= "INSERT INTO mainagioia.Replies(ID,description,date_creation,date_validation,id_review,id_validator,id_owner) VALUES(?,?,?,null,?,null,?)";
             manager.setData(sql, id, des, dat, idr, ido);
 
-            response.sendRedirect("index_nuovo.jsp");
+            response.sendRedirect(request.getHeader("referer"));
         } catch (SQLException ex) {
                 response.sendRedirect(request.getHeader("referer"));
                 Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
