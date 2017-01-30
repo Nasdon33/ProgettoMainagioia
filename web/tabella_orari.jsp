@@ -26,7 +26,7 @@
             %>
             
         <div class="table">
-                    <table class="table table-responsive"id="Altezza">
+                    <table class="table table-responsive"id="Altezza"  style="background-color: white; opacity:0.9; border-radius: 30px">
                     <thead>
                       <tr>
                     <th>Giorno</th>

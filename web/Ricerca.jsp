@@ -171,7 +171,7 @@
                             ResultSet foto = manager.getData(sql10,idris);
                             foto.next();
                         %>
-                    <img src="<%=foto.getString("path") %>" width="90%">
+                        <a href="ristorante.jsp?id=<%=idris %>"><img src="<%=foto.getString("path") %>" width="90%"></a>
                     <br>
                     <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=ristoranti.getString("name") %> </a>
                     <br>
