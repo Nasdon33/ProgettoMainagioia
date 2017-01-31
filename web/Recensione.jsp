@@ -4,24 +4,19 @@
 <%@page import="db.Ristorante"%>
 <%@page import="java.sql.Timestamp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-      <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqLGJyMiDEZIohhJaX63cDfyXTDHky-g"></script>
-        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
-        <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
-       
         
        <style>
         body {
-        height:100%;
+        height:145%;
         width:100%;
         background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
         background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
@@ -33,6 +28,7 @@
          /* The file size of this background image is 93% smaller
             to improve page load speed on mobile internet connections */
          background-image: url(img/SfondoPiccolo.jpg);
+         height:135%;
          
         }
        }

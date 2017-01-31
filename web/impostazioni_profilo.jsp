@@ -3,7 +3,8 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -51,7 +52,9 @@
         }
        }
        </style>
-        
+   
+
+       
         <title>Gestisci Profilo</title>
     </head>
     <body>
@@ -83,7 +86,7 @@
                           <hr>
                          <center><b>Cambia Password:</b></center>
 			<div class="form-group2">
-				<input type="text" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3"> <!-- richiesta vecchia password per cambiare -->
+				<input type="password" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3"> <!-- richiesta vecchia password per cambiare -->
 			</div>
                            <br>
 			<div class="form-group2">
