@@ -6,10 +6,13 @@ function sendPassword(){
        success: function(esiste){
            if(esiste==="true"){
                alert("Email inviata all'indirizzo: "+$("#login input[name=email]").val());
-           } else if (esiste==="false"){
+           }
+           else if (esiste==="false"){
                alert("Email non valida");
-           
-       }console.log("CI SONO");
+           }
+           else 
+                window.location.href = "argh_page.jsp";
+       console.log("CI SONO");
    }
    });
    }
