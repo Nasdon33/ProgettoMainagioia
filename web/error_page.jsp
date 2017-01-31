@@ -5,9 +5,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
         <link href="css/not_found.css" rel="stylesheet" type="text/css">
         <title>Error 404</title>
         
@@ -15,9 +12,7 @@
     
     <body  class="corpo">
         
-        <%@page import="db.Utente" %>
         
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <div class="row header">
             <div class="col-md-6 col-xs-8 col-md-offset-3"> 
                 <form action=Ricerca.jsp method=GET>

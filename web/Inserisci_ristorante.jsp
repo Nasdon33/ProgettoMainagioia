@@ -7,30 +7,7 @@
 <!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">        
-       <link href="css/style2.css" rel="stylesheet" type="text/css">
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-       
-       <style>
-        body {
-        height:100%;
-        width:100%;
-        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
-        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
-        background-size:cover;    
-        }
-
-      @media only screen and (max-width: 767px) {
-       body {
-         /* The file size of this background image is 93% smaller
-            to improve page load speed on mobile internet connections */
-         background-image: url(img/SfondoPiccolo.jpg);
-         
-        }
-       }
-       </style>
-       
+        <%@include file="head.html" %>       
         <title>Inserisci Ristorante</title>
     </head>
     

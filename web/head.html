@@ -3,18 +3,44 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/vendor/jquery-1.11.2.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">        
+<link href="css/style2.css" rel="stylesheet" type="text/css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="js/pass_verification.js"></script>
+<script src="js/sendPass.js"></script>
 <script src="js/login.js"></script>
+<style>
+    body {
+    height:100%;
+    width:100%;
+    background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
+    background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+    background-size:cover;    
+    }
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    @media only screen and (max-width: 767px) {
+    body {
+      /* The file size of this background image is 93% smaller
+         to improve page load speed on mobile internet connections */
+      background-image: url(img/SfondoPiccolo.jpg);
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-<link rel="stylesheet" href="css/css1.css">
+     }
+    }
+    .invalid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#ec3f41 ;
+           }
+           .valid {
+               
+               padding-left:22px;
+               line-height:24px;
+               color:#3a7d34 ;
+           }
+</style>

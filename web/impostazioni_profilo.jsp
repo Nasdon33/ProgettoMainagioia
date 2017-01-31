@@ -3,55 +3,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.Ristorante"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-       
-        <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
-       <script src="js/pass_verification.js"></script>
-        <link href="css/style2.css" rel="stylesheet" type="text/css">  
-        <link href="css/Commenti.css" rel="stylesheet" type="text/css">
-        <link href="css/Valutazione.css" rel="stylesheet" type="text/css">
-        <link href="css/recensione.css" rel="stylesheet" type="text/css">
-        <%-- Script per i MODAL --%>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-        <style>
-        body {
-        height:100%;
-        width:100%;
-        background-image:url("img/SfondoGrandeBlurred.jpg");/*your background image*/  
-        background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
-        background-size:cover;    
-        }
-        .invalid {
-               
-               padding-left:22px;
-               line-height:24px;
-               color:#ec3f41 ;
-           }
-           .valid {
-               
-               padding-left:22px;
-               line-height:24px;
-               color:#3a7d34 ;
-           }
-
-
-      @media only screen and (max-width: 767px) {
-       body {
-         /* The file size of this background image is 93% smaller
-            to improve page load speed on mobile internet connections */
-         background-image: url(img/SfondoPiccolo.jpg);
-         
-        }
-       }
-       </style>
+        <%@include file="head.html" %>
    
 
        

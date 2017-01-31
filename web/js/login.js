@@ -1,81 +1,37 @@
-$(document).ready(function(){
-    
-    var email = $("#login-normal input[name=email]");
-    var password = $("#login-normal input[name=password]");
-    var pos = $("#form").offset();
+function sottometti() {
 
-    $("#login-normal").submit(function(event){
-        event.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "validate",
-            data: {email: $(email).val(), password: $(password).val()},
-            success: function(esiste){
-                if(esiste!=="true"){
-                    $('#pop-up-login').show()
-                        .css('top', event.pageY + pos.top)
-                        .css('left', event.pageX + pos.left)
-                        .appendTo('body');
-                } else {
-                    $("#login-normal").unbind('submit').submit();
-                }
-            }
-        });
-    });
-    
-    $(document).click(function(){
-        $('#pop-up-login').hide();
-    });
-    
-    $("#login").submit(function(event){
-        event.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "validate",
-            data: {email: $("#login input[name=email]").val(), password: $("#login input[name=password").val()},
-            success: function(esiste){
-                if(esiste!=="true"){
-                    $("#login-error").removeClass("invisibile");
-                } else {
-                    $("#login").unbind('submit').submit();
-                }
-            }
-        });
-    });
-    
-    cont();
-});
- 
-$("#login input").focusin($("#login-error").addClass("invisibile"));
+    var email = $("input[name=email]").val();
+    var password = $("input[name=password]").val();
+    console.log(email);
+    console.log(password);
+    if (email === "" && password === "") {
+        alert("CAMPI INCOMPLETI");
+    }
+    if (email === "") {
 
-function sendPassword(){
+        alert("EMAIL RICHIESTA");
+        return;
+    }
+    if (password === "") {
+
+        alert("PASSWORD RICHIESTA");
+        return;
+    }
     $.ajax({
-        type: "POST",
-        url: "sendPassword",
-        data: {email: $("#login input[name=email]").val()},
-        success: function(esiste){
-            if(esiste==="true"){
-                alert("Email inviata");
-            } else if (esiste==="false"){
-                alert("Email non valida");
+        type: "GET",
+        url: "validate",
+        data: {email: email, password: password},
+        success: function (risposta) {
+            if (risposta === "OK") {
+                 window.location.href = "index_nuovo.jsp";
+                console.log("login effettuato");
+            } else if (risposta === "NOTFOUND") {
+                 alert("UTENTE O PASSWORD ERRATI");
+                console.log("UTENTE O PASSWORD ERRATI");
             } else {
                 window.location.href = "argh_page.jsp";
             }
         }
     });
 }
-
-function start(t){
-    $.ajax({
-        type: "POST",
-        url: "User",
-        data: {t: t}
-    });
-}
-
-function cont(){
-    $.ajax({
-        type: "POST",
-        url: "User"
-    });
-}
+;

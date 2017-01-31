@@ -1,7 +1,7 @@
-Tue Jan 31 09:54:21 CET 2017 : Server di rete Apache Derby: 10.11.1.2 - (1629631) avviato e pronto ad accettare connessioni sulla porta 1527
+Tue Jan 31 15:26:52 CET 2017 : Server di rete Apache Derby: 10.11.1.2 - (1629631) avviato e pronto ad accettare connessioni sulla porta 1527
 ----------------------------------------------------------------
-Tue Jan 31 09:54:21 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza a816c00e-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 15:26:52 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza a816c00e-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,7 +12,7 @@ os.arch=amd64
 os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
-Tue Jan 31 09:55:12 CET 2017 Thread[DRDAConnThread_4,5,main] Cleanup action starting
+Tue Jan 31 15:42:01 CET 2017 Thread[DRDAConnThread_4,5,main] Cleanup action starting
 java.sql.SQLException: Database 'Cinema' non trovato.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
@@ -60,14 +60,14 @@ ERROR XJ004: Database 'Cinema' non trovato.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Tue Jan 31 09:55:12 CET 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = Cinema), (DRDAID = {3}), Database 'Cinema' non trovato.
+Tue Jan 31 15:42:01 CET 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = Cinema), (DRDAID = {3}), Database 'Cinema' non trovato.
 ----------------------------------------------------------------
-Tue Jan 31 09:55:16 CET 2017:
-Arresto dell'istanza a816c00e-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 09:55:16 CET 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = Mainagioia), (DRDAID = {4}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 15:42:05 CET 2017:
+Arresto dell'istanza a816c00e-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 15:42:05 CET 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = Mainagioia), (DRDAID = {4}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 09:55:17 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 888c4022-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 15:42:07 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 19ba803c-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -79,12 +79,12 @@ os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Jan 31 10:19:40 CET 2017:
-Arresto dell'istanza 888c4022-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 10:19:40 CET 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = Mainagioia), (DRDAID = {6}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 16:19:07 CET 2017:
+Arresto dell'istanza 19ba803c-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 16:19:07 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {8}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 10:19:41 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 20e1c02b-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 16:19:09 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 8c8b0219-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -96,12 +96,12 @@ os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Jan 31 11:09:36 CET 2017:
-Arresto dell'istanza 20e1c02b-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:09:36 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {8}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 16:19:51 CET 2017:
+Arresto dell'istanza 8c8b0219-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 16:19:51 CET 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = Mainagioia), (DRDAID = {10}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 11:09:37 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza c42d805d-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 16:19:52 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 5511421a-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -113,12 +113,12 @@ os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Jan 31 11:35:05 CET 2017:
-Arresto dell'istanza c42d805d-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:35:06 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {10}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 16:22:33 CET 2017:
+Arresto dell'istanza 5511421a-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 16:22:33 CET 2017 Thread[DRDAConnThread_6,5,main] (DATABASE = Mainagioia), (DRDAID = {12}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 11:35:07 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 44ee8065-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 16:22:35 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza ad97c21b-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -130,12 +130,12 @@ os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Jan 31 11:35:07 CET 2017:
-Arresto dell'istanza 44ee8065-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:35:07 CET 2017 Thread[DRDAConnThread_6,5,main] (DATABASE = Mainagioia), (DRDAID = {12}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 16:26:12 CET 2017:
+Arresto dell'istanza ad97c21b-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 16:26:12 CET 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = Mainagioia), (DRDAID = {14}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 11:35:08 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza ed07c066-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 16:26:13 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 73f94227-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -147,216 +147,12 @@ os.version=6.3
 derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Jan 31 11:35:12 CET 2017:
-Arresto dell'istanza ed07c066-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:35:12 CET 2017 Thread[DRDAConnThread_7,5,main] (DATABASE = Mainagioia), (DRDAID = {14}), Chiusura del database 'Mainagioia'.
+Tue Jan 31 16:35:20 CET 2017:
+Arresto dell'istanza 73f94227-0159-f4eb-d11f-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Jan 31 16:35:20 CET 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = Mainagioia), (DRDAID = {16}), Chiusura del database 'Mainagioia'.
 ----------------------------------------------------------------
-Tue Jan 31 11:35:13 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza e5214067-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:40:04 CET 2017:
-Arresto dell'istanza e5214067-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:40:04 CET 2017 Thread[DRDAConnThread_8,5,main] (DATABASE = Mainagioia), (DRDAID = {16}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:40:06 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 3d3b0068-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:40:07 CET 2017:
-Arresto dell'istanza 3d3b0068-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:40:07 CET 2017 Thread[DRDAConnThread_6,5,main] (DATABASE = Mainagioia), (DRDAID = {18}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:40:09 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 05550069-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:40:09 CET 2017:
-Arresto dell'istanza 05550069-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:40:09 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {20}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:40:11 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 4d6f406a-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:50:54 CET 2017:
-Arresto dell'istanza 4d6f406a-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:50:54 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {23}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:50:56 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 94bc40a2-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:52:23 CET 2017:
-Arresto dell'istanza 94bc40a2-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:52:23 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {25}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:52:24 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza ace4c0a3-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:52:30 CET 2017:
-Arresto dell'istanza ace4c0a3-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:52:30 CET 2017 Thread[DRDAConnThread_7,5,main] (DATABASE = Mainagioia), (DRDAID = {27}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:52:31 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza ed8940a7-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:57:53 CET 2017:
-Arresto dell'istanza ed8940a7-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:57:53 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {29}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:57:55 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza ce8780ad-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 11:59:38 CET 2017:
-Arresto dell'istanza ce8780ad-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 11:59:38 CET 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = Mainagioia), (DRDAID = {31}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 11:59:41 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza b6b2c0ae-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 12:00:03 CET 2017:
-Arresto dell'istanza b6b2c0ae-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 12:00:03 CET 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = Mainagioia), (DRDAID = {33}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 12:00:04 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 6ede40af-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 12:05:12 CET 2017:
-Arresto dell'istanza 6ede40af-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 12:05:12 CET 2017 Thread[DRDAConnThread_7,5,main] (DATABASE = Mainagioia), (DRDAID = {35}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 12:05:13 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza af8ec0b3-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 12:05:22 CET 2017:
-Arresto dell'istanza af8ec0b3-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 12:05:22 CET 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = Mainagioia), (DRDAID = {37}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 12:05:23 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 67bb80b4-0159-f3bb-6267-00007f428e3f
-sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_40-b26
-user.dir=C:\Program Files\Java\jdk1.8.0_40\db
-os.name=Windows 8.1
-os.arch=amd64
-os.version=6.3
-derby.system.home=C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db
-Programma di caricamento classe database avviato - derby.database.classpath=''
-----------------------------------------------------------------
-Tue Jan 31 12:17:25 CET 2017:
-Arresto dell'istanza 67bb80b4-0159-f3bb-6267-00007f428e3f nella directory del database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con il caricatore di classi sun.misc.Launcher$AppClassLoader@60e53b93 
-Tue Jan 31 12:17:25 CET 2017 Thread[DRDAConnThread_7,5,main] (DATABASE = Mainagioia), (DRDAID = {39}), Chiusura del database 'Mainagioia'.
-----------------------------------------------------------------
-Tue Jan 31 12:17:27 CET 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 1e2700f9-0159-f3bb-6267-00007f428e3f
+Tue Jan 31 16:35:21 CET 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 0425c236-0159-f4eb-d11f-00007f428e3f
 sulla directory di database C:\Users\Carlo\Desktop\UniTN\SecondoAnno\Secondo Semestre\Web\progetto\ProgettoMainagioia\Db\Mainagioia con caricatore classi sun.misc.Launcher$AppClassLoader@60e53b93 
 Caricato da file:/C:/Program%20Files/Java/jdk1.8.0_40/db/lib/derby.jar
 java.vendor=Oracle Corporation

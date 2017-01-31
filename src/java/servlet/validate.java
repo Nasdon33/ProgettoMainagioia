@@ -1,6 +1,7 @@
 package servlet;
 
 import db.DBManager;
+import db.Utente;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class validate extends HttpServlet {
 
@@ -26,21 +28,42 @@ public class validate extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-        DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+        DBManager manager = (DBManager) super.getServletContext().getAttribute("dbmanager");
+
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String sql;
-        ResultSet rs;
-        if(password==null){ //controllo durante registrazione
-            sql = "SELECT * FROM Mainagioia.Users WHERE email = ?";
-            rs = manager.getData(sql, email);
-        } else { // controllo durante login
-            sql = "SELECT * FROM Mainagioia.Users WHERE email = ? AND password = ?";
-            rs = manager.getData(sql, email, password);
+        ResultSet rs = null;
+
+        sql = "SELECT * FROM Mainagioia.Users WHERE email = ? AND password = ?";
+        rs = manager.getData(sql, email, password);
+        if (rs.next() && rs.getString("email").equals(email) && rs.getString("password").equals(password)) {
+            HttpSession sess = request.getSession();
+            if (sess.getAttribute("utente") == null) {
+                Utente user = new Utente();
+                user.setId(rs.getString("ID"));
+                user.setNome(rs.getString("name"));
+                user.setNickname(rs.getString("nickname"));
+                user.setCognome(rs.getString("surname"));
+                user.setEmail(email);
+                user.setPassword(rs.getString("password"));
+                user.setRuolo(rs.getString("ruolo"));
+                sess.setAttribute("utente", user);
+                String risposta = "OK";
+                System.out.println(risposta);
+                out.write(risposta);
+
+            }
+
+        } else {
+            String risposta = "NOTFOUND";
+            System.out.println(email);
+            System.out.println(password);
+            System.out.println(risposta);
+            out.write(risposta);
         }
-        out.print(rs.next());
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

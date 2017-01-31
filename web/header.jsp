@@ -17,11 +17,10 @@
         <script src="js/autocomplete.js"></script>
         <link rel="stylesheet" href="css/flexform.css">
         <link rel="stylesheet" href="css/Menu_tendina.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>JSP Page</title>
     </head>
     <body>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
         <div class="row header">
             <div class="col-md-3 col-xs-1">  
             </div>

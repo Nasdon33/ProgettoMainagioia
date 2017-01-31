@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -59,7 +60,7 @@ public class Controller extends HttpServlet {
         String ric = request.getParameter("rad");
         String sql;
         if("zona".equals(ric)){
-            sql = "SELECT DISTINCT city, province, state FROM mainagioia.coordinates WHERE city LIKE '"+term+"%"+"' OR province LIKE '"+term+"%"+"' OR state LIKE '"+term+"%"+"'";
+            sql = "SELECT DISTINCT city, province, state FROM mainagioia.coordinates WHERE UPPER(city) LIKE UPPER('"+term+"%"+"') OR UPPER(province) LIKE UPPER('"+term+"%"+"') OR UPPER(state) LIKE UPPER('"+term+"%"+"')";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -76,7 +77,7 @@ public class Controller extends HttpServlet {
             }
         }
         else if("cucina".equals(ric)){
-            sql = "SELECT name FROM mainagioia.cuisines WHERE name LIKE '"+term+"%"+"'";
+            sql = "SELECT name FROM mainagioia.cuisines WHERE UPPER(name) LIKE UPPER('"+term+"%"+"')";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -89,7 +90,7 @@ public class Controller extends HttpServlet {
             }
         }
         else if("nome".equals(ric)){
-            sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
+            sql = "SELECT * FROM mainagioia.restaurants WHERE UPPER(name)  LIKE UPPER('"+term+"%"+"')";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -102,7 +103,7 @@ public class Controller extends HttpServlet {
             }
         }
         else if("indirizzo".equals(ric)){
-            sql = "SELECT address FROM mainagioia.coordinates WHERE address LIKE '"+term+"%"+"'";
+            sql = "SELECT address FROM mainagioia.coordinates WHERE UPPER(address) LIKE UPPER('"+term+"%"+"')";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -115,7 +116,7 @@ public class Controller extends HttpServlet {
             }
         }
         else{ 
-            sql = "SELECT * FROM mainagioia.restaurants WHERE name  LIKE '"+term+"%"+"'";
+            sql = "SELECT * FROM mainagioia.restaurants WHERE UPPER(name)  LIKE UPPER('"+term+"%"+"')";
             ResultSet rs;
             try{
                 rs=manager.getData(sql);
@@ -129,10 +130,10 @@ public class Controller extends HttpServlet {
         }
         
         
-
+        ArrayList<String> list2 = new ArrayList<>(new LinkedHashSet<>(list));
         
 
-        String searchList = new Gson().toJson(list);
+        String searchList = new Gson().toJson(list2);
         
             System.out.println(searchList);
         
