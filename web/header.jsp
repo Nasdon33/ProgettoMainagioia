@@ -62,7 +62,9 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            
+                                                        
+                                                       
             
             <div class="col-md-3 col-xs-3"> <!-- tasti accedi e registrati, quando effettuato l'accesso diventa menù dropdown con informazioni sul proilo -->
                 <%
@@ -109,5 +111,6 @@
             </div>
                 </center>
         </div>
+    
     </body>
 </html>
