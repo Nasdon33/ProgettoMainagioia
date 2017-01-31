@@ -1,9 +1,10 @@
 <%@page import="db.Utente" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!DOCTYPE html    DA SISTEMARE SFONDO PER INSERIRE HEADER>
+<!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
         <%@include file="head.html" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
