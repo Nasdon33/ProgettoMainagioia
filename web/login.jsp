@@ -7,6 +7,8 @@
         <%@include file="head.html" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+       <script src="js/sendPass.js"></script>
         <style>
         body {
         height:100%;
@@ -64,13 +66,13 @@
                               <div class="form-group1">
                                   
                                   <label for="password" class="control-label">Password</label>
-                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                  <input type="password" class="form-control" id="password" name="password" value="" title="Please enter your password">
                                   <span class="help-block"></span>
                               </div>
                               <div class="errore invisibile" id="login-error">Email o Password errati</div>
                               <br>
                               <button type="submit" class="btn btn-info Azzurro btn-block btn-responsive">Login</button>
-                              <a href="Password" class="btn btn-default btn-block btn-responsive">Dimenticato la password?</a>
+                              <button id="a"  onclick=sendPassword() class="btn btn-default btn-block btn-responsive">Mi Sono Dimenticato La Password</button>
                           </form>
                       </div>
                   </div>
