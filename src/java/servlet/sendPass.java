@@ -67,7 +67,7 @@ public class sendPass extends HttpServlet {
                 
                 String sender = "localhost";
                 String recipient = email;
-                String content = "Ecco la sua password: '" + utente.getString("password") + "'";
+                String content = "Email da parte di Magnagioia. Ecco la sua password: '" + utente.getString("password") + "'";
                 String subject = "Password dimenticata";
 
                 Properties props = System.getProperties();
@@ -88,7 +88,7 @@ public class sendPass extends HttpServlet {
                 msg.setSubject(subject);
                 msg.setText(content);
                 // -- Set some other header information --
-                msg.setHeader("MyMail", "Mr. XYZ");
+                msg.setHeader("MyMail", "Mr. "+utente.getString("surname"));
                 msg.setSentDate(new Date());
                 // -- Send the message --
                 Transport.send(msg);
