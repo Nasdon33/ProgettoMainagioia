@@ -4,7 +4,7 @@
 <%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html SISTEMARE PAGINA INSERENDO L'HEADER>
+<!DOCTYPE>
 <html>
     <head>
         <%@include file="head.html" %>       

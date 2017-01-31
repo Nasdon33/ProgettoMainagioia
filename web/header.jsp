@@ -37,7 +37,7 @@
                         </p>
                             </center>
                        
-                            <div class="flexsearch"> <!-- barra di ricerca con tasto incluso -->
+                            <div class="flexsearch" style="padding-bottom: 5px"> <!-- barra di ricerca con tasto incluso -->
                                             <div class="flexsearch--wrapper">
                                                  <div class="flexsearch-form" id="mainForm">
                                                         <div class="flexsearch--input-wrapper">
@@ -56,6 +56,7 @@
                                                            %>
                                                         </div>
                                                         <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                                                        
                                                 </div>
                                         </div>
                         </div>
