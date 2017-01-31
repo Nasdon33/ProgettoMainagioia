@@ -72,12 +72,12 @@
                     <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center> <!-- mostro all'utente i vecchi dati e poi offro la possibilità di cambiarli -->
 			<hr class="colorgraph">
 			<div class="form-group2">
-                            <center><b>Email Attuale:</b>"vecchia email"</center>
+                            <center><b>Email Attuale:</b><%=utente.getEmail() %></center>
 				<input type="text" name="email" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3" required="">
 			</div>
                          <hr>
 			<div class="form-group2">
-                            <center><b>Nickname Attuale:</b>"vecchio nickname"</center>
+                            <center><b>Nickname Attuale:</b><%=utente.getNickname()%></center>
 				<input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuovo Nickname" tabindex="3">
 			</div>
                           <hr>

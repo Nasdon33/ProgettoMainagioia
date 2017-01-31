@@ -363,3 +363,10 @@ input:-moz-placeholder {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
 }
+.invisibile {
+    display: none;
+}
+
+.errore {
+    color: red;
+}

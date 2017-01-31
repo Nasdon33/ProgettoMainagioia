@@ -68,7 +68,7 @@ function sendPassword(){
 function start(t){
     $.ajax({
         type: "POST",
-        url: "script_spettacoli",
+        url: "User",
         data: {t: t}
     });
 }
@@ -76,6 +76,6 @@ function start(t){
 function cont(){
     $.ajax({
         type: "POST",
-        url: "script_spettacoli"
+        url: "User"
     });
 }
