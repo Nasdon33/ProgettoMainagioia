@@ -48,7 +48,7 @@
     
     
     
-        <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1" id="Spazio"style="background-color: white; opacity:0.9; border-radius: 30px;">
+        <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1" id="Spazio"style="background-color: white; opacity:0.9; border-radius: 30px;"> <!-- Pagina di notifiche -->
             <!-- Notification header -->
             <div>
                 <center>

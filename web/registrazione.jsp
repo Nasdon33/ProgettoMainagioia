@@ -58,7 +58,7 @@
         
 <div class="container" id="Spazio">
     <div class="row" >
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"  style="background-color: white; opacity:0.9; border-radius: 30px">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"  style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- pagina di registrazione -->
 		<form role="form" method="POST" action="Registrazione">
                     <center><h2>Registrati a Magnagioia!</h2></center>
 			<hr class="colorgraph">
@@ -91,7 +91,7 @@
 						<input type="password" name="password" required="" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
 				</div>
                                 </div>
-				<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6">  <!-- controllo password -->
 					<div class="form-group2">
 						<input type="password" name="pass2" required="" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
 					</div>

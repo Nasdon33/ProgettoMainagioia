@@ -52,7 +52,7 @@
        }
        </style>
         
-        <title>Profilo</title>
+        <title>Gestisci Profilo</title>
     </head>
     <body>
         <div>
@@ -67,9 +67,9 @@
         %>
        
        <div class="row">
-        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"  id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px">
+        <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"  id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- campi per cambiare i dati del profilo -->
 		<form role="form" method="POST" action="User">
-                    <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center>
+                    <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center> <!-- mostro all'utente i vecchi dati e poi offro la possibilità di cambiarli -->
 			<hr class="colorgraph">
 			<div class="form-group2">
                             <center><b>Email Attuale:</b>"vecchia email"</center>
@@ -83,7 +83,7 @@
                           <hr>
                          <center><b>Cambia Password:</b></center>
 			<div class="form-group2">
-				<input type="text" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3">
+				<input type="text" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3"> <!-- richiesta vecchia password per cambiare -->
 			</div>
                            <br>
 			<div class="form-group2">
@@ -91,7 +91,7 @@
 			</div>
                            <br>
                            <div class="form-group2">
-						<input type="password" name="pass2" required="" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6">
+						<input type="password" name="pass2" required="" id="password_confirmation" class="form-control input-lg" placeholder="Conferma Password" tabindex="6"> <!-- controllo nuova password -->
 			</div>
                            <br>
 			<ul>

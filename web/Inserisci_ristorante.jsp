@@ -31,7 +31,7 @@
        }
        </style>
        
-        <title>Magnagioia</title>
+        <title>Inserisci Ristorante</title>
     </head>
     
     
@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"> <!-- contiene tutti i campi per il ristorante fino a "stato"-->
 
                         <hr class="colorgraph">
 
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
+                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza"> <!-- contiene i tipi di cucina, id=Altezza ha un whitespace:nowrap; per sovrapporre il testo e non spostare la posizione   -->
                         <hr>
                         <center><b>Tipo di cucina:</b></center>
                         <br>
@@ -174,7 +174,7 @@
                 <hr>
                 <center>
                 <div class="row">
-                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                    <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1"> <!-- inserimento orari -->
                         <center><b>Orari:</b></center>    
                         <br>
                         <H4> LUNEDI'</H4>
@@ -474,12 +474,12 @@
                                                                                     <option value="02:00">02.00</option>
                                                                                 </select>
                          <hr id="hr1">
-                    </div>
+                    </div> <!-- fine inserimento orari -->
                 </div>
                 </center>
                 <center>
                 <div class="row">
-                    <div id="Spazio">
+                    <div id="Spazio"> <!-- form per inserimento foto -->
                         <div class="container row">
                             <div class="col-md-12 col-xs-12">
                                 <p style="font-size: 30px">  <span class="glyphicon glyphicon-open"></span> Inserisci foto:</p>

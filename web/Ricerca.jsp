@@ -41,7 +41,7 @@
 
         <br>
             
-                <div class="col-md-3 blocca" id="Sparisci" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.3px solid;">
+                <div class="col-md-3 blocca" id="Sparisci" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.3px solid;"> <!-- inizio div per ordinare i risultati -->
                     
                     <div class="container">
                         
@@ -84,10 +84,10 @@
                             
                         </form>
                         
-                    </div>
+                    </div> <!-- fine div -->
                     
                 </div>
-                <div class="col-xs-12 Sparisci_2">
+                <div class="col-xs-12 Sparisci_2"> <!-- tasto dropdown che sostituisce il div "ordina per" quando lo schermo va in xs -->
                     <div class="row">
         
         
@@ -117,7 +117,7 @@
                           
             
                     
-        <div class="col-md-9 col-md-offset-3 col-xs-12" id="Spazio" >
+        <div class="col-md-9 col-md-offset-3 col-xs-12" id="Spazio" > <!-- mostra i risultati della ricerca -->
                
                 
                 <%! private DBManager manager; %>

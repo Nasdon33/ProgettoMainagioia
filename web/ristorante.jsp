@@ -43,6 +43,7 @@
         }
        }
        </style>
+       
         <title>Ristorante</title>
         
     </head>
@@ -55,7 +56,7 @@
 
 
         
-        <%-- Script per i MODAL --%>
+        
         
         <%! private DBManager manager; %>
             <%! 
@@ -75,7 +76,7 @@
         
         <div>
         <div class="row2" id="Spazio">
-            <div class="col-md-3 col-xs-3 ">
+            <div class="col-md-3 col-xs-3 "> <!-- Primo div, contiene la foto del ristorante e il modal per inserire le foto-->
                 <div>
                     <%
                         String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description = 'Principale' ";
@@ -84,12 +85,12 @@
                         String sql11 = "SELECT * FROM Mainagioia.Photos WHERE id_restaurant = ? AND description <> 'Principale'";
                         ResultSet foto2 = manager.getData(sql11,idris);
                     %>
-                    <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> 
+                    <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> <!-- Immagine ristorante, caricata dal db-->
 
                 </div>
                 <div id="Spazio">
-                    <div class="container">
-                    <!-- Trigger the modal with a button -->
+                    <div class="container"> <!-- inizio modal per le foto -->
+                    
                     <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn"><span class="glyphicon glyphicon-open"></span> Inserisci foto</button>
                     <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
@@ -122,11 +123,11 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> 
+                    </div> <!-- fine modal per le foto -->
                 </div>
             </div>           
             <script>
@@ -137,7 +138,7 @@
             });
             </script>
         </div>
-        <div class="col-md-6 col-xs-5">
+        <div class="col-md-6 col-xs-5"> <!-- div contentente Nome ristorante e descrizione -->
             <div>
                 <b style="font-size: 25px"><%= ristorante.getString("name") %></b>
             </div>
@@ -146,19 +147,19 @@
                 <% out.println(ristorante.getString("description")); %>
                 </div>
             </div>
-        </div>
+        </div> <!-- fine div  -->
         <div class="col-md-2">
         </div>
-        <div class="col-md-3 col-xs-4">
+        <div class="col-md-3 col-xs-4"> <!-- inizio div con i tasti "scrivi recensione" e Visualizza tabella -->
             <center>  
             <form action="Recensione.jsp?id=<%=idris %>" method="post">
                 <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="Scrivi una Recensione" />
             </form>  
             <!-- Boxes de Acoes -->
-            <div class="col-xs-12 col-md-12 Sparisci_2">
+            <div class="col-xs-12 col-md-12 Sparisci_2"> <!-- il tasto "visualizza orari" compare solo quando la grandezza dello schermo è piccola, facendo sparire la tabella degli orari  -->
                 <div class="icon">
                     <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
-                    <!-- Modal -->
+                    <!-- inizio Modal per la tabella orari -->
                     <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -167,8 +168,7 @@
                                     <p style="font-size: 30px"> <i class="fa fa-bar-chart-o"></i>Orari </p>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- INSERIRE LA TABELLA CON GLI ORARI -->
-                                    <% String url = "tabella_orari.jsp?id="+idris; %>
+                                    <% String url = "tabella_orari.jsp?id="+idris; %> <!-- viene inclusa la tabella -->
                                     <jsp:include page="<%=url %>" />
                                 </div>
                                 <div class="modal-footer">
@@ -177,14 +177,14 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
-                    <!-- Modal -->
-                </div>
-            </div>
+                    <!-- fine Modal -->
+                </div> <!-- /icon -->
+            </div> 
             </center>                            
-        </div>
+        </div> <!-- fine div -->
 	<div class="space">
         </div>	 
-        <div class="row3">
+        <div class="row3"> <!-- inizio div con valutazione e galleria foto -->
             <div class="col-md-5 col-xs-9" id="spazio">
                 <hr>
                 <%
@@ -205,12 +205,12 @@
                             media = voto / tot;
                 %> 
                     
-                <div id="Sparisci_3">
+                <div id="Sparisci_3"> <!-- spariscono solo quando lo schermo è molto piccolo (perche non ci stanno) -->
                     <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <div class="well well-sm">
                                 <div class="row">
-                                    <div class="col-xs-5 col-md-5 text-center">
+                                    <div class="col-xs-5 col-md-5 text-center"> <!-- tabella valutazione -->
                                         <h1 class="rating-num">
                                         <% 
                                             if(media > 0)
@@ -237,8 +237,8 @@
                                         <div>
                                             <span class="glyphicon glyphicon-user"></span><%=(int)tot %> recensioni
                                         </div>
-                                    </div>
-                                    <div class="col-xs-7 col-md-7" id="sx">
+                                    </div> 
+                                    <div class="col-xs-7 col-md-7" id="sx"> 
                                         <div class="row rating-desc">
                                             <% 
                                                 for(int n = 5; n > 0; n--){
@@ -264,9 +264,9 @@
                                         </div>
                                     <!-- end row -->
                                     </div>
-                                </div>
+                                </div> <!-- fine tabella valutazione -->
                             </div>
-                            <div class="row">
+                            <div class="row"> <!-- inizio galleria foto -->
                                 <div class="col-md-12" id="Spazio2">
                                     <% 
                                         int x = 0;
@@ -280,7 +280,7 @@
                                             <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
                                         </div>
                                         </a>
-                                        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <!-- quando si clicca sulla foto si apre un modal -->
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <center>
@@ -288,7 +288,7 @@
                                                         
                                                         <div class="caption">
                                                             <div id="titolo"></div><hr>
-                                                            <img id="image-gallery-image" class="img-responsive" src="" alt="UEUE" width="350px"> <!--INSERIRE LINK A FOTO SELEZIONATA-->
+                                                            <img id="image-gallery-image" class="img-responsive" src="" alt="UEUE" width="350px"> 
                                                             <div id="descrizione"></div>
                                                         </div>
                                                     </div>
@@ -325,11 +325,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-xs-3 Altezza" id="Sparisci">
+        <div class="col-md-4 col-xs-3 Altezza" id="Sparisci"> <!-- tabella orari, sparisce quando compare il tasto "visualizza orari" -->
             <jsp:include page="<%=url %>" />
         </div>                                
         <div class="row2">
-            <div class="col-md-12 col-xs-12" id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px">
+            <div class="col-md-12 col-xs-12" id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- inizio tabella con informazioni ristorante -->
                 <table class="table table-bordered">
                     <br>
                     <thead>
@@ -440,9 +440,9 @@
 
                     </tbody>
                 </table>
-            </div>
+            </div> <!-- fine tabella con informazioni -->
         </div>
-        <div class="row6"> 
+        <div class="row6"> <!-- inizio div per le recensioni -->
             <div class="col-md-12 col-xs-12">
                 <div class="row.header">
                     <div class="row">
@@ -457,17 +457,17 @@
                         %>
                     </div>
                     <div>    
-                        <div class="col-sm-1 col-xs-2">
+                        <div class="col-sm-1 col-xs-2"> <!-- spazio per avatar utente (non ancora implementato) -->
                             <div class="thumbnail">
                                 <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                             </div><!-- /thumbnail -->
                         </div><!-- /col-sm-1 -->
-                        <div class="col-sm-5 col-xs-10">
-                            <div class="panel panel-default">
+                        <div class="col-sm-5 col-xs-10"> <!-- area commento -->
+                            <div class="panel panel-default"> 
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-md-9 col-xs-9">
-                                            <strong>
+                                        <div class="col-md-9 col-xs-9"> 
+                                            <strong><!-- nome utente (in grassetto) -->
                                                 <%
                                                     String sql7 = "SELECT nickname FROM mainagioia.Users WHERE id = ?";
                                                     ResultSet user = manager.getData(sql7,recensioni.getString("id_creator"));
@@ -475,7 +475,7 @@
                                                     out.print(user.getString("nickname"));
                                                 %>
                                             </strong>
-                                            <span class="text-muted"> postato 
+                                            <span class="text-muted"> postato <!-- quanto tempo fa ha commentato -->
                                             <%
                                                 Timestamp time = recensioni.getTimestamp("date_creation");
                                                 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
@@ -559,7 +559,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div> <!-- voto per i vari ambiti delle recensioni -->
                                         <% 
                                             out.print("Voto Globale: ");
                                             for(int k = recensioni.getInt("global_value"); k > 0; k--)
@@ -599,8 +599,8 @@
                                 <div>
                                     <div class="panel-body">
                                         <div style="font-weight: bold">
-                                            <div class="col-md-9 col-xs-8">
-                                            <%=recensioni.getString("name") %>
+                                            <div class="col-md-9 col-xs-8"> <!-- commento vero e proprio -->
+                                            <%=recensioni.getString("name") %> <!-- titolo commento -->
                                             </div>
                                             
                                         </div>
@@ -612,11 +612,11 @@
                                             
                                         <div>
                                             
-                                            <%=recensioni.getString("description") %>
+                                            <%=recensioni.getString("description") %> <!-- descrizione -->
                                         </div>
                                          
                                         <hr>
-                                        <div>
+                                        <div> <!-- risposta del ristoratore alle recensioni -->
                                         <% 
                                             String sql8 = "SELECT description, date_creation, id_validator FROM Replies WHERE id_review = ?";
                                             ResultSet risposta = manager.getData(sql8,recensioni.getString("id"));
@@ -716,7 +716,7 @@
                                 
                                 </div>
                                
-                                <div class="modal-body" style="padding-bottom:200px">
+                                <div class="modal-body" style="padding-bottom:200px"> <!-- modal per le risposte alle recensioni -->
                                      <form role="form" action="Risposte" method="POST">
                                                 <div class="col-md-9 col-xs-9">
                                                     
@@ -739,10 +739,10 @@
                                     <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi</button>
                                 </div>
                                      </div>
-                                     </div>
-                            </div>
-                                    </center><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
+                                     </div> <!-- /.modal-content -->
+                            </div> <!-- /.modal-dialog -->
+                                    </center>
+                        </div>
                                     </div>  
                                         <script>
                                         $(document).ready(function () { //Dom Ready

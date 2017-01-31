@@ -26,7 +26,7 @@
             %>
             
         <div class="table">
-                    <table class="table table-responsive"id="Altezza"  style="background-color: white; opacity:0.9; border-radius: 30px">
+                    <table class="table table-responsive"id="Altezza"  style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- Orari del ristorante -->
                     <thead>
                       <tr>
                     <th>Giorno</th>
@@ -35,7 +35,7 @@
                       </tr>
                     </thead>
                     
-                    <tbody>
+                    <tbody> <!-- prende dal database i dati, la pagina verrà poi inclusa nel modal e in ristoranti.jsp -->
                         <tr>
                             
                         <%

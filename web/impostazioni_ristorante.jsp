@@ -56,10 +56,10 @@
                     <center><p style="font-size: 30px">Modifica ristorante:</p></center>
                 </div>
                     
-                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"> <!-- campi per cambiare i dati del ristorante, molto simile a inserisci ristorante-->
 <hr class="colorgraph">
                         <div class="form-group2">
-                            <center><b>Nome attuale:</b>"nome attuale"</center>
+                            <center><b>Nome attuale:</b>"nome attuale"</center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
                             <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
                         </div>
                         <br>

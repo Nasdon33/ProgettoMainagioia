@@ -53,7 +53,7 @@
           </div>
           <div class="modal-body">
               <div class="row">
-                  <div class="col-xs-6 col-md-6">
+                  <div class="col-xs-6 col-md-6"> <!-- richiesta dei dati utente per login con i relativi controlli -->
                       <div class="col-md-12 col-xs-12">
                           <form id="login" method="GET" action="User">
                               <div class="form-group1">
@@ -74,7 +74,7 @@
                           </form>
                       </div>
                   </div>
-                  <div class="col-xs-6" id="Altezza">
+                  <div class="col-xs-6" id="Altezza"> <!-- barra laterale che spiega i vantaggi a iscriverti al sito -->
                       <p style="font-size:20px">Registrati ora è <span class="text-success">GRATIS!</span></p>
                       <ul class="list-unstyled" style="line-height: 2">
                           <li><i class="fa fa-check text-success"></i> Gestisci il tuo ristorante</li>

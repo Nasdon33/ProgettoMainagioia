@@ -28,10 +28,9 @@
             
             <div class="col-md-6 col-xs-8"> 
                 <form action=Ricerca.jsp method=GET>
-                    <a href="index_nuovo.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a>
-                        <div id="Ricerca_per">
+                    <a href="index_nuovo.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a> <!-- logo pagina con link per tornare a index -->
                             <center>
-                        <p> Ricerca per: 
+                        <p> Ricerca per: <!-- ricerca per -->
                         <input type="radio" id="r1" name="ricerca" value="zona" checked="checked"> Zona
                         <input type="radio" id="r2" name="ricerca" value="cucina"> Cucina
                         <input type="radio" id="r3" name="ricerca" value="nome"> Nome
@@ -39,7 +38,7 @@
                         </p>
                             </center>
                        
-                            <div class="flexsearch">
+                            <div class="flexsearch"> <!-- barra di ricerca con tasto incluso -->
                                             <div class="flexsearch--wrapper">
                                                  <div class="flexsearch-form" id="mainForm">
                                                         <div class="flexsearch--input-wrapper">
@@ -65,7 +64,7 @@
                 </form>
             </div>
             
-            <div class="col-md-3 col-xs-3">
+            <div class="col-md-3 col-xs-3"> <!-- tasti accedi e registrati, quando effettuato l'accesso diventa menù dropdown con informazioni sul proilo -->
                 <%
                 HttpSession ses = request.getSession();
                 Utente utente;
@@ -85,7 +84,7 @@
                 %>
                 
                 <center>
-        <div class="dropdown">
+        <div class="dropdown"> <!-- menù dropdown dopo il login -->
 
 		<button type="button" class="btn btn icon-btn btn-info dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span>
             <%= utente.getNome()+" "+utente.getCognome()%> <span class="caret"></span>
