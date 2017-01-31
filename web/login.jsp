@@ -64,7 +64,6 @@
                                   <span class="help-block"></span>
                               </div>
                               <div class="form-group1">
-                                  
                                   <label for="password" class="control-label">Password</label>
                                   <input type="password" class="form-control" id="password" name="password" value="" title="Please enter your password">
                                   <span class="help-block"></span>
@@ -72,8 +71,8 @@
                               <div class="errore invisibile" id="login-error">Email o Password errati</div>
                               <br>
                               <button type="submit" class="btn btn-info Azzurro btn-block btn-responsive">Login</button>
-                              <button id="a"  onclick=sendPassword() class="btn btn-default btn-block btn-responsive">Mi Sono Dimenticato La Password</button>
                           </form>
+                          <button id="a"  onclick=sendPassword() class="btn btn-default btn-block btn-responsive">Mi Sono Dimenticato La Password</button>
                       </div>
                   </div>
                   <div class="col-xs-6" id="Altezza"> <!-- barra laterale che spiega i vantaggi a iscriverti al sito -->
