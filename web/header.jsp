@@ -85,7 +85,6 @@
                 {
                 %>
                 
-                <center>
         <div class="dropdown"> <!-- menù dropdown dopo il login -->
 
 		<button type="button" class="btn btn icon-btn btn-info dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span>
@@ -109,7 +108,6 @@
         
                             
             </div>
-                </center>
         </div>
     
     </body>

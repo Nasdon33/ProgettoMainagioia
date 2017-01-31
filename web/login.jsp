@@ -10,6 +10,10 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
        <script src="js/sendPass.js"></script>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <style>
         body {
         height:100%;
@@ -41,9 +45,6 @@
                 response.sendRedirect("index_nuovo.jsp");
             }
         %>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         
         
         <div id="login-overlay" class="modal-dialog" style="background-color: white; opacity:0.9; border-radius: 30px">
