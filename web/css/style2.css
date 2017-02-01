@@ -80,6 +80,7 @@ input.placeholder {
 body {
     font-family: 'Comic Sans MS';
     background-color: #fff;
+   
     
     
 
@@ -96,6 +97,23 @@ body {
 
 @media (min-width: 769px) and (max-width: 992px) {
   .btn-responsive {
+    padding:4px 9px;
+    font-size:100%;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-responsive2 {
+    padding:2px 4px;
+    font-size:75%;
+    line-height: 1.5;
+    border-radius:3px;
+  }
+}
+
+@media (min-width: 669px) and (max-width: 892px) {
+  .btn-responsive2 {
     padding:4px 9px;
     font-size:100%;
     line-height: 1.6;
