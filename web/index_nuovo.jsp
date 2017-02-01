@@ -102,7 +102,8 @@
                     %>
                     <%     
                          
-                        String sql = "SELECT id, name FROM Restaurants  WHERE id IN (SELECT id FROM Restaurants RIGHT JOIN Reviews ON Restaurants.id=Reviews.id_restaurant ORDER BY )";
+                        //String sql = "SELECT id, name FROM Restaurants  WHERE id IN (SELECT id FROM Restaurants RIGHT JOIN Reviews ON Restaurants.id=Reviews.id_restaurant ORDER BY )";
+                        String sql ="SELECT id, name FROM Restaurants";
                         ResultSet ristoranti = manager.getData(sql);
                         for(int i = 0; i < 3; i++){
                             ristoranti.next();
@@ -123,8 +124,8 @@
                     <br>
                     
                     <%
-                        String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
-                        ResultSet recensioni = manager.getData(sql,idris);
+                        String sql2 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
+                        ResultSet recensioni = manager.getData(sql2,idris);
                         int c = 0;
                         int voto = 0;
                         while(recensioni.next()){
@@ -159,15 +160,6 @@
                     }
                     
                     %>
-                     <div class="col-md-4 col-xs-4">
-                         ristorante importante 1
-                     </div>
-                     <div class="col-md-4 col-xs-4">
-                         ristorante importante 2
-                     </div>
-                     <div class="col-md-4 col-xs-4">
-                         ristorante importante 3
-                     </div>
                      
                      
                     
