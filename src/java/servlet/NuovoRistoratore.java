@@ -81,7 +81,7 @@ public class NuovoRistoratore extends HttpServlet {
         HttpSession ses = request.getSession();
         Utente utente;
         utente = (Utente)ses.getAttribute("utente");
-        String idp = utente.getId();
+        String idp = "7";
         String idris = request.getParameter("idris");
         String sqlU = "UPDATE USERS SET RUOLO = 'owner' WHERE ID = ?";
         manager.setData(sqlU, idp);

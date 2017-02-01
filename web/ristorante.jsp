@@ -97,8 +97,9 @@
                         </div> <!-- fine modal per le foto -->
                     </div>
                     <%
-                        utente = (Utente)ses.getAttribute("utente");
-                        if(!ristorante.getString("id_owner").equals(utente.getId())){
+                        HttpSession ses2 = request.getSession();
+                        Utente utente2 = (Utente)ses2.getAttribute("utente"); 
+                        if((utente2!=null) && (ristorante.getString("id_owner")==null)){
                     %>    
                     <div>
                         <form role="form" action="NuovoRistoratore" method="POST">
@@ -256,7 +257,7 @@
                                                     x++;
                                         %>   
                                         <div class="col-md-4 col-xs-4 thumb">
-                                            <a id="img" class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
+                                            <a id="img" class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-id="<%=foto2.getString("id") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
                                             <div>
                                                 <img class="img-responsive" src="<%=foto2.getString("path") %> " style="border-radius: 30px" alt="Short alt text">
                                             </div>
@@ -292,12 +293,13 @@
                                             $(document).ready(function () { //Dom Ready
                                                 $('#image-gallery').on('show.bs.modal', function (e) { //Event listener
                                                     var image = $(e.relatedTarget).data("image"); //.getAttribute("data-image"); //Fetch image url from modal trigger <a> link
+                                                    var id = $(e.relatedTarget).data("id"); //.getAttribute("data-id"); //Fetch image url from modal trigger <a> link
                                                     var titolo = $(e.relatedTarget).data("title"); //getAttribute("data-title"); //Fetch image url from modal trigger <a> link
                                                     var descrizione = $(e.relatedTarget).data("caption"); //getAttribute("data-caption"); //Fetch image url from modal trigger <a> link
                                                     document.getElementById("image-gallery-image").setAttribute("src", image); //load image in modal
                                                     document.getElementById("titolo").innerHTML = "<H2>"+titolo+"</H2>";                                        
                                                     document.getElementById("descrizione").innerHTML = "<H4>"+descrizione+"</H4>";
-                                                    document.getElementById("idphoto").setAttribute("value", image);
+                                                    document.getElementById("idphoto").setAttribute("value", id);
                                                 });
                                             });
                                             </script>                   
