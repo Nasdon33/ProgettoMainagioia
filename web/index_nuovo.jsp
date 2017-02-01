@@ -102,12 +102,15 @@
                     %>
                     <%     
                          
-                        //String sql = "SELECT id, name FROM Restaurants  WHERE id IN (SELECT id FROM Restaurants RIGHT JOIN Reviews ON Restaurants.id=Reviews.id_restaurant ORDER BY )";
-                        String sql ="SELECT id, name FROM Restaurants";
+                        String sql = "SELECT id_restaurant FROM Reviews GROUP BY id_restaurant ORDER BY AVG(CAST (global_value as float)) DESC fetch first 3 rows only";
+                        
                         ResultSet ristoranti = manager.getData(sql);
                         for(int i = 0; i < 3; i++){
                             ristoranti.next();
-                            String idris = ristoranti.getString("id");
+                            String idris = ristoranti.getString("id_restaurant");
+                            String sqlname ="SELECT name FROM Restaurants WHERE id = ?";
+                            ResultSet nome = manager.getData(sqlname,idris);
+                            nome.next();
                     %>
                    
                     <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.5px solid;">
@@ -120,7 +123,7 @@
                         %>
                         <a href="ristorante.jsp?id=<%=idris %>"><img src="<%=foto.getString("path") %>" width="90%"></a>
                     <br>
-                    <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=ristoranti.getString("name") %> </a>
+                    <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=nome.getString("name") %> </a>
                     <br>
                     
                     <%
