@@ -37,6 +37,10 @@
         <servlet-class>servlet.Risposte</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SegnalaFoto</servlet-name>
+        <servlet-class>servlet.SegnalaFoto</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Ristorante</servlet-name>
         <servlet-class>servlet.Ristorante</servlet-class>
     </servlet>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>NuovoRistoratore</servlet-name>
         <url-pattern>/NuovoRistoratore</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SegnalaFoto</servlet-name>
+        <url-pattern>/SegnalaFoto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>

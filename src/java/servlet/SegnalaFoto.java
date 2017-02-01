@@ -6,23 +6,21 @@
 package servlet;
 
 import db.DBManager;
-import db.Utente;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Carlo
-     */
-public class NuovoRistoratore extends HttpServlet {
+ */
+public class SegnalaFoto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +39,10 @@ public class NuovoRistoratore extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet NuovoRistoratore</title>");            
+            out.println("<title>Servlet SegnalaFoto</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet NuovoRistoratore at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet SegnalaFoto at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,23 +75,17 @@ public class NuovoRistoratore extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-        DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
-        HttpSession ses = request.getSession();
-        Utente utente;
-        utente = (Utente)ses.getAttribute("utente");
-        String idp = "7";
-        String idris = request.getParameter("idris");
-        String sqlU = "UPDATE USERS SET RUOLO = 'owner' WHERE ID = ?";
-        manager.setData(sqlU, idp);
-        String sqlR = "UPDATE RESTAURANTS SET ID_owner = ? WHERE ID = ?";
-        manager.setData(sqlR, idp, idris);
-        utente.setId("owner");
-        response.sendRedirect(request.getHeader("Referer"));
-        
+            DBManager manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+            String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
+            String idp = request.getParameter("idphoto");
+            String sql = "INSERT INTO WARNING(result, date_creation, date_validation, id_photo) VALUES(null,?,null,?)";
+            manager.setData(sql,dat,idp);
+            response.sendRedirect(request.getHeader("Referer"));
         } catch (Exception ex) {
             response.sendRedirect("argh_page.jsp");
-            Logger.getLogger(NuovoRistoratore.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SegnalaFoto.class.getName()).log(Level.SEVERE, null, ex);
         }
+    
     }
 
     /**

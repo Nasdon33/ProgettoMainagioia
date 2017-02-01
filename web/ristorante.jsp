@@ -280,7 +280,7 @@
                                                                 <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
                                                             </div>  
                                                             <div class="col-md-2 col-xs-2 col-md-offset-7 col-xs-offset-7">
-                                                                <form role="form" action="SegnalaFoto" method="GET">
+                                                                <form role="form" action="SegnalaFoto" method="POST">
                                                                 <input type="hidden" id="idphoto" name="idphoto" value="">
                                                                 <input type="submit" value="Segnala" /> 
                                                                 </form>
