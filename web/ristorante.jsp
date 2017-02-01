@@ -96,6 +96,19 @@
                             </div> 
                         </div> <!-- fine modal per le foto -->
                     </div>
+                    <%
+                        utente = (Utente)ses.getAttribute("utente");
+                        if(!ristorante.getString("id_owner").equals(utente.getId())){
+                    %>    
+                    <div>
+                        <form role="form" action="NuovoRistoratore" method="POST">
+                        <input type="hidden" name="idris" value="<%=ristorante.getString("id") %>">
+                        <input type="submit" value="E' tuo questo ristorante?" /> 
+                    </form>
+                    </div>
+                    <%
+                        }
+                    %> 
                 </div>           
                 <script>
                 $(document).ready(function(){
@@ -264,7 +277,13 @@
                                                         <div class="modal-footer">
                                                             <div class="col-md-2 col-xs-2">
                                                                 <button type="button" class="btn btn-primary btn-responsive pull-left Azzurro" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Chiudi </button>
-                                                            </div>                
+                                                            </div>  
+                                                            <div class="col-md-2 col-xs-2 col-md-offset-7 col-xs-offset-7">
+                                                                <form role="form" action="SegnalaFoto" method="GET">
+                                                                <input type="hidden" id="idphoto" name="idphoto" value="">
+                                                                <input type="submit" value="Segnala" /> 
+                                                                </form>
+                                                            </div> 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -278,6 +297,7 @@
                                                     document.getElementById("image-gallery-image").setAttribute("src", image); //load image in modal
                                                     document.getElementById("titolo").innerHTML = "<H2>"+titolo+"</H2>";                                        
                                                     document.getElementById("descrizione").innerHTML = "<H4>"+descrizione+"</H4>";
+                                                    document.getElementById("idphoto").setAttribute("value", image);
                                                 });
                                             });
                                             </script>                   

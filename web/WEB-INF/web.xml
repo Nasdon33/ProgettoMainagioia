@@ -21,6 +21,10 @@
         <servlet-class>servlet.validate</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>NuovoRistoratore</servlet-name>
+        <servlet-class>servlet.NuovoRistoratore</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>User</servlet-name>
         <servlet-class>servlet.User</servlet-class>
     </servlet>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>DBManager</servlet-name>
         <url-pattern>/DBManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NuovoRistoratore</servlet-name>
+        <url-pattern>/NuovoRistoratore</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
