@@ -52,7 +52,7 @@
                             String sql11 = "SELECT * FROM Mainagioia.Photos WHERE id_restaurant = ? AND description <> 'Principale'";
                             ResultSet foto2 = manager.getData(sql11,idris);
                         %>
-                        <img src="<%=foto.getString("path") %>" width="100%" alt="immagine"> <!-- Immagine ristorante, caricata dal db-->
+                        <img src="<%=foto.getString("path") %>" width="100%" alt="immagine" style="border-radius: 30px"> <!-- Immagine ristorante, caricata dal db-->
 
                     </div>
                     <div id="Spazio">
@@ -245,7 +245,7 @@
                                         <div class="col-md-4 col-xs-4 thumb">
                                             <a id="img" class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
                                             <div>
-                                                <img class="img-responsive" src="<%=foto2.getString("path") %>" alt="Short alt text">
+                                                <img class="img-responsive" src="<%=foto2.getString("path") %> " style="border-radius: 30px" alt="Short alt text">
                                             </div>
                                             </a>
                                             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <!-- quando si clicca sulla foto si apre un modal -->
