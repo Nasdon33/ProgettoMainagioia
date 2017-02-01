@@ -27,25 +27,25 @@
                         <form>
                             <div>
                                 
-                            <p class="col-form-legend" id="Font">Ordina per:</p>
+                                <p class="col-form-legend" id="Font">Ordina per:</p>
                             
                             <div class="col-sm-12" id="Spazio">
                               <div class="form-check">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                  Classifica
+                                  Classifica <span class="glyphicon glyphicon-stats"></span> 
                                 </label>
                               </div>
                               <div class="form-check"id="Spazio">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                  Nome
+                                  Nome <span class="glyphicon glyphicon-sort-by-alphabet"></span> 
                                 </label>
                               </div>
                               <div class="form-check disabled"id="Spazio">
                                 <label class="form-check-label">
                                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                                  Fascia di Prezzo
+                                  Fascia di Prezzo <span class="glyphicon glyphicon-euro"></span> 
                                 </label>
                               </div>
                               </div>
@@ -79,9 +79,9 @@
           </button>
             
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Classifica</a></li>
-            <li><a href="#">Nome</a></li>
-            <li><a href="#">Fascia di Prezzo</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-stats"></span> Classifica</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-sort-by-alphabet"></span> Nome</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-euro"></span> Fascia di Prezzo</a></li>
           </ul>
                 
         </div>
