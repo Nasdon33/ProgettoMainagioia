@@ -128,7 +128,7 @@
                         <br>
                         <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal">Visualizza Orari</a>
                         <!-- inizio Modal per la tabella orari -->
-                        <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="primary"x tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header modal-header-primary">

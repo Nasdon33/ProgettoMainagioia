@@ -89,9 +89,9 @@
                                </div><!-- /col-sm-5 -->
                              </div> <!-- fine commenti -->
                     
-                 <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px"> <!-- Ristoranti in vetrina -->
+                 <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- Ristoranti in vetrina -->
                      <center>
-                     <p style ="font-size: 25px">Ristoranti popolari: </p>
+                         <b>  <p style ="font-size: 30px">Ristoranti popolari: </p></b>
                      <%! private DBManager manager; %>
                     <%! 
                         public void init() throws ServletException {
@@ -113,7 +113,7 @@
                             nome.next();
                     %>
                    
-                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.5px solid;">
+                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza">
                         <br>
                         <center>
                         <%
@@ -121,7 +121,7 @@
                             ResultSet foto = manager.getData(sql10,idris);
                             foto.next();
                         %>
-                        <a href="ristorante.jsp?id=<%=idris %>"><img src="<%=foto.getString("path") %>" width="90%"></a>
+                        <a href="ristorante.jsp?id=<%=idris %>"><img src="<%=foto.getString("path") %>" width="90%" style="border-radius: 30px"></a>
                     <br>
                     <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=nome.getString("name") %> </a>
                     <br>
