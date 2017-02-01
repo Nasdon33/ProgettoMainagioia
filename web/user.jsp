@@ -7,9 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-       
         <%@include file="head.html" %>
-       
         <title>Notifiche</title>
     </head>
     
@@ -27,6 +25,7 @@
         %>
         <div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1" id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px;"> <!-- Pagina di notifiche -->
             <!-- Notification header -->
+            <center>
             <div>
                 <center>
                 <p style="font-size: 30px">Ecco le tue notifiche:</p>
@@ -52,14 +51,17 @@
                     int b = 0;
             %>
             <!-- NOTIFICHE PER IL RISTORATORE -->
+           
             <div>
-                ECCO LE TUE SEGNALAZIONI NELL'ULTIMO MESE
+                
+                <p style="font-size: 20px">Segnalazioni:</p>
+               
                 <%
                     while(segnalazioni.next()){
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata" class="btn btn-responsive Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata" class="btn btn-responsive2 Azzurro_no_bordo"> 
                         <%
                             if(segnalazioni.getString("result") == "true"){
                                 
@@ -99,13 +101,13 @@
                 %>
             </div>
             <div>
-                ECCO LE TUE RISPOSTE NELL'ULTIMO MESE
+                <p style="font-size: 20px">Risposte:</p>
                 <%
                     while(risposte.next()){
                         b++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
                         <%
                             if(risposte.getString("acc") == "true"){
                         %>
@@ -133,6 +135,7 @@
                         <div>
                             <%=risposte.getString("rpdes") %>
                         </div>
+                        
                     </div>
                 </div>
                 <%
@@ -164,7 +167,7 @@
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
                         <img src="<%=segnalazioni.getString("path") %>" width="250">
                         <br>
                         Per il ristorante <%=segnalazioni.getString("name") %>
@@ -192,7 +195,7 @@
                         b++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
                         <div>
                             <%=risposte.getString("rvn") %>
                         </div>
@@ -222,6 +225,7 @@
             <%
                 }
             %> 
+            </center>
         </div>
         <%
             }
