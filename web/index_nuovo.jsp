@@ -101,15 +101,18 @@
                      </div>
                      
                      
-                     
+                    
                      
                      </center>
                  </div>
                      
-                   
-                   
-                   
-                   
+                             
+                             <!-- riga separatoria -->
+                   <div class="col-md-12 col-xs-12">
+                       <br>
+                   </div>
+                           
+                           
             
             
                 <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
