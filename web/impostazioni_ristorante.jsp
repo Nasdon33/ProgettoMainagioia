@@ -39,20 +39,22 @@
                         <hr class="colorgraph">
                        <!-- parte di selezione del ristorante da modificare (nel caso di utenti con piu ristoranti-->
                         <center>
+                            <b>Seleziona il ristorante da modificare:</b>
+                            
                         <div>
-                            <div class="col-md-4">
+                            <br>
+                            
+                            <div class="col-md-4 col-xs-4">
                                 <button class="btn btn-responsive btn-info">"nome 1"</button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-xs-4">
                                 <button class="btn btn-responsive btn-info">"nome 2"</button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-xs-4">
                                 <button class="btn btn-responsive btn-info">"nome 3"</button>
                             </div>
-                            
-                        </div>
-                            <div>
-                            <p> Hai selezionato "nome ristorante" </p
+                            <hr>
+                        <p> Hai selezionato "nome ristorante" </p>
                             </div>
                         </center>
                         <!-- fine parte di selezione -->
@@ -486,19 +488,9 @@
                         </div>
                     </div>
                 </div>
-                </center>
-                <center>
-                    <div class="row">
-                        <H4>Sei il proprietario del ristorante?</H4>
-                        <div class="col-md-2 col-xs-2 col-md-offset-4 col-xs-offset-4">
-                            <input type="radio" name="owner" value="1"/> Sì
-                        </div>
-                        <div class="col-md-2 col-xs-2">
-                            <input type="radio" name="owner" value="0" checked/> No
-                        </div>
-                    </div>
+                
                     <div class="col-md-10 col-md-offset-1">
-                        <hr>
+                        
                     </div>
                     <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
                         <div class="form-group2">
@@ -513,7 +505,7 @@
                     <div class="row">
                         
                         <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
-                            <input type="submit" value="Inserisci" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7">
+                            <input type="submit" value="Modifica" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7">
                         </div>
                     </div>
                 </div>
