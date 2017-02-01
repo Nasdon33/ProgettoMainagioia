@@ -87,7 +87,25 @@
                                </div><!-- /col-sm-5 -->
                              </div> <!-- fine commenti -->
                     
-                   
+                 <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px"> <!-- Ristoranti in vetrina -->
+                     <center>
+                     <p style ="font-size: 25px">Ristoranti popolari: </p>
+                     <div class="col-md-4 col-xs-4">
+                         ristorante importante 1
+                     </div>
+                     <div class="col-md-4 col-xs-4">
+                         ristorante importante 2
+                     </div>
+                     <div class="col-md-4 col-xs-4">
+                         ristorante importante 3
+                     </div>
+                     
+                     
+                     
+                     
+                     </center>
+                 </div>
+                     
                    
                    
                    
@@ -103,7 +121,7 @@
                 </div>
 
             
-        </div>
+     
         
 
 
