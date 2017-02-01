@@ -125,7 +125,8 @@
                 <!-- Boxes de Acoes -->
                 <div class="col-xs-12 col-md-12 Sparisci_2"> <!-- il tasto "visualizza orari" compare solo quando la grandezza dello schermo è piccola, facendo sparire la tabella degli orari  -->
                     <div class="icon">
-                        <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal"><i class="fa fa-soundcloud"></i>Visualizza Orari</a>
+                        <br>
+                        <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal">Visualizza Orari</a>
                         <!-- inizio Modal per la tabella orari -->
                         <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">

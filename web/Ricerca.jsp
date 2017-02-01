@@ -74,7 +74,7 @@
                 <center>
         <div class="btn-group show-on-hover">
            
-            <button type="button" class="btn btn-Primary dropdown-toggle Azzurro" data-toggle="dropdown">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
             Ordina Per <span class="caret"></span>
           </button>
             
