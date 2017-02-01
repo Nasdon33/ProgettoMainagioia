@@ -36,7 +36,27 @@
                 </div>
                     
                     <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"> <!-- campi per cambiare i dati del ristorante, molto simile a inserisci ristorante-->
-<hr class="colorgraph">
+                        <hr class="colorgraph">
+                       <!-- parte di selezione del ristorante da modificare (nel caso di utenti con piu ristoranti-->
+                        <center>
+                        <div>
+                            <div class="col-md-4">
+                                <button class="btn btn-responsive btn-info">"nome 1"</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-responsive btn-info">"nome 2"</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-responsive btn-info">"nome 3"</button>
+                            </div>
+                            
+                        </div>
+                            <div>
+                            <p> Hai selezionato "nome ristorante" </p
+                            </div>
+                        </center>
+                        <!-- fine parte di selezione -->
+                        <hr>
                         <div class="form-group2">
                             <center><b>Nome attuale:</b>"nome attuale"</center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
                             <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
