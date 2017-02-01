@@ -2,6 +2,7 @@ DELETE FROM Mainagioia.restaurant_coordinate;
 DELETE FROM Mainagioia.restaurant_cuisine;
 DELETE FROM Mainagioia.opening_hours_range_restaurant;
 DELETE FROM Mainagioia.user_review_likes;
+DELETE FROM Mainagioia.warning;
 DELETE FROM Mainagioia.replies;
 DELETE FROM Mainagioia.reviews;
 DELETE FROM Mainagioia.coordinates;

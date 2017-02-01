@@ -146,7 +146,7 @@
                        <br>
                         <center>
                             <%
-                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
+                            String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description='Principale'";
                             ResultSet foto = manager.getData(sql10,idris);
                             foto.next();
                         %>
