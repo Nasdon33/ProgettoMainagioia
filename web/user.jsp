@@ -61,7 +61,7 @@
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata" class="btn btn-responsive2 Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata" class="btn btn-responsive2 Azzurro_no_bordo" id="Altezza"> 
                         <%
                             if(segnalazioni.getString("result") == "true"){
                                 
@@ -81,13 +81,14 @@
                                 }
                                 else{
                         %>
-                        <p> La tua segnalazione alla seguente foto è stata controllata ed è stata ritenuta consona ai nostri standard</p>
+                        <p> La tua segnalazione alla seguente foto è stata controllata <br>ed è stata ritenuta consona ai nostri standard</p>
                         <img src="<%=foto.getString("path") %>" width="250">            
                         <%
                                 }
                             }
                         %>
                     </div>
+                  
                 </div>
                 <%
                     }
@@ -116,12 +117,12 @@
                             }
                             else if(risposte.getString("acc") == "false"){
                         %>
-                        <p> La tua risposta alla recensione del tuo ristorante non è stata pubblicata</p> 
+                        <p> La tua risposta alla recensione del tuo ristorante <br> non è stata pubblicata</p> 
                         <%
                             }
                             else{
                         %>
-                        <p> La tua risposta alla recensione del tuo ristorante deve ancora essere controllata</p> 
+                        <p> La tua risposta alla recensione del tuo ristorante <br> deve ancora essere controllata</p> 
                         <%
                             }
                         %>
@@ -131,7 +132,7 @@
                         <div>
                             <%=risposte.getString("rvdes") %>
                         </div>
-                        LA TUA RISPOSTA:
+                        <p style="color: white"> LA TUA RISPOSTA:</p>
                         <div>
                             <%=risposte.getString("rpdes") %>
                         </div>
@@ -202,7 +203,7 @@
                         <div>
                             <%=risposte.getString("rvn") %>
                         </div>
-                        <div>
+                        <div id="Altezza">
                             <%=risposte.getString("rvdes") %>
                         </div>
                         LA TUA RISPOSTA:
