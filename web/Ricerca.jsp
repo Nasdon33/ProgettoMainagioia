@@ -20,7 +20,7 @@
 
         <br>
             
-                <div class="col-md-3 blocca" id="Sparisci" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.3px solid;"> <!-- inizio div per ordinare i risultati -->
+                <div class="col-md-3 blocca" id="Sparisci" style="background-color: white; opacity:0.9; border-radius: 30px; border: #D8D8D8 0.3px solid;"> <!-- inizio div per ordinare i risultati -->
                     
                     <div class="container">
                         
@@ -142,7 +142,7 @@
                         String idris = ristoranti.getString("id");
                     %>
                    
-                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" style="background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.5px solid;">
+                    <div class="col-md-4 col-xs-4 btn-responsive" id="Altezza" style="background-color: white; opacity:0.9; border-radius: 30px; border: #D8D8D8 0.5px solid;">
                        <br>
                         <center>
                             <%
