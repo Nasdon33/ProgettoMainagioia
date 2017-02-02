@@ -59,21 +59,18 @@
                             <div class="radio">
                                 <br>
                             <%
-                                String sql = "SELECT * FROM Restaurants WHERE id_owner = ?";
+                                String sql = "SELECT R.id as id, R.name as name, R.web_site_url as url, P.name as price, C.address as address, C.cap as cap, C.city as city, C.province as province, C.state as state FROM Restaurants as R, Price_ranges as P, Restaurant_coordinate as RC, Coordinates as C WHERE R.id_owner = ? AND R.id_price_range = P.id AND R.id = RC.id_restaurant AND RC.id_coordinate = C.id";
                                 ResultSet ristoranti = manager.getData(sql, utente.getId());
                                 while(ristoranti.next()){
                             %>
-                            <input type="hidden" name="n" value="<%=ristoranti.getString("name") %>" />
-                            <input type="hidden" name="d" value="<%=ristoranti.getString("description") %>" />
-                            <input type="hidden" name="w" value="<%=ristoranti.getString("web_site_url") %>" />
                             <div class="row">
-                                <label><input type="radio" name="scelta" data-name="<%=ristoranti.getString("name") %>" class="btn btn-responsive btn-info" value="<%=ristoranti.getString("id") %>" /> <%=ristoranti.getString("name") %></label>
+                                <label><input type="radio" name="scelta" onclick="validate('<%=ristoranti.getString("id") %>', '<%=ristoranti.getString("name") %>', '<%=ristoranti.getString("url") %>',  '<%=ristoranti.getString("price") %>', '<%=ristoranti.getString("address") %>', '<%=ristoranti.getString("cap") %>', '<%=ristoranti.getString("city") %>', '<%=ristoranti.getString("province") %>', '<%=ristoranti.getString("state") %>')" class="btn btn-responsive btn-info" value="<%=ristoranti.getString("id") %>" /> <%=ristoranti.getString("name") %></label>
                             </div>
                             <br>
                             <%
                                 }
                             %>
-                            
+                            <input type="hidden" id="rico" name="id" value="" />
                             <hr>
                             <p> Hai selezionato <span id="nome"> </span></p>
                             </div>
@@ -97,7 +94,7 @@
 
                         <div class="form-group2 hid">
                             <hr>
-                            <center><b>Fascia di prezzo attuale:</b>"fascia attuale"</center>
+                            <center><b>Fascia di prezzo attuale:</b><span id="p"> </span></center>
                             <br>
                             <div class="col-md-3 col-xs-3">
                                 <input type="radio" name="prezzo" value="0" checked> 0 - 8€<br>
@@ -116,27 +113,27 @@
                         </div>
 
                         <div class="form-group2 hid">
-                            <center><b>Indirizzo attuale:</b>"indirizzo attuale"</center>
+                            <center><b>Indirizzo attuale:</b><span id="a"> </span></center>
                             <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Nuovo indirizzo" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>CAP attuale:</b>"cap attuale"</center>
+                            <center><b>CAP attuale:</b><span id="cap"> </span></center>
                             <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="Nuovo CAP" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Città attuale:</b>"città attuale"</center>
+                            <center><b>Città attuale:</b><span id="cit"> </span></center>
                             <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Nuova città" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Provincia attuale:</b>"provincia attuale"</center>
+                            <center><b>Provincia attuale:</b><span id="pro"> </span></center>
                             <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="Nuova provincia" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Stato attuale:</b>"stato attuale"</center>
+                            <center><b>Stato attuale:</b><span id="s"> </span></center>
                             <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Nuovo stato" tabindex="3">
                         </div>
                     </div>
@@ -144,7 +141,7 @@
                 <div class="row hid">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
                         <hr>
-                        <center><b>Cucina attuale:</b>"cucina attuale"</center>
+                        <center><b>Cucina attuale:</b></center>
                         <br>
                         <div class="Spazio">
                             <div class="col-md-3 col-xs-3">
