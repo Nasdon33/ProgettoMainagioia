@@ -4,6 +4,8 @@
     Author     : Carlo
 --%>
 
+<%@page import="db.DBManager"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,20 +14,23 @@
         
         <title>Gestisci Ristorante</title>
         
-        
+       
+            
+            
         
     </head>
     <body>
         <div>
         <%@page import="db.Utente" %>
         <%@include file="header.jsp" %>
-        <%-- <%
+        <script src="js/scelta_ristorante.js"></script>
+        <%
             if(!utente.getRuolo().contains("owner")){
                 response.sendRedirect("index_nuovo.jsp");
             }
-        %> --%>
+        %>
         </div>
-        <div class="row" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">
+        <div class="row pagina" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">
             <form method="POST" action="Ristorante" enctype="multipart/form-data">
                 
                
@@ -43,38 +48,54 @@
                             
                         <div>
                             <br>
+                            <%! private DBManager manager; %>
+                            <%! 
+                                public void init() throws ServletException {
+                                // inizializza il DBManager dagli attributi di Application
+                                this.manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+                                //System.out.println("DBManager attivato\n");
+                                } 
+                            %>
+                            <div class="radio">
+                                <br>
+                            <%
+                                String sql = "SELECT * FROM Restaurants WHERE id_owner = ?";
+                                ResultSet ristoranti = manager.getData(sql, utente.getId());
+                                while(ristoranti.next()){
+                            %>
+                            <input type="hidden" name="n" value="<%=ristoranti.getString("name") %>" />
+                            <input type="hidden" name="d" value="<%=ristoranti.getString("description") %>" />
+                            <input type="hidden" name="w" value="<%=ristoranti.getString("web_site_url") %>" />
+                            <div class="row">
+                                <label><input type="radio" name="scelta" data-name="<%=ristoranti.getString("name") %>" class="btn btn-responsive btn-info" value="<%=ristoranti.getString("id") %>" /> <%=ristoranti.getString("name") %></label>
+                            </div>
+                            <br>
+                            <%
+                                }
+                            %>
                             
-                            <div class="col-md-4 col-xs-4">
-                                <button class="btn btn-responsive btn-info">"nome 1"</button>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <button class="btn btn-responsive btn-info">"nome 2"</button>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <button class="btn btn-responsive btn-info">"nome 3"</button>
-                            </div>
                             <hr>
-                        <p> Hai selezionato "nome ristorante" </p>
+                            <p> Hai selezionato <span id="nome"> </span></p>
                             </div>
                         </center>
                         <!-- fine parte di selezione -->
                         <hr>
-                        <div class="form-group2">
-                            <center><b>Nome attuale:</b>"nome attuale"</center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
+                        <div class="form-group2 hid">
+                            <center><b>Nome attuale:</b><span id="n"> </span></center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
                             <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
                         </div>
                         <br>
-                        <div class="form-group2">
-                            <center><b>Cambia descrizione:</b></center>
+                        <div class="form-group2 hid">
+                            <center><b>Cambia descrizione:</b><span id="d"> </span></center>
                             <textarea name="description" id="display_name" class="form-control input-lg" placeholder="Nuova descrizione" tabindex="3"></textarea>
                         </div>
                         <br>
-                        <div class="form-group2">
-                            <center><b>Sito Web attuale:</b>"indirizzo attuale"</center>
+                        <div class="form-group2 hid">
+                            <center><b>Sito Web attuale:</b><span id="w"> </span></center>
                             <input type="text" name="web_site_url" id="display_name" class="form-control input-lg" placeholder="Nuovo sito Web" tabindex="3">
                         </div>
 
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <hr>
                             <center><b>Fascia di prezzo attuale:</b>"fascia attuale"</center>
                             <br>
@@ -94,33 +115,33 @@
                             <hr>
                         </div>
 
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <center><b>Indirizzo attuale:</b>"indirizzo attuale"</center>
                             <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Nuovo indirizzo" tabindex="3">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <br>
                             <center><b>CAP attuale:</b>"cap attuale"</center>
                             <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="Nuovo CAP" tabindex="3">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <br>
                             <center><b>Città attuale:</b>"città attuale"</center>
                             <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Nuova città" tabindex="3">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <br>
                             <center><b>Provincia attuale:</b>"provincia attuale"</center>
                             <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="Nuova provincia" tabindex="3">
                         </div>
-                        <div class="form-group2">
+                        <div class="form-group2 hid">
                             <br>
                             <center><b>Stato attuale:</b>"stato attuale"</center>
                             <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Nuovo stato" tabindex="3">
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row hid">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
                         <hr>
                         <center><b>Cucina attuale:</b>"cucina attuale"</center>
@@ -171,7 +192,7 @@
                     </div>
                 </div>
                 <center>
-                <div class="row">
+                <div class="row hid">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
                         <hr>
                         <center><b>Cambia orari:</b></center>  
@@ -477,7 +498,7 @@
                 </div>
                 </center>
                 <center>
-                <div class="row">
+                <div class="row hid">
                     <div id="Spazio">
                         <div class="container row">
                             <div class="col-md-12 col-xs-12">
@@ -492,7 +513,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         
                     </div>
-                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1 hid">
                         <div class="form-group2">
                                 <center><b>Password:</b></center>
                                 <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Inserisci la password per confermare le modifiche" tabindex="3">
@@ -500,7 +521,7 @@
                         </div>
                     </div>
                 </center>
-                <div class="row">
+                <div class="row hid">
                     
                     <div class="row">
                         
