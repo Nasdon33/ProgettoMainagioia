@@ -59,10 +59,10 @@ public class Recensione extends HttpServlet {
         manager.setData(sql,id_user, id_review, id_creator, like, dat);
         response.sendRedirect(request.getHeader("referer"));
         } catch (SQLException ex) {
-            response.sendRedirect(request.getHeader("referer"));
+            response.sendRedirect("argh_page.jsp");
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
-            response.sendRedirect(request.getHeader("referer"));
+            response.sendRedirect("argh_page.jsp");
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

@@ -111,73 +111,15 @@ public class User extends HttpServlet {
             throws ServletException, IOException {
         
         try {
-                String password = null;
-                String nick = null;
-                String mail = null;
-                String id, sql5;
-                boolean p1, p2, p3;
-                id = request.getParameter("id");
+                HttpSession sess = request.getSession();
+                Utente utente = (Utente) sess.getAttribute("utente");;
+                String id = utente.getId();
+                String password = request.getParameter("password");
+                String mail = request.getParameter("email");
+                String nick = request.getParameter("nickname");
+                String sql= "UPDATE Users SET nickname = ? email = ? password = ? where id = ?";
+                manager.setData(sql, nick, mail, password,  id);
                 
-                if(request.getParameter("password") != null){
-                    password = request.getParameter("password");
-                    p1 = true;
-                }
-                else
-                    p1 = false;
-                
-                if(request.getParameter("email") != null){
-                    mail = request.getParameter("email");
-                    p2 = true;
-                }
-                else
-                    p2 = false;
-                if(request.getParameter("nickname") != null){
-                    nick = request.getParameter("nickname");
-                    p3 = true;
-                }
-                else
-                    p3 = false;
-                
-                if(p1 == true){
-                    if(p2 == true){
-                        if(p3 == true){
-                            sql5= "UPDATE Users SET nickname = ? email = ? password = ? where id = ?";
-                                manager.setData(sql5, nick, mail, password,  id);
-                        }
-                        else{
-                                sql5= "UPDATE Users SET email = ? password = ? where id = ?";
-                                manager.setData(sql5, mail, password,  id);
-                        }
-                    }
-                    else{
-                        if(p3 == true){
-                            sql5= "UPDATE Users SET nickname = ? password = ? where id = ?";
-                                manager.setData(sql5, nick, password,  id);
-                        }
-                        else{
-                            sql5= "UPDATE Users SET password = ? where id = ?";
-                                manager.setData(sql5, password,  id);
-                        }
-                    }
-                }
-                else{
-                    if(p2 == true){
-                        if(p3 == true){
-                            sql5= "UPDATE Users SET nickname = ? email = ? where id = ?";
-                                manager.setData(sql5, nick, mail,  id);
-                        }
-                        else{
-                            sql5= "UPDATE Users SET email = ? where id = ?";
-                                manager.setData(sql5, mail,  id); 
-                        }
-                    }
-                    else{
-                        if(p3 == true){
-                            sql5= "UPDATE Users SET nickname = ? where id = ?";
-                                manager.setData(sql5, nick,  id);
-                        }
-                    }
-                }
             response.sendRedirect(request.getHeader("Referer"));
         } catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);

@@ -21,6 +21,10 @@
         <servlet-class>servlet.validate</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>RimuoviFoto</servlet-name>
+        <servlet-class>servlet.RimuoviFoto</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>NuovoRistoratore</servlet-name>
         <servlet-class>servlet.NuovoRistoratore</servlet-class>
     </servlet>
@@ -115,6 +119,10 @@
     <servlet-mapping>
         <servlet-name>Utente</servlet-name>
         <url-pattern>/Utente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RimuoviFoto</servlet-name>
+        <url-pattern>/RimuoviFoto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>User</servlet-name>

@@ -599,11 +599,11 @@
                                         <%=recensioni.getString("description") %> <!-- descrizione -->
                                     </div>
                                     <% 
-                                        String sql8 = "SELECT description, date_creation, id_validator FROM Replies WHERE id_review = ?";
+                                        String sql8 = "SELECT description, date_creation, accepted FROM Replies WHERE id_review = ?";
                                         ResultSet risposta = manager.getData(sql8,recensioni.getString("id"));
 
                                         if(risposta.next()){
-                                            if(risposta.getString("id_validator") != null){
+                                            if(risposta.getBoolean("accepted") == true){
                                     %>  
                                     <hr>
                                     <div> <!-- risposta del ristoratore alle recensioni -->

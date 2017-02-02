@@ -154,7 +154,7 @@
                 else if(utente.getRuolo().contains("admin")){
                     String sqlW = "SELECT W.result, W.date_creation, W.date_validation, P.path, W.id_photo, R.name FROM WARNING as W, PHOTOS as P, RESTAURANTS as R WHERE R.id = P.id_restaurant AND W.id_photo = P.id AND W.result IS NULL";
                     ResultSet segnalazioni = manager.getData(sqlW);
-                    String sqlR ="SELECT RP.description as rpdes, RP.date_creation as rpdc, RP.date_validation as rpdv, rp.accepted as acc, rp.id_validator as rpv, rv.name as rvn, rv.description as rvdes, rv.date_creation as rvdc  FROM REPLIES as RP, REVIEWS as RV WHERE RP.id_review = RV.id AND RP.accepted IS NULL";
+                    String sqlR ="SELECT RP.id as id, RP.description as rpdes, RP.date_creation as rpdc, rv.name as rvn, rv.description as rvdes, rv.date_creation as rvdc  FROM REPLIES as RP, REVIEWS as RV WHERE RP.id_review = RV.id AND RP.accepted IS NULL";
                     ResultSet risposte = manager.getData(sqlR);
                     int a = 0;
                     int b = 0;
@@ -171,9 +171,12 @@
                         <img src="<%=segnalazioni.getString("path") %>" width="250">
                         <br>
                         Per il ristorante <%=segnalazioni.getString("name") %>
+                        <form action="RimuoviFoto" method="POST">
                         <div>
-                            <input type="button" value="conserva" /> <input type="button" value="elimina" />
+                            <input type="hidden" name="idp" value="<%=segnalazioni.getString("id_photo") %>" />
+                            <input type="submit" name="choice" value="conserva" /> <input type="submit" name="choice" value="elimina" />
                         </div>
+                        </form>
                     </div>
                 </div>
                 <%
@@ -206,8 +209,10 @@
                         <div>
                             <%=risposte.getString("rpdes") %>
                         </div>
+                        <form action="RimuoviFoto" method="GET">
                         <div>
-                            <input type="button" value="accetta" /> <input type="button" value="rifiuta" />
+                            <input type="hidden" name="idr" value="<%=risposte.getString("id") %>" />
+                            <input type="submit" name="choice" value="accetta" /> <input type="submit" name="choice" value="rifiuta" />
                         </div>
                     </div>
                 </div>
