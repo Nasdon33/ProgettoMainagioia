@@ -25,7 +25,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Francesco
+ * @author Carlo
  */
 public class User extends HttpServlet {
     DBManager manager;
@@ -41,36 +41,7 @@ public class User extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, Exception {
-       try {
-            manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
-        String email = request.getParameter("email");
-        String sql1 = "SELECT * FROM Mainagioia.Users WHERE email = ?";
-        ResultSet rs;
-        HttpSession sess = request.getSession();
-        Utente user;
-        if(email != null){
-            user = new Utente();
-            rs = manager.getData(sql1, email);
-            rs.next();
-            user.setId(rs.getString("ID"));
-            user.setNome(rs.getString("name"));
-            user.setNickname(rs.getString("nickname"));
-            user.setCognome(rs.getString("surname"));
-            user.setEmail(email);
-            user.setPassword(rs.getString("password"));
-            user.setRuolo(rs.getString("ruolo"));
-        } else {
-            user = null;
-            
-        }
-        sess.setAttribute("utente", user);
-        
-        response.sendRedirect(request.getHeader("Referer"));
-        } catch (SQLException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         
     }
     
@@ -87,14 +58,36 @@ public class User extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            processRequest(request,response);
-            
-            
-            
-            
+            manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
+            String email = request.getParameter("email");
+            String sql1 = "SELECT * FROM Mainagioia.Users WHERE email = ?";
+            ResultSet rs;
+            HttpSession sess = request.getSession();
+            Utente user;
+            if(email != null){
+                user = new Utente();
+                rs = manager.getData(sql1, email);
+                rs.next();
+                user.setId(rs.getString("ID"));
+                user.setNome(rs.getString("name"));
+                user.setNickname(rs.getString("nickname"));
+                user.setCognome(rs.getString("surname"));
+                user.setEmail(email);
+                user.setPassword(rs.getString("password"));
+                user.setRuolo(rs.getString("ruolo"));
+            } else {
+                user = null;
+
+            }
+            sess.setAttribute("utente", user);
+
+            response.sendRedirect(request.getHeader("Referer"));
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
+        
         
     }
 
@@ -111,19 +104,23 @@ public class User extends HttpServlet {
             throws ServletException, IOException {
         
         try {
+                manager = (DBManager)super.getServletContext().getAttribute("dbmanager");
                 HttpSession sess = request.getSession();
                 Utente utente = (Utente) sess.getAttribute("utente");;
                 String id = utente.getId();
                 String password = request.getParameter("password");
                 String mail = request.getParameter("email");
                 String nick = request.getParameter("nickname");
-                String sql= "UPDATE Users SET nickname = ? email = ? password = ? where id = ?";
+                String sql= "UPDATE Users SET nickname = ?, email = ?, password = ? where id = ?";
                 manager.setData(sql, nick, mail, password,  id);
                 
             response.sendRedirect(request.getHeader("Referer"));
         } catch (SQLException ex) {
+            
+            System.out.print("ocio, problema con la sql");
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
+            System.out.print("ocio, problema con che cazzo ne so");
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

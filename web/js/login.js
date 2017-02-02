@@ -40,10 +40,12 @@ function modifica() {
 
     var email = $("input[name=email]").val();
     var vpassword = $("input[name=vpassword]").val();
+    
     console.log(email);
     console.log(vpassword);
     if (email === "" && vpassword === "") {
         alert("CAMPI INCOMPLETI");
+        return;
     }
     if (email === "") {
 
@@ -56,28 +58,34 @@ function modifica() {
         return;
     }
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "validate",
         data: {email: email, password: vpassword},
         success: function (risposta) {
-            if (risposta === "OK") {
+            dt=risposta;
+            console.log("avrei finito il validate");
+        },
+        complete: function(){
+            if (dt === "OK") {
                 var password = $("input[name=password]").val();
                 var nick = $("input[name=nickname]").val();
                 $.ajax({
                     type: "POST",
                     url: "User",
                     data: {email: email, password: password, nickname: nick},
-                    success: function (risposta) {
-                        window.location.href = "index_nuovo.jsp";
+                    success: function () {
+                        console.log("terminato js");
+                        alert("MODIFICHE EFFETTUATE")
                     }
                 });
-                console.log("login effettuato");
-            } else if (risposta === "NOTFOUND") {
+                console.log("modifica account terminata");
+            } else if (dt === "NOTFOUND") {
                  alert("EMAIL O PASSWORD ERRATA");
                 console.log("EMAIL O PASSWORD ERRATI");
             } else {
                 window.location.href = "argh_page.jsp";
             }
+            
         }
     });
 }
