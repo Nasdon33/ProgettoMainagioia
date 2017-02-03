@@ -72,7 +72,7 @@
                             %>
                             <input type="hidden" id="rico" name="id" value="" />
                             <hr>
-                            <p> Hai selezionato <span id="nome"> </span></p>
+                            <p> Hai selezionato <span id="nome" style="color: #5bc0de"> </span></p>
                             </div>
                         </center>
                         <!-- fine parte di selezione -->

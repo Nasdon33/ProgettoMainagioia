@@ -41,6 +41,7 @@ input.placeholder {
 .Azzurro_tondo {
     background-color: #5bc0de;
     border-radius: 32px;
+    border: white 2px solid;
     
 }
 #Rosso {
