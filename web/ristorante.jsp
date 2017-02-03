@@ -6,7 +6,6 @@
 <%@page import="db.DBManager"%>
 <%@page import="db.Utente"%>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="db.Ristorante"%>
 <%@page import="java.sql.Timestamp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 

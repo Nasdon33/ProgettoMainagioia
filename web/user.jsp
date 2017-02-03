@@ -44,9 +44,9 @@
             <%
                 if(utente.getRuolo().contains("owner")){
                     String sqlW = "SELECT W.result, W.date_creation, W.date_validation, W.id_photo, R.name FROM WARNING as W, PHOTOS as P, RESTAURANTS as R WHERE R.id_owner = ? AND R.id = P.id_restaurant AND W.id_photo = P.id ORDER BY W.date_creation DESC";
-                    ResultSet segnalazioni = manager.getData(sqlW, utente.getId());
+                    ResultSet segnalazioni = manager.getData(sqlW, request.getParameter("id"));
                     String sqlR ="SELECT RP.description as rpdes, RP.date_creation as rpdc, RP.date_validation as rpdv, rp.accepted as acc, rp.id_validator as rpv, rv.name as rvn, rv.description as rvdes, rv.date_creation as rvdc  FROM REPLIES as RP, REVIEWS as RV WHERE RP.id_owner = ? AND RP.id_review = RV.id ORDER BY RP.date_creation DESC";
-                    ResultSet risposte = manager.getData(sqlR, utente.getId());
+                    ResultSet risposte = manager.getData(sqlR, request.getParameter("id"));
                     int a = 0;
                     int b = 0;
             %>
