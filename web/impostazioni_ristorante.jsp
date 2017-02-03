@@ -78,23 +78,23 @@
                         <!-- fine parte di selezione -->
                         <hr>
                         <div class="form-group2 hid">
-                            <center><b>Nome attuale:</b><span id="n"> </span></center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
+                            <center><b>Nome attuale: </b><span id="n"> </span></center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
                             <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
                         </div>
                         <br>
                         <div class="form-group2 hid">
-                            <center><b>Cambia descrizione:</b><span id="d"> </span></center>
+                            <center><b>Cambia descrizione: </b><span id="d"> </span></center>
                             <textarea name="description" id="display_name" class="form-control input-lg" placeholder="Nuova descrizione" tabindex="3"></textarea>
                         </div>
                         <br>
                         <div class="form-group2 hid">
-                            <center><b>Sito Web attuale:</b><span id="w"> </span></center>
+                            <center><b>Sito Web attuale: </b><span id="w"> </span></center>
                             <input type="text" name="web_site_url" id="display_name" class="form-control input-lg" placeholder="Nuovo sito Web" tabindex="3">
                         </div>
 
                         <div class="form-group2 hid">
                             <hr>
-                            <center><b>Fascia di prezzo attuale:</b><span id="p"> </span></center>
+                            <center><b>Fascia di prezzo attuale: </b><span id="p"> </span></center>
                             <br>
                             <div class="col-md-3 col-xs-3">
                                 <input type="radio" name="prezzo" value="0" checked> 0 - 8€<br>
@@ -113,22 +113,22 @@
                         </div>
 
                         <div class="form-group2 hid">
-                            <center><b>Indirizzo attuale:</b><span id="a"> </span></center>
+                            <center><b>Indirizzo attuale: </b><span id="a"> </span></center>
                             <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Nuovo indirizzo" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>CAP attuale:</b><span id="cap"> </span></center>
+                            <center><b>CAP attuale: </b><span id="cap"> </span></center>
                             <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="Nuovo CAP" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Città attuale:</b><span id="cit"> </span></center>
+                            <center><b>Città attuale: </b><span id="cit"> </span></center>
                             <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Nuova città" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Provincia attuale:</b><span id="pro"> </span></center>
+                            <center><b>Provincia attuale: </b><span id="pro"> </span></center>
                             <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="Nuova provincia" tabindex="3">
                         </div>
                         <div class="form-group2 hid">
@@ -141,7 +141,7 @@
                 <div class="row hid">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
                         <hr>
-                        <center><b>Cucina attuale:</b></center>
+                        <center><b>Cambia cucina:</b></center>
                         <br>
                         <div class="Spazio">
                             <div class="col-md-3 col-xs-3">
@@ -510,13 +510,16 @@
                     <div class="col-md-10 col-md-offset-1">
                         
                     </div>
-                    <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1 hid">
+                    
+                    <div class="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 hid">
                         <div class="form-group2">
                                 <center><b>Password:</b></center>
-                                <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Inserisci la password per confermare le modifiche" tabindex="3">
-                        <hr class="colorgraph">
+                                <input type="password" name="address5" id="display_name" class="form-control input-lg" placeholder="Inserisci la password per confermare le modifiche" tabindex="3">
+                      
                         </div>
                     </div>
+                        <hr class="colorgraph col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1">
+                   
                 </center>
                 <div class="row hid">
                     

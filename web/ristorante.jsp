@@ -56,7 +56,7 @@
 
                     </div>
                     <div id="Spazio">
-                        <div class="container"> <!-- inizio modal per le foto -->
+                        <div class="container" > <!-- inizio modal per le foto -->
 
                         <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn"><span class="glyphicon glyphicon-open"></span> Inserisci foto</button>
                         <!-- Modal -->
@@ -67,12 +67,13 @@
                                         <div class="modal-header col-md-12 col-xs-12 " style="padding:35px 50px;">
                                         <center>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                                        <p style="font-size:30px">
+                                      
+                                        <p style="font-size:30px;">
                                             <span class="glyphicon glyphicon-open"></span>
                                             Inserisci foto:
                                         </p>
                                         <hr>
+                                        
                                         <form action="Photos" method="post" enctype="multipart/form-data" id="Spazio">
                                         <input type="file" name="file" />
                                         <h4>
@@ -145,9 +146,9 @@
                         <div class="modal fade" id="primary"x tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header modal-header-primary">
+                                    <div class="modal-header modal-header-primary" style="background-color: #5bc0de">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <p style="font-size: 30px"> <i class="fa fa-bar-chart-o"></i>Orari </p>
+                                        <b> <p style="font-size: 30px; color: white">Orari </p></b>
                                     </div>
                                     <div class="modal-body">
                                         <% String url = "tabella_orari.jsp?id="+idris; %> <!-- viene inclusa la tabella -->
@@ -319,7 +320,7 @@
                 <jsp:include page="<%=url %>" />
             </div>                                
             <div class="row2">
-                <div class="col-md-12 col-xs-12" id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- inizio tabella con informazioni ristorante -->
+                <div class="col-md-12 col-xs-12" id="Spazio" style="background-color: white; border-radius: 30px"> <!-- inizio tabella con informazioni ristorante -->
                     <table class="table table-bordered">
                         <br>
                         <thead>
