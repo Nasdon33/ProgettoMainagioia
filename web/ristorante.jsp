@@ -102,10 +102,10 @@
                         Utente utente2 = (Utente)ses2.getAttribute("utente"); 
                         if((utente2!=null) && (ristorante.getString("id_owner")==null)){
                     %>    
-                    <div>
+                    <div style="padding-top: 10px">
                         <form role="form" action="NuovoRistoratore" method="POST">
                         <input type="hidden" name="idris" value="<%=ristorante.getString("id") %>">
-                        <input type="submit" value="E' tuo questo ristorante?" /> 
+                        <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="E' tuo questo ristorante?" /> 
                     </form>
                     </div>
                     <%
@@ -434,10 +434,10 @@
                 </div> <!-- fine tabella con informazioni -->
             </div>
             <div class="row6"> <!-- inizio div per le recensioni -->
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12" id="Spazio">
                     <div class="row.header">
                         <div class="row">
-                            <div class="col-sm-12" id="Arancio">
+                            <div class="col-sm-12 col-xs-12" id="Arancio">
                                 <h3><center>Scopri le recensioni dei clienti:</center></h3>
                             </div><!-- /col-sm-12 -->
                         </div><!-- /row -->
@@ -448,12 +448,12 @@
                             %>
                         </div>
                         <div>    
-                            <div class="col-sm-1 col-xs-2"> <!-- spazio per avatar utente (non ancora implementato) -->
+                            <div class="col-sm-1 col-xs-2"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="img/user.png">
                                 </div><!-- /thumbnail -->
                             </div><!-- /col-sm-1 -->
-                            <div class="col-sm-5 col-xs-10"> <!-- area commento -->
+                            <div class="col-sm-5 col-xs-10" id="Spazio"> <!-- area commento -->
                                 <div class="panel panel-default"> 
                                     <div class="panel-heading">
                                         <div class="row">
