@@ -133,7 +133,7 @@
                         </div>
                         <div class="form-group2 hid">
                             <br>
-                            <center><b>Stato attuale:</b><span id="s"> </span></center>
+                            <center><b>Stato attuale: </b><span id="s"> </span></center>
                             <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Nuovo stato" tabindex="3">
                         </div>
                     </div>
