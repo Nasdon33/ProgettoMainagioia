@@ -25,6 +25,10 @@
         <servlet-class>servlet.RimuoviFoto</servlet-class>
     </servlet>
     <servlet>
+      <servlet-name>Ricerca</servlet-name>
+      <servlet-class>servlet.Ricerca</servlet-class>
+  </servlet>
+    <servlet>
         <servlet-name>NuovoRistoratore</servlet-name>
         <servlet-class>servlet.NuovoRistoratore</servlet-class>
     </servlet>
@@ -76,6 +80,10 @@
        <servlet-name>Controller</servlet-name>
        <url-pattern>/Controller</url-pattern>
    </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>Ricerca</servlet-name>
+      <url-pattern>/Ricerca</url-pattern>
+  </servlet-mapping>
    <servlet-mapping>
        <servlet-name>sendPass</servlet-name>
        <url-pattern>/sendPass</url-pattern>

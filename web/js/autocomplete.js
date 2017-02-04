@@ -13,11 +13,10 @@ $(document).ready(function () {
            scroll: true,
            highlight: false,
            source: function (request, response) {
-
-               var rad= $('input[name=ricerca]:checked').val();
-               console.log(rad);
-               var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
-               $.ajax({
+                var rad= $('input[name=paramricerca]:checked').val();
+                console.log(rad);
+                var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+                $.ajax({
                    
                    url: "Controller",
                    type: "GET",
