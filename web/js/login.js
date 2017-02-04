@@ -113,6 +113,7 @@ function ristorante() {
         },
         complete: function(){
             if (dt === "OK") {
+                var id = $("input[name=id]").val();
                 var nome = $("input[name=nome]").val();
                 var description = $("textarea[name=description]").val();
                 var web_site_url = $("input[name=web_site_url]").val();
@@ -142,7 +143,7 @@ function ristorante() {
                 $.ajax({
                     type: "GET",
                     url: "Ristorante",
-                    data: {nome: nome, description: description, web_site_url: web_site_url, prezzo: prezzo, address: address, CAP: CAP, city: city, province: province, state: state, cucine: cucine, giorni: giorni, orari: orari},
+                    data: {id: id, nome: nome, description: description, web_site_url: web_site_url, prezzo: prezzo, address: address, CAP: CAP, city: city, province: province, state: state, cucine: cucine, giorni: giorni, orari: orari},
                     success: function () {
                         console.log("terminato js");
                         alert("MODIFICHE EFFETTUATE")
