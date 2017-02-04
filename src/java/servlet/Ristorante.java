@@ -90,7 +90,7 @@ public class Ristorante extends HttpServlet {
             String cap = request.getParameter("CAP");
             if(cap == null){
                 cap = ristorante.getString("CAP");
-            coordinate++;
+                coordinate++;
             }
             String city = request.getParameter("city");
             if(city == null){
@@ -109,19 +109,19 @@ public class Ristorante extends HttpServlet {
             }
             String cucine [] = request.getParameterValues("cucine[]");
             Boolean cuc = true;
-            if(cucine[0] == null){
+            if(cucine == null){
                 cuc = false;
             }
             String giorni [] = request.getParameterValues("giorni[]");
             String orari [] = request.getParameterValues("orari[]");
             Boolean gioora = true;
-            if(giorni[0] == null){
+            if(giorni == null){
                 gioora = false;
             }
             
             if(general != 4){
                 String sql1 = "UPDATE Restaurants SET name = ?, description = ?, web_site_url = ?, id_price_range = ? WHERE id = ?";
-                manager.setData(sql1, nome, description, web_site_url, id);
+                manager.setData(sql1, nome, description, web_site_url, price, id);
             }
             if(coordinate != 5){
                 String sql4id = "SELECT ID FROM mainagioia.Coordinates ORDER BY ID DESC  fetch first 1 rows only";
@@ -131,7 +131,7 @@ public class Ristorante extends HttpServlet {
                 String[] coord = Coordinate.getLatLongPositions(address+", "+cap+" "+ city+" "+province+" "+state); // <- FUNZIONE che traduce un indirizzo in coordinate
                 String sql4 = "INSERT INTO Coordinates(id, latitude, longitude, address, cap, city, province, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"; 
                 manager.setData(sql4, coo, coord[0], coord[1], address, cap, city, province, state);
-                String sql5 ="UPDATE Restaurant_Coordinate SET id_coordinate = ? WHERE id_restaurant =";
+                String sql5 ="UPDATE Restaurant_Coordinate SET id_coordinate = ? WHERE id_restaurant = ?";
                 manager.setData(sql5, coo, id);
             }
         
@@ -148,13 +148,9 @@ public class Ristorante extends HttpServlet {
             }
             
             if(gioora == true){
-                String sql4 = "DELETE FROM mainagioia.opening_hours_range_restaurant WHERE id = ?";
+                String sql4 = "DELETE FROM mainagioia.opening_hours_range_restaurant WHERE id_restaurant = ?";
                 manager.setData(sql4, id);
                 for(int i = 0; i < giorni.length; i++){
-                    String sqlapid = "SELECT ID FROM mainagioia.opening_hours_ranges ORDER BY ID DESC  fetch first 1 rows only";
-                    ResultSet increment2 = manager.getData(sqlapid);
-                    increment2.next();
-                    String ido = String.valueOf(1 + Integer.parseInt(increment2.getString("id")));
                     String day;
                     String eora;
                     String sora;
@@ -264,8 +260,9 @@ public class Ristorante extends HttpServlet {
                         eora = null;
                     }
                     }
+                    System.out.println(day+" "+sora+" "+eora);
                     String sql7 = "SELECT id FROM Opening_hours_ranges WHERE day_of_the_week = ? AND start_hour = ? AND end_hour = ?";
-                    ResultSet idor = manager.getData(sql7, ido, day, sora, eora);
+                    ResultSet idor = manager.getData(sql7, day, sora, eora);
                     idor.next();
                     String sql8 = "INSERT INTO Opening_hours_range_Restaurant(id_restaurant, id_opening_hours_range) VALUES(?,?)";
                     manager.setData(sql8, id, idor.getString("id"));
