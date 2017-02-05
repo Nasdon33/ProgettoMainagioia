@@ -20,7 +20,7 @@
         <%@include file="header.jsp" %>
         <%
             if(!utente.getRuolo().contains("owner")){
-                response.sendRedirect("index_nuovo.jsp");
+                response.sendRedirect("index.jsp");
             }
         %>
         </div>

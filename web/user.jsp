@@ -19,7 +19,7 @@
         <%
             utente = (Utente)ses.getAttribute("utente");
             if(utente==null || utente.getRuolo().contains("user")){
-                response.sendRedirect("index_nuovo.jsp");
+                response.sendRedirect("index.jsp");
             }
             else{
         %>

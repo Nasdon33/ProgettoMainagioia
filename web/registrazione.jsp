@@ -16,7 +16,7 @@
         <%
             utente = (Utente)ses.getAttribute("utente");
             if(utente!=null){
-                response.sendRedirect("index_nuovo.jsp");
+                response.sendRedirect("index.jsp");
             }
         %>
         

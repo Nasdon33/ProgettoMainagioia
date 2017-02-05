@@ -25,7 +25,7 @@
             
             <div class="col-md-6 col-xs-8"> 
                 <form action=Ricerca.jsp method=GET>
-                <a href="index_nuovo.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a> <!-- logo pagina con link per tornare a index -->
+                <a href="index.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a> <!-- logo pagina con link per tornare a index -->
                 <center>
                     <p> Ricerca per: <!-- ricerca per -->
                     <input type="radio" id="r1" name="paramricerca" value="zona" checked> Zona

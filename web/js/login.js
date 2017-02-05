@@ -23,7 +23,7 @@ function sottometti() {
         data: {email: email, password: password},
         success: function (risposta) {
             if (risposta === "OK") {
-                 window.location.href = "index_nuovo.jsp";
+                 window.location.href = "index.jsp";
                 console.log("login effettuato");
             } else if (risposta === "NOTFOUND") {
                  alert("UTENTE O PASSWORD ERRATI");

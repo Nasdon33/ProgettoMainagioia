@@ -100,7 +100,7 @@ public class Recensione extends HttpServlet {
                 String sql2= "INSERT INTO mainagioia.Reviews(ID,global_value, food, service, value_for_money, atmosphere, name,description,date_creation,id_restaurant,id_creator,id_photo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null)";
                 manager.setData(sql2, id, val, foo, ser, vfm, atm, nam, des, dat, idr, idc);
         
-                response.sendRedirect("index_nuovo.jsp");
+                response.sendRedirect("index.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(Registrazione.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {

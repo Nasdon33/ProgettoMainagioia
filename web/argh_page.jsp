@@ -16,7 +16,7 @@
         <div class="row header">
             <div class="col-md-6 col-xs-8 col-md-offset-3"> 
                 <form action=Ricerca.jsp method=GET>
-                    <a href="index_nuovo.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a>
+                    <a href="index.jsp"><img src="img/Magnagioia_orange.png" id="logo" alt="Magnagioia"  width="100%"> </a>
                 </form>
             </div>
         </div>
