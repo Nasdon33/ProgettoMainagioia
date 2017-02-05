@@ -312,6 +312,23 @@ public class Ristorante extends HttpServlet {
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -355,10 +372,10 @@ public class Ristorante extends HttpServlet {
                     + "id_owner, id_creator, id_price_range) VALUES (?,?,?,?,?,?,?)";
 
             manager.setData(sql3, ris, nam, des, web, owner, id, price);
-        String sql4id = "SELECT ID FROM mainagioia.Coordinates ORDER BY ID DESC  fetch first 1 rows only";
-        
-        ResultSet increment2 = manager.getData(sql4id);
-        increment2.next();
+            String sql4id = "SELECT ID FROM mainagioia.Coordinates ORDER BY ID DESC  fetch first 1 rows only";
+
+            ResultSet increment2 = manager.getData(sql4id);
+            increment2.next();
             String coo = String.valueOf(1 + Integer.parseInt(increment2.getString("id")));
             String address = request.getParameter("address1");
             String cap = request.getParameter("address2");

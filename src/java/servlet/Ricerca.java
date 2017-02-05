@@ -188,7 +188,7 @@ public class Ricerca extends HttpServlet {
                         out.println("<div class=\"col-md-4 col-xs-4 btn-responsive\" id=\"Altezza\" style=\"background-color: white; opacity:0.9; border-radius: 30px; border: grey 0.5px solid;\">");
                         out.println("<br>");
                         out.println("<center>");
-                        String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
+                        String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description='Principale' ";
                         ResultSet foto = manager.getData(sql10, idris);
                         foto.next();
                         out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");

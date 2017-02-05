@@ -68,7 +68,6 @@ public class Photos extends HttpServlet {
         
         
         String savePath = appPath + SAVE_DIR;
-        
 
         
         File fileSaveDir = new File(savePath);
@@ -127,6 +126,8 @@ public class Photos extends HttpServlet {
                 description = (String) request.getAttribute("descrizione");
             String path = savePath + fileName;
             String id_owner = u.getId();
+            
+            String pathDB = SAVE_DIR + fileName;
 
             System.out.println("ID= "+id);
             System.out.println("NOME RISTO= "+name);
@@ -137,7 +138,7 @@ public class Photos extends HttpServlet {
 
             String sql = "INSERT INTO mainagioia.photos VALUES (?,?,?,?,?,?)";
             try {
-                manager.setData(sql, id, name, description, path, ris, id_owner);
+                manager.setData(sql, id, name, description, pathDB, ris, id_owner);
             } catch (Exception ex) {
                 System.out.println("FOTO NON CARICATA");
             }

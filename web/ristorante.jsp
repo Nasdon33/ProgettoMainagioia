@@ -3,6 +3,7 @@
     Created on : Jan 17, 2017, 12:06:37 PM
     Author     : adribuc
 --%>
+<%@page import="java.sql.SQLException"%>
 <%@page import="db.DBManager"%>
 <%@page import="db.Utente"%>
 <%@page import="java.sql.ResultSet"%>
@@ -50,9 +51,10 @@
                             foto.next();
                             String sql11 = "SELECT * FROM Mainagioia.Photos WHERE id_restaurant = ? AND description <> 'Principale'";
                             ResultSet foto2 = manager.getData(sql11,idris);
+                            try{
                         %>
                         <img src="<%=foto.getString("path") %>" width="100%" alt="immagine" style="border-radius: 30px"> <!-- Immagine ristorante, caricata dal db-->
-
+<% }catch(SQLException ex){} %>
                     </div>
                     <div id="Spazio">
                         <div class="container" > <!-- inizio modal per le foto -->
