@@ -253,9 +253,9 @@ VALUES (18, 'Berton', 'Ristorante multiculturale: cucina mediterranea ed interna
 INSERT INTO Mainagioia.restaurants
 VALUES (19, 'Il Delfino', 'Ristorante artistico e culturale che offre ottimi piatti di pesce', 'http://www.ristorantecucinasardamilano.com/', 10, 10, 1);
 INSERT INTO Mainagioia.restaurants
-VALUES (20, 'La Collina d'Oro', 'Ristorante elegante che offre un'apia cucina asiatica', 'http://www.lacollinadoro.com/', null, 13, 1);
+VALUES (20, 'La Collina d Oro', 'Ristorante elegante che offre un apia cucina asiatica', 'http://www.lacollinadoro.com/', null, 13, 1);
 INSERT INTO Mainagioia.restaurants
-VALUES (21, 'Bleecker Street Pizza', 'Rinomata pizzeria d'asporto', 'http://bleeckerstreetpizza.com/', 15, 15, 1);
+VALUES (21, 'Bleecker Street Pizza', 'Rinomata pizzeria d asporto', 'http://bleeckerstreetpizza.com/', 15, 15, 1);
 INSERT INTO Mainagioia.restaurants
 VALUES (22, 'Le Bernardin', 'Elegante ristorante francese', 'https://www.le-bernardin.com/', 15, 15, 1);
 INSERT INTO Mainagioia.restaurants
@@ -273,9 +273,9 @@ VALUES (28, 'Rosa Mexicano', 'Ristorante incentrato sulla cucina spagnola e mess
 INSERT INTO Mainagioia.restaurants
 VALUES (29, 'Keens Steakhouse', 'Ristorante con specialità a base di bovino', 'http://keens.com/', null, 13, 1);
 INSERT INTO Mainagioia.restaurants
-VALUES (30, 'Ted's Montana Grill', 'Steakhouse tipica americana', 'https://www.tedsmontanagrill.com/', null, 12, 1);
+VALUES (30, 'Ted s Montana Grill', 'Steakhouse tipica americana', 'https://www.tedsmontanagrill.com/', null, 12, 1);
 INSERT INTO Mainagioia.restaurants
-VALUES (31, 'Truluck's', 'Ristorante americano con specilità di pesce', 'https://trulucks.com/', 18, 18, 1);
+VALUES (31, 'Truluck s', 'Ristorante americano con specilità di pesce', 'https://trulucks.com/', 18, 18, 1);
 INSERT INTO Mainagioia.restaurants
 VALUES (32, 'Red Lobster', 'Ristorante con specialità di pesce, americano', 'https://www.redlobster.com/', 18, 18, 1);
 INSERT INTO Mainagioia.restaurants
@@ -321,7 +321,7 @@ VALUES (9,46.066395, 11.122977,' Via S. Trinità 9', '38122', 'Trento', 'TN', 'It
 INSERT INTO Mainagioia.coordinates
 VALUES (10,46.066024, 11.120960,'Via Giovanni Prati 42', '38122', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (11,45.469442, 9.190805,'Via Andegari 9', ' 20121', 'Milano', 'MI', 'Italia');
+VALUES (11,45.469442, 9.190805,'Via Andegari 9', '20121', 'Milano', 'MI', 'Italia');
 INSERT INTO Mainagioia.coordinates
 VALUES (12,45.484870, 9.215577,'Corso Buenos Aires 86', '20124', 'Milano', 'MI', 'Italia');
 INSERT INTO Mainagioia.coordinates
@@ -505,6 +505,7 @@ VALUES (59,59);
 INSERT INTO Mainagioia.restaurant_coordinate
 VALUES (60,60);
 
+
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (0,0);
 INSERT INTO Mainagioia.restaurant_cuisine
@@ -654,7 +655,7 @@ VALUES (26,10);
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (27,10);
 INSERT INTO Mainagioia.restaurant_cuisine
-VALUES (28,10,7);
+VALUES (28,10);
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (28,7);
 INSERT INTO Mainagioia.restaurant_cuisine
@@ -2122,6 +2123,7 @@ INSERT INTO Mainagioia.opening_hours_range_restaurant
 VALUES (54,52);
 
 
+
 INSERT INTO Mainagioia.reviews
 VALUES (0,5,5,3,5,4,'Ottima cena','Sabato ho passato una fantastica cena in questo ristorante, il servizio potrebbe essere più veloce ma il cibo ripaga l attesa', '2017-01-23 11:12:56', 0,2, null);
 INSERT INTO Mainagioia.reviews
@@ -2307,7 +2309,7 @@ VALUES (81,3,3,3,3,3,'Accettabile','Ristorante senza pretese, passateci se non s
 INSERT INTO Mainagioia.reviews
 VALUES (82,5,5,3,4,5,'Ottima serata','Con i miei amici ho passato una serata eccezzionale in questo ristorante, consigliatissimo', '2016-12-15 14:32:38', 40,0, null);
 INSERT INTO Mainagioia.reviews
-VALUES (83,2,2,3,3,1,'Sconsigliato','Non avevo mai assaggiato il sushi, però quello che ho mangiato qui sicuramente non me lo farà più riprovare', '2016-09-17 22:54:04', 34,23, null);
+VALUES (83,2,2,3,3,1,'Sconsigliato','Non avevo mai assaggiato il sushi, però quello che ho mangiato qui sicuramente non me lo farà più riprovare', '2016-09-17 22:54:04', 34,13, null);
 
 INSERT INTO Mainagioia.reviews
 VALUES (84,4,3,3,4,4,'Ottima cena','Sabato ho passato una fantastica cena in questo ristorante, il servizio potrebbe essere più veloce ma il cibo ripaga l attesa', '2017-01-23 11:12:56', 32,4, null);
@@ -2328,8 +2330,6 @@ INSERT INTO Mainagioia.reviews
 VALUES (91,3,2,3,3,4,'Decente','Il cibo mi ha lasciato insoddisfatto ma il ristorante è carino', '2017-01-02 17:10:34', 32,8, null);
 INSERT INTO Mainagioia.reviews
 VALUES (92,2,1,3,3,3,'Ottima atmosfera','Ristorante nella media se non fosse per la bellissima atmosfera che si respira al suo interno', '2016-05-25 12:54:24', 32,17, null);
-
-
 
 INSERT INTO Mainagioia.reviews
 VALUES (93,5,5,3,5,4,'Ottima cena','Sabato ho passato una fantastica cena in questo ristorante, il servizio potrebbe essere più veloce ma il cibo ripaga l attesa', '2017-01-23 11:12:56', 41,0, null);
@@ -2400,6 +2400,8 @@ INSERT INTO Mainagioia.reviews
 VALUES (122,2,1,3,3,3,'Ottima atmosfera','Ristorante nella media se non fosse per la bellissima atmosfera che si respira al suo interno', '2016-05-25 12:54:24', 56,4, null);
 
 
+
+
 INSERT INTO Mainagioia.replies
 VALUES (0, 'La ringraziamo dei complimenti, per noi è un piacere servire i nostri ospiti', '2016-12-17 11:27:03', '2016-12-17 19:03:47', 4, 6, 4, true);
 INSERT INTO Mainagioia.replies
@@ -2424,15 +2426,15 @@ VALUES (1, 2, 8, 1, '2016-07-21 08:04:45');
 INSERT INTO Mainagioia.user_review_likes
 VALUES (16, 56, 4, 1, '2017-01-24 12:01:38');
 INSERT INTO Mainagioia.user_review_likes
-VALUES (13, 103, 10, 1, '2016-07-21 08:04:45');
-INSERT INTO Mainagioia.user_review_likes
-VALUES (14, 111, 2, -1, '2017-01-24 12:01:38');
-INSERT INTO Mainagioia.user_review_likes
 VALUES (15, 85, 9, 1, '2016-07-21 08:04:45');
 INSERT INTO Mainagioia.user_review_likes
 VALUES (4, 23, 15, 1, '2017-01-24 12:01:38');
 INSERT INTO Mainagioia.user_review_likes
 VALUES (6, 37, 16, -1, '2016-07-21 08:04:45');
+INSERT INTO Mainagioia.user_review_likes
+VALUES (13, 103, 10, 1, '2016-07-21 08:04:45');
+INSERT INTO Mainagioia.user_review_likes
+VALUES (14, 111, 2, -1, '2017-01-24 12:01:38');
 
 
 
@@ -2463,70 +2465,74 @@ values(8,'Biotopo Bistro','Principale','img/biotopo-bistro.jpg',8,7);
 insert into photos
 values(9,'Castelli Romani','Principale','img/castelli-romani.jpg',9,2);
 insert into photos
-values(10,’La Bottega della Piada’,'Principale','img/la-bottega-della-piada.jpg',10,9);
+values(10,'La Bottega della Piada','Principale','img/la-bottega-della-piada.jpg',10,9);
 insert into photos
-values(11,’Seta’,'Principale','img/seta.jpg',11,2);
+values(11,'Seta','Principale','img/seta.jpg',11,2);
 insert into photos
-values(12,’Verace’,'Principale','img/Verace.jpg',12,3);
+values(12,'Verace','Principale','img/Verace.jpg',12,3);
 insert into photos
-values(13,’Mr Panozzo’,'Principale','img/MrPanozzo.jpg’,13,4);
+values(13,'Mr Panozzo','Principale','img/MrPanozzo.jpg',13,4);
 insert into photos
-values(14,’Essenza’,'Principale','img/Essenza.jpg’,14,5);
+values(14,'Essenza','Principale','img/Essenza.jpg',14,5);
 insert into photos
-values(15,’Piz’,'Principale','img/PizMilano.jpg’,15,10);
+values(15,'Piz','Principale','img/PizMilano.jpg',15,10);
 insert into photos
-values(16,’Beirut’,'Principale','img/beirutMilano.jpg’,16,15);
+values(16,'Beirut','Principale','img/beirutMilano.jpg',16,15);
 insert into photos
-values(17,’Shannara’,'Principale','img/shannara.jpg’,17,18);
+values(17,'Shannara','Principale','img/shannara.jpg',17,18);
 insert into photos
-values(18,’Berton’,'Principale','img/berton.jpg’,18,7);
+values(18,'Berton','Principale','img/berton.jpg',18,7);
 insert into photos
-values(19,’Il Delfino’,'Principale','img/Delfino.jpg’,19,10);
+values(19,'Il Delfino','Principale','img/Delfino.jpg',19,10);
 insert into photos
-values(20,’La Collina Oro’,'Principale','img/LaCollinadoro.jpg’,20,13);
+values(20,'La Collina Oro','Principale','img/LaCollinadoro.jpg',20,13);
 insert into photos
-values(21,’Bleecker Street Pizza’,'Principale','img/bleecker.jpg’,21,15);
+values(21,'Bleecker Street Pizza','Principale','img/bleecker.jpg',21,15);
 insert into photos
-values(22,’Le Bernardin’,'Principale','img/lebernadin.jpg’,22,15);
+values(22,'Le Bernardin','Principale','img/lebernadin.jpg',22,15);
 insert into photos
-values(23,’Blue Ribbon Sushi’,'Principale','img/blue_ribbon_sushi.jpg’,23,17);
+values(23,'Blue Ribbon Sushi','Principale','img/blue_ribbon_sushi.jpg',23,17);
 insert into photos
-values(24,’Ippudo’,'Principale','img/ippudo.jpg’,24,16);
+values(24,'Ippudo','Principale','img/ippudo.jpg',24,16);
 insert into photos
-values(25,’Sapporo’,'Principale','img/Sapporo.jpg’,25,18);
+values(25,'Sapporo','Principale','img/Sapporo.jpg',25,18);
 insert into photos
-values(26,’Toloache’,'Principale','img/toloache.jpg’,26,17);
+values(26,'Toloache','Principale','img/toloache.jpg',26,17);
 insert into photos
-values(27,’La Esquina’,'Principale','img/laesqiuna.jpg’,27,15);
+values(27,'La Esquina','Principale','img/laesqiuna.jpg',27,15);
 insert into photos
-values(28,’Rosa Mexicano’,'Principale','img/RosaMexicano.jpg’,28,14);
+values(28,'Rosa Mexicano','Principale','img/RosaMexicano.jpg',28,14);
 insert into photos
-values(29,’Keens Steakhouse’,'Principale','img/KeensSteakhouse.jpg’,29,13);
+values(29,'Keens Steakhouse','Principale','img/KeensStreakhouse.jpg',29,13);
 insert into photos
-values(30,’Teds Montana Grill’,'Principale','img/TedMontanaGrill.jpg’,30,12);
+values(30,'Teds Montana Grill','Principale','img/TedMontanaGrill.jpg',30,12);
 insert into photos
-values(31,’Trulucks’,'Principale','img/Trulucks.jpg’,31,18);
+values(31,'Trulucks','Principale','img/Trulucks.jpg',31,18);
 insert into photos
-values(32,’Red Lobster’,'Principale','img/redlobster.jpg’,32,18);
+values(32,'Red Lobster','Principale','img/redlobster.jpg',32,18);
 insert into photos
-values(33,’Dr. Limon’,'Principale','img/dr-limon.jpg’,33,17);
+values(33,'Dr. Limon','Principale','img/dr-limon.jpg',33,17);
 insert into photos
-values(34,’Andiamo’,'Principale','img/andiamo.jpg’,34,18);
+values(34,'Andiamo','Principale','img/andiamo.jpg',34,18);
 insert into photos
-values(35,’Farfalle’,'Principale','img/farfalle.jpg’,35,2);
+values(35,'Farfalle','Principale','img/farfalle.jpg',35,2);
 insert into photos
-values(36,’Il Gabbiano’,'Principale','img/IlGabbiano.jpg’,36,3);
+values(36,'Il Gabbiano','Principale','img/IlGabbiano.jpg',36,3);
 insert into photos
-values(37,’Kon Chau’,'Principale','img/kon-chau.jpg’,37,19);
+values(37,'Kon Chau','Principale','img/kon-chau.jpg',37,19);
 insert into photos
-values(38,’Komodo’,'Principale','img/Komodo.jpg’,38,11);
+values(38,'Komodo','Principale','img/Komodo.jpg',38,11);
 insert into photos
-values(39,’La Carreta’,'Principale','img/lacarreta.jpg’,39,15);
+values(39,'La Carreta','Principale','img/lacarreta.jpg',39,15);
 insert into photos
-values(40,’Coyo Taco’,'Principale','img/taco_coyo.jpg’,40,17);
+values(40,'Coyo Taco','Principale','img/taco_coyo.jpg',40,17);
 
 
+/*
 
+SPAZIO PER FOTO DI LA E EXTRA
+
+*/
 
 
 
@@ -2557,7 +2563,7 @@ values(70,'Sapporo','Ramen','img/ramensapporocurry.jpg',25,16);
 insert into photos
 values(71,'Rosa Mexicano','Salsa Piccante','img/SalsaPiccante.jpg',28,18);
 insert into photos
-values(72,'Keens Steakhouse','Grigliata di carne','img/carne.jpg',29,20);
+values(72,'Keens Steakhouse','Grigliata di carne','img/carne.jpg',29,19);
 
 insert into photos
 values(73,'Red Lobster','Aragosta','img/aragosta.jpg',32,12);
@@ -2567,6 +2573,16 @@ insert into photos
 values(75,'Il Gabbiano','Dessert','img/dolce.jpg',36,0);
 insert into photos
 values(76,'Coyo Taco','Taco con gamberetti','img/taco.jpg',40,7);
+
+
+
+/*
+
+Da modificare finita LA
+
+*/
+
+
 
 insert into photos
 values(77,'FryChicken','Alette di pollo','img/alette.jpg',3,2);
@@ -2578,11 +2594,12 @@ insert into photos
 values(80,'FryChicken','Alette di pollo','img/alette.jpg',3,13);
 
 
+
 INSERT INTO Mainagioia.Warning(result, date_creation, date_validation, id_photo)
 VALUES(false, '2016-12-28 18:32:14', '2016-12-30 18:32:14', 61);
 INSERT INTO Mainagioia.Warning(result, date_creation, date_validation, id_photo)
 VALUES(false, '2016-12-28 18:32:14', '2016-01-28 18:32:14', 65);
 INSERT INTO Mainagioia.Warning(result, date_creation, date_validation, id_photo)
-VALUES(true, '2016-12-28 18:32:14', '2016-12-29 18:32:14', 81);
+VALUES(true, '2016-12-28 18:32:14', '2016-12-29 18:32:14', null);
 INSERT INTO Mainagioia.Warning(result, date_creation, date_validation, id_photo)
 VALUES(null, '2016-12-28 18:32:14', null, 67);
