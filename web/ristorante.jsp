@@ -51,10 +51,10 @@
                             foto.next();
                             String sql11 = "SELECT * FROM Mainagioia.Photos WHERE id_restaurant = ? AND description <> 'Principale'";
                             ResultSet foto2 = manager.getData(sql11,idris);
-                            try{
+                            
                         %>
                         <img src="<%=foto.getString("path") %>" width="100%" alt="immagine" style="border-radius: 30px"> <!-- Immagine ristorante, caricata dal db-->
-<% }catch(SQLException ex){} %>
+                        
                     </div>
                     <div id="Spazio">
                         <div class="container" > <!-- inizio modal per le foto -->
@@ -144,7 +144,7 @@
                         <br>
                         <a class="btn btn-primary btn-responsive Azzurro" href="#primary" data-toggle="modal">Visualizza Orari</a>
                         <!-- inizio Modal per la tabella orari -->
-                        <div class="modal fade" id="primary"x tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header modal-header-primary" style="background-color: #5bc0de">

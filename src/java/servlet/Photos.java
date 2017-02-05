@@ -144,10 +144,7 @@ public class Photos extends HttpServlet {
             }
             
         
-
-        request.setAttribute("message", "Upload has been done successfully!");
-        getServletContext().getRequestDispatcher("/index_nuovo.jsp").forward(
-                request, response);
+            response.sendRedirect("ristorante.jsp?id="+ris);
 
         
     }

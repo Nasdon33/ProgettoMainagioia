@@ -117,7 +117,8 @@ public class Ricerca extends HttpServlet {
                         out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");
          
                         out.println("<br>");
-                        out.println("<a href=\"ristorante.jsp?id" + idris + " style=\"font-size:18px; color: #5bc0de >");
+                        String url = "ristorante.jsp?id=" + idris;
+                        out.println("<a href=\""+ url +"\" style=\"font-size:18px\" color: #5bc0de >");
                         out.println(nome.getString("name"));
                         out.println("</a>");
                         out.println("<br>");
@@ -194,7 +195,8 @@ public class Ricerca extends HttpServlet {
                         out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");
          
                         out.println("<br>");
-                        out.println("<a href=\"ristorante.jsp?id" + idris + " style=\"font-size:18px; color: #5bc0de >");
+                        String url = "ristorante.jsp?id="+idris;
+                        out.println("<a href="+ url + " style=\"font-size:18px; color: #5bc0de >");
                         out.println(nome.getString("name"));
                         out.println("</a>");
                         out.println("<br>");
@@ -271,7 +273,8 @@ public class Ricerca extends HttpServlet {
                         out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");
          
                         out.println("<br>");
-                        out.println("<a href=\"ristorante.jsp?id" + idris + " style=\"font-size:18px; color: #5bc0de >");
+                        String url = "ristorante.jsp?id="+idris;
+                        out.println("<a href="+ url + " style=\"font-size:18px; color: #5bc0de >");
                         out.println(nome.getString("name"));
                         out.println("</a>");
                         out.println("<br>");

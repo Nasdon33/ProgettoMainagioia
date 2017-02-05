@@ -113,8 +113,8 @@ public class RimuoviFoto extends HttpServlet {
             String idp = request.getParameter("idp");
             String res = "true";
             String dat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
-            String sql = "UPDATE Warning SET result = ?, date_validation = ?, id_photo = ? WHERE id_photo = ?";
-            manager.setData(sql,res,dat, "null",idp);
+            String sql = "UPDATE Warning SET result = ?, date_validation = ?, id_photo = CAST(NULL as integer) WHERE id_photo = ?";
+            manager.setData(sql,res,dat, idp);
             String sql2 = "DELETE FROM Photos WHERE id = ?";
             manager.setData(sql2,idp);
         }
