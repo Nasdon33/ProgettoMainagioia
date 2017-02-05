@@ -25,6 +25,10 @@
         <servlet-class>servlet.RimuoviFoto</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>GeoSearch</servlet-name>
+        <servlet-class>servlet.GeoSearch</servlet-class>
+    </servlet>
+    <servlet>
       <servlet-name>Ricerca</servlet-name>
       <servlet-class>servlet.Ricerca</servlet-class>
   </servlet>
@@ -83,6 +87,10 @@
    <servlet-mapping>
       <servlet-name>Ricerca</servlet-name>
       <url-pattern>/Ricerca</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+      <servlet-name>GeoSearch</servlet-name>
+      <url-pattern>/GeoSearch</url-pattern>
   </servlet-mapping>
    <servlet-mapping>
        <servlet-name>sendPass</servlet-name>

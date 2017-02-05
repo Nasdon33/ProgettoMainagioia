@@ -13,6 +13,7 @@
     <body>
         
         <%@page import="db.Utente" %>
+<script src="js/Geolocalization.js"></script>
         
         <div>
        <%@include file="header.jsp" %> <!-- header incluso come in tutte le pagine-->
@@ -169,6 +170,11 @@
                      
                      </center>
                  </div>
+                    <center>
+                    <div id="demo">
+                        
+                    </div>
+                    </center>
                      
                              
                              <!-- riga separatoria -->

@@ -13,10 +13,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <script src="js/autocomplete.js"></script>
         <link rel="stylesheet" href="css/flexform.css">
-        <link rel="stylesheet" href="css/Menu_tendina.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>JSP Page</title>
     </head>
