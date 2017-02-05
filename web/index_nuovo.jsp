@@ -170,8 +170,14 @@
                      
                      </center>
                  </div>
+                    
+                    <div class="col-md-12 col-xs-12">
+                       <br>
+                   </div>
+                    
+                    
                     <center>
-                    <div id="demo">
+                    <div class="row" id="demo">
                         
                     </div>
                     </center>

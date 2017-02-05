@@ -43,11 +43,12 @@ public class GeoSearch extends HttpServlet {
             ResultSet increment = manager.getData(sqlget);
             increment.next();
             int choice = 0 + (int)(Math.random() * ((increment.getInt("id") - 0) + 1));
+            System.out.println(choice);
             String cucina = String.valueOf(choice);
-            String sql3 = "SELECT R.id, R.name, acos(sin(Coo.Latitude) * sin(?) + cos(Coo.Latitude) * cos(?) * cos(Coo.longitude-?)) as dist "
+            String sql3 = "SELECT R.id, R.name as name, Cui.name as cucina, acos(sin(Coo.Latitude) * sin(?) + cos(Coo.Latitude) * cos(?) * cos(Coo.longitude-?)) as dist "
                     + "FROM Restaurants as R, Restaurant_cuisine as RCui, Cuisines as Cui, "
                     + "Restaurant_coordinate as RCoo, Coordinates as Coo "
-                    + "WHERE R.id = RCui.id_restaurant AND RCui.id_cousine = Cui.id AND Cui.name = ? "
+                    + "WHERE R.id = RCui.id_restaurant AND RCui.id_cousine = Cui.id AND Cui.id = ? "
                     + "AND RCoo.id_restaurant = R.id AND RCoo.id_coordinate = Coo.id "
                     + "ORDER BY dist ASC";
             String latitude = request.getParameter("lati");
@@ -55,27 +56,27 @@ public class GeoSearch extends HttpServlet {
             ResultSet ristoranti2 = manager.getData(sql3,latitude, latitude, longitude, cucina);
             if(ristoranti2.next()){
             
-                    System.out.println("<div class =\"col-md-12 col-xs-12\" style=\"background-color: white; opacity:0.9; border-radius: 30px\"> ");
-                    System.out.println("<center>");
-                        System.out.println("<b>  <p style =\"font-size: 30px\">Ristoranti più vicini per cucina "+ cucina +": </p></b>");
+                    out.println("<div class =\"col-md-12 col-xs-12\" style=\"background-color: white; opacity:0.9; border-radius: 30px\"> ");
+                    out.println("<center>");
+                        out.println("<b>  <p style =\"font-size: 30px\">Ristoranti più vicini per cucina "+ ristoranti2.getString("cucina") +": </p></b>");
                         
                     for(int i = 0; i < 3; i++){
 
-                        String idris = ristoranti2.getString("id_restaurant");
+                        String idris = ristoranti2.getString("id");
                         String nome = ristoranti2.getString("name");
                        
                    
-                    System.out.println("<div class=\"col-md-4 col-xs-4 btn-responsive\" id=\"Altezza\"> ");
-                        System.out.println("<br>");
-                        System.out.println("<center>");
+                    out.println("<div class=\"col-md-4 col-xs-4 btn-responsive\" id=\"Altezza\"> ");
+                        out.println("<br>");
+                        out.println("<center>");
                         String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description='Principale'";
                         ResultSet foto = manager.getData(sql10,idris);
                         foto.next();
                         
-                        System.out.println("<a href=ristorante.jsp?id="+idris+"\"><img src=\""+foto.getString("path")+"\" width=\"90%\" style=\"border-radius: 30px\"></a>");
-                    System.out.println("<br>");
-                    System.out.println("<a href=\"ristorante.jsp?id="+idris+"\" style=\"font-size:18px; color: #5bc0de\"> "+nome+" </a>");
-                    System.out.println("<br>");
+                        out.println("<a href=ristorante.jsp?id="+idris+"\"><img src=\""+foto.getString("path")+"\" width=\"90%\" style=\"border-radius: 30px\"></a>");
+                    out.println("<br>");
+                    out.println("<a href=\"ristorante.jsp?id="+idris+"\" style=\"font-size:18px; color: #5bc0de\"> "+nome+" </a>");
+                    out.println("<br>");
                     String sql4 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                     ResultSet recensioni = manager.getData(sql4,idris);
                     int c = 0;
@@ -92,8 +93,8 @@ public class GeoSearch extends HttpServlet {
                     }
                     else
                         out.print("0 Recensioni");
-                    System.out.println("<br>");
-                    System.out.println("Cucina: ");
+                    out.println("<br>");
+                    out.println("Cucina: ");
                     String sql5 = "SELECT C.name FROM mainagioia.cuisines as C, (SELECT RC.id_cousine FROM restaurants as R, restaurant_cuisine as RC WHERE RC.id_restaurant = R.id AND R.id = ?)  as R WHERE C.id = R.id_cousine";
                     ResultSet cuisine = manager.getData(sql5,idris);
                     cuisine.next();
@@ -101,14 +102,14 @@ public class GeoSearch extends HttpServlet {
                     while(cuisine.next())
                             out.print(", " + cuisine.getString("name"));
 
-                        System.out.println("</center>");
-                        System.out.println("<br>");
-                    System.out.println("</div>");
+                        out.println("</center>");
+                        out.println("<br>");
+                    out.println("</div>");
                     if(!ristoranti2.next())
                         i = 3;
                     }
-                     System.out.println("</center>");
-                 System.out.println("</div>");
+                     out.println("</center>");
+                 out.println("</div>");
                         }
         }
     }
