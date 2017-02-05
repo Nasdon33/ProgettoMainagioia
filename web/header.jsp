@@ -85,12 +85,18 @@
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu1">
                     <% 
                     String ruolo = utente.getRuolo();
+                    if(!ruolo.contains("user")){
+                    %>
+                        <li><a href="user.jsp?id=<%=utente.getId() %>"><span class="glyphicon glyphicon-bell"></span> Notifiche</a></li>
+                    <%
                     if(ruolo.contains("owner")) { %>
                         <li><a href="impostazioni_ristorante.jsp?id=<%=utente.getId() %>"><span class="glyphicon glyphicon-cog"></span> Gestisci Ristorante</a></li>
-                    <%          
+                        
+                        <%          
                     } 
+                    }
                     %>
-                    <li><a href="user.jsp?id=<%=utente.getId() %>"><span class="glyphicon glyphicon-bell"></span> Notifiche</a></li>
+                    
                     <li><a href="impostazioni_profilo.jsp"><span class="glyphicon glyphicon-cog"></span> Gestisci Profilo</a></li>
                     <li><a href="Inserisci_ristorante.jsp"><span class="glyphicon glyphicon-plus"></span> Aggiungi Ristorante</a></li>
                     <li><a href="User"><span class="glyphicon glyphicon-log-out"></span> Esci</a></li> 
