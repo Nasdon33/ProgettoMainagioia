@@ -75,7 +75,7 @@ public class GeoSearch extends HttpServlet {
                         
                         out.println("<a href=ristorante.jsp?id="+idris+"\"><img src=\""+foto.getString("path")+"\" width=\"90%\" style=\"border-radius: 30px\"></a>");
                     out.println("<br>");
-                    out.println("<a href=\"ristorante.jsp?id="+idris+"\" style=\"font-size:18px; color: #5bc0de\"> "+nome+" </a>");
+                    out.println("<a href=\"ristorante.jsp?id="+idris+"\" style=\"font-size:18px; color: #5bc0de\"><h5> "+nome+" </h5></a>");
                     out.println("<br>");
                     String sql4 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                     ResultSet recensioni = manager.getData(sql4,idris);
