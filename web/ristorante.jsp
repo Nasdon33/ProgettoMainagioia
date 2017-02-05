@@ -113,7 +113,7 @@
         </div>
         <div>
             <div class="row2" id="Spazio">
-                <div class="col-md-3 col-xs-3 "> <!-- Primo div, contiene la foto del ristorante e il modal per inserire le foto-->
+                <div class="col-md-3 col-sm-3 col-xs-4 "> <!-- Primo div, contiene la foto del ristorante e il modal per inserire le foto-->
                     <div>
                         <%
                             String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description = 'Principale' ";
@@ -139,18 +139,18 @@
                                         <center>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                       
-                                        <p style="font-size:30px;">
+                                        <h1>
                                             <span class="glyphicon glyphicon-open"></span>
                                             Inserisci foto:
-                                        </p>
+                                        </h1>
                                         <hr>
                                         
                                         <form action="Photos" method="post" enctype="multipart/form-data" id="Spazio">
                                         <input type="file" name="file" />
-                                        <h4>
+                                        <h5>
                                             <i class="fa fa-paper-plane-o"></i>
                                             Descrizione:
-                                        </h4>
+                                        </h5>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="2" name="descrizione"></textarea>
                                         </div>
@@ -191,9 +191,9 @@
                 });
                 </script>
             </div>
-            <div class="col-md-6 col-xs-5"> <!-- div contentente Nome ristorante e descrizione -->
+            <div class="col-md-6 col-sm-5 col-xs-5"> <!-- div contentente Nome ristorante e descrizione -->
                 <div>
-                    <b style="font-size: 25px"><%= ristorante.getString("name") %></b>
+                    <h3><%= ristorante.getString("name") %></h3>
                 </div>
                 <div>
                     <div id="Spazio"> <%--Descrizione --%> 
@@ -203,7 +203,7 @@
             </div> <!-- fine div  -->
             <div class="col-md-2">
             </div>
-            <div class="col-md-3 col-xs-4"> <!-- inizio div con i tasti "scrivi recensione" e Visualizza tabella -->
+            <div class="col-md-3 col-xs-3"> <!-- inizio div con i tasti "scrivi recensione" e Visualizza tabella -->
                 <center>  
                 <form action="Recensione.jsp?id=<%=idris %>" method="post">
                     <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="Scrivi una Recensione" />
@@ -219,7 +219,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header modal-header-primary" style="background-color: #5bc0de">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <b> <p style="font-size: 30px; color: white">Orari </p></b>
+                                        <h1 style=" color: white">Orari </h1>
                                     </div>
                                     <div class="modal-body">
                                         <% String url = "tabella_orari.jsp?id="+idris; %> <!-- viene inclusa la tabella -->
@@ -239,7 +239,7 @@
             <div class="space">
             </div>	 
             <div class="row3"> <!-- inizio div con valutazione e galleria foto -->
-                <div class="col-md-5 col-xs-9" id="spazio">
+                <div class="col-md-5 col-sm-9 col-xs-12" id="spazio">
                     <hr>
                     <%
                         String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
@@ -259,20 +259,20 @@
                                 media = voto / tot;
                     %> 
 
-                    <div id="Sparisci_3"> <!-- spariscono solo quando lo schermo è molto piccolo (perche non ci stanno) -->
+                    <div> 
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
                                 <div class="well well-sm">
                                     <div class="row">
                                         <div class="col-xs-5 col-md-5 text-center"> <!-- tabella valutazione -->
-                                            <h1 class="rating-num">
+                                            <h2 class="rating-num">
                                             <% 
                                                 if(media > 0)
                                                     out.print((float)((int) (media*10)) /10);
                                                 else
                                                     out.print("-");
                                             %>
-                                            </h1>
+                                            </h2>
                                             <div class="rating">
                                                 <% 
                                                     for(int k = 0;k < 5; k++){
@@ -506,7 +506,7 @@
                     <div class="row.header">
                         <div class="row">
                             <div class="col-sm-12 col-xs-12" id="Arancio">
-                                <h3><center>Scopri le recensioni dei clienti:</center></h3>
+                                <h1><center>Scopri le recensioni dei clienti:</center></h1>
                             </div><!-- /col-sm-12 -->
                         </div><!-- /row -->
                         <div>
@@ -516,16 +516,16 @@
                             %>
                         </div>
                         <div>    
-                            <div class="col-sm-1 col-xs-2"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
+                            <div class="col-md-1 col-sm-2 col-xs-3"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="img/user.png">
                                 </div><!-- /thumbnail -->
                             </div><!-- /col-sm-1 -->
-                            <div class="col-sm-5 col-xs-10" id="Spazio"> <!-- area commento -->
+                            <div class="col-sm-5 col-xs-9" id="Spazio"> <!-- area commento -->
                                 <div class="panel panel-default"> 
                                     <div class="panel-heading">
                                         <div class="row">
-                                            <div class="col-md-9 col-xs-9"> 
+                                            <div class="col-md-9 col-sm-9 col-xs-8"> 
                                                 <strong><!-- nome utente (in grassetto) -->
                                                     <%
                                                         String sql7 = "SELECT nickname FROM mainagioia.Users WHERE id = ?";
@@ -598,7 +598,7 @@
                                                     out.print(" fa");
                                                 %>
                                             </div>
-                                            <div class="col-md-3 col-xs-3 " id="Altezza">
+                                            <div class="col-md-3 col-sm-3 col-xs-4 " id="Altezza">
                                                 <%
                                                     String sql12 = "SELECT like_type FROM user_review_likes WHERE id_review = ?";
                                                     ResultSet likes = manager.getData(sql12, recensioni.getString("id"));

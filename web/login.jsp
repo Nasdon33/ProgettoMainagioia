@@ -22,7 +22,7 @@
       <div >
           <div>
               <center>
-              <p class="modal-title" style="font-size: 30px" id="myModalLabel">Effettua il Login su Magnagioia!</p>
+                  <h1 id="myModalLabel">Effettua il Login su Magnagioia!</h1>
               </center>
               <hr class="colorgraph">
           </div>
@@ -49,7 +49,7 @@
                      </div>
                  </div>
                  <div class="col-xs-6" id="Altezza"> <!-- barra laterale che spiega i vantaggi a iscriverti al sito -->
-                     <p style="font-size:20px">Registrati ora è <span class="text-success">GRATIS!</span></p>
+                     <h4>Registrati ora è <span class="text-success">GRATIS!</span></h4>
                      <ul class="list-unstyled" style="line-height: 2">
                          <li><i class="fa fa-check text-success"></i> Gestisci il tuo ristorante</li>
                          <li><span class="fa fa-check text-success"></span> Scegli il ristorante più adatto a te</li>

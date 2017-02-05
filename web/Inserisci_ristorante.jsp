@@ -27,7 +27,7 @@
         <div class="row" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">
             <form method="POST" action="Ristorante" enctype="multipart/form-data">
                 <div>
-                    <center><p style="font-size:30px">Inserisci ristorante</p></center>
+                    <center><h1>Inserisci ristorante:</h1></center>
                 </div>
                 
                 <div class="row">
@@ -37,23 +37,23 @@
 
 
                         <div class="form-group2">
-                            <center><b>Nome:</b></center>
+                            <center><h4>Nome:</h4></center>
                             <input type="text" name="nome" id="display_name" required="" class="form-control input-lg" placeholder="Nome Ristorante" tabindex="3">
                         </div>
                         <br>
                         <div class="form-group2">
-                            <center><b>Descrizione:</b></center>
+                            <center><h4>Descrizione:</h4></center>
                             <textarea name="description" id="display_name" required="" class="form-control input-lg" placeholder="Descrizione" tabindex="3"></textarea>
                         </div>
                         <br>
                         <div class="form-group2">
-                            <center><b>Sito Web:</b></center>
+                            <center><h4>Sito Web:</h4></center>
                             <input type="text" name="web_site_url" id="display_name" class="form-control input-lg" placeholder="Sito Web" tabindex="3">
                         </div>
 
                         <div class="form-group2">
                             <hr>
-                            <center><b>Fascia di prezzo:</b></center>
+                            <center><h4>Fascia di prezzo:</h4></center>
                             <br>
                             <div class="col-md-3 col-xs-3">
                                 <input type="radio" name="prezzo" value="0" checked> 0 - 8€<br>
@@ -73,27 +73,27 @@
 
                         <div class="form-group2">
                            
-                            <center><b>Indirizzo:</b></center>
+                            <center><h4>Indirizzo:</h4></center>
                             <input type="text" name="address1" id="display_name" required="" class="form-control input-lg" placeholder="Via Napoleone 57" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
-                            <center><b>CAP:</b></center>
+                            <center><h4>CAP:</h4></center>
                             <input type="text" name="address2" id="display_name" required="" class="form-control input-lg" placeholder="38122" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
-                            <center><b>Città:</b></center>
+                            <center><h4>Città:</h4></center>
                             <input type="text" name="address3" id="display_name" required="" class="form-control input-lg" placeholder="Trento" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
-                            <center><b>Provincia:</b></center>
+                            <center><h4>Provincia:</h4></center>
                             <input type="text" name="address4" id="display_name" required="" class="form-control input-lg" placeholder="TN" tabindex="3">
                         </div>
                         <div class="form-group2">
                             <br>
-                            <center><b>Stato:</b></center>
+                            <center><h4>Stato:</h4></center>
                             <input type="text" name="address5" id="display_name" required="" class="form-control input-lg" placeholder="Italia" tabindex="3">
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                 <div class="row">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza"> <!-- contiene i tipi di cucina, id=Altezza ha un whitespace:nowrap; per sovrapporre il testo e non spostare la posizione   -->
                         <hr>
-                        <center><b>Tipo di cucina:</b></center>
+                        <center><h4>Tipo di cucina:</h4></center>
                         <br>
                         <div class="Spazio">
                             <div class="col-md-3 col-xs-3">
@@ -152,7 +152,7 @@
                 <center>
                 <div class="row">
                     <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1"> <!-- inserimento orari -->
-                        <center><b>Orari:</b></center>    
+                        <center><h4>Orari:</h4></center>    
                         <br>
                         <H4> LUNEDI'</H4>
                         <input type="checkbox" name="lun0" value="lun0"> Pranzo <select name="oraplun0">
@@ -366,7 +366,7 @@
                                                                                     <option value="02:00">02.00</option>
                                                                                 </select>
                         <hr id="hr1">
-                        <H4> SABATO'</H4>
+                        <H4> SABATO</H4>
                         <input type="checkbox" name="sab0" value="sab0"> Pranzo <select name="orapsab0">
                                                                                     <option value="10:00">10.00</option>
                                                                                     <option value="10:30">10.30</option>
@@ -459,7 +459,7 @@
                     <div id="Spazio"> <!-- form per inserimento foto -->
                         <div class="container row">
                             <div class="col-md-12 col-xs-12">
-                                <p style="font-size: 30px">  <span class="glyphicon glyphicon-open"></span> Inserisci foto:</p>
+                                <h1>  <span class="glyphicon glyphicon-open"></span> Inserisci foto:</h1>
                                 <input type="file" name="file" required=""/>
                             </div>
                         </div>

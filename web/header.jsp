@@ -15,10 +15,8 @@
       <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
        <script src="js/bootstrap.min.js"></script>
        <script src="js/autocomplete.js"></script>
-       <link rel="stylesheet" href="css/flexform.css">
-       <link rel="stylesheet" href="css/Menu_tendina.css">
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <title>JSP Page</title>
+        <title>Header</title>
     </head>
     <body>
         <div class="row header">
@@ -79,10 +77,10 @@
             {
             %>
             <div class="dropdown"> <!-- menù dropdown dopo il login -->
-		<button type="button" class="btn btn icon-btn btn-info dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span>
+		<button type="button" class="btn btn-responsive icon-btn btn-info dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon btn-glyphicon glyphicon-user img-circle"></span>
                 <%= utente.getNome()+" "+utente.getCognome()%> <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu1">
+                <ul class="dropdown-menu multi-level btn-responsive" role="menu" aria-labelledby="dropdownMenu1">
                     <% 
                     String ruolo = utente.getRuolo();
                     if(!ruolo.contains("user")){

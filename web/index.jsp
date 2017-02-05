@@ -22,21 +22,21 @@
        
         <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
             <center>
-                <b>  <p class="Font_ridimensionato">Benvenuto su Magnagioia!</p></b> <!-- pagina benvenuto -->
-                <p class="Font_ridimensionato2">Scopri nuovi ristoranti e aiutali a migliorare</p>
+                 <p style="font-size: 3em; font-weight: bold;">Benvenuto su Magnagioia! </p> <!-- pagina benvenuto -->
+                <h2>Scopri nuovi ristoranti e aiutali a migliorare</h2>
                 
             </center>
         </div>
         
                 <div class=" col-sm-10 col-md-10 col-md-offset-1 col-xs-12 col-sm-offset-2"> <!-- i due migliori commenti -->
                     <br>
-                               <div class="col-sm-3 col-xs-3 col-md-2" id="Altezza">
+                               <div class="col-md-2 col-sm-3 col-xs-4" id="Altezza">
                                <div class="thumbnail" >
                                <img class="img-responsive user-photo" src="img/avatar.jpeg">
                                </div><!-- /thumbnail -->
                                </div><!-- /col-sm-1 -->
 
-                               <div class="col-sm-7 col-xs-9 col-md-4">
+                               <div class="col-md-4 col-sm-6 col-xs-8">
                                <div class="panel panel-default">
                                <div class="panel-heading">
                                <strong>
@@ -60,13 +60,13 @@
                              
                     
                     
-                               <div class="col-sm-2 col-xs-3" id="Sparisci">
+                               <div class="col-md-2 col-sm-3 col-xs-4" id="Sparisci">
                                <div class="thumbnail">
                                <img class="img-responsive user-photo" src="img/avatar2.jpeg">
                                </div><!-- /thumbnail -->
                                </div><!-- /col-sm-1 -->
 
-                               <div class="col-sm-4 col-xs-9" id="Sparisci">
+                               <div class="col-md-4 col-sm-9 col-xs-8" id="Sparisci">
                                <div class="panel panel-default">
                                <div class="panel-heading">
                                <strong>
@@ -92,7 +92,7 @@
                     
                  <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- Ristoranti in vetrina -->
                      <center>
-                         <b>  <p style ="font-size: 30px">Ristoranti popolari: </p></b>
+                          <h1>Ristoranti popolari: </h1>
                      <%! private DBManager manager; %>
                     <%! 
                         public void init() throws ServletException {
@@ -124,8 +124,8 @@
                         %>
                         <a href="ristorante.jsp?id=<%=idris %>"><img src="<%=foto.getString("path") %>" width="90%" style="border-radius: 30px"></a>
                     <br>
-                    <a href="ristorante.jsp?id=<%=idris %>" style="font-size:18px; color: #5bc0de"> <%=nome.getString("name") %> </a>
-                    <br>
+                    <a href="ristorante.jsp?id=<%=idris %>" style="color: #5bc0de"><h5> <%=nome.getString("name") %> </h5></a>
+                   
                     
                     <%
                         String sql2 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
@@ -177,7 +177,7 @@
                     
                     
                     <center>
-                    <div class="row" id="demo">
+                    <div id="demo">
                         
                     </div>
                     </center>
@@ -193,9 +193,9 @@
             
                 <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
                      <center> <!-- alternativa ai tasti registrati e accedi -->
-                         <p style="font-size:20px;"> Sei un nuovo utente? <a href="registrazione.jsp" style="color:#5bc0de;">Registrati</a></p>
-                <p style="font-size:20px;"> Hai già un account? <a href="login.jsp" style="color:#5bc0de;">Accedi</a></p>
-                <p style="font-size:20px;">#Magnagioia</p>
+                         <h4> Sei un nuovo utente? <a href="registrazione.jsp" style="color:#5bc0de;">Registrati</a></h4>
+                <h4> Hai già un account? <a href="login.jsp" style="color:#5bc0de;">Accedi</a></h4>
+                <h4>#Magnagioia</h4>
                     </center>
                 </div>
 

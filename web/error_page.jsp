@@ -1,12 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
-
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link href="css/not_found.css" rel="stylesheet" type="text/css">
+        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        
         <title>Error 404</title>
+        
         
     </head>
     
@@ -23,12 +24,12 @@
             <hr class="spazio">
       <footer>
             <div class="container">
-                <div class="col-md-12">
-                    <div class="centered">
+                <div class="col-md-12 col-xs-12">
+                    <div>
                         <center>
                             <img src="img/piatto404.png" alt="Error 404" width=50% >
                             <br>
-                            <h1>Page not found</h1>
+                            <h1>Page not found! g</h1>
                         </center>
                     </div>
                 </div>

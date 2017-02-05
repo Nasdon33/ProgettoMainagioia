@@ -21,7 +21,7 @@
             <form role="form" action="Recensione" method="POST">
             <center>
                 <div class="row" id="Spazio">
-                    <p style="font-size:30px">Inserisci la tua Recensione:</p>
+                    <h1>Inserisci la tua Recensione:</h1>
                     <hr class="colorgraph">
                 </div>
                 <div class="container" id="Altezza">

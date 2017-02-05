@@ -3,7 +3,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.DBManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -62,10 +61,10 @@
         </div> <!-- fine div -->
         <div class="col-xs-12 Sparisci_2"> <!-- tasto dropdown che sostituisce il div "ordina per" quando lo schermo va in xs -->
             <div class="row">
-		<!-- Our Special dropdown has class show-on-hover -->
+        <!-- Our Special dropdown has class show-on-hover -->
                 <center>
                     <div class="btn-group show-on-hover">
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-info dropdown-toggle btn-responsive" data-toggle="dropdown">
                         Ordina Per <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -73,6 +72,7 @@
                             <li><a href="#"><span class="glyphicon glyphicon-sort-by-alphabet"></span> Nome</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-euro"></span> Fascia di Prezzo</a></li>
                         </ul>
+                        <br>
                     </div>
                 </center>
             </div>

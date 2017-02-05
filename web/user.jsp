@@ -28,7 +28,7 @@
             <center>
             <div>
                 <center>
-                <p style="font-size: 30px">Ecco le tue notifiche:</p>
+                <h1>Ecco le tue notifiche:</h1>
                 </center>
                 <hr class="colorgraph">
             </div>
@@ -54,14 +54,14 @@
            
             <div>
                 
-                <p style="font-size: 20px">Segnalazioni:</p>
+                <h4>Segnalazioni:</h4>
                
                 <%
                     while(segnalazioni.next()){
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata" class="btn btn-responsive2 Azzurro_no_bordo" id="Altezza"> 
+                    <div id="segnalazione_controllata" class="btn btn-responsive Azzurro_no_bordo" id="Altezza"> 
                         <%
                             if(segnalazioni.getString("result") == "true"){
                                 
@@ -102,13 +102,13 @@
                 %>
             </div>
             <div>
-                <p style="font-size: 20px">Risposte:</p>
+                <h4>Risposte:</h4>
                 <%
                     while(risposte.next()){
                         b++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
                         <%
                             if(risposte.getString("acc") == "true"){
                         %>
@@ -162,13 +162,13 @@
             %>   
             <!-- NOTIFICHE PER L' ADMIN -->
             <div>
-                ECCO LE FOTO SEGNALATE DA CONTROLLARE
+                <h4>Segnalazioni:</h4>
                 <%
                     while(segnalazioni.next()){
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
                         <img src="<%=segnalazioni.getString("path") %>" width="250">
                         <br>
                         Per il ristorante <%=segnalazioni.getString("name") %>
@@ -193,13 +193,13 @@
             </div>
             <div>
                 
-                ECCO LE RISPOSTE DA CONTROLLARE
+                <h4>Risposte:</h4>
                 <%
                     while(risposte.next()){
                         b++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive2 Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
                         <div>
                             <%=risposte.getString("rvn") %>
                         </div>

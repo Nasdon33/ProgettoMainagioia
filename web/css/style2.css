@@ -88,6 +88,7 @@ body {
     font-family: 'Comic Sans MS';
     background-color: #fff;
    
+   
     
     
 
@@ -96,7 +97,7 @@ body {
 @media (max-width: 768px) {
   .btn-responsive {
     padding:2px 4px;
-    font-size:90%;
+    font-size:85%;
     line-height: 1.5;
     border-radius:3px;
   }
@@ -109,18 +110,45 @@ body {
     line-height: 1.6;
   }
 }
+ 
+h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+}
 
-@media (max-width: 768px) {
-  .btn-responsive2 {
+h2 {
+    font-size: 2.0em;
+    
+}
+
+h3 {
+    font-size: 2em;    
+    font-weight: bold;
+
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+
+
+@media (max-width: 600px) {
+  body{
     padding:2px 4px;
-    font-size:75%;
+    font-size:85%;
     line-height: 1.5;
     border-radius:3px;
   }
 }
 
-@media (min-width: 669px) and (max-width: 892px) {
-  .btn-responsive2 {
+@media (min-width: 600px) and (max-width: 892px) {
+  body{
     padding:4px 9px;
     font-size:100%;
     line-height: 1.6;

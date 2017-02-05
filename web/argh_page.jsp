@@ -6,6 +6,8 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link href="css/not_found.css" rel="stylesheet" type="text/css">
+         <link href="css/style2.css" rel="stylesheet" type="text/css">
+       
         <title>ARGH!</title>
         
     </head>
@@ -22,17 +24,19 @@
         </div>
             <hr class="spazio">
       <footer>
+          <center>
             <div class="container">
-                <div class="col-md-12">
-                    <div class="centered">
-                        <center>
-                            <img src="img/cameriere.png" alt="" style="min-height: 300px; padding-top: 5%">
+                <div class="col-md-12 col-xs-12">
+                    <div>
+                       
+                            <img src="img/cameriere.png" alt="" style=" padding-top: 5%">
                             <br>
                             <h1>Qualcosa è andato storto, vi chiamo subito lo chef!</h1>
-                        </center>
+                        
                     </div>
                 </div>
             </div>
+          </center>
         </footer>
     </body>
 </html>

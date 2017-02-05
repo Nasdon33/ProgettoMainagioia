@@ -27,13 +27,13 @@
         <div class="row pagina" style="background-color: white; opacity:0.85; border-radius: 30px" id="Spazio">  
             <div class="row">
                 <div>
-                    <center><p style="font-size: 30px">Modifica ristorante:</p></center>
+                    <center><h1>Modifica ristorante:</h1></center>
                 </div>
                 <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"> <!-- campi per cambiare i dati del ristorante, molto simile a inserisci ristorante-->
                     <hr class="colorgraph">
                    <!-- parte di selezione del ristorante da modificare (nel caso di utenti con piu ristoranti-->
                     <center>
-                        <b>Seleziona il ristorante da modificare:</b>
+                        <h4>Seleziona il ristorante da modificare:</h4>
 
                     <div>
                         <br>
@@ -63,29 +63,29 @@
                         %>
                         <input type="hidden" id="rico" name="id" value="" />
                         <hr>
-                        <p> Hai selezionato <span id="nome" style="color: #5bc0de"> </span></p>
+                        <h4> Hai selezionato <span id="nome" style="color: #5bc0de"> </span></h4>
                         </div>
                     </center>
                     <!-- fine parte di selezione -->
                     <hr>
                     <div class="form-group2 hid">
-                        <center><b>Nome attuale: </b><span id="n"> </span></center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
+                        <center><h4>Nome attuale: </h4><span id="n"> </span></center> <!-- mostro il vecchio campo e subito dopo la possibilità di cambiarlo -->
                         <input type="text" name="nome" id="display_name" class="form-control input-lg" placeholder="Nuovo nome" tabindex="3">
                     </div>
                     <br>
                     <div class="form-group2 hid">
-                        <center><b>Cambia descrizione: </b><span id="d"> </span></center>
+                        <center><h4>Cambia descrizione: </h4><span id="d"> </span></center>
                         <textarea name="description" id="display_name" class="form-control input-lg" placeholder="Nuova descrizione" tabindex="3"></textarea>
                     </div>
                     <br>
                     <div class="form-group2 hid">
-                        <center><b>Sito Web attuale: </b><span id="w"> </span></center>
+                        <center><h4>Sito Web attuale: </h4><span id="w"> </span></center>
                         <input type="text" name="web_site_url" id="display_name" class="form-control input-lg" placeholder="Nuovo sito Web" tabindex="3">
                     </div>
 
                     <div class="form-group2 hid">
                         <hr>
-                        <center><b>Fascia di prezzo attuale: </b><span id="p"> </span></center>
+                        <center><h4>Fascia di prezzo attuale: </h4><span id="p"> </span></center>
                         <br>
                         <div class="col-md-3 col-xs-3">
                             <input type="radio" name="prezzo" value="0" checked> 0 - 8€<br>
@@ -104,27 +104,27 @@
                     </div>
 
                     <div class="form-group2 hid">
-                        <center><b>Indirizzo attuale: </b><span id="a"> </span></center>
+                        <center><h4>Indirizzo attuale: </h4><span id="a"> </span></center>
                         <input type="text" name="address1" id="display_name" class="form-control input-lg" placeholder="Nuovo indirizzo" tabindex="3">
                     </div>
                     <div class="form-group2 hid">
                         <br>
-                        <center><b>CAP attuale: </b><span id="cap"> </span></center>
+                        <center><h4>CAP attuale: </h4><span id="cap"> </span></center>
                         <input type="text" name="address2" id="display_name" class="form-control input-lg" placeholder="Nuovo CAP" tabindex="3">
                     </div>
                     <div class="form-group2 hid">
                         <br>
-                        <center><b>Città attuale: </b><span id="cit"> </span></center>
+                        <center><h4>Città attuale: </h4><span id="cit"> </span></center>
                         <input type="text" name="address3" id="display_name" class="form-control input-lg" placeholder="Nuova città" tabindex="3">
                     </div>
                     <div class="form-group2 hid">
                         <br>
-                        <center><b>Provincia attuale: </b><span id="pro"> </span></center>
+                        <center><h4>Provincia attuale: </h4><span id="pro"> </span></center>
                         <input type="text" name="address4" id="display_name" class="form-control input-lg" placeholder="Nuova provincia" tabindex="3">
                     </div>
                     <div class="form-group2 hid">
                         <br>
-                        <center><b>Stato attuale: </b><span id="s"> </span></center>
+                        <center><h4>Stato attuale: </h4><span id="s"> </span></center>
                         <input type="text" name="address5" id="display_name" class="form-control input-lg" placeholder="Nuovo stato" tabindex="3">
                     </div>
                 </div>
@@ -132,7 +132,7 @@
             <div class="row hid">
                 <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="Altezza">
                     <hr>
-                    <center><b>Cambia cucina:</b></center>
+                    <center><h4>Cambia cucina:</h4></center>
                     <br>
                     <div class="Spazio">
                         <div class="col-md-3 col-xs-3">
@@ -183,7 +183,7 @@
             <div class="row hid">
                 <div class="form-group2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="orari">
                     <hr>
-                    <center><b>Cambia orari:</b></center>  
+                    <center><h4>Cambia orari:</h4></center>  
                     <br>
                     <H4> LUNEDI'</H4>
                     <input type="checkbox" class="giorno" name="lun0" value="lun0"> Pranzo <select name="oraplun0">
@@ -397,7 +397,7 @@
                                                                                 <option value="02:00">02.00</option>
                                                                             </select>
                     <hr id="hr1">
-                    <H4> SABATO'</H4>
+                    <H4> SABATO</H4>
                     <input type="checkbox" class="giorno" name="sab0" value="sab0"> Pranzo <select name="orapsab0">
                                                                                 <option value="10:00">10.00</option>
                                                                                 <option value="10:30">10.30</option>
@@ -494,7 +494,7 @@
 
                 <div class="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 hid">
                     <div class="form-group2">
-                            <center><b>Password:</b></center>
+                            <center><h4>Password:</h4></center>
                             <input type="password" name="password" id="display_name" class="form-control input-lg" placeholder="Inserisci la password per confermare le modifiche" tabindex="3">
                             <input type="hidden" name="email" value="<%=utente.getEmail() %>">
                     </div>

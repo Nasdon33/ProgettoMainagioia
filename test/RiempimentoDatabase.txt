@@ -274,6 +274,26 @@ INSERT INTO Mainagioia.restaurants
 VALUES (29, 'Keens Steakhouse', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://keens.com/', 2, 0, 1);
 INSERT INTO Mainagioia.restaurants
 VALUES (30, 'Ted's Montana Grill', 'Ristorante con specialità di carne nella fattispecie di pollo', 'https://www.tedsmontanagrill.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (31, 'Truluck's', 'Ristorante americano con specilità di pesce', 'https://trulucks.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (32, 'Red Lobster', 'Ristorante con specialità di pesce, americano', 'https://www.redlobster.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (33, 'Dr. Limon', 'Ristorante sudamericano con specialità di pesce', 'http://www.doctorlimon.com/home/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (34, 'Andiamo', 'Pizzeria italiana', 'http://andiamopizzamiami.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (35, 'Farfalle', 'Elegante ristorante italiano', 'http://farfalle.eat24hour.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (36, 'Il Gabbiano', 'Ristorante italiano di lusso', 'http://www.ilgabbianomia.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (37, 'Kon Chau', 'Ristorante cinese tipico', 'no site', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (38, 'Komodo', 'Elegante ristorante specializzato in cucina asiatica', 'http://www.komodomiami.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (39, 'La Carreta', 'Ristorante basato su specialità sudamericane e spagnole', 'http://lacarreta.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (40, 'Coyo Taco', 'Fastfood con menù tipici spagnoli e messicani', 'http://coyo-taco.com/', 2, 0, 1);
 
 
 
@@ -340,7 +360,26 @@ INSERT INTO Mainagioia.coordinates
 VALUES (29,40.750775, -73.986447,'72 West 36th Street', '10018', 'New York', 'NY', 'Stati Uniti');
 INSERT INTO Mainagioia.coordinates
 VALUES (30,40.760727, -73.980903,'110 W 51st St', '10020', 'New York', 'NY', 'Stati Uniti');
-
+INSERT INTO Mainagioia.coordinates
+VALUES (31,25.766588, -80.189979,'777 Brickell Avenue', '33131', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (32,25.898048, -80.161741,'13300 Biscayne Blvd', '33181', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (33,25.688180, -80.418193,'13766 SW 84th Ave', '33158', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (34,25.827605, -80.186846,'5600 Biscayne Blvd', '33137', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (35,25.772826, -80.188571,'333 SE 2nd St', '33131', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (36,25.771630, -80.185230,'335 S Biscayne Blvd', '33131', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (37,25.732498, -80.331231,'8376 Bird Rd', '33155', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (38,25.765927, -80.190431,'801 Brickell Ave', '33131', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (39,25.764478, -80.253840,'3632 SW 8th St', '33135', 'Miami', 'FL', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (40,25.799762, -80.199334,'2320 NW 2nd Av', '33127', 'Miami', 'FL', 'Stati Uniti');
 
 
 INSERT INTO Mainagioia.restaurant_coordinate
@@ -596,6 +635,74 @@ INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (20,9);
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (20,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (21,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (21,11);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (21,14);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (22,6);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (23,9);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (24,9);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (25,9);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (26,10);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (27,10);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (28,10,7);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (28,7);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (29,4);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (29,3);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (30,3);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (30,4);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (31,4);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (31,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (32,4);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (32,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (33,10);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (33,7);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (33,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (34,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (34,11);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (35,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (35,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (36,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (37,8);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (38,8);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (38,9);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (39,7);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (40,10);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (40,7);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (40,14);
 
 INSERT INTO Mainagioia.opening_hours_range_restaurant
 VALUES (0,0);

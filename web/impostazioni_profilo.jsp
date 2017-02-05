@@ -25,19 +25,19 @@
        
        <div class="row">
         <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1"  id="Spazio" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- campi per cambiare i dati del profilo -->
-            <center><p style="font-size: 30px">Modifica i tuoi dati:</p></center> <!-- mostro all'utente i vecchi dati e poi offro la possibilità di cambiarli -->
+            <center><h1>Modifica i tuoi dati:</h1></center> <!-- mostro all'utente i vecchi dati e poi offro la possibilità di cambiarli -->
                 <hr class="colorgraph">
                 <div class="form-group2">
-                    <center><b>Email Attuale: </b><%=utente.getEmail() %></center>
+                    <center><h4>Email Attuale: </h4><%=utente.getEmail() %></center>
                         <input type="text" name="email" id="display_name" class="form-control input-lg" placeholder="Nuova Email" tabindex="3" required="">
                 </div>
                  <hr>
                 <div class="form-group2">
-                    <center><b>Nickname Attuale: </b><%=utente.getNickname()%></center>
+                    <center><h4>Nickname Attuale: </h4><%=utente.getNickname()%></center>
                         <input type="text" name="nickname" id="display_name" class="form-control input-lg" placeholder="Nuovo Nickname" tabindex="3">
                 </div>
                   <hr>
-                 <center><b>Cambia Password:</b></center>
+                 <center><h4>Cambia Password:</h4></center>
                 <div class="form-group2">
                         <input type="password" name="vpassword" id="display_name" class="form-control input-lg" placeholder="Password Attuale" tabindex="3"> <!-- richiesta vecchia password per cambiare -->
                 </div>
