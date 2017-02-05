@@ -1,5 +1,5 @@
 $(document).ready(function () {
-var x = $(this).getElementById("demo");
+    var x = document.getElementById("demo");
     if (navigator.geolocation) {
         console.log("CIAO");
         navigator.geolocation.getCurrentPosition(success);
@@ -11,6 +11,7 @@ var x = $(this).getElementById("demo");
     
     
     function success(pos){
+    console.log("success");
     var coord = pos.coords;
     console.log(coord.latitude);
     console.log(coord.longitude);

@@ -13,11 +13,11 @@
     <body>
         
         <%@page import="db.Utente" %>
-<script src="js/Geolocalization.js"></script>
         
         <div>
        <%@include file="header.jsp" %> <!-- header incluso come in tutte le pagine-->
         </div>  
+<script src="js/Geolocalization.js"></script>
 
        
         <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
