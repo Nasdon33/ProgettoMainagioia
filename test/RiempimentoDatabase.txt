@@ -34,11 +34,17 @@ VALUES (8, 'Cinese');
 INSERT INTO Mainagioia.cuisines
 VALUES (9, 'Giapponese');
 INSERT INTO Mainagioia.cuisines
-VALUES (10, 'Dolci');
+VALUES (10, 'Messicana');
 INSERT INTO Mainagioia.cuisines
 VALUES (11, 'Pizza');
 INSERT INTO Mainagioia.cuisines
 VALUES (12, 'Cibo di Strada');
+INSERT INTO Mainagioia.cuisines
+VALUES (13, 'Mediterranea');
+INSERT INTO Mainagioia.cuisines
+VALUES (14, 'Fast Food');
+INSERT INTO Mainagioia.cuisines
+VALUES (15, 'Pesce');
 
 INSERT INTO Mainagioia.opening_hours_ranges
 VALUES (0,1,'11:00:00','15:00:00');
@@ -182,6 +188,29 @@ INSERT INTO Mainagioia.users
 VALUES (8, 'Giuseppe', 'Zanini', 'Giuse1976', 'giuseppe.zanini76@yahoo.it', 'tofu', 'user');
 INSERT INTO Mainagioia.users
 VALUES (9, 'Valerio', 'Scaltoni', 'WaleTantoWale', 'scalrio@live.it', 'ferrari', 'user');
+INSERT INTO Mainagioia.users
+VALUES (10, 'Gianni', 'Bernerdi', 'Gianni74', 'gianni74@alice.it', 'scout', 'owner');
+INSERT INTO Mainagioia.users
+VALUES (11, 'Luca', 'Benedetti', 'Bene94L', 'ishoku@live.it', 'luisa', 'user');
+INSERT INTO Mainagioia.users
+VALUES (12, 'Nicola', 'Belli', 'Bellonik', 'nicola.belli@hotmail.it', 'ronaldo', 'admin');
+INSERT INTO Mainagioia.users
+VALUES (13, 'Veronica', 'Radina', 'Balena33', 'pazza23@tiscali.it', 'apple66', 'user');
+INSERT INTO Mainagioia.users
+VALUES (14, 'Margherita', 'Piromallo', 'Pinocchio', 'grillo6parlante@alice.it', '4bastoni', 'user');
+INSERT INTO Mainagioia.users
+VALUES (15, 'Marco', 'Girandola', 'Giannino87', 'giannino@gmail.com', 'galliani', 'owner');
+INSERT INTO Mainagioia.users
+VALUES (16, 'Paul', 'Harden', 'Defence', 'harden@gmail.com', 'houston', 'user');
+INSERT INTO Mainagioia.users
+VALUES (17, 'Antonio', 'De La Fuente', 'Barbossa', 'juanito@gmail.es', 'toro', 'owner');
+INSERT INTO Mainagioia.users
+VALUES (18, 'Antonella', 'Marina', 'Ascaria', 'altolaalsudore@tiscali.it', 'ocio', 'owner');
+INSERT INTO Mainagioia.users
+VALUES (19, 'Giulia', 'Giannetta', 'Panettiera', 'giulia.1993@alice.it', 'verita', 'owner');
+
+
+
 
 INSERT INTO Mainagioia.restaurants
 VALUES (0, 'La Stube del Galletto', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://www.lastubedelgalletto.com/', 2, 0, 1);
@@ -197,6 +226,57 @@ INSERT INTO Mainagioia.restaurants
 VALUES (5, 'ZUSHI', 'Ristorante giapponese con specialità di sushi', 'http://www.zushi.eu/Trento/it/page/index1', null, 8, 1);
 INSERT INTO Mainagioia.restaurants
 VALUES (6, 'Le Ciaspole', 'Ristorante rinomato', 'http://www.alleciaspole.it/', 4, 4, 3);
+INSERT INTO Mainagioia.restaurants
+VALUES (7, 'Ai Tre Garofani', 'Ristorante elegante e raffinato che offre piatti tipici leggermente rivisitati', 'http://www.aitregarofani.com/website/welcomePage/welcome.html/', null, 4, 2);
+INSERT INTO Mainagioia.restaurants
+VALUES (8, 'Biotopo Bistrò', 'Ristorante con specialità di pesce e cucina mediterranea', 'http://www.biotopobistro.it/', null, 7, 2);
+INSERT INTO Mainagioia.restaurants
+VALUES (9, 'Castelli Romani', 'Gastronomia e fast food di qualità', 'https://www.facebook.com/AI-CASTELLI-ROMANI-TRENTO-226066885297/', null, 2, 0);
+INSERT INTO Mainagioia.restaurants
+VALUES (10, 'La Bottega della Piada', 'Piadineria che offre anche menù vegetariani', 'https://www.facebook.com/labottegadellapiada42/', null, 9, 0);
+INSERT INTO Mainagioia.restaurants
+VALUES (11, 'Seta', 'Ristorante elegante con cucina a base di pesce', 'http://www.mandarinoriental.it/milan/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (12, 'Verace', 'Focacceria che offre prodotti nuovi ed introvabili', 'http://www.verace.eu/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (13, 'Mr Panozzo', 'Mr Panozzo è un locale per tutti non ha età e razza', 'https://www.facebook.com/misterpanozzo/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (14, 'Essenza', 'Ristorante adatto ad occasioni speciali', 'http://www.essenzaristorante.it/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (15, 'Piz', 'Pizzeria tradizionale', 'https://www.facebook.com/pizmilano/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (16, 'Beirut', 'Ristorante centrato sulla cucina araba e mediorientale', 'http://www.ristorantebeirut.it/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (17, 'Shannara', 'Ristorante offrente principalmente menù di zuppe e pesce', 'http://www.shannara.mi.it/chisiamo.htm/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (18, 'Berton', 'Ristorante multiculturale: cucina mediterranea ed internazionale', 'http://www.ristoranteberton.com/it/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (19, 'Il Delfino', 'Ristorante artistico e culturale che offre ottimi piatti di pesce', 'http://www.ristorantecucinasardamilano.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (20, 'La Collina d'Oro', 'Ristorante elegante che offre un'apia cucina asiatica', 'http://www.lacollinadoro.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (21, 'Bleecker Street Pizza', 'Rinomata pizzeria d'asporto', 'http://bleeckerstreetpizza.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (22, 'Le Bernardin', 'Elegante ristorante francese', 'https://www.le-bernardin.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (23, 'Blue Ribbon Sushi', 'Ristorante giapponese', 'https://www.blueribbonrestaurants.com/restaurants/blue-ribbon-sushi-original/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (24, 'Ippudo', 'Ristorante giapponese', 'http://www.ippudony.com/#mainwrapper-west/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (25, 'Sapporo', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://www.sapporo-nyc.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (26, 'Toloache', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://toloachenyc.com/media/toloache.html/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (27, 'La Esquina', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://www.esquinanyc.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (28, 'Rosa Mexicano', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://www.rosamexicano.com/newyorkcity/unionsquare/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (29, 'Keens Steakhouse', 'Ristorante con specialità di carne nella fattispecie di pollo', 'http://keens.com/', 2, 0, 1);
+INSERT INTO Mainagioia.restaurants
+VALUES (30, 'Ted's Montana Grill', 'Ristorante con specialità di carne nella fattispecie di pollo', 'https://www.tedsmontanagrill.com/', 2, 0, 1);
+
+
+
 
 INSERT INTO Mainagioia.coordinates
 VALUES (0,46.088294, 11.065447,'Via Strada di cadine 13', '38123', 'Trento', 'TN', 'Italia');
@@ -212,6 +292,56 @@ INSERT INTO Mainagioia.coordinates
 VALUES (5,46.075187, 11.124904,'Via del Brennero 2', '38121', 'Trento', 'TN', 'Italia');
 INSERT INTO Mainagioia.coordinates
 VALUES (6,46.480856, 11.141735,'Localita Plazze 6', '38010', 'Fondo', 'TN', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (7,46.065851, 11.122995,'Via Giuseppe Mazzini 33', '38122', 'Trento', 'TN', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (8,46.010024, 11.116165,'Via Delle Ischie 59', '38123', 'Trento', 'TN', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (9,46.066395, 11.122977,' Via S. Trinità 9', '38122', 'Trento', 'TN', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (10,46.066024, 11.120960,'Via Giovanni Prati 42', '38122', 'Trento', 'TN', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (11,45.469442, 9.190805,'Via Andegari 9', ' 20121', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (12,45.484870, 9.215577,'Corso Buenos Aires 86', '20124', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (13,45.477397, 9.218660,'Via Enrico Noe 8', '20133', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (14,45.466615, 9.151049,'Via Marghera 34', '20149', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (15,45.462203, 9.185686,'Via Torino 34', '20123', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (16,45.452575, 9.214971,'Via Tito Livio 1', '20137', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (17,45.461807, 9.235103,'Via Luigi de Andreis 13', '20137', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (18,45.481992, 9.194270,'Via Mike Bongiorno 13', '20124', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (19,45.482079, 9.219751,'Viale Gran Sasso 26', '20131', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (20,45.467420, 9.142603,'Via Pieter Rubens 24', '20148', 'Milano', 'MI', 'Italia');
+INSERT INTO Mainagioia.coordinates
+VALUES (21,40.732182, -74.003399,'69 7th Ave South', '10014', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (22,40.761558, -73.981806,'155 W 51st St', '10019', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (23,40.725458, -74.003017,'119 Sullivan St', '10012', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (24,40.763484, -73.986586,'321 W 51st St', '10019', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (25,40.760164, -73.983299,'152 W 49th St', '10019', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (26,40.762312, -73.985596,'251 W 50th St', '10019', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (27,40.721369, -73.997538,'114 Kenmare St', '10012', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (28,40.771235, -73.983051,'9 E 18th St', '10003', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (29,40.750775, -73.986447,'72 West 36th Street', '10018', 'New York', 'NY', 'Stati Uniti');
+INSERT INTO Mainagioia.coordinates
+VALUES (30,40.760727, -73.980903,'110 W 51st St', '10020', 'New York', 'NY', 'Stati Uniti');
+
+
 
 INSERT INTO Mainagioia.restaurant_coordinate
 VALUES (0,0);
@@ -227,6 +357,114 @@ INSERT INTO Mainagioia.restaurant_coordinate
 VALUES (5,5);
 INSERT INTO Mainagioia.restaurant_coordinate
 VALUES (6,6);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (7,7);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (8,8);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (9,9);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (10,10);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (11,11);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (12,12);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (13,13);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (14,14);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (15,15);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (16,16);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (17,17);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (18,18);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (19,19);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (20,20);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (21,21);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (22,22);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (23,23);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (24,24);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (25,25);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (26,26);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (27,27);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (28,28);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (29,29);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (30,30);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (31,31);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (32,32);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (33,33);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (34,34);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (35,35);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (36,36);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (37,37);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (38,38);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (39,39);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (40,40);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (41,41);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (42,42);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (43,43);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (44,44);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (45,45);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (46,46);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (47,47);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (48,48);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (49,49);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (50,50);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (51,51);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (52,52);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (53,53);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (54,54);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (55,55);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (56,56);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (57,57);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (58,58);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (59,59);
+INSERT INTO Mainagioia.restaurant_coordinate
+VALUES (60,60);
 
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (0,0);
@@ -270,6 +508,94 @@ INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (6,2);
 INSERT INTO Mainagioia.restaurant_cuisine
 VALUES (6,10);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (7,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (8,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (8,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (9,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (9,14);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (10,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (10,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (10,12);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (10,1);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (11,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (11,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (11,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (12,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (12,11);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (12,14);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (12,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (13,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (13,11);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (13,14);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (13,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (13,1);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (14,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (14,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (14,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (14,1);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (15,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (15,11);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (15,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (16,5);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (16,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (16,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (17,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (17,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (17,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (18,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (18,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (18,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (19,0);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (19,13);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (19,15);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (20,8);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (20,1);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (20,9);
+INSERT INTO Mainagioia.restaurant_cuisine
+VALUES (20,15);
 
 INSERT INTO Mainagioia.opening_hours_range_restaurant
 VALUES (0,0);
@@ -434,6 +760,1261 @@ VALUES (6,44);
 INSERT INTO Mainagioia.opening_hours_range_restaurant
 VALUES (6,52);
 
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (13,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (8,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (7,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (12,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (10,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (11,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (9,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (20,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (19,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (18,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (17,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (16,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (15,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (14,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (21,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (22,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (23,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (24,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (25,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (26,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (33,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (28,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (27,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (32,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (30,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (31,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (29,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (40,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (39,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (38,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (37,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (36,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (35,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (34,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (41,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (42,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (43,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (44,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (45,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (46,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (53,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (48,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (47,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (52,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (50,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (51,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (49,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,24);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,34);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,47);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (60,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,2);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (59,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,25);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,8);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,36);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,46);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,50);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (58,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,1);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,7);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,12);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,13);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,28);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,39);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,19);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (57,20);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,0);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,4);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,6);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,17);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,27);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,35);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,38);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,45);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,48);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (56,52);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,5);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,11);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,18);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,26);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,37);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,55);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (55,54);
+
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,9);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,15);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,22);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,30);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,41);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,51);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,10);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,16);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,23);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,33);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,44);
+INSERT INTO Mainagioia.opening_hours_range_restaurant
+VALUES (54,52);
+
+
 INSERT INTO Mainagioia.reviews
 VALUES (0,5,5,3,5,4,'Ottima cena','Sabato ho passato una fantastica cena in questo ristorante, il servizio potrebbe essere più veloce ma il cibo ripaga l attesa', '2017-01-23 11:12:56', 0,2, null);
 INSERT INTO Mainagioia.reviews
@@ -451,9 +2032,9 @@ INSERT INTO Mainagioia.replies
 VALUES (0, 'La ringraziamo dei complimenti, per noi è un piacere servire i nostri ospiti', '2016-12-17 11:27:03', '2016-12-17 19:03:47', 4, 6, 4, true);
 
 INSERT INTO Mainagioia.user_review_likes
-VALUES (0, 0, 3, 1, '2017-01-24 12:01:38');
+VALUES (0, 0, 2, 1, '2017-01-24 12:01:38');
 INSERT INTO Mainagioia.user_review_likes
-VALUES (1, 2, 9, 1, '2016-07-21 08:04:45');
+VALUES (1, 2, 8, 1, '2016-07-21 08:04:45');
 
 
 
