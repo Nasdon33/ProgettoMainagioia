@@ -61,69 +61,91 @@ public class Ristorante extends HttpServlet {
             ResultSet ristorante = manager.getData(sql, id);
             ristorante.next();
             String nome = request.getParameter("nome");
+            System.out.println(nome);
             int general = 0;
-            if(nome == null){
+            if(nome == ""){
+                System.out.println("nome assente");
                 nome = ristorante.getString("name");
                 general++;
             }
             String description = request.getParameter("description");
-            if(description == null){
+            System.out.println(description);
+            if(description == ""){
+                System.out.println("descrione assente");
                 description = ristorante.getString("description");
                 general++;
             }
             String web_site_url = request.getParameter("web_site_url");
-            if(web_site_url == null){
+            System.out.println(web_site_url);
+            if(web_site_url == ""){
+                System.out.println("sito assente");
                 web_site_url = ristorante.getString("web_site_url");
                 general++;
             }
-            String price = request.getParameter("price");
+            String price = request.getParameter("prezzo");
+            System.out.println(price);
             if(price == null){
+                System.out.println("prezzo assente");
                 price = ristorante.getString("id_price_range");
                 general++;
             }
             String address = request.getParameter("address");
+            System.out.println(address);
             int coordinate = 0;
-            if(address == null){
+            if(address == ""){
+                System.out.println("indirizzo assente");
                 address = ristorante.getString("address");
                 coordinate++;
             }
             String cap = request.getParameter("CAP");
-            if(cap == null){
+            System.out.println(cap);
+            if(cap == ""){
+                System.out.println("CAP assente");
                 cap = ristorante.getString("CAP");
                 coordinate++;
             }
             String city = request.getParameter("city");
-            if(city == null){
+            System.out.println(city);
+            if(city == ""){
+                System.out.println("città assente");
                 city = ristorante.getString("city");
                 coordinate++;
             }
             String province = request.getParameter("province");
-            if(province == null){
+            System.out.println(province);
+            if(province == ""){
+                System.out.println("provincia assente");
                 province = ristorante.getString("province");
                 coordinate++;
             }
             String state = request.getParameter("state");
-            if(state == null){
+            System.out.println(state);
+            if(state == ""){
+                System.out.println("stato assente");
                 state = ristorante.getString("state");
                 coordinate++;
             }
             String cucine [] = request.getParameterValues("cucine[]");
             Boolean cuc = true;
             if(cucine == null){
+                System.out.println("cucina assente");
                 cuc = false;
             }
             String giorni [] = request.getParameterValues("giorni[]");
             String orari [] = request.getParameterValues("orari[]");
             Boolean gioora = true;
             if(giorni == null){
+                System.out.println("giorni assente");
                 gioora = false;
             }
             
             if(general != 4){
+                System.out.println("Nessuna general info inserita");
                 String sql1 = "UPDATE Restaurants SET name = ?, description = ?, web_site_url = ?, id_price_range = ? WHERE id = ?";
                 manager.setData(sql1, nome, description, web_site_url, price, id);
             }
             if(coordinate != 5){
+                System.out.println("Nessuna coordinate info inserita");
                 String sql4id = "SELECT ID FROM mainagioia.Coordinates ORDER BY ID DESC  fetch first 1 rows only";
                 ResultSet increment = manager.getData(sql4id);
                 increment.next();
@@ -146,7 +168,7 @@ public class Ristorante extends HttpServlet {
                     manager.setData(sql6, id, cucina.getString("id"));
                 }
             }
-            
+            System.out.println(orari[20]);
             if(gioora == true){
                 String sql4 = "DELETE FROM mainagioia.opening_hours_range_restaurant WHERE id_restaurant = ?";
                 manager.setData(sql4, id);
@@ -165,92 +187,92 @@ public class Ristorante extends HttpServlet {
                     case "lun1":
                     {
                         day = "1";
-                        sora = orari[1];
-                        eora = orari[2];
+                        sora = orari[2];
+                        eora = orari[3];
                         break;
                     }
                     case "mar0":
                     {
                         day = "2";
-                        sora = orari[3];
-                        eora = orari[4];
+                        sora = orari[4];
+                        eora = orari[5];
                         break;
                     }
                     case "mar1":
                     {
                         day = "2";
-                        sora = orari[5];
-                        eora = orari[6];
+                        sora = orari[6];
+                        eora = orari[7];
                         break;
                     }
                     case "mer0":
                     {
                         day = "3";
-                        sora = orari[7];
-                        eora = orari[8];
+                        sora = orari[8];
+                        eora = orari[9];
                         break;
                     }
                     case "mer1":
                     {
                         day = "3";
-                        sora = orari[9];
-                        eora = orari[10];
+                        sora = orari[10];
+                        eora = orari[11];
                         break;
                     }
                     case "gio0":
                     {
                         day = "4";
-                        sora = orari[11];
-                        eora = orari[12];
+                        sora = orari[12];
+                        eora = orari[13];
                         break;
                     }
                     case "gio1":
                     {
                         day = "4";
-                        sora = orari[13];
-                        eora = orari[14];
+                        sora = orari[14];
+                        eora = orari[15];
                         break;
                     }
                     case "ven0":
                     {
                         day = "5";
-                        sora = orari[15];
-                        eora = orari[16];
+                        sora = orari[16];
+                        eora = orari[17];
                         break;
                     }
                     case "ven1":
                     {
                         day = "5";
-                        sora = orari[17];
-                        eora = orari[18];
+                        sora = orari[18];
+                        eora = orari[19];
                         break;
                     }
                     case "sab0":
                     {
                         day = "6";
-                        sora = orari[19];
-                        eora = orari[20];
+                        sora = orari[20];
+                        eora = orari[21];
                         break;
                     }
                     case "sab1":
                     {
                         day = "6";
-                        sora = orari[21];
-                        eora = orari[22];
+                        sora = orari[22];
+                        eora = orari[23];
                         break;
                     }
                     case "dom0":
                     {
                         day = "7";
-                        sora = orari[23];
-                        eora = orari[24];
+                        sora = orari[24];
+                        eora = orari[25];
                         break;
                     }
                     case "dom1":
                     {
                         day = "7";
-                        sora = orari[25];
-                        eora = orari[26];
+                        sora = orari[26];
+                        eora = orari[27];
                         break;
                     }
                     default:
@@ -261,11 +283,24 @@ public class Ristorante extends HttpServlet {
                     }
                     }
                     System.out.println(day+" "+sora+" "+eora);
+                    try{
                     String sql7 = "SELECT id FROM Opening_hours_ranges WHERE day_of_the_week = ? AND start_hour = ? AND end_hour = ?";
                     ResultSet idor = manager.getData(sql7, day, sora, eora);
                     idor.next();
                     String sql8 = "INSERT INTO Opening_hours_range_Restaurant(id_restaurant, id_opening_hours_range) VALUES(?,?)";
                     manager.setData(sql8, id, idor.getString("id"));
+                    }
+                    catch(SQLException ex){
+                        String sqlget = "SELECT ID FROM mainagioia.Opening_hours_ranges ORDER BY ID DESC  fetch first 1 rows only";
+                        ResultSet increment = manager.getData(sqlget);
+                        increment.next();
+                        String idcoo = String.valueOf(1 + Integer.parseInt(increment.getString("id")));
+                        String sql7 = "INSERT INTO Opening_hours_ranges(id, day_of_the_week, start_hour, end_hour) VALUES (?,?,?,?)";
+                        manager.setData(sql7, idcoo, day, sora, eora);
+                        String sql8 = "INSERT INTO Opening_hours_range_Restaurant(id_restaurant, id_opening_hours_range) VALUES(?,?)";
+                        manager.setData(sql8, id, idcoo);
+                    };
+                    
                 }
             }
             

@@ -117,7 +117,8 @@ function ristorante() {
                 var nome = $("input[name=nome]").val();
                 var description = $("textarea[name=description]").val();
                 var web_site_url = $("input[name=web_site_url]").val();
-                var prezzo = $("input[name=prezzo]:radio").val();
+                var prezzo = $("input[name=prezzo]:checked").val();
+                console.log(prezzo);
                 var address = $("input[name=address1]").val();
                 var CAP = $("input[name=address2]").val();
                 var city = $("input[name=address3]").val();
