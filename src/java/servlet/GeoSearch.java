@@ -58,7 +58,7 @@ public class GeoSearch extends HttpServlet {
             
                     out.println("<div class =\"col-md-12 col-xs-12\" style=\"background-color: white; opacity:0.9; border-radius: 30px\"> ");
                     out.println("<center>");
-                        out.println("<b>  <p style =\"font-size: 30px\">Ristoranti più vicini per cucina "+ ristoranti2.getString("cucina") +": </p></b>");
+                        out.println("<h1>Ristoranti più vicini per cucina "+ ristoranti2.getString("cucina") +": </h1>");
                         
                     for(int i = 0; i < 3; i++){
 
