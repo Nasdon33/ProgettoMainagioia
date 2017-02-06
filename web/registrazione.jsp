@@ -6,7 +6,7 @@
         <%@include file="head.html" %>
        
         
-        <title>Ristorante Magnagioia</title>
+        <title>Rgistrazione</title>
     </head>
     <body>
         <div>

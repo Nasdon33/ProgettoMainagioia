@@ -73,7 +73,7 @@ public class GeoSearch extends HttpServlet {
                         ResultSet foto = manager.getData(sql10,idris);
                         foto.next();
                         
-                        out.println("<a href=ristorante.jsp?id="+idris+"\"><img src=\""+foto.getString("path")+"\" width=\"90%\" style=\"border-radius: 30px\"></a>");
+                        out.println("<a href=\"ristorante.jsp?id="+idris+"\"><img src=\""+foto.getString("path")+"\" width=\"90%\" style=\"border-radius: 30px\"></a>");
                     out.println("<br>");
                     out.println("<a href=\"ristorante.jsp?id="+idris+"\" style=\"color: #5bc0de\"><h5> "+nome+" </h5></a>");
                     

@@ -59,15 +59,17 @@
                     </div>
                     <div id="Spazio">
                         <div class="container" > <!-- inizio modal per le foto -->
+                           
 
                         <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn"><span class="glyphicon glyphicon-open"></span> Inserisci foto</button>
                         <!-- Modal -->
+                           
                         
                             <div class="modal fade" id="myModal" role="dialog">
                                 <div class="modal-dialog">
                                 <!-- Modal content-->
                                     <div class="modal-content">
-                                        <div class="modal-header col-md-12 col-xs-12 " style="padding:35px 50px;">
+                                        <div class="modal-header col-md-12 col-xs-12">
                                         <center>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                       
@@ -127,7 +129,8 @@
                 });
                 </script>
             </div>
-            <div class="col-md-6 col-sm-5 col-xs-5"> <!-- div contentente Nome ristorante e descrizione -->
+            <div class="col-md-5 col-sm-5 col-xs-5"> <!-- div contentente Nome ristorante e descrizione -->
+                <center>
                 <div>
                     <h3><%= ristorante.getString("name") %></h3>
                 </div>
@@ -136,10 +139,11 @@
                     <% out.println(ristorante.getString("description")); %>
                     </div>
                 </div>
+                </center>
             </div> <!-- fine div  -->
             <div class="col-md-2">
             </div>
-            <div class="col-md-3 col-xs-3"> <!-- inizio div con i tasti "scrivi recensione" e Visualizza tabella -->
+            <div class="col-md-2 col-xs-3 col-md-offset-1"> <!-- inizio div con i tasti "scrivi recensione" e Visualizza tabella -->
                 <center>  
                 <form action="Recensione.jsp?id=<%=idris %>" method="post">
                     <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="Scrivi una Recensione" />
@@ -523,7 +527,7 @@
                             %>
                         </div>
                         <div>    
-                            <div class="col-md-1 col-sm-2 col-xs-3"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
+                            <div class="col-md-1 col-sm-1 col-xs-3"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="img/user.png">
                                 </div><!-- /thumbnail -->

@@ -60,13 +60,14 @@
                     while(segnalazioni.next()){
                         a++;
                 %>
-                <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata" class="btn btn-responsive Azzurro_no_bordo" id="Altezza"> 
+                <div class="col-md-12 col-xs-12 Azzurro_tondo">
+                    <div id="segnalazione_controllata" id="Altezza"> 
                         <%
                             if(segnalazioni.getString("result") == "true"){
                                 
                         %>
-                        <p> La tua segnalazione alla foto del ristorante <%=segnalazioni.getString("name") %> è stata controllata e non rispettando i nostri standard è stata cancellata </p> 
+                        <p style="color: white"> La tua segnalazione alla foto del ristorante <%=segnalazioni.getString("name") %> è stata controllata e non rispettando i nostri standard è stata cancellata </p> 
+                        <br>
                         <%
                             }
                             else{
@@ -75,18 +76,21 @@
                                 foto.next();
                                 if(segnalazioni.getString("date_validation") == null){
                         %>
-                        <p> La tua segnalazione alla seguente foto non è ancora stata controllata </p>
-                        <img src="<%=foto.getString("path") %>" width="250">
+                        <p style="color: white"> La tua segnalazione alla seguente foto non è ancora stata controllata </p>
+                        <img src="<%=foto.getString("path") %>" width="80%">
+                        <br>
                         <%
                                 }
                                 else{
                         %>
-                        <p> La tua segnalazione alla seguente foto è stata controllata <br>ed è stata ritenuta consona ai nostri standard</p>
-                        <img src="<%=foto.getString("path") %>" width="250">            
+                        <p style="color: white"> La tua segnalazione alla seguente foto è stata controllata ed è stata ritenuta consona ai nostri standard</p>
+                        <img src="<%=foto.getString("path") %>" width="80%">     
+                        <br>
                         <%
                                 }
                             }
                         %>
+                        <br>
                     </div>
                   
                 </div>
@@ -107,22 +111,22 @@
                     while(risposte.next()){
                         b++;
                 %>
-                <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
+                <div class="col-md-12 col-xs-12 Azzurro_tondo">
+                    <div id="segnalazione_controllata">
                         <%
                             if(risposte.getString("acc") == "true"){
                         %>
-                        <p> La tua risposta alla recensione del tuo ristorante è stata pubblicata</p> 
+                        <p style="color: white"> La tua risposta alla recensione del tuo ristorante è stata pubblicata</p> 
                         <%
                             }
                             else if(risposte.getString("acc") == "false"){
                         %>
-                        <p> La tua risposta alla recensione del tuo ristorante <br> non è stata pubblicata</p> 
+                        <p style="color: white"> La tua risposta alla recensione del tuo ristorante non è stata pubblicata</p> 
                         <%
                             }
                             else{
                         %>
-                        <p> La tua risposta alla recensione del tuo ristorante <br> deve ancora essere controllata</p> 
+                        <p style="color: white"> La tua risposta alla recensione del tuo ristorante deve ancora essere controllata</p> 
                         <%
                             }
                         %>
@@ -168,14 +172,15 @@
                         a++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
-                        <img src="<%=segnalazioni.getString("path") %>" width="250">
+                    <div id="segnalazione_controllata"> 
+                        <p style="color: white">Per il ristorante <%=segnalazioni.getString("name") %></p>
+                        <img src="<%=segnalazioni.getString("path") %>" width="80%">
                         <br>
-                        Per il ristorante <%=segnalazioni.getString("name") %>
+                        
                         <form action="RimuoviFoto" method="POST">
                         <div>
                             <input type="hidden" name="idp" value="<%=segnalazioni.getString("id_photo") %>" />
-                            <input type="submit" name="choice" value="conserva" /> <input type="submit" name="choice" value="elimina" />
+                            <input type="submit" name="choice" value="Accetta" /> <input type="submit" name="choice" value="Elimina" />
                         </div>
                         </form>
                     </div>
@@ -199,21 +204,21 @@
                         b++;
                 %>
                 <div class="col-md-12 Azzurro_tondo">
-                    <div id="segnalazione_controllata"  class="btn btn-responsive Azzurro_no_bordo"> 
+                    <div id="segnalazione_controllata"> 
                         <div>
                             <%=risposte.getString("rvn") %>
                         </div>
                         <div id="Altezza">
                             <%=risposte.getString("rvdes") %>
                         </div>
-                        LA TUA RISPOSTA:
+                        <p style="color: white">RISPOSTA RISOTRATORE:</p>
                         <div>
                             <%=risposte.getString("rpdes") %>
                         </div>
                         <form action="RimuoviFoto" method="GET">
                         <div>
                             <input type="hidden" name="idr" value="<%=risposte.getString("id") %>" />
-                            <input type="submit" name="choice" value="accetta" /> <input type="submit" name="choice" value="rifiuta" />
+                            <input type="submit" name="choice" value="Accetta" /> <input type="submit" name="choice" value="Elimina" />
                         </div>
                     </div>
                 </div>
