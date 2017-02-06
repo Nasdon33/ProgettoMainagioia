@@ -539,10 +539,67 @@
                                             <div class="col-md-9 col-sm-9 col-xs-8"> 
                                                 <strong><!-- nome utente (in grassetto) -->
                                                     <%
-                                                        String sql7 = "SELECT nickname FROM mainagioia.Users WHERE id = ?";
+                                                        String sql7 = "SELECT id, nickname FROM mainagioia.Users WHERE id = ?";
                                                         ResultSet user = manager.getData(sql7,recensioni.getString("id_creator"));
                                                         user.next();
                                                         out.print(user.getString("nickname"));
+                                                        String val = "SELECT * FROM (Select u.id,SUM(like_type) AS positive from users as U, user_review_likes as RL where like_type=1 and u.id=rl.id_creator and u.id=? GROUP BY u.id)as a NATURAl JOIN(Select u.id,SUM(like_type) AS negative from users as U, user_review_likes as RL where like_type=-1 and u.id=rl.id_creator AND u.id=? GROUP BY u.id)as b";
+                                                        ResultSet classifica;
+                                                        classifica = manager.getData(val, user.getString("id"), user.getString("id"));
+                                                        if (classifica.next()) {
+
+                                                            float valore = Integer.parseInt(classifica.getString("positive") + 1) / (-Integer.parseInt(classifica.getString("negative") + 1));
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <%
+                                                        if (valore < 0.5) {
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <%
+                                                    } else if (valore < 1) {
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <%
+                                                    } else if (valore < 2) {
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <%
+                                                    } else if (valore < 5) {
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <%
+                                                    } else {
+                                                    %>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <%
+                                                            }
+
+                                                            
+                                                        } else {
+                                                           %>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                    <%
+                                                        }
+
                                                     %>
                                                 </strong>
                                                 <span class="text-muted"> postato <!-- quanto tempo fa ha commentato -->
