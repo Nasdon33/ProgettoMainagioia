@@ -2459,11 +2459,11 @@ values(14,'Essenza','Principale','img/Essenza.jpg',14,5);
 insert into photos
 values(15,'Piz','Principale','img/PizMilano.jpg',15,10);
 insert into photos
-values(16,'Beirut','Principale','img/beirutMilano.jpg',16,15);
+values(16,'Beirut','Principale','img/BeirutMilano.jpg',16,15);
 insert into photos
 values(17,'Shannara','Principale','img/shannara.jpg',17,18);
 insert into photos
-values(18,'Berton','Principale','img/berton.jpg',18,7);
+values(18,'Berton','Principale','img/Berton.jpg',18,7);
 insert into photos
 values(19,'Il Delfino','Principale','img/Delfino.jpg',19,10);
 insert into photos
@@ -2485,7 +2485,7 @@ values(27,'La Esquina','Principale','img/laesqiuna.jpg',27,15);
 insert into photos
 values(28,'Rosa Mexicano','Principale','img/RosaMexicano.jpg',28,14);
 insert into photos
-values(29,'Keens Steakhouse','Principale','img/KeensStreakhouse.jpg',29,13);
+values(29,'Keens Steakhouse','Principale','img/KeensSteakhouse.jpg',29,13);
 insert into photos
 values(30,'Teds Montana Grill','Principale','img/TedMontanaGrill.jpg',30,12);
 insert into photos
@@ -2495,7 +2495,7 @@ values(32,'Red Lobster','Principale','img/redlobster.jpg',32,18);
 insert into photos
 values(33,'Dr. Limon','Principale','img/dr-limon.jpg',33,17);
 insert into photos
-values(34,'Andiamo','Principale','img/andiamo.jpg',34,18);
+values(34,'Andiamo','Principale','img/Andiamo.jpg',34,18);
 insert into photos
 values(35,'Farfalle','Principale','img/farfalle.jpg',35,2);
 insert into photos
@@ -2527,7 +2527,7 @@ values(48,'In-N-Out Burger','Principale','img/in-n-out.jpg',48,3);
 insert into photos
 values(49,'Brents Delicatessen','Principale','img/delicatessen.jpg',49,5);
 insert into photos
-values(50,'Langers','Principale','img/langers.jpg',50,5);
+values(50,'Langers','Principale','img/langers.JPG',50,5);
 insert into photos
 values(51,'Area 31','Principale','img/area31.jpg',51,5);
 insert into photos
