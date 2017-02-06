@@ -171,44 +171,33 @@
                      </center>
                  </div>
                     
-                    <div class="col-md-12 col-xs-12">
-                       <br>
-                   </div>
-                    
-                    
-                    <center>
-                    <div id="demo">
-                        
-                    </div>
-                    </center>
-                     
-                             
-                             <!-- riga separatoria -->
-                   <div class="col-md-12 col-xs-12">
-                       <br>
-                   </div>
-                           
-                           
-            
-            
-                <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
-                     <center> <!-- alternativa ai tasti registrati e accedi -->
-                         <h4> Sei un nuovo utente? <a href="registrazione.jsp" style="color:#5bc0de;">Registrati</a></h4>
-                <h4> Hai già un account? <a href="login.jsp" style="color:#5bc0de;">Accedi</a></h4>
-                <h4>#Magnagioia</h4>
-                    </center>
-                </div>
-
-            
-     
-        
+            <div class="col-md-12 col-xs-12">
+               <br>
+           </div>
 
 
-       
+            <center>
+            <div id="demo">
+
+            </div>
+            </center>
 
 
-            
-               
+                     <!-- riga separatoria -->
+           <div class="col-md-12 col-xs-12">
+               <br>
+           </div>
 
+
+
+
+        <div class="col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12" style="background-color: white; opacity:0.8; border-radius: 30px">
+             <center> <!-- alternativa ai tasti registrati e accedi -->
+                 <h4> Sei un nuovo utente? <a href="registrazione.jsp" style="color:#5bc0de;">Registrati</a></h4>
+        <h4> Hai già un account? <a href="login.jsp" style="color:#5bc0de;">Accedi</a></h4>
+        <h4>#Magnagioia</h4>
+            </center>
+        </div>
+   
     </body>
 </html>
