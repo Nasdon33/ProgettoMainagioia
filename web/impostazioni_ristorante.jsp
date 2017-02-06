@@ -506,7 +506,7 @@
 
                 <div class="row">
 
-                    <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+                    <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
                         <button type="submit" onclick=ristorante() class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7"> Modifica </button>
                     </div>
                 </div>
