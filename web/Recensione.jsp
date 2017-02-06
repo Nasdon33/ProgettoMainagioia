@@ -13,9 +13,17 @@
         
     </head>
     <body>
+        
         <div>
          <%@include file="header.jsp" %>
         </div>
+        <%
+            ses = request.getSession();
+            utente = (Utente)ses.getAttribute("utente");
+            if(utente == null)
+                response.sendRedirect("ristorante.jsp?id="+request.getParameter("id"));
+            else{
+        %>
         <div class="container" style="background-color: white; opacity:0.9; border-radius: 30px">
             <form role="form" action="Recensione" method="POST">
             <center>
@@ -113,5 +121,8 @@
                 </center>
             </form>
         </div>
+        <%
+            }
+        %>
     </body>
 </html>
