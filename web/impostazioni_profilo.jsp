@@ -60,7 +60,7 @@
                 <input type="hidden" name="id" value="<%=utente.getId() %>">
                 <hr class="colorgraph">
                 <div class="row">
-                    <div class="col-xs-10 col-md-offset-1 col-md-10 col-xs-offset-1">
+                    <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
                         <button type="submit" onclick=modifica() id="reg_but" class="btn btn-info btn-block btn-lg" tabindex="7"> Conferma </button>
                     </div>
                 </div>

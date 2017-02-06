@@ -116,7 +116,9 @@
                         <input type="hidden" value="<%=request.getParameter("id") %>" name="id_restaurant"/>
                         <input type="hidden" value="<%=utente.getId() %>" name="id_creator"/>
                         <hr class="colorgraph">
-                        <button type="submit" class="btn btn-info Azzurro  btn-responsive"><span class="glyphicon glyphicon-send"></span> Invia Recensione</button>
+                        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+                        <button type="submit" class="btn btn-info Azzurro  btn-block"><span class="glyphicon glyphicon-send"></span> Invia Recensione</button>
+                        </div>
                     </div>
                 </center>
             </form>

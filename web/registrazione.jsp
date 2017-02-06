@@ -75,7 +75,8 @@
             
             <hr class="colorgraph">
             <div class="row">
-                            <div class="col-xs-12 col-md-12"><input type="submit" id="reg_but" value="Registrati" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
+                            <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+                                <input type="submit" id="reg_but" value="Registrati" class="btn btn-info btn-block btn-lg" tabindex="7"></div>
                         </div>
         </form>
     </div>

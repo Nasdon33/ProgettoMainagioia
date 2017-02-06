@@ -485,7 +485,7 @@
                     <hr class="colorgraph col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
                     <div class="row">
                         
-                        <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+                        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
                             
                             <input type="submit" value="Inserisci" class="btn btn-primary btn-block btn-lg Azzurro" tabindex="7">
                         </div>
