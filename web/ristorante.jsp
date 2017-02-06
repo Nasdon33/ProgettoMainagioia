@@ -41,76 +41,7 @@
             ResultSet ristorante = manager.getData(sql, idris);
             ristorante.next();
         %>
-        <div class="row">
-            <center>
-            <%
-                String sqltest =" SELECT * FROM Reviews WHERE id_restaurant = ?";
-                ResultSet r = manager.getData(sqltest,idris);
-                String idcoo = ristorante.getString("id_coordinate");
-                String sql2 = "SELECT * FROM mainagioia.coordinates WHERE id = ?";
-                ResultSet address = manager.getData(sql2,idcoo);
-                address.next();
-                if(r.next()){
-                        String classificac = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
-                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
-                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.city = ? "
-                                + "GROUP BY RV.id_restaurant "
-                                + "ORDER BY med DESC";
-                        String citta = address.getString("city");
-                        String classificap = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
-                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
-                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.province = ? "
-                                + "GROUP BY RV.id_restaurant "
-                                + "ORDER BY med DESC";
-                        String provincia = address.getString("province");
-                        String classificas = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
-                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
-                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.state = ? "
-                                + "GROUP BY RV.id_restaurant "
-                                + "ORDER BY med DESC";
-                        String stat = address.getString("state");
-                        ResultSet cc = manager.getData(classificac,citta);
-                        ResultSet cp = manager.getData(classificap,provincia);
-                        ResultSet cs = manager.getData(classificas,stat);
-                        int tmp = 0;
-                        int c = 0;
-                        int p = 0;
-                        int s = 0;
-                        while(cc.next()){
-                            tmp++;
-                            System.out.println("entrato in ciclo città");
-                            if(cc.getString("id").contains(idris))
-                                c = tmp;
-                        }
-                        tmp = 0;
-                        while(cp.next()){
-                            tmp++;
-                            System.out.println("entrato in ciclo provincia");
-                            if(cp.getString("id").contains(idris))
-                                p = tmp;
-                        }
-                        tmp = 0;
-                        while(cs.next()){
-                            tmp++;
-                            System.out.println("entrato in ciclo stato");
-                            if(cs.getString("id").contains(idris))
-                                s = tmp;
-                        }
-                %>
-                <div>
-                    <%=c %>° tra i ristoranti nella città di <%=citta %>
-                </div>
-                <div>
-                    <%=p %>° tra i ristoranti nella provincia di <%=provincia %>
-                </div>
-                <div>
-                    <%=s %>° tra i ristoranti nello stato <%=stat %>
-                </div>
-                <%
-                }
-            %>
-            </center>
-        </div>
+        
         <div>
             <div class="row2" id="Spazio">
                 <div class="col-md-3 col-sm-3 col-xs-4 "> <!-- Primo div, contiene la foto del ristorante e il modal per inserire le foto-->
@@ -131,6 +62,7 @@
 
                         <button type="button" class="btn btn-primary btn-responsive Azzurro" id="myBtn"><span class="glyphicon glyphicon-open"></span> Inserisci foto</button>
                         <!-- Modal -->
+                        
                             <div class="modal fade" id="myModal" role="dialog">
                                 <div class="modal-dialog">
                                 <!-- Modal content-->
@@ -167,6 +99,7 @@
                                 </div>
                             </div> 
                         </div> <!-- fine modal per le foto -->
+                       
                     </div>
                     <%
                         HttpSession ses2 = request.getSession();
@@ -178,10 +111,13 @@
                         <input type="hidden" name="idris" value="<%=ristorante.getString("id") %>">
                         <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="E' tuo questo ristorante?" /> 
                     </form>
+                       
                     </div>
                     <%
                         }
                     %> 
+                
+                
                 </div>           
                 <script>
                 $(document).ready(function(){
@@ -238,9 +174,79 @@
             </div> <!-- fine div -->
             <div class="space">
             </div>	 
-            <div class="row3"> <!-- inizio div con valutazione e galleria foto -->
+            <div class="row3"> <!-- inizio div con classifica, valutazione e galleria foto -->
                 <div class="col-md-5 col-sm-9 col-xs-12" id="spazio">
                     <hr>
+                    <div class="row" style="background-color: white; opacity: 0.9; border-radius: 30px;">
+            <center>
+            <%
+                String sqltest =" SELECT * FROM Reviews WHERE id_restaurant = ?";
+                ResultSet r = manager.getData(sqltest,idris);
+                String idcoo = ristorante.getString("id_coordinate");
+                String sql2 = "SELECT * FROM mainagioia.coordinates WHERE id = ?";
+                ResultSet address = manager.getData(sql2,idcoo);
+                address.next();
+                if(r.next()){
+                        String classificac = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
+                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
+                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.city = ? "
+                                + "GROUP BY RV.id_restaurant "
+                                + "ORDER BY med DESC";
+                        String citta = address.getString("city");
+                        String classificap = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
+                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
+                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.province = ? "
+                                + "GROUP BY RV.id_restaurant "
+                                + "ORDER BY med DESC";
+                        String provincia = address.getString("province");
+                        String classificas = "SELECT RV.id_restaurant as id,(AVG(CAST (RV.global_value as float)))-(2.0/CAST(COUNT(RV.id) as float)) as med "
+                                + "FROM Restaurants as R, Restaurant_coordinate as RC, Coordinates as C, Reviews as RV "
+                                + "WHERE R.id = RV.ID_RESTAURANT AND RC.id_restaurant = R.id AND RC.id_coordinate = C.id AND C.state = ? "
+                                + "GROUP BY RV.id_restaurant "
+                                + "ORDER BY med DESC";
+                        String stat = address.getString("state");
+                        ResultSet cc = manager.getData(classificac,citta);
+                        ResultSet cp = manager.getData(classificap,provincia);
+                        ResultSet cs = manager.getData(classificas,stat);
+                        int tmp = 0;
+                        int c = 0;
+                        int p = 0;
+                        int s = 0;
+                        while(cc.next()){
+                            tmp++;
+                            System.out.println("entrato in ciclo città");
+                            if(cc.getString("id").contains(idris))
+                                c = tmp;
+                        }
+                        tmp = 0;
+                        while(cp.next()){
+                            tmp++;
+                            System.out.println("entrato in ciclo provincia");
+                            if(cp.getString("id").contains(idris))
+                                p = tmp;
+                        }
+                        tmp = 0;
+                        while(cs.next()){
+                            tmp++;
+                            System.out.println("entrato in ciclo stato");
+                            if(cs.getString("id").contains(idris))
+                                s = tmp;
+                        }
+                %>
+                <div>
+                     <h4><%=c %>° tra i ristoranti nella città di <%=citta %> </h4>
+                </div>
+                <div>
+                     <h4><%=p %>° tra i ristoranti nella provincia di <%=provincia %> </h4>
+                </div>
+                <div>
+                    <h4> <%=s %>° tra i ristoranti in <%=stat %> </h4>
+                </div>
+                <%
+                }
+            %>
+            </center>
+        </div>
                     <%
                         String sql6 = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql6,idris);
@@ -262,6 +268,7 @@
                     <div> 
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
+                                <br>
                                 <div class="well well-sm">
                                     <div class="row">
                                         <div class="col-xs-5 col-md-5 text-center"> <!-- tabella valutazione -->
@@ -331,7 +338,7 @@
                                         <div class="col-md-4 col-xs-4 thumb">
                                             <a id="img" class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<%=foto2.getString("name") %>" data-caption="<%=foto2.getString("description") %>" data-id="<%=foto2.getString("id") %>" data-image="<%=foto2.getString("path") %>" data-target="#image-gallery">
                                             <div>
-                                                <img class="img-responsive" src="<%=foto2.getString("path") %> " style="border-radius: 30px" alt="Short alt text">
+                                                <img class="img-responsive" src="<%=foto2.getString("path") %> " alt="Short alt text">
                                             </div>
                                             </a>
                                             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <!-- quando si clicca sulla foto si apre un modal -->
@@ -808,7 +815,7 @@
                     </div><!-- /container -->
                </div><!-- /panel panel-default -->
             </div><!-- /col-sm-5 -->
-    </div>
+    
     </body> 
 </html>
     
