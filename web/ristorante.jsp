@@ -238,13 +238,13 @@
                         }
                 %>
                 <div>
-                     <h4><%=c %>° tra i ristoranti nella città di <%=citta %> </h4>
+                    <h4><strong style="color: #5bc0de"><%=c %>°</strong> tra i ristoranti nella città di <%=citta %> </h4>
                 </div>
                 <div>
-                     <h4><%=p %>° tra i ristoranti nella provincia di <%=provincia %> </h4>
+                    <h4><strong style="color: #5bc0de"><%=p %>°</strong> tra i ristoranti nella provincia di <%=provincia %> </h4>
                 </div>
                 <div>
-                    <h4> <%=s %>° tra i ristoranti in <%=stat %> </h4>
+                    <h4> <strong style="color: #5bc0de"><%=s %>°</strong> tra i ristoranti in <%=stat %> </h4>
                 </div>
                 <%
                 }
