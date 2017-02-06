@@ -190,7 +190,7 @@ public class Ricerca extends HttpServlet {
                         ResultSet foto = manager.getData(sql10, idris);
                         foto.next();
                         String url = "ristorante.jsp?id="+idris;
-                        out.println("<a href="+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");
+                        out.println("<a href=\""+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");
                         out.println("<a href="+ url + " style=\"color: #5bc0de\"> <h5> ");
                         out.println(nome.getString("name"));
                         out.println("</h5></a>");
@@ -265,7 +265,7 @@ public class Ricerca extends HttpServlet {
                         ResultSet foto = manager.getData(sql10, idris);
                         foto.next();
                         String url = "ristorante.jsp?id="+idris;
-                        out.println("<a href="+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");    
+                        out.println("<a href=\""+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");    
                         out.println("<a href="+ url + " style=\"color: #5bc0de\"> <h5> ");
                         out.println(nome.getString("name"));
                         out.println("</h5></a>");
