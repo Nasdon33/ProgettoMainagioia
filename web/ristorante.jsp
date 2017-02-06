@@ -111,7 +111,7 @@
                     <div style="padding-top: 10px">
                         <form role="form" action="NuovoRistoratore" method="POST">
                         <input type="hidden" name="idris" value="<%=idris %>">
-                        <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="E' tuo questo ristorante?" /> 
+                        <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="E' tuo questo ristorante?" /> <!-- tasto per diventare proprietario del ristorante -->
                     </form>
                        
                     </div>
@@ -181,7 +181,7 @@
             <div class="row3"> <!-- inizio div con classifica, valutazione e galleria foto -->
                 <div class="col-md-5 col-sm-9 col-xs-12" id="spazio">
                     <hr>
-                    <div class="row" style="background-color: white; opacity: 0.9; border-radius: 30px;">
+                    <div class="row" style="background-color: white; opacity: 0.9; border-radius: 30px;"> <!-- classifica -->
             <center>
             <%
                 String sqltest =" SELECT * FROM Reviews WHERE id_restaurant = ?";
@@ -435,7 +435,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-body">
                                                     <center>
-                                                    <div id="map-canvas" style="height:350px; width:100%"></div>
+                                                    <div id="map-canvas" style="height:350px; width:100%"></div> <!-- modal per mappa -->
                                                         <script>
 
                                                             var map;
@@ -527,7 +527,7 @@
                             %>
                         </div>
                         <div>    
-                            <div class="col-md-1 col-sm-1 col-xs-3"id="Spazio"> <!-- spazio per avatar utente (non ancora implementato) -->
+                            <div class="col-md-1 col-sm-1 col-xs-3"id="Spazio"> <!-- avatar utente (non implementato) -->
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="img/user.png">
                                 </div><!-- /thumbnail -->
@@ -550,7 +550,7 @@
 
                                                             float valore = Integer.parseInt(classifica.getString("positive") + 1) / (-Integer.parseInt(classifica.getString("negative") + 1));
                                                     %>
-                                                    <span class="glyphicon glyphicon-star"></span>
+                                                    <span class="glyphicon glyphicon-star"></span> <!-- feedback utente -->
                                                     <%
                                                         if (valore < 0.5) {
                                                     %>
@@ -678,7 +678,7 @@
                                                         out.println("+");
                                                     out.println(l);
                                                 %>
-                                                <a href="Recensione?id=<%=recensioni.getString("id_creator") %>&idr=<%=recensioni.getString("id") %>&val=1" >
+                                                <a href="Recensione?id=<%=recensioni.getString("id_creator") %>&idr=<%=recensioni.getString("id") %>&val=1" > <!-- tasti like /dislike al commento -->
                                                     <img src="https://www.forzacavallasca.it/wp-content/plugins/like-dislike-counter-for-posts-pages-and-comments/images/up.png" alt="like">
                                                 </a>
                                                 <a href="Recensione?id=<%=recensioni.getString("id_creator") %>&idr=<%=recensioni.getString("id") %>&val=-1">
@@ -821,7 +821,7 @@
                                     %> 
                                     <hr>
                                     <div>
-                                        <div class="col-md-3  col-xs-4 col-sm-6">
+                                        <div class="col-md-3  col-xs-4 col-sm-6"> <!-- modal di risposta a recensione (solo da parte di ristoratore) -->
                                             <a class="btn btn-primary btn-responsive Azzurro" href="#terzo" data-toggle="modal" data-id="<%=recensioni.getString("id") %>"><span class="glyphicon glyphicon-send"></span> Rispondi</a>
                                             <!-- Modal -->
                                             <div class="modal fade" id="terzo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -832,7 +832,7 @@
                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                             <p style="font-size:30px">Rispondi a commento:</p>
                                                         </div>
-                                                        <div class="modal-body" style="padding-bottom:200px"> <!-- modal per le risposte alle recensioni -->
+                                                        <div class="modal-body" style="padding-bottom:200px"> 
                                                             <form role="form" action="Risposte" method="POST">
                                                             <div class="col-md-9 col-xs-9">
                                                                 <textarea  class="form-control textarea" name="description" rows="3" ></textarea>

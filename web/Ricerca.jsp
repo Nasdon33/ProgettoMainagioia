@@ -31,7 +31,7 @@
                     <input type="hidden" name="search" id="tmp" value="<%=stringa%>">
                     <input type="hidden" name="paramradiob" value="<%=radiob%>">
                     <div>
-                        <p class="col-form-legend" id="Font">Ordina per:</p>
+                        <p class="col-form-legend" id="Font">Ordina per:</p> <!-- ordinare i risultati -->
                         <div class="col-sm-12" id="Spazio">
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -61,7 +61,6 @@
         </div> <!-- fine div -->
         <div class="col-xs-12 Sparisci_2"> <!-- tasto dropdown che sostituisce il div "ordina per" quando lo schermo va in xs -->
             <div class="row">
-        <!-- Our Special dropdown has class show-on-hover -->
                 <center>
                     <div class="btn-group show-on-hover">
                         <button type="button" class="btn btn-info dropdown-toggle btn-responsive" data-toggle="dropdown">

@@ -32,7 +32,7 @@
                     <hr class="colorgraph">
                 </div>
                 <div class="container" id="Altezza">
-                    <div class="col-md-4 col-xs-4">
+                    <div class="col-md-4 col-xs-4"> <!-- possibilità di dare un voto ai vari ambiti da 1 a 5 -->
                         
                         <h4><span class="glyphicon glyphicon-globe"></span> Voto globale</h4>
                         <br>
@@ -103,9 +103,8 @@
                         </div>
                     </div>
                     <hr>
-                <!-- the comment box -->
                     <div>
-                        <h3><i class="fa fa-paper-plane-o"></i> TITOLO:</h3>
+                        <h3><i class="fa fa-paper-plane-o"></i> TITOLO:</h3> <!-- area commento con titolo e descrizione -->
                         <div class="form-group">
                             <input type="text" class="form-control"  name="name" value="" required="" />
                         </div>

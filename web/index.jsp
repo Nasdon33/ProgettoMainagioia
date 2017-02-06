@@ -28,7 +28,7 @@
             </center>
         </div>
         
-                <div class=" col-sm-10 col-md-10 col-md-offset-1 col-xs-12 col-sm-offset-2"> <!-- i due migliori commenti -->
+                <div class=" col-sm-10 col-md-10 col-md-offset-1 col-xs-12 col-sm-offset-2"> <!-- i due migliori commenti, sono di bellezza stile tripadvisor-->
                     <br>
                                <div class="col-md-2 col-sm-3 col-xs-4" id="Altezza">
                                <div class="thumbnail" >
@@ -66,7 +66,7 @@
                                </div><!-- /thumbnail -->
                                </div><!-- /col-sm-1 -->
 
-                               <div class="col-md-4 col-sm-9 col-xs-8" id="Sparisci">
+                               <div class="col-md-4 col-sm-9" id="Sparisci"> <!-- sparisce quando va in xs -->
                                <div class="panel panel-default">
                                <div class="panel-heading">
                                <strong>
@@ -90,7 +90,7 @@
                                </div><!-- /col-sm-5 -->
                              </div> <!-- fine commenti -->
                     
-                 <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- Ristoranti in vetrina -->
+                 <div class ="col-md-12 col-xs-12" style="background-color: white; opacity:0.9; border-radius: 30px"> <!-- Ristoranti popolari -->
                      <center>
                           <h1>Ristoranti popolari: </h1>
                      <%! private DBManager manager; %>
@@ -177,7 +177,7 @@
 
 
             <center>
-            <div id="demo">
+            <div id="demo"> 
 
             </div>
             </center>

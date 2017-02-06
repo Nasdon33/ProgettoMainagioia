@@ -29,29 +29,29 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group2">
-                                            
+                                            <!-- form nome -->
                         <input type="text" name="nome" required="" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1">
                     </div>
                 </div>
                             
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                    <div class="form-group2">
+                    <div class="form-group2"> <!-- form cognome -->
                         <input type="text" name="cognome" required="" id="last_name" class="form-control input-lg" placeholder="Cognome" tabindex="2">
                     </div>
                 </div>
             </div>
                          <br>
-            <div class="form-group2">
+            <div class="form-group2"> <!-- form nickname -->
                 <input type="text" name="nickname" required="" id="display_name" class="form-control input-lg" placeholder="Nickname" tabindex="3">
             </div>
                           <br>
-            <div class="form-group2">
+            <div class="form-group2"> <!-- form email -->
                 <input type="email" name="email" id="email" required="" class="form-control input-lg" placeholder="Email" tabindex="4">
             </div>
                            <br>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                    <div class="form-group2">
+                    <div class="form-group2"> <!-- form password -->
                         <input type="password" name="password" required="" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
                 </div>
                                 </div>
@@ -65,7 +65,7 @@
                               
             </div>
                            <br>
-            <ul>
+            <ul>                        <!-- condizioni per la password, bisogna rispettarle -->
                                         <li id="letter" class="invalid">Almeno <strong>una lettera</strong></li>
                                         <li id="capital" class="invalid">Almeno <strong>una lettera maiuscola</strong></li>
                                         <li id="number" class="invalid">Almeno <strong>un numero</strong></li>
