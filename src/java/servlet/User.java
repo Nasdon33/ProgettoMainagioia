@@ -81,7 +81,7 @@ public class User extends HttpServlet {
             }
             sess.setAttribute("utente", user);
 
-            response.sendRedirect(request.getHeader("Referer"));
+            response.sendRedirect("index.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
@@ -114,7 +114,7 @@ public class User extends HttpServlet {
                 String sql= "UPDATE Users SET nickname = ?, email = ?, password = ? where id = ?";
                 manager.setData(sql, nick, mail, password,  id);
                 
-            response.sendRedirect(request.getHeader("Referer"));
+            response.sendRedirect("index.jsp");
         } catch (SQLException ex) {
             
             System.out.print("ocio, problema con la sql");
