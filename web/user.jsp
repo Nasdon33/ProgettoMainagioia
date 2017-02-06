@@ -77,14 +77,14 @@
                                 if(segnalazioni.getString("date_validation") == null){
                         %>
                         <p style="color: white"> La tua segnalazione alla seguente foto non è ancora stata controllata </p>
-                        <img src="<%=foto.getString("path") %>" width="80%">
+                        <img src="<%=foto.getString("path") %>" width="70%">
                         <br>
                         <%
                                 }
                                 else{
                         %>
                         <p style="color: white"> La tua segnalazione alla seguente foto è stata controllata ed è stata ritenuta consona ai nostri standard</p>
-                        <img src="<%=foto.getString("path") %>" width="80%">     
+                        <img src="<%=foto.getString("path") %>" width="70%">     
                         <br>
                         <%
                                 }
