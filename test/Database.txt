@@ -371,75 +371,75 @@ VALUES (19,45.482079, 9.219751,'Viale Gran Sasso 26', '20131', 'Milano', 'MI', '
 INSERT INTO Mainagioia.coordinates
 VALUES (20,45.467420, 9.142603,'Via Pieter Rubens 24', '20148', 'Milano', 'MI', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (21,40.732182, -74.003399,'69 7th Ave South', '10014', 'New York', 'NY', 'Stati Uniti');
+VALUES (21,40.732182, -74.003399,'69 7th Ave South', '10014', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (22,40.761558, -73.981806,'155 W 51st St', '10019', 'New York', 'NY', 'Stati Uniti');
+VALUES (22,40.761558, -73.981806,'155 W 51st St', '10019', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (23,40.725458, -74.003017,'119 Sullivan St', '10012', 'New York', 'NY', 'Stati Uniti');
+VALUES (23,40.725458, -74.003017,'119 Sullivan St', '10012', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (24,40.763484, -73.986586,'321 W 51st St', '10019', 'New York', 'NY', 'Stati Uniti');
+VALUES (24,40.763484, -73.986586,'321 W 51st St', '10019', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (25,40.760164, -73.983299,'152 W 49th St', '10019', 'New York', 'NY', 'Stati Uniti');
+VALUES (25,40.760164, -73.983299,'152 W 49th St', '10019', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (26,40.762312, -73.985596,'251 W 50th St', '10019', 'New York', 'NY', 'Stati Uniti');
+VALUES (26,40.762312, -73.985596,'251 W 50th St', '10019', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (27,40.721369, -73.997538,'114 Kenmare St', '10012', 'New York', 'NY', 'Stati Uniti');
+VALUES (27,40.721369, -73.997538,'114 Kenmare St', '10012', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (28,40.771235, -73.983051,'9 E 18th St', '10003', 'New York', 'NY', 'Stati Uniti');
+VALUES (28,40.771235, -73.983051,'9 E 18th St', '10003', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (29,40.750775, -73.986447,'72 West 36th Street', '10018', 'New York', 'NY', 'Stati Uniti');
+VALUES (29,40.750775, -73.986447,'72 West 36th Street', '10018', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (30,40.760727, -73.980903,'110 W 51st St', '10020', 'New York', 'NY', 'Stati Uniti');
+VALUES (30,40.760727, -73.980903,'110 W 51st St', '10020', 'New York', 'NY', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (31,25.766588, -80.189979,'777 Brickell Avenue', '33131', 'Miami', 'FL', 'Stati Uniti');
+VALUES (31,25.766588, -80.189979,'777 Brickell Avenue', '33131', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (32,25.898048, -80.161741,'13300 Biscayne Blvd', '33181', 'Miami', 'FL', 'Stati Uniti');
+VALUES (32,25.898048, -80.161741,'13300 Biscayne Blvd', '33181', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (33,25.688180, -80.418193,'13766 SW 84th Ave', '33158', 'Miami', 'FL', 'Stati Uniti');
+VALUES (33,25.688180, -80.418193,'13766 SW 84th Ave', '33158', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (34,25.827605, -80.186846,'5600 Biscayne Blvd', '33137', 'Miami', 'FL', 'Stati Uniti');
+VALUES (34,25.827605, -80.186846,'5600 Biscayne Blvd', '33137', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (35,25.772826, -80.188571,'333 SE 2nd St', '33131', 'Miami', 'FL', 'Stati Uniti');
+VALUES (35,25.772826, -80.188571,'333 SE 2nd St', '33131', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (36,25.771630, -80.185230,'335 S Biscayne Blvd', '33131', 'Miami', 'FL', 'Stati Uniti');
+VALUES (36,25.771630, -80.185230,'335 S Biscayne Blvd', '33131', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (37,25.732498, -80.331231,'8376 Bird Rd', '33155', 'Miami', 'FL', 'Stati Uniti');
+VALUES (37,25.732498, -80.331231,'8376 Bird Rd', '33155', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (38,25.765927, -80.190431,'801 Brickell Ave', '33131', 'Miami', 'FL', 'Stati Uniti');
+VALUES (38,25.765927, -80.190431,'801 Brickell Ave', '33131', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (39,25.764478, -80.253840,'3632 SW 8th St', '33135', 'Miami', 'FL', 'Stati Uniti');
+VALUES (39,25.764478, -80.253840,'3632 SW 8th St', '33135', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (40,25.799762, -80.199334,'2320 NW 2nd Av', '33127', 'Miami', 'FL', 'Stati Uniti');
+VALUES (40,25.799762, -80.199334,'2320 NW 2nd Av', '33127', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (41,34.050645, -118.248694,'317 S Broadway', '90013', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (41,34.050645, -118.248694,'317 S Broadway', '90013', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (42,34.059741, -118.237055,'1001 N Alameda St', '90012', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (42,34.059741, -118.237055,'1001 N Alameda St', '90012', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (43,34.033777, -118.229276,'2121 E 7th Pl', '90021', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (43,34.033777, -118.229276,'2121 E 7th Pl', '90021', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (44,34.075699, -118.384118,'113 N Robertson Blvd', '90048', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (44,34.075699, -118.384118,'113 N Robertson Blvd', '90048', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (45,34.071762, -118.360931,'6333 West 3rd Street', '90036', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (45,34.071762, -118.360931,'6333 West 3rd Street', '90036', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (46,34.083632, -118.330199,'5955 Melrose Ave', '90038', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (46,34.083632, -118.330199,'5955 Melrose Ave', '90038', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (47,34.049057, -118.254688,'544 S Grand Ave', '90071', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (47,34.049057, -118.254688,'544 S Grand Ave', '90071', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (48,33.953693, -118.396755,'9149 S Sepulveda Blvd', '90045', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (48,33.953693, -118.396755,'9149 S Sepulveda Blvd', '90045', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (49,34.228913, -118.560482,'19565 Parthenia St', '91324', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (49,34.228913, -118.560482,'19565 Parthenia St', '91324', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (50,34.056177, -118.276815,'704 S Alvarado St', '90057', 'Los Angeles', 'CA', 'Stati Uniti');
+VALUES (50,34.056177, -118.276815,'704 S Alvarado St', '90057', 'Los Angeles', 'CA', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (51,25.770222, -80.189571,'270 Biscayne Blvd Way', '33131', 'Miami', 'FL', 'Stati Uniti');
+VALUES (51,25.770222, -80.189571,'270 Biscayne Blvd Way', '33131', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
-VALUES (52,25.807337, -80.193593,'3401 N Miami Ave', '33127', 'Miami', 'FL', 'Stati Uniti');
+VALUES (52,25.807337, -80.193593,'3401 N Miami Ave', '33127', 'Miami', 'FL', 'USA');
 INSERT INTO Mainagioia.coordinates
 VALUES (53,45.485879, 9.163195,'Via Losanna 15', '20154', 'Milano', 'MI', 'Italia');
 INSERT INTO Mainagioia.coordinates
 VALUES (54,45.470064, 9.194138,'Via Borgospesso 12', '20121', 'Milano', 'MI', 'Italia');
 INSERT INTO Mainagioia.coordinates
-VALUES (55,40.710551, -74.007606,'97 Nassau St', '10038', 'New York', 'NY', 'Stati Uniti');
+VALUES (55,40.710551, -74.007606,'97 Nassau St', '10038', 'New York', 'NY', 'USA');
 
 
 
