@@ -118,10 +118,10 @@ public class Ricerca extends HttpServlet {
          
                         out.println("<br>");
                         String url = "ristorante.jsp?id=" + idris;
-                        out.println("<a href=\""+ url +"\" style=\"font-size:18px\" color: #5bc0de >");
+                        out.println("<a href=\""+ url +"\" style=color: #5bc0de > <h5>");
                         out.println(nome.getString("name"));
-                        out.println("</a>");
-                        out.println("<br>");
+                        out.println("</h5></a>");
+                        
                         String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql, idris);
                         int c = 0;
