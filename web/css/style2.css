@@ -28,6 +28,13 @@ input.placeholder {
   }
 }
 
+.glyphicon-star-empty {
+    color: #5bc0de;
+}
+.glyphicon-star {
+    color: #5bc0de;
+}
+
 
 
 @media (min-width: 991px) {
