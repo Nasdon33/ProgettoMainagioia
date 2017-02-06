@@ -288,12 +288,12 @@
                                                 <% 
                                                     for(int k = 0;k < 5; k++){
                                                         if((int) media-k > 0){ %>
-                                                            <span class="glyphicon glyphicon-star"></span>
+                                                            <span class="glyphicon glyphicon-star" style="color: black;"></span>
                                                             <%
                                                         }
                                                         else{
                                                             %>
-                                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                                            <span class="glyphicon glyphicon-star-empty" style="color: black;"></span>
                                                             <%
                                                         }
                                                     }
@@ -310,7 +310,7 @@
                                                         int p = (int) ((c[n-1]/tot) * 100);
                                                 %>
                                                 <div class="col-xs-3 col-md-3 text-right">
-                                                    <span class="glyphicon glyphicon-star"></span><%=n %>
+                                                    <span class="glyphicon glyphicon-star" style="color: black;" ></span><%=n %>
                                                 </div>
                                                 <div class="col-xs-8 col-md-9">
                                                     <div class="progress progress-striped">
