@@ -110,7 +110,7 @@
                     %>    
                     <div style="padding-top: 10px">
                         <form role="form" action="NuovoRistoratore" method="POST">
-                        <input type="hidden" name="idris" value="<%=ristorante.getString("id") %>">
+                        <input type="hidden" name="idris" value="<%=idris %>">
                         <input type="submit" class="btn btn-primary btn-responsive Azzurro" value="E' tuo questo ristorante?" /> 
                     </form>
                        
