@@ -365,7 +365,7 @@
                                                             <div class="col-md-2 col-xs-2 col-md-offset-7 col-xs-offset-7">
                                                                 <form role="form" action="SegnalaFoto" method="POST">
                                                                 <input type="hidden" id="idphoto" name="idphoto" value="">
-                                                                <input type="submit" value="Segnala" /> 
+                                                                <input type="submit" class="btn btn-danger btn-responsive" value="Segnala" /> 
                                                                 </form>
                                                             </div> 
                                                         </div>

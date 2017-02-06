@@ -174,14 +174,17 @@
                 <div class="col-md-12 Azzurro_tondo">
                     <div id="segnalazione_controllata"> 
                         <p style="color: white">Per il ristorante <%=segnalazioni.getString("name") %></p>
-                        <img src="<%=segnalazioni.getString("path") %>" width="80%">
+                        <img src="<%=segnalazioni.getString("path") %>" width="70%">
                         <br>
                         
                         <form action="RimuoviFoto" method="POST">
-                        <div>
+                            <br>
+                            <div>
                             <input type="hidden" name="idp" value="<%=segnalazioni.getString("id_photo") %>" />
-                            <input type="submit" name="choice" value="Accetta" /> <input type="submit" name="choice" value="Elimina" />
+                            <input type="submit" class="btn btn-success btn-responsive" name="choice" value="Accetta" /> <input type="submit" class="btn btn-danger btn-responsive" name="choice" value="Elimina" />
+                            
                         </div>
+                            <br>
                         </form>
                     </div>
                 </div>
@@ -211,15 +214,18 @@
                         <div id="Altezza">
                             <%=risposte.getString("rvdes") %>
                         </div>
-                        <p style="color: white">RISPOSTA RISOTRATORE:</p>
+                        <p style="color: white">RISPOSTA RISTORATORE:</p>
                         <div>
                             <%=risposte.getString("rpdes") %>
+                            
                         </div>
                         <form action="RimuoviFoto" method="GET">
-                        <div>
+                            <br>
+                            <div>
                             <input type="hidden" name="idr" value="<%=risposte.getString("id") %>" />
-                            <input type="submit" name="choice" value="Accetta" /> <input type="submit" name="choice" value="Elimina" />
+                            <input type="submit" class="btn btn-success btn-responsive" name="choice" value="Accetta" /> <input type="submit" class="btn btn-danger btn-responsive" name="choice" value="Elimina" />
                         </div>
+                            <br>
                     </div>
                 </div>
                 <%
