@@ -193,13 +193,14 @@ public class Ricerca extends HttpServlet {
                         String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ? AND description='Principale' ";
                         ResultSet foto = manager.getData(sql10, idris);
                         foto.next();
-                        out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");
+                        
+                        String url = "ristorante.jsp?id="+idris;
+                        out.println("<a href="+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");
          
                         out.println("<br>");
-                        String url = "ristorante.jsp?id="+idris;
-                        out.println("<a href="+ url + " style=\"color: #5bc0de");
+                        out.println("<a href="+ url + " style=\"color: #5bc0de\"> <h5> ");
                         out.println(nome.getString("name"));
-                        out.println("</a>");
+                        out.println("</h5></a>");
                         out.println("<br>");
                         String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql, idris);
@@ -271,13 +272,13 @@ public class Ricerca extends HttpServlet {
                         String sql10 = "SELECT path FROM Mainagioia.Photos WHERE id_restaurant = ?";
                         ResultSet foto = manager.getData(sql10, idris);
                         foto.next();
-                        out.println("<img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\">");
+                        String url = "ristorante.jsp?id="+idris;
+                        out.println("<a href="+ url + "\" ><img src='"+foto.getString("path")+"' width=\"90%\" style=\"border-radius: 30px\"></a>");
          
                         out.println("<br>");
-                        String url = "ristorante.jsp?id="+idris;
-                        out.println("<a href="+ url + " style=\"font-size:18px; color: #5bc0de >");
+                        out.println("<a href="+ url + " style=\"color: #5bc0de\"> <h5> ");
                         out.println(nome.getString("name"));
-                        out.println("</a>");
+                        out.println("</h5></a>");
                         out.println("<br>");
                         String sql = "SELECT * FROM mainagioia.Reviews WHERE id_restaurant = ?";
                         ResultSet recensioni = manager.getData(sql, idris);
